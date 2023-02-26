@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="2">level</layout>
+        <event-sheet order="1">E_Level</event-sheet>
+        <event-sheet active="1" order="0">E_Engine</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="Collisions_Slopes" />
+        <family expanded="0" name="BalancingTriggers" />
+        <family expanded="0" name="SolidObjects" />
+        <family expanded="0" name="Collisions_Layer0" />
+        <family expanded="0" name="Collisions_Layer1" />
+        <family expanded="1" name="Behavior_Solid" />
+        <family expanded="0" name="Behavior_Jumpthru" />
+        <family expanded="0" name="Animals" />
+        <family expanded="0" name="obj" />
+        <family expanded="0" name="AndroidButtons" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="0" path="object-folder/.System Objects/" />
+        <folder expanded="0" path="object-folder/Player Objects/" />
+        <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
+        <folder expanded="0" path="object-folder/Level Collisions/" />
+        <folder expanded="0" path="object-folder/GUI/" />
+        <folder expanded="0" path="object-folder/GUI/Editor Separator/" />
+        <folder expanded="0" path="object-folder/GUI/HUD/" />
+        <folder expanded="0" path="object-folder/GUI/HUD/Linum/" />
+        <folder expanded="0" path="object-folder/GUI/HUD/Other/" />
+        <folder expanded="0" path="object-folder/GUI/Android controls/" />
+        <folder expanded="0" path="object-folder/GUI/Menu/" />
+        <folder expanded="0" path="object-folder/GUI/Logo/" />
+        <folder expanded="0" path="object-folder/GUI/MenuBG/" />
+        <folder expanded="0" path="object-folder/GUI/Debug/" />
+        <folder expanded="0" path="object-folder/Level Objects/" />
+        <folder expanded="0" path="object-folder/Level Objects/Effects and Misc/" />
+        <folder expanded="0" path="object-folder/Level Objects/Engine objects/" />
+        <folder expanded="0" path="object-folder/Test/" />
+        <folder expanded="0" path="object-folder/manual/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Engine/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Font/MotelKing/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Font/" />
+        <folder expanded="1" path="animation-folder/Values_Player/" />
+        <folder expanded="1" path="animation-folder/Values_Level/" />
+        <folder expanded="1" path="animation-folder/Values_Input/" />
+        <folder expanded="1" path="animation-folder/Values_Menus/" />
+        <folder expanded="1" path="animation-folder/Values_Camera/" />
+        <folder expanded="1" path="animation-folder/Values_PauseMenu/" />
+        <folder expanded="1" path="animation-folder/cursor/" />
+        <folder expanded="1" path="animation-folder/Values_CMD/" />
+        <folder expanded="1" path="animation-folder/FireShieldDash/" />
+        <folder expanded="1" path="animation-folder/InstaShield/" />
+        <folder expanded="1" path="animation-folder/Invincibility/" />
+        <folder expanded="1" path="animation-folder/InvincibilityAfterimage/" />
+        <folder expanded="1" path="animation-folder/ShieldBottom/" />
+        <folder expanded="1" path="animation-folder/ShieldTop/" />
+        <folder expanded="1" path="animation-folder/SkiddingDust/" />
+        <folder expanded="1" path="animation-folder/SpinDashDust/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Sonic/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Unused/" />
+        <folder expanded="1" path="animation-folder/LightShield/" />
+        <folder expanded="1" path="animation-folder/ThunderSpark/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Sonic/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Tails/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Knux/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Amy/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Amy/GoldRing/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Amy/SonicWorldDelta/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Sally/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Cream/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Eggman/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Eggman/jackpack/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Eggman/nojackpack/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Shadow/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/MetalSonic/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/MetalSonic/Sprites by Danik/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Unused/" />
+        <folder expanded="1" path="animation-folder/Sensor_LedgeLeft/" />
+        <folder expanded="1" path="animation-folder/Sensor_Hitbox/" />
+        <folder expanded="1" path="animation-folder/Sensor_LedgeRight/" />
+        <folder expanded="1" path="animation-folder/Sensor_Environment/" />
+        <folder expanded="1" path="animation-folder/Sensor_Main/" />
+        <folder expanded="1" path="animation-folder/camera/" />
+        <folder expanded="1" path="animation-folder/Sensor_ObjectDown/" />
+        <folder expanded="1" path="animation-folder/Sensor_ObjectLeft/" />
+        <folder expanded="1" path="animation-folder/Sensor_ObjectRight/" />
+        <folder expanded="1" path="animation-folder/Sensor_ObjectUp/" />
+        <folder expanded="1" path="animation-folder/TailsBack/" />
+        <folder expanded="1" path="animation-folder/TailsBack/unused/" />
+        <folder expanded="1" path="animation-folder/Concave/" />
+        <folder expanded="1" path="animation-folder/Convex/" />
+        <folder expanded="1" path="animation-folder/SmoothStepDown/" />
+        <folder expanded="1" path="animation-folder/SmoothStepUp/" />
+        <folder expanded="1" path="animation-folder/SmoothStepUpThru/" />
+        <folder expanded="1" path="animation-folder/SmoothStepDownThru/" />
+        <folder expanded="1" path="animation-folder/Solid/" />
+        <folder expanded="1" path="animation-folder/Jumpthru/" />
+        <folder expanded="1" path="animation-folder/Concave_Layer0/" />
+        <folder expanded="1" path="animation-folder/Concave_Layer1/" />
+        <folder expanded="1" path="animation-folder/Solid_Layer0/" />
+        <folder expanded="1" path="animation-folder/Solid_Layer1/" />
+        <folder expanded="1" path="animation-folder/Convex_Layer0/" />
+        <folder expanded="1" path="animation-folder/Convex_Layer1/" />
+        <folder expanded="1" path="animation-folder/Tunnel1/" />
+        <folder expanded="1" path="animation-folder/Tunnel2/" />
+        <folder expanded="1" path="animation-folder/HUD_Rings/" />
+        <folder expanded="1" path="animation-folder/HUD_Ring/" />
+        <folder expanded="1" path="animation-folder/HUD_Time/" />
+        <folder expanded="1" path="animation-folder/LinumLivesBack/" />
+        <folder expanded="1" path="animation-folder/LinumLivesHud/" />
+        <folder expanded="1" path="animation-folder/TimerIco/" />
+        <folder expanded="1" path="animation-folder/TimerPart1/" />
+        <folder expanded="1" path="animation-folder/TimerPart2/" />
+        <folder expanded="1" path="animation-folder/MultiHUD/" />
+        <folder expanded="1" path="animation-folder/MultiHUD/Sonic 3/" />
+        <folder expanded="1" path="animation-folder/MultiHUD/Sonic Simple Worlds/" />
+        <folder expanded="1" path="animation-folder/PauseSSW/" />
+        <folder expanded="1" path="animation-folder/BoostGauge/" />
+        <folder expanded="1" path="animation-folder/spr_pause_menu/" />
+        <folder expanded="1" path="animation-folder/Android_Pause/" />
+        <folder expanded="1" path="animation-folder/Android_A/" />
+        <folder expanded="1" path="animation-folder/Android_Apressed/" />
+        <folder expanded="1" path="animation-folder/Android_Azone/" />
+        <folder expanded="1" path="animation-folder/Android_Down/" />
+        <folder expanded="1" path="animation-folder/Android_DownZone/" />
+        <folder expanded="1" path="animation-folder/Android_Left/" />
+        <folder expanded="1" path="animation-folder/Android_LeftZone/" />
+        <folder expanded="1" path="animation-folder/Android_Right/" />
+        <folder expanded="1" path="animation-folder/Android_RightZone/" />
+        <folder expanded="1" path="animation-folder/Android_Up/" />
+        <folder expanded="1" path="animation-folder/Android_UpZone/" />
+        <folder expanded="1" path="animation-folder/Android_DPad/" />
+        <folder expanded="1" path="animation-folder/MenuHeader/" />
+        <folder expanded="1" path="animation-folder/Menu_BigBlueButtonBG/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton1BG/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton2BG/" />
+        <folder expanded="1" path="animation-folder/Menu_BigBlueButton/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton/" />
+        <folder expanded="1" path="animation-folder/Menu_BigIcon/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallIcon/" />
+        <folder expanded="1" path="animation-folder/GamepadButton/" />
+        <folder expanded="1" path="animation-folder/Loading/" />
+        <folder expanded="1" path="animation-folder/Logo/" />
+        <folder expanded="1" path="animation-folder/Logo2/" />
+        <folder expanded="1" path="animation-folder/Android_Console/" />
+        <folder expanded="1" path="animation-folder/DebugSpriteText/" />
+        <folder expanded="1" path="animation-folder/CMDBG/" />
+        <folder expanded="1" path="animation-folder/Explosion1/" />
+        <folder expanded="1" path="animation-folder/MonitorIcon/" />
+        <folder expanded="1" path="animation-folder/Layer_0to1/" />
+        <folder expanded="1" path="animation-folder/Layer_1to0/" />
+        <folder expanded="1" path="animation-folder/Layer_Switch/" />
+        <folder expanded="1" path="animation-folder/PlayerSpawn/" />
+        <folder expanded="1" path="animation-folder/Monitor/" />
+        <folder expanded="1" path="animation-folder/Ring/" />
+        <folder expanded="1" path="animation-folder/SpringRed_Down/" />
+        <folder expanded="1" path="animation-folder/SpringRed_Left/" />
+        <folder expanded="1" path="animation-folder/SpringRed_Right/" />
+        <folder expanded="1" path="animation-folder/SpringRed_Up/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_Down/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_Left/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_Right/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_Up/" />
+        <folder expanded="1" path="animation-folder/Ring2/" />
+        <folder expanded="1" path="animation-folder/RingLost/" />
+        <folder expanded="1" path="animation-folder/Bumper/" />
+        <folder expanded="1" path="animation-folder/BreakableWall/" />
+        <folder expanded="1" path="animation-folder/BreakableBlock/" />
+        <folder expanded="1" path="animation-folder/Gimmick_CollapsingPlatform/" />
+        <folder expanded="1" path="animation-folder/Gimmick_Fan/" />
+        <folder expanded="1" path="animation-folder/Gimmick_CNZBarrel/" />
+        <folder expanded="1" path="animation-folder/Gimmick_Accelerator_Right/" />
+        <folder expanded="1" path="animation-folder/Help1/" />
+        <folder expanded="1" path="animation-folder/help11/" />
+        <folder expanded="1" path="animation-folder/Help2/" />
+        <folder expanded="1" path="animation-folder/help3/" />
+        <folder expanded="1" path="animation-folder/help10/" />
+        <folder expanded="1" path="animation-folder/help4/" />
+        <folder expanded="1" path="animation-folder/Help6/" />
+        <folder expanded="1" path="animation-folder/help7/" />
+        <folder expanded="1" path="animation-folder/help8/" />
+        <folder expanded="1" path="animation-folder/help5/" />
+        <folder expanded="1" path="animation-folder/help9/" />
+        <folder expanded="1" path="animation-folder/SparklesEffect/" />
+        <folder expanded="1" path="animation-folder/SonicLivesHud/" />
+        <folder expanded="1" path="animation-folder/SonicLivesHud/Sonic 3/" />
+        <folder expanded="1" path="animation-folder/SonicLivesHud/SSW/" />
+        <folder expanded="1" path="animation-folder/SonicLivesHud/Other/" />
+        <folder expanded="1" path="animation-folder/PauseBG/" />
+        <folder expanded="1" path="animation-folder/pts/" />
+        <folder expanded="1" path="animation-folder/Water/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Gimmick_HangingIdle_Bar/" />
+        <folder expanded="1" path="animation-folder/Gimmick_ConveyorBelt/" />
+        <folder expanded="1" path="animation-folder/Badnik_MotoBug_Limit/" />
+        <folder expanded="1" path="animation-folder/Tablet/" />
+        <folder expanded="1" path="animation-folder/Badnik_MotoBug/" />
+        <folder expanded="1" path="animation-folder/Effect_Motobug_Exhaust/" />
+        <folder expanded="1" path="animation-folder/animal_bird/" />
+        <folder expanded="1" path="animation-folder/animal_monkey/" />
+        <folder expanded="1" path="animation-folder/animal_mouse/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/SoundEmitterWaterfall/" />
+        <folder expanded="1" path="animation-folder/TunnelTrigger/" />
+        <folder expanded="1" path="animation-folder/Spikes/" />
+        <folder expanded="1" path="animation-folder/Gimmick_FanRange/" />
+        <folder expanded="1" path="animation-folder/Gimmick_CollapsingPlatform_Right_Brick1/" />
+        <folder expanded="1" path="animation-folder/Gimmick_CollapsingPlatform_Right_Brick2/" />
+        <folder expanded="1" path="animation-folder/Gimmick_CollapsingPlatform_Right_Brick3/" />
+        <folder expanded="1" path="animation-folder/Gimmick_CollapsingPlatform_Left_Brick01/" />
+        <folder expanded="1" path="animation-folder/Gimmick_CollapsingPlatform_Right_Brick4/" />
+        <folder expanded="1" path="animation-folder/Spikes2/" />
+        <folder expanded="1" path="animation-folder/Spikes3/" />
+        <folder expanded="1" path="animation-folder/Spikes4/" />
+        <folder expanded="1" path="animation-folder/Tornado/" />
+        <folder expanded="1" path="animation-folder/PauseFade/" />
+        <folder expanded="1" path="animation-folder/SonicTransition/" />
+        <folder expanded="1" path="animation-folder/Badnik_Mechapig/" />
+        <folder expanded="1" path="animation-folder/Ballhog_Ball/" />
+        <folder expanded="1" path="animation-folder/GameOver1/" />
+        <folder expanded="1" path="animation-folder/GameOver2/" />
+    </folders-expanded>
+</c2uistate>

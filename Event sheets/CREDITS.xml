@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CREDITS</name>
+    <events>
+        <comment>Linum Framework (Legacy) v0.2.1 by Halatnikov</comment>
+        <comment>Update by stas&apos;s ports</comment>
+        <comment>halatnikov.github.io</comment>
+        <comment>------ADD-ONS USED:</comment>
+        <comment>SonicPhysics behaviour by PixelMonkey</comment>
+        <comment>LiteTween behaviour by lunarray</comment>
+        <comment>Audio Helper plugin by rexrainbow</comment>
+        <comment>------GRAPHICS USED:</comment>
+        <comment>Logo by AyleenSeraph</comment>
+        <comment>Sonic sprites from Sonic 3 Complete by Tiddles, Neo, That One Jig, flamewing and others</comment>
+        <comment>A lot of graphics from various versions of Sonic Worlds by SFGHQ</comment>
+        <comment>Menu Sonic icon by DniweTamp, other icons from IconsDB and Icons8</comment>
+        <comment>------OTHER:</comment>
+        <comment>Level music is le_forque.mod by marvin of skarla</comment>
+        <comment>Pieces of code from PixelMonkey, SamNight, 360є Engine by Damizean, Sonic Worlds by SFGHQ, Sonic Physics Guide by Sonic Retro, Jase00</comment>
+        <comment>Special thanks to Ayleen-Seraph, DniweTamp, HolatRoom server, HedgeLand server, Cosmic Framework server, Scirra forums</comment>
+        <comment>All the official Sonic stuff is by Sonic Team and SEGA</comment>
+        <comment>i probably forgot someone/something, sorry</comment>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_logo</name>
+    <events>
+        <include>E_global</include>
+        <event-block disabled="1" sid="226552157989935">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="486200205817181" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="416561973834504" type="Version">
+                    <param id="0" name="Text">&quot;Game version: &quot;&amp;projectversion&amp;newline&amp;&quot;Linum version: 0.2.1 (17)&quot;&amp;newline&amp;&quot;Modification version: 1.0&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="disable this group to hide the warning" sid="895023961054836" title="Warning">
+            <sub-events>
+                <event-block any="1" sid="898877858678307">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="368091563201631" type="Keyboard" />
+                        <condition id="14" name="On tap" sid="780346288549654" type="Touch" />
+                        <condition id="1" name="On any click" sid="518201980780171" type="Mouse" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="791882321052117" type="System">
+                            <param id="0" name="Group name">&quot;Warning&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="156332568059812" title="Logo">
+            <sub-events>
+                <event-block sid="916132416935779">
+                    <conditions>
+                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="285168957726768" type="Logo" />
+                        <condition id="-8" name="Compare two values" sid="781699761607178" type="System">
+                            <param id="0" name="First value">Logo.Rotate.Speed</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">60</param>
+                        </condition>
+                        <condition id="-13" name="Is between angles" sid="260751430363387" type="Logo">
+                            <param id="0" name="First angle">1</param>
+                            <param id="1" name="Second angle">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="850826505597943" type="Logo">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="275664142982461" type="Logo">
+                            <param id="0" name="Acceleration">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="314573893860523" type="Logo">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="721049445653497">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="735154733348034" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="142274694914138" type="ArtByAyleenSeraph">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="618764150999595" type="ArtByAyleenSeraph" />
+                                <action id="-16" name="Wait" sid="382806943699853" type="System">
+                                    <param id="0" name="Seconds">0.35</param>
+                                </action>
+                                <action behavior="LiteTween3" id="10" name="Start" sid="371697384349291" type="Logo">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="876257790581759" type="Logo2">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="604497328994094">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="642648987386927" type="Logo2" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="968028103886060" type="LogoText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="101669393166157" type="LogoText">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="839754590916258">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="800844855951014" type="LogoText" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="889871129467739" type="System">
+                            <param id="0" name="Seconds">2.25</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="186204212197933" type="TransitionIn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="334730027520335" type="TransitionIn" />
+                        <action id="-16" name="Wait" sid="565934610460312" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="686136537382057" type="System">
+                            <param id="0" name="Layout">mainMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="479953147373302">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="502312884079070" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="988759112195689" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                        <condition id="0" name="On any touch start" sid="230381731997542" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="542404403662648" type="TransitionIn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="961559431704406" type="TransitionIn" />
+                        <action id="-16" name="Wait" sid="324700352540209" type="System">
+                            <param id="0" name="Seconds">0.15</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="410822686100152" type="System">
+                            <param id="0" name="Layout">mainMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="216109561509442">
+            <conditions>
+                <condition id="-15" inverted="1" name="Is group active" sid="284591140864996" type="System">
+                    <param id="0" name="Group name">&quot;Warning&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="975241991608067" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="680364011421416" type="WarningText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="732289687803418" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="741741881011215" type="System">
+                    <param id="0" name="Group name">&quot;Logo&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="638749497994727" type="System">
+                    <param id="0" name="Layer">&quot;Warning&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="764703384208442" type="Logo">
+                    <param id="0" name="Speed">240</param>
+                </action>
+                <action behavior="Rotate" id="1" name="Set acceleration" sid="631194439585059" type="Logo">
+                    <param id="0" name="Acceleration">-85</param>
+                </action>
+                <action id="-15" name="Set visible" sid="582710289540072" type="Logo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="361704100520589" type="Logo">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

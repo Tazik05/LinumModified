@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_preloader</name>
+    <events>
+        <include>E_global</include>
+        <event-block sid="354147174539684">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="977031247017573" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="456701955370928" type="Function">
+                    <param id="0" name="Name">&quot;LoadingTextAnimation&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="391813112806490" type="Version">
+                    <param id="0" name="Text">&quot;Game version: &quot;&amp;projectversion&amp;newline&amp;&quot;Linum version: 0.2.1 (17)&quot;&amp;newline&amp;&quot;Modification version: 1.0&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="283679545073689">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="320516699484967" type="System" />
+                <condition id="-27" inverted="1" name="Effects are supported" sid="409070078611138" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Alert" sid="324642627081167" type="Browser">
+                    <param id="0" name="Message">&quot;Your device doesn&apos;t support WebGL, certain things may look wrong&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="711401414949083">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="226427941169553" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="673806534558614" type="ProgressBar">
+                    <param id="0" name="Width">lerp(Self.Width, loadingprogress*LayoutWidth, 0.1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="858853886296614">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="786854187392611" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="167855552888233" type="Audio">
+                    <param id="0" name="Audio file">MUS_menu</param>
+                </action>
+                <action id="4" name="Preload" sid="945258382465278" type="Audio">
+                    <param id="0" name="Audio file">MUS_level</param>
+                </action>
+                <action id="4" name="Preload" sid="794484311192578" type="Audio">
+                    <param id="0" name="Audio file">MUS_invincibility</param>
+                </action>
+                <action id="4" name="Preload" sid="475072000719190" type="Audio">
+                    <param id="0" name="Audio file">MUS_speedshoes</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164729706448005">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="168048628814598" type="System">
+                    <param id="0" name="First value">loadingprogress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="1" name="Preloads complete" sid="449246588333569" type="Audio" />
+                <condition id="-4" name="Trigger once while true" sid="494828258672101" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="808180246338857" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="978834277487697" type="TransitionIn" />
+                <action id="-16" name="Wait" sid="850818590255147" type="System">
+                    <param id="0" name="Seconds">0.20</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="748046550370489" type="System">
+                    <param id="0" name="Layout">logo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="485358712148855">
+            <conditions>
+                <condition id="0" name="On function" sid="735010963835670" type="Function">
+                    <param id="0" name="Name">&quot;LoadingTextAnimation&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="765052735878130" type="Preload_Text">
+                    <param id="0" name="Text">&quot;Loading&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="391279200892934" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Set text" sid="247143058901534" type="Preload_Text">
+                    <param id="0" name="Text">&quot;Loading.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="922121354995662" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Set text" sid="940153585226816" type="Preload_Text">
+                    <param id="0" name="Text">&quot;Loading..&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="871381747949811" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Set text" sid="772050318864094" type="Preload_Text">
+                    <param id="0" name="Text">&quot;Loading...&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="956450031009577" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Call function" sid="575140580893030" type="Function">
+                    <param id="0" name="Name">&quot;LoadingTextAnimation&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

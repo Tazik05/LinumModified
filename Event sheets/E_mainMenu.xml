@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_mainMenu</name>
+    <events>
+        <include>E_global</include>
+        <event-group description="" sid="423914286752749" title="Menu Background">
+            <sub-events>
+                <event-block sid="868634386226924">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="387769689643117" type="System">
+                            <param id="0" name="Interval (seconds)">0.05</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="309877250646828" type="MenuGrid2">
+                            <param id="0" name="Distance">-1</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="712313236665216" type="MenuGrid1">
+                            <param id="0" name="Distance">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="304772634925409">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="950861669737063" type="MenuGrid1">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">248.1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="752323082552282" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="808394276701565" type="MenuGrid2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="611889173494446" type="MenuGrid1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="117836399856139" type="System">
+                            <param id="0" name="Seconds">2.25</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="473126259179651" type="MenuGrid2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="240546704634121" type="MenuGrid1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="256284191671426">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="780799632789488" type="MenuGrid1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">431.9</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="688487986912077" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="237142523601360" type="MenuGrid2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="328593394647444" type="MenuGrid1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="655033315107418" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="107022160138264" type="MenuGrid2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="168254861977404" type="MenuGrid1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="946516046578958">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="851372611144634" type="MenuGrid1">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">-150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="362614491802444" type="MenuGrid2">
+                            <param id="0" name="X">-214</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="354051881898786" type="MenuGrid1">
+                            <param id="0" name="X">-278</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="905476150486281" title="Main menu">
+            <sub-events>
+                <event-block sid="145890139423496">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="132263864192636" type="Values_Menus">
+                            <param id="0" name="Instance variable">CurrentMenu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;mainmenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="516779930116800" type="System">
+                            <param id="0" name="Layer">&quot;mainmenu&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="206598208949026" type="System">
+                            <param id="0" name="Layer">&quot;settings&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="606513031713378">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="232246491166393" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="748747261689101" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="720838157824924" type="Menu_BigBlueButtonBG">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="14" name="Stop" sid="252203115255753" type="Menu_SmallGrayButton1BG">
+                                    <param id="0" name="Stop Mode">1</param>
+                                </action>
+                                <action behavior="LiteTween" id="14" name="Stop" sid="159907975857220" type="Menu_SmallGrayButton2BG">
+                                    <param id="0" name="Stop Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Scrolling lock</comment>
+                        <event-block sid="263332192193637">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="672464161047613" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="668871602885831" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CanScrollUp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="304563986539465">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="483255275315450" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="751759302022456" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CanScrollUp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="194884622998897">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="882389643525477" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="748618384426898" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CanScrollDown</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="865633228348672">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="823853433707193" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="782854784608569" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CanScrollDown</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Buttons animations</comment>
+                        <event-block sid="302527927056547">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="669734441607578" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyUpHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="975249943838227" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="758575125409139" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CanScrollUp</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="806760887655988" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="489832203728339">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="869394160639238" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="132123070947713" type="Menu_BigBlueButtonBG">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="256241499179376" type="Menu_SmallGrayButton1BG">
+                                            <param id="0" name="Reverse mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="914795103287990">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="896559459394234" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="471894808637389" type="Menu_SmallGrayButton1BG">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="562200387065891" type="Menu_SmallGrayButton2BG">
+                                            <param id="0" name="Reverse mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="418618689259760">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="856379036891326" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyDownHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="983248592197781" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="555865762724499" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CanScrollDown</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="201921418111898" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="752375776095278">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="471929288877157" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="535450000683796" type="Menu_BigBlueButtonBG">
+                                            <param id="0" name="Reverse mode">1</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="694800610368533" type="Menu_SmallGrayButton1BG">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="395182323709109">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="790433735325812" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="526702035067311" type="Menu_SmallGrayButton1BG">
+                                            <param id="0" name="Reverse mode">1</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="199907864554080" type="Menu_SmallGrayButton2BG">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="737097673705331">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="743767631902424" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="794551757795061" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Test level</comment>
+                                <event-block sid="716646528032069">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="105877874005787" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="789461813119798" type="TransitionIn">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="633408227265283" type="TransitionIn" />
+                                        <action id="-16" name="Wait" sid="821037944985703" type="System">
+                                            <param id="0" name="Seconds">0.25</param>
+                                        </action>
+                                        <action id="33" name="Stop all" sid="748709491408659" type="Audio" />
+                                        <action id="-2" name="Go to layout" sid="441421628915749" type="System">
+                                            <param id="0" name="Layout">level</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Go to website</comment>
+                                <event-block sid="915472896681924">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="406508082428489" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>Can&apos;t do an &quot;OR&quot; here because web version can be launched from mobile</comment>
+                                        <event-block sid="173456896965371">
+                                            <conditions>
+                                                <condition id="-32" name="Is on platform" sid="443183441962506" type="System">
+                                                    <param id="0" name="Platform">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="316673630541042" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="7" name="Go to URL" sid="926009413381396" type="Browser">
+                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
+                                                    <param id="1" name="Target">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="647187694218149">
+                                            <conditions>
+                                                <condition id="-20" name="Is on mobile device" sid="405623139740707" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="872702200479033" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="7" name="Go to URL" sid="686987781595761" type="Browser">
+                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
+                                                    <param id="1" name="Target">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="523918662940293">
+                                            <conditions>
+                                                <condition id="-32" name="Is on platform" sid="281323407414908" type="System">
+                                                    <param id="0" name="Platform">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="529801472437511" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="29" name="Open browser" sid="847366891969452" type="NWjs">
+                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Quit game</comment>
+                                <event-block sid="817087416686709">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="673938768849700" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="377353899682090" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="1" name="Close" sid="397600169137525" type="Browser" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="579283931367090">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="321533598759489" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="0" name="Restart fade" sid="454232651757764" type="Transition" />
+                <action id="0" name="Play" sid="214090899290803" type="Audio">
+                    <param id="0" name="Audio file">MUS_menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MUS_menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

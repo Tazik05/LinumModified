@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 3</name>
+    <events>
+        <event-block sid="292964693224497">
+            <conditions>
+                <condition id="0" name="On clicked" sid="107895314148628" type="Button2" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="409656468287841" type="Audio">
+                    <param id="0" name="Audio file">bgm_test_zone_2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;test&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="655926093370544">
+            <conditions>
+                <condition id="0" name="On clicked" sid="937925070707232" type="Button3" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="440538675980618" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioSpeedup</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="309106007436156">
+            <conditions>
+                <condition id="0" name="On clicked" sid="247482749493782" type="Button4" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="713683227857902" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioSpeedup</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="634082700490933">
+            <conditions>
+                <condition id="0" name="On clicked" sid="666294936411237" type="Button5" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="703947194474852" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="242832810695273">
+            <conditions />
+            <actions>
+                <action id="0" name="Set text" sid="110379170206661" type="Text2">
+                    <param id="0" name="Text">Values_Level.AudioPlaybackRate</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="742124405988734">
+            <conditions>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="863686990462612" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioPlaybackRate</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set playback rate" sid="589960985916764" type="Audio">
+                    <param id="0" name="Tag">&quot;test&quot;</param>
+                    <param id="1" name="Playback rate">Values_Level.AudioPlaybackRate</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="264801195379474">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="176611233089688" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioPlaybackRate</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="611119037193003" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set playback rate" sid="926927573623724" type="Audio">
+                    <param id="0" name="Tag">&quot;test&quot;</param>
+                    <param id="1" name="Playback rate">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="969475831578899">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="963084735186405" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioSpeedup</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="643572483667933" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioPlaybackRate</param>
+                    <param id="1" name="Value">lerp(Self.AudioPlaybackRate, 1.3, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="932303566842852">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="682419356322362" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioSpeedup</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="701453296718300" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioPlaybackRate</param>
+                    <param id="1" name="Value">lerp(Self.AudioPlaybackRate, 1, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="860188835211054">
+            <conditions>
+                <condition id="0" name="On clicked" sid="777782396246525" type="Button4" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="213060176071113" type="Values_Level">
+                    <param id="0" name="Instance variable">AudioSpeedup</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

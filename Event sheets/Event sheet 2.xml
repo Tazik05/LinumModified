@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <event-block sid="331565099236896">
+            <conditions>
+                <condition id="0" name="On clicked" sid="279377085674116" type="Button" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="515605062993776" type="AJAX">
+                    <param id="0" name="Tag">&quot;GetGameInfo&quot;</param>
+                    <param id="1" name="URL">&quot;https://gamejolt.com/site-api/web/discover/games/overview/&quot;&amp;TextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106321670404164">
+            <conditions>
+                <condition id="0" name="On completed" sid="693512084410737" type="AJAX">
+                    <param id="0" name="Tag">&quot;GetGameInfo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="60" name="LoadJSON" sid="579736563750252" type="JSON">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_Level</name>
+    <events>
+        <include>E_Engine</include>
+        <include>E_global</include>
+        <event-block disabled="1" sid="899657733420228">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="439500231071097" type="LevelBG">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-64</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="288150501695696" type="LevelBG">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">-64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="152397062303061" type="LevelBG">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="929725451777216">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="754055169826174" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="667258813755448" type="Function">
+                    <param id="0" name="Name">&quot;AndroidKeysShow&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
