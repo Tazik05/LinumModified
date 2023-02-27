@@ -4926,19 +4926,36 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="564906723433932">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="607073831019648" type="Function">
+                                            <param id="0" name="Name">&quot;Hurt&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
                                 <event-block sid="585982989851380">
                                     <conditions>
-                                        <condition id="0" name="On function" sid="444062377204617" type="Function">
-                                            <param id="0" name="Name">&quot;Hurt&quot;</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="444062377204617" type="Values_Player">
+                                            <param id="0" name="Instance variable">IsHurt</param>
                                         </condition>
                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="895356850357763" type="Values_Player">
                                             <param id="0" name="Instance variable">State</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Dead&quot;</param>
                                         </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="710217185033978" type="Values_Player">
+                                            <param id="0" name="Instance variable">Invincibility</param>
+                                        </condition>
                                         <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="341373871719906" type="PlayerSprite" />
+                                        <condition id="-4" name="Trigger once while true" sid="454261778302470" type="System" />
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="980804485803495" type="Values_Player">
+                                            <param id="0" name="Instance variable">IsHurt</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="478995578530858">
                                             <conditions>
@@ -7096,9 +7113,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="111683912781236" type="Function">
-                                            <param id="0" name="Name">&quot;Hurt&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                        <action id="-13" name="Set boolean" sid="260354426201027" type="Values_Player">
+                                            <param id="0" name="Instance variable">IsHurt</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -7406,9 +7423,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="497510269714122" type="Function">
-                                                    <param id="0" name="Name">&quot;Hurt&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
+                                                <action id="-13" name="Set boolean" sid="677286349247245" type="Values_Player">
+                                                    <param id="0" name="Instance variable">IsHurt</param>
+                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -7489,9 +7506,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="849062593886670" type="Function">
-                                            <param id="0" name="Name">&quot;Hurt&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                        <action id="-13" name="Set boolean" sid="182803135764191" type="Values_Player">
+                                            <param id="0" name="Instance variable">IsHurt</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -7786,11 +7803,20 @@
                                                                 <condition id="-4" name="Trigger once while true" sid="190473419212492" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="0" name="Call function" sid="888464525266895" type="Function">
-                                                                    <param id="0" name="Name">&quot;Hurt&quot;</param>
-                                                                    <param id="1" name="Parameter {n}"></param>
+                                                                <action id="-13" name="Set boolean" sid="472114501638213" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">IsHurt</param>
+                                                                    <param id="1" name="Value">1</param>
                                                                 </action>
-                                                                <action id="0" name="Play" sid="939436940306935" type="Audio">
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="817932329055220">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="130324538940650" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Invincibility</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Play" sid="628000329299935" type="Audio">
                                                                     <param id="0" name="Audio file">SFX_Spikes</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>

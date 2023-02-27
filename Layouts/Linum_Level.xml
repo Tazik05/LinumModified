@@ -23344,6 +23344,59 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Monitor" uid="833">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Invincibility</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Contents>Invincibility</Contents>
+                        <Bumpable>false</Bumpable>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop2">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>360</max-speed>
+                                <acceleration>0</acceleration>
+                                <deceleration>0</deceleration>
+                                <jump-strength>0</jump-strength>
+                                <gravity>787.5</gravity>
+                                <max-fall-speed>960</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3160</x>
+                        <y>696</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -25472,6 +25525,7 @@
                         <LastPTS>0</LastPTS>
                         <ShieldTimer>0</ShieldTimer>
                         <ShieldTrigger>false</ShieldTrigger>
+                        <IsHurt>false</IsHurt>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

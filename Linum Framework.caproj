@@ -156,6 +156,7 @@
                     <instance-variable name="LastPTS" sid="367798282381673" type="number" />
                     <instance-variable name="ShieldTimer" sid="654778540999989" type="number" />
                     <instance-variable name="ShieldTrigger" sid="401757578402107" type="boolean" />
+                    <instance-variable name="IsHurt" sid="838965631354767" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Timer" sid="760925343406501">
