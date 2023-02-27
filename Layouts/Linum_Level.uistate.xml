@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>-3.56433</position-x>
-        <position-y>116.31</position-y>
-        <position-z>39.3304</position-z>
-        <lookat-x>-3.56433</lookat-x>
-        <lookat-y>116.31</lookat-y>
+        <position-x>6.55287</position-x>
+        <position-y>77.865</position-y>
+        <position-z>62.8186</position-z>
+        <lookat-x>6.55287</lookat-x>
+        <lookat-y>77.865</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -37,10 +37,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layer locked="0" name="Pause_Menu" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="Android_Controls" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="Android_Areas" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Transition" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="LevelCard" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Debug" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="ConsoleUI" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Cursor" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Transition" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="LevelCard" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Debug" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="ConsoleUI" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Cursor" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>

@@ -4860,10 +4860,6 @@
                                                 <action behavior="Timer2" id="1" name="Stop timer" sid="315410974496958" type="Values_Player">
                                                     <param id="0" name="Tag">&quot;HurtTimer&quot;</param>
                                                 </action>
-                                                <action disabled="1" id="-10" name="Set value" sid="323579039338839" type="Values_Player">
-                                                    <param id="0" name="Instance variable">State</param>
-                                                    <param id="1" name="Value">&quot;Idle&quot;</param>
-                                                </action>
                                                 <action id="-13" name="Set boolean" sid="153041257365537" type="Values_Player">
                                                     <param id="0" name="Instance variable">CanControl</param>
                                                     <param id="1" name="Value">1</param>
@@ -4944,161 +4940,226 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="509884889844579">
+                                        <event-block sid="478995578530858">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="326089982601352" type="Values_Player">
-                                                    <param id="0" name="Instance variable">Rings</param>
-                                                    <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="862868004378857" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="361488301488534" type="Function">
-                                                    <param id="0" name="Name">&quot;InstantDeath&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="745467873091357">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="924001526741438" type="Values_Player">
-                                                    <param id="0" name="Instance variable">Rings</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">0</param>
+                                                <condition id="-7" name="Compare instance variable" sid="976929278641980" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;None&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="700667009293143">
+                                                <event-block sid="509884889844579">
                                                     <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="359490776143773" type="System" />
+                                                        <condition id="-7" name="Compare instance variable" sid="326089982601352" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Rings</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="862868004378857" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Play" sid="984130611691460" type="Audio">
-                                                            <param id="0" name="Audio file">SFX_LoseRings</param>
+                                                        <action id="0" name="Call function" sid="361488301488534" type="Function">
+                                                            <param id="0" name="Name">&quot;InstantDeath&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="745467873091357">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="924001526741438" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Rings</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="700667009293143">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="359490776143773" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Play" sid="984130611691460" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_LoseRings</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_LoseRings&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="122039636791261" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">State</param>
+                                                                    <param id="1" name="Value">&quot;Hurt&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="227371695158330" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">HurtingState</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="211907073174356" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanControl</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="530674232252324" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanChangeDirection</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action behavior="Timer2" id="0" name="Start timer" sid="405699406315610" type="Values_Player">
+                                                                    <param id="0" name="Duration">0.1</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;HurtTimer&quot;</param>
+                                                                </action>
+                                                                <action id="-2" name="Set Y" sid="698945817829937" type="Sensor_Main">
+                                                                    <param id="0" name="Y">Self.Y-2</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="212248485251000">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="957341222841368" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Rings</param>
+                                                                    <param id="1" name="Comparison">3</param>
+                                                                    <param id="2" name="Value">50</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="469518239416824">
+                                                                    <conditions>
+                                                                        <condition id="-12" name="Repeat" sid="808260386714362" type="System">
+                                                                            <param id="0" name="Count">Values_Player.Rings</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-11" name="Add to" sid="647066070649445" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Rings</param>
+                                                                            <param id="1" name="Value">-1</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Create object" sid="784799228588198" type="System">
+                                                                            <param id="0" name="Object to create">RingLost</param>
+                                                                            <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
+                                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                                            <param id="3" name="Y">Sensor_Main.Y</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="0" name="Set speed" sid="454933865007763" type="RingLost">
+                                                                            <param id="0" name="Speed">random(100,250)</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="2" name="Set gravity" sid="638661592539909" type="RingLost">
+                                                                            <param id="0" name="Gravity">250</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="205356272596585" type="RingLost">
+                                                                            <param id="0" name="Angle">random(0,359)</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="386449272812118" type="RingLost">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="840324940747024">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="617223996076515" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Rings</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Value">50</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="137787362672122">
+                                                                    <conditions>
+                                                                        <condition id="-4" name="Trigger once while true" sid="620660971693157" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="951439005194144" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Rings</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="751619535753001">
+                                                                    <conditions>
+                                                                        <condition id="-12" name="Repeat" sid="444270853407935" type="System">
+                                                                            <param id="0" name="Count">50</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="322563561987772" type="System">
+                                                                            <param id="0" name="Object to create">RingLost</param>
+                                                                            <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
+                                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                                            <param id="3" name="Y">Sensor_Main.Y</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="0" name="Set speed" sid="668089353342712" type="RingLost">
+                                                                            <param id="0" name="Speed">random(100,250)</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="2" name="Set gravity" sid="545110452550872" type="RingLost">
+                                                                            <param id="0" name="Gravity">250</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="253208401286205" type="RingLost">
+                                                                            <param id="0" name="Angle">random(0,359)</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="672136188268558" type="RingLost">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="505375749198568">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="675019478473506" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;None&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="946240021712626">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="663999529884205" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="766954636796260" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Hurt</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFX_LoseRings&quot;</param>
                                                         </action>
-                                                        <action id="-10" name="Set value" sid="122039636791261" type="Values_Player">
+                                                        <action id="-10" name="Set value" sid="303581542420042" type="Values_Player">
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Value">&quot;Hurt&quot;</param>
                                                         </action>
-                                                        <action id="-10" name="Set value" sid="227371695158330" type="Values_Player">
+                                                        <action id="-10" name="Set value" sid="623673684794128" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Shield</param>
+                                                            <param id="1" name="Value">&quot;None&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="900416829592026" type="Values_Player">
                                                             <param id="0" name="Instance variable">HurtingState</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
-                                                        <action id="-13" name="Set boolean" sid="211907073174356" type="Values_Player">
+                                                        <action id="-13" name="Set boolean" sid="633577358382989" type="Values_Player">
                                                             <param id="0" name="Instance variable">CanControl</param>
                                                             <param id="1" name="Value">0</param>
                                                         </action>
-                                                        <action id="-13" name="Set boolean" sid="530674232252324" type="Values_Player">
+                                                        <action id="-13" name="Set boolean" sid="905092486653374" type="Values_Player">
                                                             <param id="0" name="Instance variable">CanChangeDirection</param>
                                                             <param id="1" name="Value">0</param>
                                                         </action>
-                                                        <action behavior="Timer2" id="0" name="Start timer" sid="405699406315610" type="Values_Player">
+                                                        <action behavior="Timer2" id="0" name="Start timer" sid="291022360675703" type="Values_Player">
                                                             <param id="0" name="Duration">0.1</param>
                                                             <param id="1" name="Type">0</param>
                                                             <param id="2" name="Tag">&quot;HurtTimer&quot;</param>
                                                         </action>
-                                                        <action id="-2" name="Set Y" sid="698945817829937" type="Sensor_Main">
+                                                        <action id="-2" name="Set Y" sid="741748200771610" type="Sensor_Main">
                                                             <param id="0" name="Y">Self.Y-2</param>
                                                         </action>
                                                     </actions>
-                                                </event-block>
-                                                <event-block sid="212248485251000">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="957341222841368" type="Values_Player">
-                                                            <param id="0" name="Instance variable">Rings</param>
-                                                            <param id="1" name="Comparison">3</param>
-                                                            <param id="2" name="Value">50</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="469518239416824">
-                                                            <conditions>
-                                                                <condition id="-12" name="Repeat" sid="808260386714362" type="System">
-                                                                    <param id="0" name="Count">Values_Player.Rings</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-11" name="Add to" sid="647066070649445" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Rings</param>
-                                                                    <param id="1" name="Value">-1</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="784799228588198" type="System">
-                                                                    <param id="0" name="Object to create">RingLost</param>
-                                                                    <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
-                                                                    <param id="2" name="X">Sensor_Main.X</param>
-                                                                    <param id="3" name="Y">Sensor_Main.Y</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="0" name="Set speed" sid="454933865007763" type="RingLost">
-                                                                    <param id="0" name="Speed">random(100,250)</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="2" name="Set gravity" sid="638661592539909" type="RingLost">
-                                                                    <param id="0" name="Gravity">250</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="205356272596585" type="RingLost">
-                                                                    <param id="0" name="Angle">random(0,359)</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="5" name="Set enabled" sid="386449272812118" type="RingLost">
-                                                                    <param id="0" name="State">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                                <event-block sid="840324940747024">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="617223996076515" type="Values_Player">
-                                                            <param id="0" name="Instance variable">Rings</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Value">50</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="137787362672122">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="620660971693157" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-10" name="Set value" sid="951439005194144" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Rings</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="751619535753001">
-                                                            <conditions>
-                                                                <condition id="-12" name="Repeat" sid="444270853407935" type="System">
-                                                                    <param id="0" name="Count">50</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-3" name="Create object" sid="322563561987772" type="System">
-                                                                    <param id="0" name="Object to create">RingLost</param>
-                                                                    <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
-                                                                    <param id="2" name="X">Sensor_Main.X</param>
-                                                                    <param id="3" name="Y">Sensor_Main.Y</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="0" name="Set speed" sid="668089353342712" type="RingLost">
-                                                                    <param id="0" name="Speed">random(100,250)</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="2" name="Set gravity" sid="545110452550872" type="RingLost">
-                                                                    <param id="0" name="Gravity">250</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="253208401286205" type="RingLost">
-                                                                    <param id="0" name="Angle">random(0,359)</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="5" name="Set enabled" sid="672136188268558" type="RingLost">
-                                                                    <param id="0" name="State">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
