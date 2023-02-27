@@ -12,9 +12,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="2">Linum_Level</layout>
         <layout order="5">Linum_Continue</layout>
-        <event-sheet active="1" order="1">E_Engine</event-sheet>
+        <event-sheet order="1">E_Engine</event-sheet>
         <event-sheet order="3">E_Level</event-sheet>
-        <event-sheet order="4">E_global</event-sheet>
+        <event-sheet active="1" order="4">E_global</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

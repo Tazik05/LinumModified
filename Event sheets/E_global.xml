@@ -81,403 +81,413 @@
         <event-group description="" sid="573594773311582" title="Global input management">
             <sub-events>
                 <comment>Toggle between keyboard and gamepad mode</comment>
-                <event-block sid="467579441829596">
+                <event-block sid="718362349947669">
                     <conditions>
-                        <condition id="1" name="On any key pressed" sid="407975175697701" type="Keyboard" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="907618015177816" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="341736681528556">
-                    <conditions>
-                        <condition id="8" name="On any button pressed" sid="533035319676779" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="473063524453421" type="Values_PauseMenu">
+                            <param id="0" name="Instance variable">Paused</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="365545032729620" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>UP</comment>
-                <event-block any="1" sid="587037598112557">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="650723416054903" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="3" name="Is button down" sid="129842666408964" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">12</param>
-                        </condition>
-                        <condition id="5" name="Compare axis" sid="406267832431395" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">-25</param>
-                        </condition>
-                        <condition id="4" name="Is touching object" sid="859542581551754" type="Touch">
-                            <param id="0" name="Object">Android_UpZone</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="880120722482258" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyUpHold</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="922333564834874" type="Android_Up">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="765418101062414">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="120820868890749" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="4" inverted="1" name="Is touching object" sid="695733481328605" type="Touch">
-                            <param id="0" name="Object">Android_UpZone</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="294080098273497" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="169189685887831" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyUpHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="118201686494753" type="Android_Up">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="248076071758885">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="801237890277692" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="577292571695241" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="569015685125610" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyUpHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="365034178816679" type="Android_Up">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>DOWN</comment>
-                <event-block any="1" sid="534297211708051">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="476379232378493" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                        <condition id="6" name="On button pressed" sid="281408423254891" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">13</param>
-                        </condition>
-                        <condition id="5" name="Compare axis" sid="478113669467842" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">25</param>
-                        </condition>
-                        <condition id="4" name="Is touching object" sid="542759946034934" type="Touch">
-                            <param id="0" name="Object">Android_DownZone</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="719879900266985" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyDownHold</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="948794184750153" type="Android_Down">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="458403011698301">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="137422096296248" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                        <condition id="4" inverted="1" name="Is touching object" sid="308910569071111" type="Touch">
-                            <param id="0" name="Object">Android_DownZone</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="355038626324287" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="301028258792168" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyDownHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="721960198760595" type="Android_Down">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="278104613191731">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="793106322769453" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                        <condition id="3" inverted="1" name="Is button down" sid="919729154057435" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">13</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="697982353469032" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="209461150209607" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyDownHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="300340249455380" type="Android_Down">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>LEFT</comment>
-                <event-block any="1" sid="928156728940077">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="799785146448813" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="3" name="Is button down" sid="638081607625358" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">14</param>
-                        </condition>
-                        <condition id="5" name="Compare axis" sid="200186354067203" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">-25</param>
-                        </condition>
-                        <condition id="4" name="Is touching object" sid="873397467404405" type="Touch">
-                            <param id="0" name="Object">Android_LeftZone</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="327634587081947" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyLeftHold</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="198926875402333" type="Android_Left">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="676581031023339">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="639291624494044" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="4" inverted="1" name="Is touching object" sid="998601775775921" type="Touch">
-                            <param id="0" name="Object">Android_LeftZone</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="465989223385304" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="721575571515337" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyLeftHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="358287483172058" type="Android_Left">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="914456249915579">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="876283413927920" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                        <condition id="3" inverted="1" name="Is button down" sid="367073408131059" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">14</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="737551422705371" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="458916895606166" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyLeftHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="377695610802293" type="Android_Left">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>RIGHT</comment>
-                <event-block any="1" sid="913074517068116">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="577725867727148" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="3" name="Is button down" sid="254943574266828" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">15</param>
-                        </condition>
-                        <condition id="5" name="Compare axis" sid="885435920404123" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">25</param>
-                        </condition>
-                        <condition id="4" name="Is touching object" sid="332362883505924" type="Touch">
-                            <param id="0" name="Object">Android_RightZone</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="267078388936559" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyRightHold</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="757898368951348" type="Android_Right">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="706929746657522">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="666410063838958" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="4" inverted="1" name="Is touching object" sid="515024187825618" type="Touch">
-                            <param id="0" name="Object">Android_RightZone</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="505069908759382" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="606067589951960" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyRightHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="997725104378512" type="Android_Right">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="372924745812343">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="112192612787964" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                        <condition id="3" inverted="1" name="Is button down" sid="738959432162339" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">15</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="277197354789503" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="861289383736430" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyRightHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="728229847041559" type="Android_Right">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>A</comment>
-                <event-block any="1" sid="196865102290657">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="947788726970996" type="Keyboard">
-                            <param id="0" name="Key">90</param>
-                        </condition>
-                        <condition id="3" name="Is button down" sid="553142279019333" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">0</param>
-                        </condition>
-                        <condition id="4" name="Is touching object" sid="573710077487599" type="Touch">
-                            <param id="0" name="Object">Android_Azone</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="490190737801373" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyAHold</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="614671886492924" type="Android_Apressed">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="375573799779948">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="746012425129796" type="Keyboard">
-                            <param id="0" name="Key">90</param>
-                        </condition>
-                        <condition id="4" inverted="1" name="Is touching object" sid="404101208685729" type="Touch">
-                            <param id="0" name="Object">Android_Azone</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="143567736209136" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="742493226678234" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyAHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="845441068493447" type="Android_Apressed">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="803058627908558">
-                    <conditions>
-                        <condition id="3" inverted="1" name="Is button down" sid="381615183240170" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="133636724043246" type="Values_Input">
-                            <param id="0" name="Instance variable">Gamepad</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="138780683502731" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyAHold</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="690953107386895" type="Android_Apressed">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="467579441829596">
+                            <conditions>
+                                <condition id="1" name="On any key pressed" sid="407975175697701" type="Keyboard" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="907618015177816" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="341736681528556">
+                            <conditions>
+                                <condition id="8" name="On any button pressed" sid="533035319676779" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="365545032729620" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>UP</comment>
+                        <event-block any="1" sid="587037598112557">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="650723416054903" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="129842666408964" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">12</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="406267832431395" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-25</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="859542581551754" type="Touch">
+                                    <param id="0" name="Object">Android_UpZone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="880120722482258" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyUpHold</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="922333564834874" type="Android_Up">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="765418101062414">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="120820868890749" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="695733481328605" type="Touch">
+                                    <param id="0" name="Object">Android_UpZone</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="294080098273497" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="169189685887831" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyUpHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="118201686494753" type="Android_Up">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="248076071758885">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="801237890277692" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="577292571695241" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="569015685125610" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyUpHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="365034178816679" type="Android_Up">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>DOWN</comment>
+                        <event-block any="1" sid="534297211708051">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="476379232378493" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="281408423254891" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">13</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="478113669467842" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">25</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="542759946034934" type="Touch">
+                                    <param id="0" name="Object">Android_DownZone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="719879900266985" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyDownHold</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="948794184750153" type="Android_Down">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="458403011698301">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="137422096296248" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="308910569071111" type="Touch">
+                                    <param id="0" name="Object">Android_DownZone</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="355038626324287" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="301028258792168" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyDownHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="721960198760595" type="Android_Down">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="278104613191731">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="793106322769453" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Is button down" sid="919729154057435" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">13</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="697982353469032" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="209461150209607" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyDownHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="300340249455380" type="Android_Down">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>LEFT</comment>
+                        <event-block any="1" sid="928156728940077">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="799785146448813" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="638081607625358" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">14</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="200186354067203" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-25</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="873397467404405" type="Touch">
+                                    <param id="0" name="Object">Android_LeftZone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="327634587081947" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyLeftHold</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="198926875402333" type="Android_Left">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="676581031023339">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="639291624494044" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="998601775775921" type="Touch">
+                                    <param id="0" name="Object">Android_LeftZone</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="465989223385304" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="721575571515337" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyLeftHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="358287483172058" type="Android_Left">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="914456249915579">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="876283413927920" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Is button down" sid="367073408131059" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">14</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="737551422705371" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="458916895606166" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyLeftHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="377695610802293" type="Android_Left">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>RIGHT</comment>
+                        <event-block any="1" sid="913074517068116">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="577725867727148" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="254943574266828" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">15</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="885435920404123" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">25</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="332362883505924" type="Touch">
+                                    <param id="0" name="Object">Android_RightZone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="267078388936559" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyRightHold</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="757898368951348" type="Android_Right">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="706929746657522">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="666410063838958" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="515024187825618" type="Touch">
+                                    <param id="0" name="Object">Android_RightZone</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="505069908759382" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="606067589951960" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyRightHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="997725104378512" type="Android_Right">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372924745812343">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="112192612787964" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Is button down" sid="738959432162339" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">15</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="277197354789503" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="861289383736430" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyRightHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="728229847041559" type="Android_Right">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>A</comment>
+                        <event-block any="1" sid="196865102290657">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="947788726970996" type="Keyboard">
+                                    <param id="0" name="Key">90</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="553142279019333" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="573710077487599" type="Touch">
+                                    <param id="0" name="Object">Android_Azone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="490190737801373" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="614671886492924" type="Android_Apressed">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="375573799779948">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Key is down" sid="746012425129796" type="Keyboard">
+                                    <param id="0" name="Key">90</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="404101208685729" type="Touch">
+                                    <param id="0" name="Object">Android_Azone</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="143567736209136" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="742493226678234" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="845441068493447" type="Android_Apressed">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="803058627908558">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Is button down" sid="381615183240170" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="133636724043246" type="Values_Input">
+                                    <param id="0" name="Instance variable">Gamepad</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="138780683502731" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="690953107386895" type="Android_Apressed">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Pause</comment>
                 <event-block any="1" sid="385230594388925">
