@@ -287,6 +287,7 @@
                     <instance-variable name="FpsCounter" sid="270356192948968" type="number" />
                     <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
                     <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
+                    <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
                 </instance-variables>
             </object-type>
             <object-type name="cursor" sid="832183731288467">
@@ -6371,6 +6372,11 @@
         </object-type>
         <object-type name="GameOver1" sid="912355455450772">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="293416155509236">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="949936784779570" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
@@ -6379,6 +6385,11 @@
         </object-type>
         <object-type name="GameOver2" sid="294040365613534">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="749978625385856">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="149307371272188" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\2.png" />
@@ -6395,6 +6406,11 @@
         </object-type>
         <object-type name="SpritesGameOver" sid="658648441229629">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="886339485170397">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Sonic" pingpong="0" repeatcount="1" repeatto="0" sid="506412896546380" speed="2">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Pc\Downloads\121194.png" />
@@ -6403,6 +6419,12 @@
                 <animation framecount="2" loop="1" name="Sonic02" pingpong="0" repeatcount="1" repeatto="0" sid="716224606755090" speed="2">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Pc\Downloads\Project - Cosmic Framework REBOOT\54410.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="1" name="Sonic03" pingpong="0" repeatcount="1" repeatto="0" sid="459320481186964" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\двиг\LinumFrameworkLegacy_v0.2.1\Animations\PlayerSprite\Run_1\000.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\двиг\LinumFrameworkLegacy_v0.2.1\Animations\PlayerSprite\Run_1\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\двиг\LinumFrameworkLegacy_v0.2.1\Animations\PlayerSprite\Run_1\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\двиг\LinumFrameworkLegacy_v0.2.1\Animations\PlayerSprite\Run_1\003.png" />
                 </animation>
                 <animation framecount="2" loop="1" name="Tails" pingpong="0" repeatcount="1" repeatto="0" sid="270617591566122" speed="2">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Pc\Downloads\121194.png" />
@@ -6433,6 +6455,18 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Pc\Downloads\121194.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Values_Continue" sid="380752313897791">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="CanContinue" sid="979891868910808" type="boolean" />
+                <instance-variable name="IsMoving" sid="757693685905375" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148652501287206" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -6637,7 +6671,7 @@
         <layout>Linum_mainMenu.xml</layout>
         <layout>Linum_MenuNew.xml</layout>
         <layout>Linum_Level.xml</layout>
-        <layout>Linum_GameOverScreen.xml</layout>
+        <layout>Linum_Continue.xml</layout>
         <layout>UpdateTest.xml</layout>
         <layout>TestLayout.xml</layout>
         <layout>ConsoleUI.xml</layout>

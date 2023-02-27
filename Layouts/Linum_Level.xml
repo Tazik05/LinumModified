@@ -28889,6 +28889,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -28911,6 +28922,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -29151,17 +29173,17 @@
     <nonworld-instances>
         <instance type="GlobalSettings" uid="998">
             <instance-variables>
-                <Lives>3</Lives>
+                <Lives>1</Lives>
                 <Score>0</Score>
                 <TunnelMode>1</TunnelMode>
                 <RingHighEffect>true</RingHighEffect>
                 <NewSpeedShoesAudio>true</NewSpeedShoesAudio>
                 <EnablePause>true</EnablePause>
-                <EnableOptimization>false</EnableOptimization>
+                <EnableOptimization>true</EnableOptimization>
                 <EnableEventOptimization>false</EnableEventOptimization>
                 <EnableDebuggingMessages>true</EnableDebuggingMessages>
                 <EnableConsole>false</EnableConsole>
-                <EnableDebug>false</EnableDebug>
+                <EnableDebug>true</EnableDebug>
                 <SmartWatchSupport>false</SmartWatchSupport>
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
@@ -29171,6 +29193,7 @@
                 <FpsCounter>0</FpsCounter>
                 <FpsFix>false</FpsFix>
                 <PauseStyle>SSW</PauseStyle>
+                <LayoutSaver>Linum_Level</LayoutSaver>
             </instance-variables>
         </instance>
     </nonworld-instances>

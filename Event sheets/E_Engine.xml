@@ -1713,17 +1713,6 @@
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
-                                                        <event-block disabled="1" sid="137880707179617">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="396141796896590" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-10" name="Set value" sid="280102705818453" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">ShieldTimer</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
                                                     </sub-events>
                                                 </event-block>
                                             </sub-events>
@@ -4764,6 +4753,10 @@
                                                         <condition id="-4" name="Trigger once while true" sid="720815516588698" type="System" />
                                                     </conditions>
                                                     <actions>
+                                                        <action id="-13" name="Set boolean" sid="674955300940979" type="Values_Level">
+                                                            <param id="0" name="Instance variable">IsLevelTimerActive</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
                                                         <action id="33" name="Stop all" sid="121647849862793" type="Audio" />
                                                         <action id="0" name="Play" sid="887862609481146" type="Audio">
                                                             <param id="0" name="Audio file">Sonic 3 And Knuckles OST - Game Over</param>
@@ -4777,6 +4770,22 @@
                                                         <action id="0" name="Call function" sid="713450891974166" type="Function">
                                                             <param id="0" name="Name">&quot;Transition&quot;</param>
                                                             <param id="1" name="Parameter {n}">&quot;In&quot;{###}1.0{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="273043026271268" type="System">
+                                                            <param id="0" name="Seconds">2.0</param>
+                                                        </action>
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="144229523468410" type="GameOver1" />
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="728792922859344" type="GameOver2" />
+                                                        <action id="-16" name="Wait" sid="210201815619773" type="System">
+                                                            <param id="0" name="Seconds">1.0</param>
+                                                        </action>
+                                                        <action id="33" name="Stop all" sid="987810663828445" type="Audio" />
+                                                        <action id="-10" name="Set value" sid="861665349124496" type="GlobalSettings">
+                                                            <param id="0" name="Instance variable">LayoutSaver</param>
+                                                            <param id="1" name="Value">LayoutName</param>
+                                                        </action>
+                                                        <action id="-2" name="Go to layout" sid="664655114952313" type="System">
+                                                            <param id="0" name="Layout">Linum_Continue</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -12508,7 +12517,7 @@
                                         <action behavior="LevelTimer" id="1" name="Stop timer" sid="151400022098037" type="Values_Level">
                                             <param id="0" name="Tag">&quot;LevelTimer&quot;</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="296966495889896" type="HUD_TimeFont">
+                                        <action disabled="1" id="0" name="Set text" sid="296966495889896" type="HUD_TimeFont">
                                             <param id="0" name="Text">&quot;-:--&quot;</param>
                                         </action>
                                     </actions>

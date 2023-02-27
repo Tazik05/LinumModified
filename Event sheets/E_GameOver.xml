@@ -4,5 +4,156 @@
     <name>E_GameOver</name>
     <events>
         <include>E_global</include>
+        <event-block sid="441606434132863">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="382797773661769" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="955438453861428" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="167769570402998" type="Audio">
+                    <param id="0" name="Audio file">MUS_continue</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MUS_Continue&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="258677725713839">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="222476911755776" type="Text_CountGAMEOVER">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">10</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="456739594763317" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="686473661944199" type="Values_Continue">
+                    <param id="0" name="Instance variable">CanContinue</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="928305075634775">
+            <conditions>
+                <condition id="3" inverted="1" name="Compare frame" sid="754209316797268" type="Text_CountGAMEOVER">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">10</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="568764034133753" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="614139098413162" type="Values_Continue">
+                    <param id="0" name="Instance variable">CanContinue</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment></comment>
+        <event-block sid="130515130835468">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="240019417861511" type="Values_Continue">
+                    <param id="0" name="Instance variable">CanContinue</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="889772106754214">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="935255420437053" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="346742314309206" type="Text_CountGAMEOVER">
+                            <param id="0" name="Frame number">Self.AnimationFrame+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="910849830191179">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="734826763097887" type="Values_Input">
+                            <param id="0" name="Instance variable">KeyAHold</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="671695482318350" type="Values_Continue">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="403522165812840">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="181780367561522" type="Touch" />
+                        <condition id="-20" name="Is on mobile device" sid="148360807576762" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="967415845710136" type="Values_Continue">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="141133617118125">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="209889149929923" type="Values_Continue">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="849973026733927" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="194935794662586" type="Values_Continue">
+                    <param id="0" name="Instance variable">CanContinue</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="556893663484433" type="SpritesGameOver">
+                    <param id="0" name="Animation">&quot;Sonic03&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="779345649858163" type="SpritesGameOver">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="647152752246597" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="0" name="Call function" sid="468363222985149" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="108565902485115" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="33" name="Stop all" sid="762842932709609" type="Audio" />
+                <action id="-25" name="Go to layout (by name)" sid="329959628613084" type="System">
+                    <param id="0" name="Layout">GlobalSettings.LayoutSaver</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="621842867003459">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="785374336376099" type="Values_Continue">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="287081580874849" type="Values_Continue">
+                    <param id="0" name="Instance variable">CanContinue</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="634225561435526" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="578450143992066" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="9" name="Reload" sid="741286294036926" type="Browser" />
+            </actions>
+        </event-block>
+        <comment></comment>
     </events>
 </c2eventsheet>
