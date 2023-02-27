@@ -1041,7 +1041,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="743797938787801" title="ExecutingСommands">
+                        <event-group description="" sid="743797938787801" title="Executing Сommands">
                             <sub-events>
                                 <event-block sid="680336578440753">
                                     <conditions>
@@ -1513,13 +1513,8 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block any="1" sid="820866646637266">
+                                <event-block sid="820866646637266">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="754153904870278" type="GlobalSettings">
-                                            <param id="0" name="Instance variable">Platform</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Mobile&quot;</param>
-                                        </condition>
                                         <condition id="-7" name="Compare instance variable" sid="109604721507360" type="GlobalSettings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
@@ -1567,7 +1562,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block disabled="1" sid="986448328331441">
+                                <event-block sid="986448328331441">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="783123509109212" type="GlobalSettings">
                                             <param id="0" name="Instance variable">Platform</param>
