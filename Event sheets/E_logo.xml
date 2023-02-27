@@ -112,7 +112,7 @@
                             <param id="0" name="Seconds">0.25</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="686136537382057" type="System">
-                            <param id="0" name="Layout">mainMenu</param>
+                            <param id="0" name="Layout">Linum_mainMenu</param>
                         </action>
                     </actions>
                 </event-block>
@@ -135,7 +135,7 @@
                             <param id="0" name="Seconds">0.15</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="410822686100152" type="System">
-                            <param id="0" name="Layout">mainMenu</param>
+                            <param id="0" name="Layout">Linum_mainMenu</param>
                         </action>
                     </actions>
                 </event-block>

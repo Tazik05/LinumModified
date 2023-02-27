@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>preloader</name>
+    <name>Linum_preloader</name>
     <sid>364718172305157</sid>
     <event-sheet>E_preloader</event-sheet>
     <size>

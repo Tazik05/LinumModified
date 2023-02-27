@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>maunMenuNew</name>
-    <sid>901139305503960</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <name>Linum_mainMenu</name>
+    <sid>193874386154429</sid>
+    <event-sheet>E_mainMenu</event-sheet>
     <size>
         <width>426</width>
         <height>240</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="BG" sid="170278770680179">
+        <layer name="BG" sid="479537752714910">
             <initially-visible>1</initially-visible>
             <background-color>165,165,165</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Logo2" uid="1112">
+                <instance type="Logo2" uid="444">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -64,7 +64,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Logo" uid="1113">
+                <instance type="Logo" uid="443">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -116,7 +116,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuLoop2" uid="1114">
+                <instance type="MenuLoop2" uid="395">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -149,7 +149,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuLoop1" uid="1115">
+                <instance type="MenuLoop1" uid="394">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -182,7 +182,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Values_Menus" uid="1116">
+                <instance type="Values_Menus" uid="316">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -194,7 +194,7 @@
                         <Selected>1</Selected>
                         <CanScrollUp>false</CanScrollUp>
                         <CanScrollDown>false</CanScrollDown>
-                        <IsSettings>true</IsSettings>
+                        <IsSettings>false</IsSettings>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -211,7 +211,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Values_Input" uid="1117">
+                <instance type="Values_Input" uid="317">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -243,7 +243,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuGrid2" uid="1118">
+                <instance type="MenuGrid2" uid="391">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -278,7 +278,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuGrid1" uid="1119">
+                <instance type="MenuGrid1" uid="392">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -316,7 +316,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="MainMenu" sid="892467641096658">
+        <layer name="MainMenu" sid="208237642262059">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -332,7 +332,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Menu_ButtonsBG" uid="1120">
+                <instance type="Menu_ButtonsBG" uid="396">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -352,7 +352,7 @@
                         <opacity>0.400000006</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_SmallGrayButton2BG" uid="1121">
+                <instance type="Menu_SmallGrayButton2BG" uid="389">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -387,7 +387,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_SmallGrayButton1BG" uid="1122">
+                <instance type="Menu_SmallGrayButton1BG" uid="388">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -422,7 +422,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_BigBlueButtonBG" uid="1123">
+                <instance type="Menu_BigBlueButtonBG" uid="384">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -457,7 +457,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuHeader" uid="1124">
+                <instance type="MenuHeader" uid="369">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -479,7 +479,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BigStaticText" uid="1125">
+                <instance type="BigStaticText" uid="371">
                     <properties>
                         <character-width>20</character-width>
                         <character-height>26</character-height>
@@ -509,7 +509,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GamepadButton" uid="1126">
+                <instance type="GamepadButton" uid="372">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -531,7 +531,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_BigBlueButton" uid="1127">
+                <instance type="Menu_BigBlueButton" uid="382">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -553,7 +553,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_SmallGrayButton" uid="1128">
+                <instance type="Menu_SmallGrayButton" uid="383">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -575,7 +575,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_BigIcon" uid="1129">
+                <instance type="Menu_BigIcon" uid="385">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -597,7 +597,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_SmallIcon" uid="1130">
+                <instance type="Menu_SmallIcon" uid="386">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -619,7 +619,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StaticText" uid="1131">
+                <instance type="StaticText" uid="400">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>7</character-height>
@@ -649,7 +649,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BigStaticText" uid="1132">
+                <instance type="BigStaticText" uid="401">
                     <properties>
                         <character-width>20</character-width>
                         <character-height>26</character-height>
@@ -679,7 +679,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_SmallGrayButton" uid="1133">
+                <instance type="Menu_SmallGrayButton" uid="379">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -701,7 +701,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Menu_SmallIcon" uid="1134">
+                <instance type="Menu_SmallIcon" uid="380">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -723,7 +723,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StaticText" uid="1135">
+                <instance type="StaticText" uid="381">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>7</character-height>
@@ -753,7 +753,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GamepadButton2" uid="1136">
+                <instance type="GamepadButton2" uid="136">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>7</character-height>
@@ -786,7 +786,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Android_Controls" sid="568347627061819">
+        <layer name="Android_Controls" sid="620670640027556">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -802,7 +802,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Android_A" uid="1137">
+                <instance type="Android_A" uid="154">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -824,7 +824,7 @@
                         <opacity>0.649999976</opacity>
                     </world>
                 </instance>
-                <instance type="Android_Apressed" uid="1138">
+                <instance type="Android_Apressed" uid="170">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -846,7 +846,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Android_DPad" uid="1139">
+                <instance type="Android_DPad" uid="150">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -868,7 +868,7 @@
                         <opacity>0.649999976</opacity>
                     </world>
                 </instance>
-                <instance type="Android_Up" uid="1140">
+                <instance type="Android_Up" uid="155">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -890,7 +890,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Android_Left" uid="1141">
+                <instance type="Android_Left" uid="156">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -912,7 +912,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Android_Right" uid="1142">
+                <instance type="Android_Right" uid="157">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -934,7 +934,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Android_Down" uid="1143">
+                <instance type="Android_Down" uid="169">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -959,7 +959,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Android_Areas" sid="916424506229630">
+        <layer name="Android_Areas" sid="696184038694038">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -975,7 +975,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Android_Azone" uid="1144">
+                <instance type="Android_Azone" uid="171">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -997,7 +997,7 @@
                         <opacity>0.800000012</opacity>
                     </world>
                 </instance>
-                <instance type="Android_UpZone" uid="1145">
+                <instance type="Android_UpZone" uid="177">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1019,7 +1019,7 @@
                         <opacity>0.800000012</opacity>
                     </world>
                 </instance>
-                <instance type="Android_DownZone" uid="1146">
+                <instance type="Android_DownZone" uid="180">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1044,7 +1044,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Transition" sid="309798277687930">
+        <layer name="Transition" sid="488389124004201">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1060,7 +1060,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Transition" uid="1147">
+                <instance type="Transition" uid="528">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1091,7 +1091,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TransitionIn" uid="1148">
+                <instance type="TransitionIn" uid="0">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1122,7 +1122,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Android_FPS" uid="1149">
+                <instance type="Android_FPS" uid="509">
                     <properties>
                         <character-width>8</character-width>
                         <character-height>7</character-height>
@@ -1155,171 +1155,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Settings" sid="520863047778462">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="9patch" uid="1151">
-                    <properties>
-                        <left-margin>16</left-margin>
-                        <right-margin>16</right-margin>
-                        <top-margin>16</top-margin>
-                        <bottom-margin>16</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Center</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>224</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>400</width>
-                        <height>192</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="cursor" uid="1150">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>192</x>
-                        <y>-16</y>
-                        <z>0</z>
-                        <width>12</width>
-                        <height>17</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="StaticText2" uid="1152">
-                    <properties>
-                        <character-width>8</character-width>
-                        <character-height>7</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
-                        <text>+Video+</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>28</x>
-                        <y>36</y>
-                        <z>0</z>
-                        <width>68</width>
-                        <height>12</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="StaticText2" uid="1153">
-                    <properties>
-                        <character-width>8</character-width>
-                        <character-height>7</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
-                        <text>+Sound+</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>104</x>
-                        <y>36</y>
-                        <z>0</z>
-                        <width>68</width>
-                        <height>12</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="StaticText2" uid="1154">
-                    <properties>
-                        <character-width>8</character-width>
-                        <character-height>7</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
-                        <text>+Game+</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>176</x>
-                        <y>36</y>
-                        <z>0</z>
-                        <width>68</width>
-                        <height>12</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="SystemMessages" sid="284022722831116">
+        <layer name="ConsoleUI" sid="782471496048033">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1337,25 +1173,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="ConsoleUI" sid="674064161406096">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="Cursor" sid="293230818975568">
+        <layer name="Cursor" sid="229740180894961">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

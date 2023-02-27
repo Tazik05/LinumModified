@@ -64,7 +64,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>level</first-layout>
+    <first-layout>Linum_Level</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -154,6 +154,8 @@
                     <instance-variable name="Power" sid="853772095970707" type="number" />
                     <instance-variable name="PTSTimer" sid="875690953160355" type="number" />
                     <instance-variable name="LastPTS" sid="367798282381673" type="number" />
+                    <instance-variable name="ShieldTimer" sid="654778540999989" type="number" />
+                    <instance-variable name="ShieldTrigger" sid="401757578402107" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Timer" sid="760925343406501">
@@ -586,7 +588,7 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>
-                        <animation framecount="3" loop="0" name="Aquatic_Bouncing" pingpong="0" repeatcount="1" repeatto="0" sid="934826324709879" speed="10">
+                        <animation framecount="3" loop="0" name="Aquatic_Bouncing" pingpong="0" repeatcount="1" repeatto="0" sid="934826324709879" speed="20">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -4611,6 +4613,18 @@
                             <frame duration="64" hotspotX="0.5" hotspotY="0.75" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
                         </animation>
+                        <animation framecount="10" loop="0" name="AquaticShield" pingpong="0" repeatcount="1" repeatto="0" sid="767376550584994" speed="60">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="64" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                        </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
@@ -4792,7 +4806,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="WaterShield" pingpong="0" repeatcount="1" repeatto="0" sid="792932492374610" speed="15">
+                    <animation framecount="2" loop="1" name="AquaticShield" pingpong="0" repeatcount="1" repeatto="0" sid="792932492374610" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\двиг\11.png">
                             <collision-poly>
                                 <point x="0.0625" y="0" />
@@ -6371,6 +6385,57 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text_CONTINUE" sid="860225999069035">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="654483503043261" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Pc\Downloads\121194.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpritesGameOver" sid="658648441229629">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Sonic" pingpong="0" repeatcount="1" repeatto="0" sid="506412896546380" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Pc\Downloads\121194.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="2" loop="1" name="Sonic02" pingpong="0" repeatcount="1" repeatto="0" sid="716224606755090" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Pc\Downloads\Project - Cosmic Framework REBOOT\54410.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="2" loop="1" name="Tails" pingpong="0" repeatcount="1" repeatto="0" sid="270617591566122" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Pc\Downloads\121194.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BG_Continue" sid="989332992373350">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239386361806048" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pc\Downloads\121194.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_CountGAMEOVER" sid="884052337233311">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907979677897555" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Pc\Downloads\121194.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -6567,11 +6632,12 @@
         </family>
     </families>
     <layout-folder>
-        <layout>preloader.xml</layout>
-        <layout>logo.xml</layout>
-        <layout>mainMenu.xml</layout>
-        <layout>maunMenuNew.xml</layout>
-        <layout>level.xml</layout>
+        <layout>Linum_preloader.xml</layout>
+        <layout>Linum_logo.xml</layout>
+        <layout>Linum_mainMenu.xml</layout>
+        <layout>Linum_MenuNew.xml</layout>
+        <layout>Linum_Level.xml</layout>
+        <layout>Linum_GameOverScreen.xml</layout>
         <layout>UpdateTest.xml</layout>
         <layout>TestLayout.xml</layout>
         <layout>ConsoleUI.xml</layout>
@@ -6585,8 +6651,9 @@
             <event-sheet>E_mainMenu.xml</event-sheet>
             <event-sheet>E_preloader.xml</event-sheet>
             <event-sheet>CREDITS.xml</event-sheet>
+            <event-sheet>E_Level.xml</event-sheet>
+            <event-sheet>E_GameOver.xml</event-sheet>
         </event-folder>
-        <event-sheet>E_Level.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
@@ -6679,8 +6746,8 @@
         <file name="Sonic 3 And Knuckles OST - Game Over.ogg" />
         <file name="SFX_Snap.m4a" />
         <file name="SFX_Snap.ogg" />
-        <file name="Sound_BubbleBounce.m4a" />
-        <file name="Sound_BubbleBounce.ogg" />
+        <file name="SFX_BubbleBounce.m4a" />
+        <file name="SFX_BubbleBounce.ogg" />
         <file name="SFX_BubbleSheildGet.m4a" />
         <file name="SFX_BubbleSheildGet.ogg" />
         <file name="SFX_RingLeft.ogg" />
@@ -6692,6 +6759,7 @@
         <file name="MUS_speedshoes.ogg" />
         <file name="MUS_invincibility.ogg" />
         <file name="bgm_test_zone_2.ogg" />
+        <file name="MUS_continue.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

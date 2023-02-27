@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>level</name>
+    <name>Linum_Level</name>
     <sid>4650502934421703</sid>
     <event-sheet>E_Level</event-sheet>
     <size>
@@ -18229,7 +18229,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-160</x>
+                        <x>-192</x>
                         <y>224</y>
                         <z>0</z>
                         <width>32</width>
@@ -18282,7 +18282,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-128</x>
+                        <x>-160</x>
                         <y>224</y>
                         <z>0</z>
                         <width>32</width>
@@ -18388,7 +18388,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-192</x>
+                        <x>-224</x>
                         <y>224</y>
                         <z>0</z>
                         <width>32</width>
@@ -20338,7 +20338,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-224</x>
+                        <x>-128</x>
                         <y>224</y>
                         <z>0</z>
                         <width>32</width>
@@ -22227,7 +22227,7 @@
                 <instance type="Monitor" uid="789">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>WaterShield</initial-animation>
+                        <initial-animation>AquaticShield</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -22321,7 +22321,7 @@
                         <x>2456</x>
                         <y>-32</y>
                         <z>0</z>
-                        <width>28</width>
+                        <width>32</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -23165,12 +23165,12 @@
                 <instance type="Monitor" uid="819">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>WaterShield</initial-animation>
+                        <initial-animation>AquaticShield</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Contents>SpeedShoes</Contents>
+                        <Contents>AquaticShield</Contents>
                         <Bumpable>false</Bumpable>
                     </instance-variables>
                     <behavior-instances>
@@ -25430,7 +25430,7 @@
                         <CanControl>false</CanControl>
                         <CanJump>false</CanJump>
                         <State>Idle</State>
-                        <Character>3</Character>
+                        <Character>1</Character>
                         <Rings>0</Rings>
                         <SpeedShoes>false</SpeedShoes>
                         <SpinDashProgress>0</SpinDashProgress>
@@ -25470,6 +25470,8 @@
                         <Power>100</Power>
                         <PTSTimer>1</PTSTimer>
                         <LastPTS>0</LastPTS>
+                        <ShieldTimer>0</ShieldTimer>
+                        <ShieldTrigger>false</ShieldTrigger>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -27879,36 +27881,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TestCounter" uid="1176">
-                    <properties>
-                        <character-width>9</character-width>
-                        <character-height>14</character-height>
-                        <character-set>0123456789-+.</character-set>
-                        <text>0</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>280</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>144</width>
-                        <height>88</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="SSWTimer" uid="728">
                     <properties>
                         <character-width>9</character-width>
@@ -29099,6 +29071,36 @@
                         <z>0</z>
                         <width>57</width>
                         <height>7</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TestCounter" uid="1176">
+                    <properties>
+                        <character-width>9</character-width>
+                        <character-height>14</character-height>
+                        <character-set>0123456789-+.</character-set>
+                        <text>0</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>280</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>144</width>
+                        <height>88</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

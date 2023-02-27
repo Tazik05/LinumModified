@@ -325,7 +325,7 @@
                                         </action>
                                         <action id="33" name="Stop all" sid="748709491408659" type="Audio" />
                                         <action id="-2" name="Go to layout" sid="441421628915749" type="System">
-                                            <param id="0" name="Layout">level</param>
+                                            <param id="0" name="Layout">Linum_Level</param>
                                         </action>
                                     </actions>
                                 </event-block>

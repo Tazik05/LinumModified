@@ -77,7 +77,7 @@
                     <param id="0" name="Seconds">0.20</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="748046550370489" type="System">
-                    <param id="0" name="Layout">logo</param>
+                    <param id="0" name="Layout">Linum_logo</param>
                 </action>
             </actions>
         </event-block>

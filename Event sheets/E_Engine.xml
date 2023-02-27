@@ -1685,18 +1685,42 @@
                                                                     <param id="0" name="Instance variable">Attacking</param>
                                                                     <param id="1" name="Value">&quot;True&quot;</param>
                                                                 </action>
-                                                                <action id="6" name="Stop" sid="793478884383749" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;SFX_Jump&quot;</param>
-                                                                </action>
-                                                                <action id="0" name="Play" sid="744293506010012" type="Audio">
-                                                                    <param id="0" name="Audio file">SFX_Jump</param>
-                                                                    <param id="2" name="Loop">0</param>
-                                                                    <param id="3" name="Volume">0</param>
-                                                                    <param id="1" name="Tag (optional)">&quot;SFX_Jump&quot;</param>
-                                                                </action>
                                                                 <action id="4" name="Set animation" sid="985256441114917" type="PlayerSprite">
                                                                     <param id="0" name="Animation">&quot;Jump_&quot;&amp;Values_Player.Character</param>
                                                                     <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="220169041251583">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="337664734036890" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">ShieldTimer</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="6" name="Stop" sid="763451761100681" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;SFX_Jump&quot;</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="235361606667608" type="Audio">
+                                                                            <param id="0" name="Audio file">SFX_Jump</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;SFX_Jump&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block disabled="1" sid="137880707179617">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="396141796896590" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="280102705818453" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">ShieldTimer</param>
+                                                                    <param id="1" name="Value">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -5083,78 +5107,165 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="33" name="Stop all" sid="280713967759224" type="Audio" />
-                                        <action id="0" name="Play" sid="537103645977772" type="Audio">
-                                            <param id="0" name="Audio file">SFX_Hurt</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
-                                        <action id="-11" name="Add to" sid="796185517298118" type="GlobalSettings">
+                                        <action id="-11" name="Add to" sid="869408626290887" type="GlobalSettings">
                                             <param id="0" name="Instance variable">Lives</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="865387432484746" type="Function">
-                                            <param id="0" name="Name">&quot;UpdateLives&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="189330960068890" type="Function">
-                                            <param id="0" name="Name">&quot;AndroidKeysHide&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="720673029229817" type="Sensor_Main">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="340708613556509" type="Values_Camera">
-                                            <param id="0" name="Instance variable">mode</param>
-                                            <param id="1" name="Value">-1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="468706262297902" type="Values_Player">
-                                            <param id="0" name="Instance variable">CanControl</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="963201598453951" type="Values_Player">
-                                            <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="294794907035409" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Value">&quot;Dead&quot;</param>
-                                        </action>
-                                        <action behavior="Flash" id="1" name="Stop flashing" sid="911848470972460" type="PlayerSprite" />
-                                        <action id="4" name="Set animation" sid="278547012363379" type="PlayerSprite">
-                                            <param id="0" name="Animation">&quot;Dead_&quot;&amp;Values_Player.Character</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="497722937490588" type="PlayerAfterimage" />
-                                        <action id="-9" name="Destroy" sid="548756189597137" type="TailsBack" />
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="667007319311403" type="Sensor_Main">
-                                            <param id="0" name="Angle">270</param>
-                                        </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="908486573371141" type="Sensor_Main">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action behavior="Bullet" id="2" name="Set gravity" sid="940175665941814" type="Sensor_Main">
-                                            <param id="0" name="Gravity">800</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="762123573430286" type="System">
-                                            <param id="0" name="Seconds">0.5</param>
-                                        </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="735456920828518" type="Sensor_Main">
-                                            <param id="0" name="Angle">90</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="506252031614642" type="System">
-                                            <param id="0" name="Seconds">2.0</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="259671049408074" type="Function">
-                                            <param id="0" name="Name">&quot;Transition&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="281636957796176" type="System">
-                                            <param id="0" name="Seconds">0.5</param>
-                                        </action>
-                                        <action id="-26" name="Restart layout" sid="925676350467198" type="System" />
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="664129426391381">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="837498877638040" type="GlobalSettings">
+                                                    <param id="0" name="Instance variable">Lives</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="33" name="Stop all" sid="851411656241301" type="Audio" />
+                                                <action id="0" name="Play" sid="388224162751851" type="Audio">
+                                                    <param id="0" name="Audio file">SFX_Hurt</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="498988556723760" type="Function">
+                                                    <param id="0" name="Name">&quot;UpdateLives&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="744810950582979" type="Function">
+                                                    <param id="0" name="Name">&quot;AndroidKeysHide&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="14" name="Set enabled" sid="258421889559336" type="Sensor_Main">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="385915633107074" type="Values_Camera">
+                                                    <param id="0" name="Instance variable">mode</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="960054757299081" type="Values_Player">
+                                                    <param id="0" name="Instance variable">CanControl</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="822471656569333" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="140133818848228" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Value">&quot;Dead&quot;</param>
+                                                </action>
+                                                <action behavior="Flash" id="1" name="Stop flashing" sid="709163087905192" type="PlayerSprite" />
+                                                <action id="4" name="Set animation" sid="526968735447878" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Dead_&quot;&amp;Values_Player.Character</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="394964930614379" type="PlayerAfterimage" />
+                                                <action id="-9" name="Destroy" sid="415311933703819" type="TailsBack" />
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="723747161259672" type="Sensor_Main">
+                                                    <param id="0" name="Angle">270</param>
+                                                </action>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="668048449967727" type="Sensor_Main">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="2" name="Set gravity" sid="374518724532731" type="Sensor_Main">
+                                                    <param id="0" name="Gravity">800</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="482290605912410" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="582740510696611" type="Sensor_Main">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="514998195918046" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="592652813815991" type="Values_Level">
+                                                    <param id="0" name="Instance variable">IsGameOver</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="536237116258493">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="565423638596375" type="GlobalSettings">
+                                                    <param id="0" name="Instance variable">Lives</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="33" name="Stop all" sid="280713967759224" type="Audio" />
+                                                <action id="0" name="Play" sid="537103645977772" type="Audio">
+                                                    <param id="0" name="Audio file">SFX_Hurt</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="865387432484746" type="Function">
+                                                    <param id="0" name="Name">&quot;UpdateLives&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="189330960068890" type="Function">
+                                                    <param id="0" name="Name">&quot;AndroidKeysHide&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="14" name="Set enabled" sid="720673029229817" type="Sensor_Main">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="340708613556509" type="Values_Camera">
+                                                    <param id="0" name="Instance variable">mode</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="468706262297902" type="Values_Player">
+                                                    <param id="0" name="Instance variable">CanControl</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="963201598453951" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="294794907035409" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Value">&quot;Dead&quot;</param>
+                                                </action>
+                                                <action behavior="Flash" id="1" name="Stop flashing" sid="911848470972460" type="PlayerSprite" />
+                                                <action id="4" name="Set animation" sid="278547012363379" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Dead_&quot;&amp;Values_Player.Character</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="497722937490588" type="PlayerAfterimage" />
+                                                <action id="-9" name="Destroy" sid="548756189597137" type="TailsBack" />
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="667007319311403" type="Sensor_Main">
+                                                    <param id="0" name="Angle">270</param>
+                                                </action>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="908486573371141" type="Sensor_Main">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="2" name="Set gravity" sid="940175665941814" type="Sensor_Main">
+                                                    <param id="0" name="Gravity">800</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="762123573430286" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="735456920828518" type="Sensor_Main">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="506252031614642" type="System">
+                                                    <param id="0" name="Seconds">2.0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="259671049408074" type="Function">
+                                                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="281636957796176" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action id="-26" name="Restart layout" sid="925676350467198" type="System" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -5786,10 +5897,6 @@
                                     <param id="0" name="Object">PlayerSprite</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action disabled="1" id="4" name="Set animation" sid="817721191444557" type="Sensor_Main">
-                                    <param id="0" name="Animation">&quot;InTunnel&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="626578576614144">
@@ -5799,6 +5906,7 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;None&quot;</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="471151906000293" type="System" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="241217401869154" type="ShieldTop">
@@ -5818,6 +5926,7 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Normal&quot;</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="590481658729050" type="System" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="173387849711351" type="ShieldTop">
@@ -5840,6 +5949,7 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Fire&quot;</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="297481203873722" type="System" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="585731214054339" type="ShieldTop">
@@ -5862,6 +5972,7 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Light&quot;</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="685732200772339" type="System" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="847395874575134" type="ShieldTop">
@@ -5873,6 +5984,29 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-16" name="Set opacity" sid="252963203481247" type="ShieldTop">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="466192147860313">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="436723390219541" type="Values_Player">
+                                    <param id="0" name="Instance variable">Shield</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Aquatic&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="528779276242738" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="879168256845691" type="ShieldTop">
+                                    <param id="0" name="Animation">&quot;Aquatic&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="777449816817100" type="ShieldBottom">
+                                    <param id="0" name="Animation">&quot;None&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="593854027805762" type="ShieldTop">
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
@@ -6204,6 +6338,226 @@
                                                 </action>
                                                 <action id="-9" name="Destroy" sid="427726556546513" type="ThunderSpark" />
                                             </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="827538511276030" title="Aquatic-Shield">
+                            <sub-events>
+                                <event-block sid="827436382112738">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="967449196393814" type="ShieldTop">
+                                            <param id="0" name="Animation">&quot;Aquatic_Bouncing&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="357247310705636" type="ShieldTop">
+                                            <param id="0" name="Animation">&quot;Aquatic&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="801449563193923">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="536332658482489" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="530049025125502" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="703115364798106" type="Values_Player">
+                                            <param id="0" name="Instance variable">ShieldTrigger</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="154166043553334">
+                                    <conditions>
+                                        <condition behavior="SonicPhysics" id="9" name="On landed" sid="216736570803793" type="Sensor_Main" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="359916026463651" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="804817683201499" type="Values_Player">
+                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="514915619727703" type="Values_Player">
+                                            <param id="0" name="Instance variable">ShieldTrigger</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="360183688352971" type="Values_Player">
+                                            <param id="0" name="Instance variable">ShieldTimer</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="946646337173657" type="Values_Player">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Aquatic&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="208170457985643" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="666608477515173" type="Audio">
+                                            <param id="0" name="Audio file">SFX_BubbleBounce</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_BubbleBounce&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="826712249168870" type="Values_Player">
+                                            <param id="0" name="Instance variable">ShieldTrigger</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="414248590796881" type="ShieldTop">
+                                            <param id="0" name="Animation">&quot;Aquatic_Bouncing&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="495350053546196" type="Sensor_Main">
+                                            <param id="0" name="Vector Y">-400</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block disabled="1" sid="870284145858720">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="144642406819650" type="Values_Player">
+                                                    <param id="0" name="Instance variable">ShieldTimer</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                        <event-block disabled="1" sid="780535353306568">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="425029385916433" type="Values_Player">
+                                                    <param id="0" name="Instance variable">ShieldTimer</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="375971214322183">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="405635003304476" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="836112469163564" type="Values_Player">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Aquatic&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="488105554213692" type="Values_Player">
+                                            <param id="0" name="Instance variable">Character</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="120059217717015">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="488649077683240" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="408412271909035">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="870096829858911" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="475767701100095" type="Values_Player">
+                                                            <param id="0" name="Instance variable">ShieldTimer</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="486265157878849">
+                                                    <conditions>
+                                                        <condition behavior="SonicPhysics" id="2" inverted="1" name="Is on floor" sid="578585004769260" type="Sensor_Main" />
+                                                        <condition id="-8" name="Compare two values" sid="996746212103462" type="System">
+                                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                        <condition id="-6" name="Every X seconds" sid="608218447140876" type="System">
+                                                            <param id="0" name="Interval (seconds)">0.05</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="525228112215700" type="Values_Player">
+                                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Add to" sid="268098277749777" type="Values_Player">
+                                                            <param id="0" name="Instance variable">ShieldTimer</param>
+                                                            <param id="1" name="Value">0.05</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="790465789807750">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="766547763107967" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="608671603493993">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="868204781277128" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="157482901842316" type="ShieldTop">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="664414845313555" type="ShieldBottom">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action disabled="1" id="0" name="Play" sid="215587063985712" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_ThunderJump</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_ThunderJump&quot;</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="865666047514368" type="System">
+                                                                    <param id="0" name="Seconds">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="316575364904693" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="613508135200459">
+                                                                    <conditions />
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="227237543940282" type="Sensor_Main">
+                                                                            <param id="0" name="Vector Y">400</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="160010019353805">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-13" name="Set boolean" sid="873806004139614" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -12357,7 +12711,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="941072514271414" type="TestCounter">
-                    <param id="0" name="Text">Values_Player.LastPTS&amp;newline&amp;Values_Player.PTSTimer</param>
+                    <param id="0" name="Text">Values_Player.ShieldTimer</param>
                 </action>
             </actions>
         </event-block>
