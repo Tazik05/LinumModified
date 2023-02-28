@@ -4,12 +4,29 @@
 Linum Framework Modified is a redesigned original Linum Framework engine with a lot of things that were borrowed from other sonic engines
 
 
+## FAQ
+
+~~I'll write something else here later~~
+
+
+#### Game controls
+
+Arrows - walk
+
+Z -Action
+
+ESC - Pause
+
+` - Open the console
+
+
 ## Authors
 
 - [@stas's ports](https://gamejolt.com/@stas_ports) `The creator of the modification`
 - [@Halatnikov](https://gamejolt.com/@Halatnikov)  `Creator of the original engine`
 - [@Danik_animation](https://gamejolt.com/@Halatnikov)  `Help with sprites, ideas and testing`
 - [@ZaP-65](https://gamejolt.com/@Halatnikov)  `Help with ideas and testing`
+- [@TheLightXen](https://gamejolt.com/@everypony)  `Helped with the creation of the repository`
 
 
 
