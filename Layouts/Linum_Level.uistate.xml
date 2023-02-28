@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>155.094</position-x>
-        <position-y>189.892</position-y>
-        <position-z>84.3083</position-z>
-        <lookat-x>155.094</lookat-x>
-        <lookat-y>189.892</lookat-y>
+        <position-x>7139.34</position-x>
+        <position-y>809.116</position-y>
+        <position-z>69.6763</position-z>
+        <lookat-x>7139.34</lookat-x>
+        <lookat-y>809.116</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -33,13 +33,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layer locked="0" name="Collisions_LayerRed" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Objects_Helpers" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="HUD_Linum" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="HUD_Custom" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Pause_Menu" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Android_Controls" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="HUD_Custom" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Pause_Menu" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Android_Controls" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Android_Areas" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="Transition" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="LevelCard" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Debug" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="LevelCard" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Debug" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="ConsoleUI" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Cursor" parallax-in-editor="0" visible="1" />
     </layers>

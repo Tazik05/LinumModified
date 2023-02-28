@@ -25941,6 +25941,7 @@
                         <KeyESCHold>false</KeyESCHold>
                         <KeyCMDHold>false</KeyCMDHold>
                         <Gamepad>false</Gamepad>
+                        <IgnoreInput>false</IgnoreInput>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -27394,7 +27395,7 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
-                        <CanPass>false</CanPass>
+                        <CanPass>true</CanPass>
                         <StartScoringPointsAnimation>false</StartScoringPointsAnimation>
                         <StartScoringPoints>false</StartScoringPoints>
                         <UIScrollSpeed>4</UIScrollSpeed>
@@ -27406,6 +27407,33 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-64</x>
+                        <y>114</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Values_PauseMenu" uid="1033">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Paused>false</Paused>
+                        <Selected>0</Selected>
+                        <FadeBG>0</FadeBG>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-36</x>
                         <y>114</y>
                         <z>0</z>
                         <width>24</width>
@@ -28369,33 +28397,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Values_PauseMenu" uid="1033">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Paused>false</Paused>
-                        <Selected>0</Selected>
-                        <FadeBG>0</FadeBG>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-36</x>
-                        <y>112</y>
-                        <z>0</z>
-                        <width>24</width>
-                        <height>24</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

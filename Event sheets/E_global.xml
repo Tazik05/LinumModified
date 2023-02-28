@@ -86,6 +86,9 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="473063524453421" type="Values_PauseMenu">
                             <param id="0" name="Instance variable">Paused</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="325034563099389" type="Values_Input">
+                            <param id="0" name="Instance variable">IgnoreInput</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>

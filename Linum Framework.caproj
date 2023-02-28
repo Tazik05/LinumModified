@@ -209,6 +209,7 @@
                     <instance-variable name="KeyESCHold" sid="194769702175625" type="boolean" />
                     <instance-variable name="KeyCMDHold" sid="599905634123669" type="boolean" />
                     <instance-variable name="Gamepad" sid="412280474540619" type="boolean" />
+                    <instance-variable name="IgnoreInput" sid="503764158089819" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="771943124886850" speed="5">
