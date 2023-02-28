@@ -6696,6 +6696,47 @@
             <plugin id="Spritefont2" />
             <texture original-source="C:\Users\Tazik05\Desktop\41.png" />
         </object-type>
+        <object-type name="Spr_Car" sid="895185107855527">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PlayerInCar" sid="244097803444658" type="boolean" />
+                <instance-variable name="CanMoving" sid="478783559353328" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="661041661991885">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463463103072594" speed="5">
+                    <frame duration="1" hotspotX="0.45082" hotspotY="0.5" original-source="C:\Users\Tazik05\Downloads\ald.png">
+                        <image-point name="Imagepoint 1" x="0.188525" y="0.775" />
+                        <image-point name="Imagepoint 2" x="0.795082" y="0.8" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_wheel1" sid="184692640884142">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="496462371313271">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641278781528278" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="C:\Users\Tazik05\Downloads\sx.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_wheel2" sid="722126284669008">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759471460869133" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="C:\Users\Tazik05\Downloads\sx.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -7045,5 +7086,6 @@
             </file-folder>
         </file-folder>
         <file name="sonicXtailsREAL.png" />
+        <file name="danik.png" />
     </files-folder>
 </c2project>

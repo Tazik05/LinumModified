@@ -38,6 +38,220 @@
             <sub-events>
                 <event-group description="" sid="158973237713220" title="*Fun mods*">
                     <sub-events>
+                        <event-group description="By danik" sid="725772900262883" title="Car(WTFFFFFFFFFFFFFFFF)">
+                            <sub-events>
+                                <event-block sid="830792031190590">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="852021145194873" type="Spr_Car">
+                                            <param id="0" name="Instance variable">PlayerInCar</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="443434269235688" type="Sensor_Main">
+                                            <param id="0" name="X">Spr_Car.X</param>
+                                            <param id="1" name="Y">Spr_Car.Y-12</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="204369653881806" type="spr_wheel2">
+                                            <param id="0" name="Angle">spr_wheel1.Angle</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="731629456035980">
+                                            <conditions>
+                                                <condition behavior="Platform" id="0" name="Is moving" sid="369632352019943" type="Spr_Car" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="517109875634681">
+                                                    <conditions>
+                                                        <condition id="7" inverted="1" name="Is mirrored" sid="585966214522752" type="Spr_Car" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Rotate" id="0" name="Set speed" sid="321918645873725" type="spr_wheel1">
+                                                            <param id="0" name="Speed">Spr_Car.Platform.Speed*2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="564928124585506">
+                                                    <conditions>
+                                                        <condition id="7" name="Is mirrored" sid="771724175051527" type="Spr_Car" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Rotate" id="0" name="Set speed" sid="456744054180810" type="spr_wheel1">
+                                                            <param id="0" name="Speed">-Spr_Car.Platform.Speed*2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="759339537409131">
+                                            <conditions>
+                                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="434413985451880" type="Spr_Car" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Rotate" id="0" name="Set speed" sid="483722292174843" type="spr_wheel1">
+                                                    <param id="0" name="Speed">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="204493663214497">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="698508070002843" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="169305053334986" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Idle_&quot;&amp;Values_Player.Character</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="215417040627308">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="989163936679182" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyLeftHold</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="951315310237100" type="Spr_Car">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="570918267592263" type="Spr_Car">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="925159523637856" type="PlayerSprite">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="123408526174666">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="919805398580323" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyRightHold</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="7" name="Simulate control" sid="994229168398622" type="Spr_Car">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="387238308395515" type="Spr_Car">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="523260759438593" type="PlayerSprite">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="646080505958429">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="305168867994580" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="622889909423549" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="981296591757426" type="Sensor_Main">
+                                                    <param id="0" name="Input">1</param>
+                                                </action>
+                                                <action behavior="SonicPhysics" disabled="1" id="14" name="Set enabled" sid="781876429384420" type="Sensor_Main">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="Platform" id="11" name="Set enabled" sid="825220914779586" type="Spr_Car">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="600535542948398">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="849498324693864" type="Sensor_Main">
+                                            <param id="0" name="Object">Spr_Car</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="241760152903990" type="Spr_Car">
+                                            <param id="0" name="Instance variable">PlayerInCar</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="999776766996661" type="GamepadButton2">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="249164105089190" type="GamepadButton">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="139017948953011">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="514486454416351" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="751656900230651" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="141678607933624" type="Spr_Car">
+                                                    <param id="0" name="Instance variable">PlayerInCar</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="324671809136642" type="GamepadButton2">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="432744181730296" type="GamepadButton">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="220484855144805">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="550599885912345" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="204624869905779" type="GamepadButton2">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="881284551208047" type="GamepadButton">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="705793376315128">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="279611657296637" type="Sensor_Main">
+                                            <param id="0" name="Object">Spr_Car</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="288998548272442" type="Spr_Car">
+                                            <param id="0" name="Instance variable">PlayerInCar</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="487809975468715" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="933568925289207" type="GamepadButton2">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="730689332805445" type="GamepadButton">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="511251651408778">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="438592099986600" type="Spr_Car" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="113023011914980" type="spr_wheel1">
+                                            <param id="0" name="Object">Spr_Car</param>
+                                            <param id="1" name="Image point (optional)">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="358947678392890" type="spr_wheel2">
+                                            <param id="0" name="Object">Spr_Car</param>
+                                            <param id="1" name="Image point (optional)">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-block sid="497581473529751">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="204421802780876" type="GlobalSettings">
