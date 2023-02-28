@@ -4832,6 +4832,10 @@
                                             <param id="0" name="Animation">&quot;Hurt_&quot;&amp;Values_Player.Character</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="-13" name="Set boolean" sid="527581161240794" type="Values_Player">
+                                            <param id="0" name="Instance variable">IsHurt</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="666233903411047">
@@ -7111,6 +7115,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Roll&quot;</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="344439788660170" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="260354426201027" type="Values_Player">
@@ -7421,6 +7426,7 @@
                                                 <condition id="1" name="Is overlapping another object" sid="953924088411040" type="Ballhog_Ball">
                                                     <param id="0" name="Object">Sensor_Main</param>
                                                 </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="221412365709055" type="System" />
                                             </conditions>
                                             <actions>
                                                 <action id="-13" name="Set boolean" sid="677286349247245" type="Values_Player">
@@ -7504,6 +7510,7 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Roll&quot;</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="147293530672818" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="-13" name="Set boolean" sid="182803135764191" type="Values_Player">
@@ -7814,6 +7821,7 @@
                                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="130324538940650" type="Values_Player">
                                                                     <param id="0" name="Instance variable">Invincibility</param>
                                                                 </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="888682732977950" type="System" />
                                                             </conditions>
                                                             <actions>
                                                                 <action id="0" name="Play" sid="628000329299935" type="Audio">
