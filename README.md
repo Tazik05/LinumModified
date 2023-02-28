@@ -19,6 +19,25 @@ ESC - Pause
 
 ` - Open the console
 
+#### Installing plugins and Behaviors
+`Most likely you will not be able to run this engine without installing add-ons, so follow the instructions below`
+
+First you have to download `behaviors` and `plugins`, after that you have to go to the folder with the installed Construct 2. Now go to the path: `construct2\exporters\html5` and move the `plugins` and `behaviors` folder there, if a file replacement request appears, then confirm it
+
+ Now restart construct 2 (if it was open) and you will be able to run a preview of the engine
+
+ It is also recommended to install [NWJS](https://www.construct.net/en/construct-2/nwjs) for a better usage experience.
+ #### Global Settings
+`This is the main thing that you will have to configure, depending on your needs`
+
+![App Screenshot](https://cdn.discordapp.com/attachments/856267195893153833/1080268419355652116/image.png)
+
+Find the folder `.System object`s and click on `GlobalSettings`
+
+![App Screenshot](https://cdn.discordapp.com/attachments/856267195893153833/1080268993270644879/image.png)
+
+Here you can change the parameters, at the bottom there is a description of what it is responsible for and what can be entered there
+
 
 ## Authors
 
