@@ -11805,14 +11805,380 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="264929406844176">
+                        <event-block sid="330850574863500">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="545029754468198" type="Values_SignPost">
+                                <condition id="-8" name="Is boolean instance variable set" sid="397340353281667" type="Values_SignPost">
                                     <param id="0" name="Instance variable">StartScoringPoints</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-block sid="544961172442996">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="162825714643897" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="408794636691404" type="Audio">
+                                            <param id="0" name="Audio file">SFX_ScoringPoints</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_ScoringPoints&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="666984798595974">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="179468390112774" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">TimeBonus</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="724358522358657" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">RingsBonus</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="795189537929554" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="707208183239070" type="Audio">
+                                            <param id="0" name="Tag">&quot;SFX_ScoringPoints&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="178457082360460" type="Audio">
+                                            <param id="0" name="Audio file">SFX_ScoringResult</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="799879736769175">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="475636921862766" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">TimeBonus</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="824877136698229" type="Values_PauseMenu">
+                                            <param id="0" name="Instance variable">Paused</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="118378348241425" type="GlobalSettings">
+                                            <param id="0" name="Instance variable">Score</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="831679355786328" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">TimeBonus</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="961159251089161" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">TotalBonus</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="810502085431324">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="356061501391091" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">RingsBonus</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="907741220733604" type="Values_PauseMenu">
+                                            <param id="0" name="Instance variable">Paused</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="750850671694846" type="GlobalSettings">
+                                            <param id="0" name="Instance variable">Score</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="251903680459065" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">RingsBonus</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="537192061602888" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">TotalBonus</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="264929406844176">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="545029754468198" type="Values_SignPost">
+                                    <param id="0" name="Instance variable">StartScoringPointsAnimation</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="973168557251177" type="results_time_counter">
+                                    <param id="0" name="Text">Values_SignPost.TimeBonus</param>
+                                </action>
+                                <action id="0" name="Set text" sid="803236152248686" type="results_rings_counter">
+                                    <param id="0" name="Text">Values_SignPost.RingsBonus</param>
+                                </action>
+                                <action id="0" name="Set text" sid="610436650701844" type="results_total_counter">
+                                    <param id="0" name="Text">Values_SignPost.TotalBonus</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>sec zeropad(floor(Values_Level.LevelTimer_Global)%60,2)&#x0D;&#x0A;min zeropad(floor(Values_Level.LevelTimer_Global/60),1)</comment>
+                                <event-block sid="912082901012073">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="529503152783915" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="847256573690916" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="866408495337971" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">StartScoringPoints</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="300484767407371">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="838437347834813" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="251542367418045" type="Values_SignPost">
+                                            <param id="0" name="Instance variable">RingsBonus</param>
+                                            <param id="1" name="Value">Values_Player.Rings*100</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="170570350100554">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="637405385357643" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="505753750574954" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="717804984106309" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">80000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="807356293907287">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="852176358168529" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="488755681147179" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="908887264398383" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">50000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="906992019915757">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="518886246092219" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="864754910189881" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="412279575300882" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">10000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="567678609925424">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="161349645485179" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="287224744863667" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="400690893267769" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">5000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="296755015849078">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="727153074178552" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">2</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="713792759181115" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="156148907742354" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">3000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="560868314360641">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="391754654196162" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">2</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="915331554225262" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="107902406815094" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">2000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="697581957040834">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="901933361386703" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">3</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="641415062594965" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="560410331480878" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">1000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="821412289802399">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="211967708585639" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">3</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="594379146207166" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">30</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="743408358171595" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="163695916288595">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="383949946698375" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="864277351727494" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="833362766453532">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="793756982542843" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">9</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="534748445734998" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">59</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="694655672194988">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="440689012510510" type="System">
+                                                            <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Second value">5</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="792486912749937" type="Values_SignPost">
+                                                            <param id="0" name="Instance variable">TimeBonus</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="516474187250820">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="858522182751999" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global/60)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">9</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="129941620118770" type="System">
+                                                    <param id="0" name="First value">floor(Values_Level.LevelTimer_Global)%60</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">59</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="461695385504565" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">TimeBonus</param>
+                                                    <param id="1" name="Value">100000</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="435329143824508">
                                     <conditions>
                                         <condition id="-1" inverted="1" name="Compare X" sid="660762486175835" type="spr_results_name">

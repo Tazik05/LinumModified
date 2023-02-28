@@ -25506,7 +25506,7 @@
                         <CanJump>false</CanJump>
                         <State>Idle</State>
                         <Character>1</Character>
-                        <Rings>0</Rings>
+                        <Rings>1000</Rings>
                         <SpeedShoes>false</SpeedShoes>
                         <SpinDashProgress>0</SpinDashProgress>
                         <SonicPhysicsEnabled>true</SonicPhysicsEnabled>
@@ -27395,8 +27395,12 @@
                     </properties>
                     <instance-variables>
                         <CanPass>false</CanPass>
-                        <StartScoringPoints>true</StartScoringPoints>
+                        <StartScoringPointsAnimation>true</StartScoringPointsAnimation>
+                        <StartScoringPoints>false</StartScoringPoints>
                         <UIScrollSpeed>4</UIScrollSpeed>
+                        <TimeBonus>0</TimeBonus>
+                        <RingsBonus>0</RingsBonus>
+                        <TotalBonus>0</TotalBonus>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

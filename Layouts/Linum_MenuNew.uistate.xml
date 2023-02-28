@@ -26,13 +26,5 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <active-layer name="BG" />
     <layers>
         <layer locked="0" name="BG" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="MainMenu" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Android_Controls" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Android_Areas" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Transition" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Settings" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="SystemMessages" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="ConsoleUI" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Cursor" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

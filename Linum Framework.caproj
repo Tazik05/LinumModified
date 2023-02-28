@@ -339,8 +339,12 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="CanPass" sid="746940035761485" type="boolean" />
-                    <instance-variable name="StartScoringPoints" sid="116539956672202" type="boolean" />
+                    <instance-variable name="StartScoringPointsAnimation" sid="116539956672202" type="boolean" />
+                    <instance-variable name="StartScoringPoints" sid="750558350039942" type="boolean" />
                     <instance-variable name="UIScrollSpeed" sid="448667294147980" type="number" />
+                    <instance-variable name="TimeBonus" sid="125518200611597" type="number" />
+                    <instance-variable name="RingsBonus" sid="706353674154303" type="number" />
+                    <instance-variable name="TotalBonus" sid="114097172025383" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241352453011895" speed="5">
