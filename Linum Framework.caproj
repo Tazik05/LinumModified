@@ -4844,6 +4844,114 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="2" loop="1" name="Eggman" pingpong="0" repeatcount="1" repeatto="0" sid="587671842945050" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\14.png">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="1up_1" pingpong="0" repeatcount="1" repeatto="0" sid="673632325451517" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\14.png">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="1up_2" pingpong="0" repeatcount="1" repeatto="0" sid="633055036181542" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\14.png">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="1up_3" pingpong="0" repeatcount="1" repeatto="0" sid="705755815815316" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\14.png">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="1up_4" pingpong="0" repeatcount="1" repeatto="0" sid="601238152178461" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\14.png">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="1up_5" pingpong="0" repeatcount="1" repeatto="0" sid="491532161248820" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\14.png">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0625" y="0" />
+                                <point x="0.9375" y="0" />
+                                <point x="0.9375" y="1" />
+                                <point x="0.0625" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Ring" sid="716210427273475">
@@ -6909,6 +7017,7 @@
         <file name="SFX_ScoringResult.ogg" />
         <file name="SFX_ObjectSignpost.m4a" />
         <file name="SFX_ObjectSignpost.ogg" />
+        <file name="SFX_1UP.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MUS_level.ogg" />

@@ -4830,14 +4830,6 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="564906723433932">
-                                    <conditions>
-                                        <condition id="0" name="On function" sid="607073831019648" type="Function">
-                                            <param id="0" name="Name">&quot;Hurt&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
                                 <event-block sid="585982989851380">
                                     <conditions>
                                         <condition id="-8" name="Is boolean instance variable set" sid="444062377204617" type="Values_Player">
@@ -10054,6 +10046,11 @@
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">&quot;SpeedShoes&quot;</param>
                                                         </condition>
+                                                        <condition id="1" name="Compare parameter" sid="460889340687965" type="Function">
+                                                            <param id="0" name="Index">0</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;SpeedShoes&quot;</param>
+                                                        </condition>
                                                     </conditions>
                                                     <actions>
                                                         <action id="-16" name="Wait" sid="720274713989878" type="System">
@@ -10064,6 +10061,141 @@
                                                             <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="755814183732954">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="300081592031721" type="System">
+                                                            <param id="0" name="First value">find(Function.Param(0),&quot;1up&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-1</param>
+                                                        </condition>
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="750317389840555" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Character</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">7</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="745231337893829" type="System">
+                                                            <param id="0" name="Seconds">0.7</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="653313959670119" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_1UP</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="3" name="Set volume" sid="316417192569470" type="Audio">
+                                                            <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                                            <param id="1" name="dB">-100</param>
+                                                        </action>
+                                                        <action id="-11" name="Add to" sid="802525531375445" type="GlobalSettings">
+                                                            <param id="0" name="Instance variable">Lives</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="950055871246276" type="System">
+                                                            <param id="0" name="Seconds">2.0</param>
+                                                        </action>
+                                                        <action id="3" name="Set volume" sid="293666711111738" type="AudioHelper">
+                                                            <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                                            <param id="1" name="Volume">1</param>
+                                                            <param id="2" name="Fade">2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="673156553414138">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="182512472099190" type="System">
+                                                            <param id="0" name="First value">find(Function.Param(0),&quot;1up&quot;)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">-1</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="233732836617634" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Character</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">7</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="593656124983140" type="System">
+                                                            <param id="0" name="Seconds">0.7</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="119332905948176" type="Values_Player">
+                                                            <param id="0" name="Instance variable">IsHurt</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="574881774977441">
+                                                    <conditions>
+                                                        <condition id="1" name="Compare parameter" sid="390004369231082" type="Function">
+                                                            <param id="0" name="Index">0</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Eggman&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="944993312776371">
+                                                            <conditions>
+                                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="484830196557832" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Character</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">7</param>
+                                                                </condition>
+                                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="561880032906232" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Character</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">9</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-16" name="Wait" sid="677763594301744" type="System">
+                                                                    <param id="0" name="Seconds">0.7</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="610244544330596" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">IsHurt</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="843656801239426">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="930713442168605" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Character</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">7</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-16" name="Wait" sid="957289213243662" type="System">
+                                                                    <param id="0" name="Seconds">0.7</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="942865893174726" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_1UP</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="3" name="Set volume" sid="453142560236436" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                                                    <param id="1" name="dB">-100</param>
+                                                                </action>
+                                                                <action id="-11" name="Add to" sid="717222114145731" type="GlobalSettings">
+                                                                    <param id="0" name="Instance variable">Lives</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="714290927441550" type="System">
+                                                                    <param id="0" name="Seconds">2.0</param>
+                                                                </action>
+                                                                <action id="3" name="Set volume" sid="397554875475591" type="AudioHelper">
+                                                                    <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                                                    <param id="1" name="Volume">1</param>
+                                                                    <param id="2" name="Fade">2</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -13227,12 +13359,7 @@
                         <event-group description="" sid="288286131934682" title="Lives">
                             <sub-events>
                                 <event-block any="1" sid="874180075626381">
-                                    <conditions>
-                                        <condition id="-2" name="On start of layout" sid="298169322324341" type="System" />
-                                        <condition id="0" name="On function" sid="962772188748122" type="Function">
-                                            <param id="0" name="Name">&quot;UpdateLives&quot;</param>
-                                        </condition>
-                                    </conditions>
+                                    <conditions />
                                     <actions>
                                         <action id="0" name="Set text" sid="974313855420533" type="Player_Lives_Linum">
                                             <param id="0" name="Text">zeropad(GlobalSettings.Lives,2)</param>
