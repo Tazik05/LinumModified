@@ -4078,7 +4078,7 @@
                                                                             <param id="1" name="From">1</param>
                                                                         </action>
                                                                         <action id="0" name="Play" sid="485352610356967" type="Audio">
-                                                                            <param id="0" name="Audio file">jetpack</param>
+                                                                            <param id="0" name="Audio file">SFX_Jetpack</param>
                                                                             <param id="2" name="Loop">1</param>
                                                                             <param id="3" name="Volume">0</param>
                                                                             <param id="1" name="Tag (optional)">&quot;SFX_EggmanFlying&quot;</param>
@@ -4110,7 +4110,7 @@
                                                                             <param id="0" name="Tag">&quot;SFX_EggmanFlying&quot;</param>
                                                                         </action>
                                                                         <action id="0" name="Play" sid="106659773365769" type="Audio">
-                                                                            <param id="0" name="Audio file">jetpack-falling</param>
+                                                                            <param id="0" name="Audio file">SFX_Jetpackfall</param>
                                                                             <param id="2" name="Loop">0</param>
                                                                             <param id="3" name="Volume">0</param>
                                                                             <param id="1" name="Tag (optional)">&quot;SFX_TiredFlying&quot;</param>
@@ -4381,7 +4381,7 @@
                                                                             <param id="1" name="From">1</param>
                                                                         </action>
                                                                         <action disabled="1" id="0" name="Play" sid="523294518874754" type="Audio">
-                                                                            <param id="0" name="Audio file">jetpack</param>
+                                                                            <param id="0" name="Audio file">SFX_Jetpack</param>
                                                                             <param id="2" name="Loop">1</param>
                                                                             <param id="3" name="Volume">0</param>
                                                                             <param id="1" name="Tag (optional)">&quot;SFX_EggmanFlying&quot;</param>
@@ -4413,7 +4413,7 @@
                                                                             <param id="0" name="Tag">&quot;SFX_EggmanFlying&quot;</param>
                                                                         </action>
                                                                         <action disabled="1" id="0" name="Play" sid="168594187605972" type="Audio">
-                                                                            <param id="0" name="Audio file">jetpack-falling</param>
+                                                                            <param id="0" name="Audio file">SFX_Jetpackfall</param>
                                                                             <param id="2" name="Loop">0</param>
                                                                             <param id="3" name="Volume">0</param>
                                                                             <param id="1" name="Tag (optional)">&quot;SFX_TiredFlying&quot;</param>
@@ -4719,106 +4719,6 @@
                         </event-block>
                         <event-group description="" sid="344355677490879" title="Hurt System">
                             <sub-events>
-                                <event-group description="" sid="268449703361394" title="GameOver_Text">
-                                    <sub-events>
-                                        <event-block sid="923017748347821">
-                                            <conditions>
-                                                <condition id="-2" name="On start of layout" sid="914466308437839" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-2" name="Set Y" sid="385260692977222" type="GameOver1">
-                                                    <param id="0" name="Y">120</param>
-                                                </action>
-                                                <action id="-1" name="Set X" sid="156963872579734" type="GameOver1">
-                                                    <param id="0" name="X">-31</param>
-                                                </action>
-                                                <action id="-2" name="Set Y" sid="101336005499854" type="GameOver2">
-                                                    <param id="0" name="Y">120</param>
-                                                </action>
-                                                <action id="-1" name="Set X" sid="783423956061681" type="GameOver2">
-                                                    <param id="0" name="X">457</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="426287741548154">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="185783448828611" type="Values_Level">
-                                                    <param id="0" name="Instance variable">IsGameOver</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="509587697474133">
-                                                    <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="720815516588698" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-13" name="Set boolean" sid="674955300940979" type="Values_Level">
-                                                            <param id="0" name="Instance variable">IsLevelTimerActive</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                        <action id="33" name="Stop all" sid="121647849862793" type="Audio" />
-                                                        <action id="0" name="Play" sid="887862609481146" type="Audio">
-                                                            <param id="0" name="Audio file">Sonic 3 And Knuckles OST - Game Over</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="278051449574149" type="System">
-                                                            <param id="0" name="Seconds">8.0</param>
-                                                        </action>
-                                                        <action id="0" name="Call function" sid="713450891974166" type="Function">
-                                                            <param id="0" name="Name">&quot;Transition&quot;</param>
-                                                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}1.0{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="273043026271268" type="System">
-                                                            <param id="0" name="Seconds">2.0</param>
-                                                        </action>
-                                                        <action behavior="Fade" id="1" name="Start fade" sid="144229523468410" type="GameOver1" />
-                                                        <action behavior="Fade" id="1" name="Start fade" sid="728792922859344" type="GameOver2" />
-                                                        <action id="-16" name="Wait" sid="210201815619773" type="System">
-                                                            <param id="0" name="Seconds">1.0</param>
-                                                        </action>
-                                                        <action id="33" name="Stop all" sid="987810663828445" type="Audio" />
-                                                        <action id="-10" name="Set value" sid="861665349124496" type="GlobalSettings">
-                                                            <param id="0" name="Instance variable">LayoutSaver</param>
-                                                            <param id="1" name="Value">LayoutName</param>
-                                                        </action>
-                                                        <action id="-2" name="Go to layout" sid="664655114952313" type="System">
-                                                            <param id="0" name="Layout">Linum_Continue</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="434224865645834">
-                                                    <conditions>
-                                                        <condition id="-1" inverted="1" name="Compare X" sid="691518163836391" type="GameOver1">
-                                                            <param id="0" name="Comparison">4</param>
-                                                            <param id="1" name="X co-ordinate">170</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-17" name="Move forward" sid="422764383821367" type="GameOver1">
-                                                            <param id="0" name="Distance">2</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="854611344312498">
-                                                    <conditions>
-                                                        <condition id="-1" inverted="1" name="Compare X" sid="594173963851449" type="GameOver2">
-                                                            <param id="0" name="Comparison">2</param>
-                                                            <param id="1" name="X co-ordinate">257</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-17" name="Move forward" sid="970159713995548" type="GameOver2">
-                                                            <param id="0" name="Distance">-2</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-group>
                                 <event-block sid="509232383437812">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="425158030146372" type="Values_Player">
@@ -7608,6 +7508,27 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-group description="" sid="994771570927211" title="Sign Post">
+                                    <sub-events>
+                                        <event-block sid="782640208098436">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="339029501369745" type="Sensor_Main">
+                                                    <param id="0" name="Object">obj_sign_post</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="118325823825948" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">CanPass</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="762922731865490" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="143857453568303" type="Values_SignPost">
+                                                    <param id="0" name="Instance variable">CanPass</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                                 <event-group description="" sid="154007207566537" title="Tornado">
                                     <sub-events>
                                         <event-block sid="372762519053523">
@@ -9885,7 +9806,7 @@
                                                             <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
                                                         </action>
                                                         <action id="0" name="Play" sid="673974385811649" type="Audio">
-                                                            <param id="0" name="Audio file">Sound_RingMonitor</param>
+                                                            <param id="0" name="Audio file">SFX_RingMonitor</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFX_Ring&quot;</param>
@@ -11721,6 +11642,298 @@
         </event-group>
         <event-group description="" sid="331206807603223" title="UI stuff">
             <sub-events>
+                <event-group description="" sid="868516338001849" title="GameOver_Text">
+                    <sub-events>
+                        <event-block sid="234624847920943">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="203102445860584" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="694222318172244" type="GameOver1">
+                                    <param id="0" name="Y">120</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="531188573516434" type="GameOver1">
+                                    <param id="0" name="X">-31</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="566208504817186" type="GameOver2">
+                                    <param id="0" name="Y">120</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="638310986275458" type="GameOver2">
+                                    <param id="0" name="X">457</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="134759272676371">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="471445520512664" type="Values_Level">
+                                    <param id="0" name="Instance variable">IsGameOver</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="268921883978857">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="266610224953383" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="624441080194138" type="Values_Level">
+                                            <param id="0" name="Instance variable">IsLevelTimerActive</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="33" name="Stop all" sid="911199163099882" type="Audio" />
+                                        <action id="0" name="Play" sid="320114678758998" type="Audio">
+                                            <param id="0" name="Audio file">SFX_GameOver</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="924638711814667" type="System">
+                                            <param id="0" name="Seconds">8.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="858295451441063" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}1.0{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="694689969132623" type="System">
+                                            <param id="0" name="Seconds">2.0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="229305118014124" type="GameOver1" />
+                                        <action behavior="Fade" id="1" name="Start fade" sid="497568361888387" type="GameOver2" />
+                                        <action id="-16" name="Wait" sid="257511932602781" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="33" name="Stop all" sid="726443122517845" type="Audio" />
+                                        <action id="-10" name="Set value" sid="405583131659499" type="GlobalSettings">
+                                            <param id="0" name="Instance variable">LayoutSaver</param>
+                                            <param id="1" name="Value">LayoutName</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="978402796372826" type="System">
+                                            <param id="0" name="Layout">Linum_Continue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="433920836601024">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="246341557847053" type="GameOver1">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">170</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="192054570022825" type="GameOver1">
+                                            <param id="0" name="Distance">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="259532883044530">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="361846457615489" type="GameOver2">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">257</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="484008967567175" type="GameOver2">
+                                            <param id="0" name="Distance">-2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="329595441616874" title="Results">
+                    <sub-events>
+                        <event-block sid="127997597865218">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="939427189825643" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="554055598805740" type="spr_results_name">
+                                    <param id="0" name="X">-90</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="545490652934029" type="spr_results_name">
+                                    <param id="0" name="Y">64</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="418977023264029" type="spr_results_through">
+                                    <param id="0" name="X">484</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="255010673837144" type="spr_results_through">
+                                    <param id="0" name="Y">88</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="456403521990473" type="Results_Zone">
+                                    <param id="0" name="X">582</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="476014724159302" type="Results_Zone">
+                                    <param id="0" name="Y">80</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="239215066769488" type="spr_results_time">
+                                    <param id="0" name="X">470</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="241958271904086" type="spr_results_time">
+                                    <param id="0" name="Y">120</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="539390792492043" type="spr_results_rings">
+                                    <param id="0" name="X">470+20</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="315459000026141" type="spr_results_rings">
+                                    <param id="0" name="Y">144</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="846597855459356" type="spr_results_total">
+                                    <param id="0" name="X">470+40</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="323453754764545" type="spr_results_total">
+                                    <param id="0" name="Y">176</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="549182991681858" type="results_time_counter">
+                                    <param id="0" name="X">514</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="727298480718617" type="results_time_counter">
+                                    <param id="0" name="Y">116</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="182376195555962" type="results_rings_counter">
+                                    <param id="0" name="X">514+20</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="444019576370262" type="results_rings_counter">
+                                    <param id="0" name="Y">140</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="921752902995357" type="results_total_counter">
+                                    <param id="0" name="X">514+40</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="187582097242557" type="results_total_counter">
+                                    <param id="0" name="Y">172</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="264929406844176">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="545029754468198" type="Values_SignPost">
+                                    <param id="0" name="Instance variable">StartScoringPoints</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="435329143824508">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="660762486175835" type="spr_results_name">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="X co-ordinate">200</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="147721657670152" type="spr_results_name">
+                                            <param id="0" name="Distance">Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="948305421679104">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="700605361245235" type="spr_results_through">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">224</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="558743285428046" type="spr_results_through">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="292115727656764">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="191232797934255" type="Results_Zone">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">320</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="133929447949550" type="Results_Zone">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="635212919357498">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="315277952231728" type="spr_results_time">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">128</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="707118001124599" type="spr_results_time">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="447123390528987">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="740628627305317" type="spr_results_rings">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">128</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="528554172532228" type="spr_results_rings">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="257352735900954">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="842916465481062" type="spr_results_total">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">128</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="636320919604953" type="spr_results_total">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="880845672485059">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="143282710360637" type="results_time_counter">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">172</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="303233847001970" type="results_time_counter">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="962241598009372">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="423231474274559" type="results_rings_counter">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">172</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="800206039041988" type="results_rings_counter">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="487114831909767">
+                                    <conditions>
+                                        <condition id="-1" inverted="1" name="Compare X" sid="404886555503072" type="results_total_counter">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">172</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-17" name="Move forward" sid="616932132336760" type="results_total_counter">
+                                            <param id="0" name="Distance">-Values_SignPost.UIScrollSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="512653599401297" title="Global">
                     <sub-events>
                         <event-block sid="439648486296224">

@@ -335,6 +335,19 @@
             <object-type name="PromptWrap" sid="212329042939811">
                 <plugin id="Rex_PromptWrap" />
             </object-type>
+            <object-type name="Values_SignPost" sid="382411722973745">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CanPass" sid="746940035761485" type="boolean" />
+                    <instance-variable name="StartScoringPoints" sid="116539956672202" type="boolean" />
+                    <instance-variable name="UIScrollSpeed" sid="448667294147980" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241352453011895" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Player Objects">
             <object-folder name="Shields and Misc">
@@ -6471,7 +6484,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="607062196168441">
+        <object-type name="obj_sign_post" sid="607062196168441">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="28" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532389719684395" speed="0">
@@ -6541,7 +6554,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="429642992961399">
+        <object-type name="spr_results_total" sid="429642992961399">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505370383292363" speed="5">
@@ -6549,7 +6562,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="574905740854107">
+        <object-type name="Results_Zone" sid="574905740854107">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115757044220367" speed="5">
@@ -6563,6 +6576,10 @@
             <texture original-source="C:\Users\Tazik05\Desktop\41.png" />
         </object-type>
         <object-type name="results_rings_counter" sid="670440592097790">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Tazik05\Desktop\41.png" />
+        </object-type>
+        <object-type name="results_total_counter" sid="415099309375893">
             <plugin id="Spritefont2" />
             <texture original-source="C:\Users\Tazik05\Desktop\41.png" />
         </object-type>
@@ -6865,14 +6882,14 @@
         <file name="KC_48.m4a" />
         <file name="SFX_Beep.m4a" />
         <file name="SFX_Beep.ogg" />
-        <file name="Sound_RingMonitor.m4a" />
-        <file name="Sound_RingMonitor.ogg" />
-        <file name="[Sound Effect] Knuckles - Oh No!.ogg" />
-        <file name="jetpack-falling.ogg" />
-        <file name="jetpack.ogg" />
+        <file name="SFX_RingMonitor.m4a" />
+        <file name="SFX_RingMonitor.ogg" />
+        <file name="SFX_Knuckles_Oh_No.ogg" />
+        <file name="SFX_Jetpackfall.ogg" />
+        <file name="SFX_Jetpack.ogg" />
         <file name="SFX_MenuBleep.m4a" />
         <file name="SFX_MenuBleep.ogg" />
-        <file name="Sonic 3 And Knuckles OST - Game Over.ogg" />
+        <file name="SFX_GameOver.ogg" />
         <file name="SFX_Snap.m4a" />
         <file name="SFX_Snap.ogg" />
         <file name="SFX_BubbleBounce.m4a" />
@@ -6881,13 +6898,19 @@
         <file name="SFX_BubbleSheildGet.ogg" />
         <file name="SFX_RingLeft.ogg" />
         <file name="SFX_RingRight.ogg" />
+        <file name="SFX_ScoringPoints.m4a" />
+        <file name="SFX_ScoringPoints.ogg" />
+        <file name="SFX_ScoringResult.m4a" />
+        <file name="SFX_ScoringResult.ogg" />
+        <file name="SFX_ObjectSignpost.m4a" />
+        <file name="SFX_ObjectSignpost.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MUS_level.ogg" />
         <file name="MUS_menu.ogg" />
         <file name="MUS_speedshoes.ogg" />
         <file name="MUS_invincibility.ogg" />
-        <file name="bgm_test_zone_2.ogg" />
+        <file name="MUS_test_zone_2.ogg" />
         <file name="MUS_continue.ogg" />
     </music-folder>
     <files-folder>

@@ -23397,7 +23397,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="834">
+                <instance type="obj_sign_post" uid="834">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -27386,6 +27386,33 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Values_SignPost" uid="844">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CanPass>false</CanPass>
+                        <StartScoringPoints>true</StartScoringPoints>
+                        <UIScrollSpeed>4</UIScrollSpeed>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-64</x>
+                        <y>114</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -29112,7 +29139,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="839">
+                <instance type="spr_results_total" uid="839">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -29134,7 +29161,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite4" uid="840">
+                <instance type="Results_Zone" uid="840">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -29216,7 +29243,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="results_rings_counter" uid="843">
+                <instance type="results_total_counter" uid="843">
                     <properties>
                         <character-width>7</character-width>
                         <character-height>11</character-height>
