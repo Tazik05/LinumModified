@@ -24,8 +24,8 @@ ESC - Pause
 
 - [@stas's ports](https://gamejolt.com/@stas_ports) `The creator of the modification`
 - [@Halatnikov](https://gamejolt.com/@Halatnikov)  `Creator of the original engine`
-- [@Danik_animation](https://gamejolt.com/@Halatnikov)  `Help with sprites, ideas and testing`
-- [@ZaP-65](https://gamejolt.com/@Halatnikov)  `Help with ideas and testing`
+- [@Danik_animation](https://gamejolt.com/@Danik_animation)  `Help with sprites, ideas and testing`
+- [@ZaP-65](https://gamejolt.com/@ZaP-65)  `Help with ideas and testing`
 - [@TheLightXen](https://gamejolt.com/@everypony)  `Helped with the creation of the repository`
 
 
@@ -41,6 +41,7 @@ ESC - Pause
 - [Sonic Worlds](https://info.sonicretro.org/Sonic_Worlds) 
 - [Simple Sonic Worlds](https://forums.sonicretro.org/index.php?threads/simple-sonic-worlds.36075/) 
 - [Sonic Open Construct](https://www.construct.net/en/free-online-games/sonic-open-construct-17757/play) 
+- [Unreal Engine](https://www.unrealengine.com/en-US) `borrowed the console style`
 ## Screenshots
 
 ![App Screenshot](https://cdn.discordapp.com/attachments/856267195893153833/1080253907403538432/1.png)
