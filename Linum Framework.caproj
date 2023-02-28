@@ -6471,6 +6471,101 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="607062196168441">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="28" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532389719684395" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_results_name" sid="261638381154704">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655444138730586" speed="0">
+                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_results_through" sid="576212378512100">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219030135320517" speed="5">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\spr_results_through.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_results_time" sid="837444015247778">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="557972432410296" speed="5">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\spr_results_time.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spr_results_rings" sid="244722099342313">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999855203507838" speed="5">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\spr_results_rings.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="429642992961399">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505370383292363" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.526316" original-source="C:\Users\Tazik05\Desktop\spr_results_total.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="574905740854107">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115757044220367" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="results_time_counter" sid="990704614261134">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Tazik05\Desktop\41.png" />
+        </object-type>
+        <object-type name="results_rings_counter" sid="670440592097790">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Tazik05\Desktop\41.png" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -6689,7 +6784,6 @@
             <event-sheet>E_Level.xml</event-sheet>
             <event-sheet>E_GameOver.xml</event-sheet>
         </event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
         <event-sheet>Event sheet 4.xml</event-sheet>

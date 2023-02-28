@@ -10,11 +10,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">Linum_Level</layout>
-        <layout order="5">Linum_Continue</layout>
-        <event-sheet active="1" order="1">E_Engine</event-sheet>
-        <event-sheet order="3">E_Level</event-sheet>
-        <event-sheet order="4">E_global</event-sheet>
+        <layout active="1" order="0">Linum_Level</layout>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,8 +31,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="AndroidButtons" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/.System Objects/" />
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="0" path="object-folder/.System Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
         <folder expanded="0" path="object-folder/Level Collisions/" />
@@ -56,7 +52,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Test/" />
         <folder expanded="0" path="object-folder/manual/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
@@ -251,5 +247,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BG_Continue/" />
         <folder expanded="1" path="animation-folder/Text_CountGAMEOVER/" />
         <folder expanded="1" path="animation-folder/Values_Continue/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/spr_results_name/" />
+        <folder expanded="1" path="animation-folder/spr_results_through/" />
+        <folder expanded="1" path="animation-folder/spr_results_time/" />
+        <folder expanded="1" path="animation-folder/spr_results_rings/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
     </folders-expanded>
 </c2uistate>
