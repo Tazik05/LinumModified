@@ -32,7 +32,7 @@ First you have to download `behaviors` and `plugins`, after that you have to go 
 
 ![App Screenshot](https://cdn.discordapp.com/attachments/856267195893153833/1080268419355652116/image.png)
 
-Find the folder `.System object`s and click on `GlobalSettings`
+Find the folder `.System objects` and click on `GlobalSettings`
 
 ![App Screenshot](https://cdn.discordapp.com/attachments/856267195893153833/1080268993270644879/image.png)
 
