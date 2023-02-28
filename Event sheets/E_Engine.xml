@@ -5258,6 +5258,22 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="583845655257624">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="638270314764660" type="Values_Player">
+                                            <param id="0" name="Instance variable">IsHurt</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="294472103638849" type="Values_Player">
+                                            <param id="0" name="Instance variable">IsHurt</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>lazy fixes for damage problems when the player is not standing on spikes, etc</comment>
+                                    </sub-events>
+                                </event-block>
                             </sub-events>
                         </event-group>
                         <event-group description="" sid="189300565260770" title="Invincibility">
@@ -9349,9 +9365,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="928998692590001" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="808990279109804" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingLeft</param>
                                                             <param id="2" name="Loop">0</param>
@@ -9376,9 +9389,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="440930952761328" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="115293615439670" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingRight</param>
                                                             <param id="2" name="Loop">0</param>
@@ -9467,9 +9477,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="305212157185667" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="911906433887000" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingLeft</param>
                                                             <param id="2" name="Loop">0</param>
@@ -9494,9 +9501,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="929122489995800" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="494998436810018" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingRight</param>
                                                             <param id="2" name="Loop">0</param>
