@@ -27395,7 +27395,7 @@
                     </properties>
                     <instance-variables>
                         <CanPass>false</CanPass>
-                        <StartScoringPointsAnimation>true</StartScoringPointsAnimation>
+                        <StartScoringPointsAnimation>false</StartScoringPointsAnimation>
                         <StartScoringPoints>false</StartScoringPoints>
                         <UIScrollSpeed>4</UIScrollSpeed>
                         <TimeBonus>0</TimeBonus>
