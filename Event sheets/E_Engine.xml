@@ -6019,680 +6019,709 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-group description="" sid="423499360042624" title="Insta-shield ">
+                        <event-block sid="327331677245342">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="705560423292997" type="Values_Player">
+                                    <param id="0" name="Instance variable">Invincibility</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="642451756398429">
-                                    <conditions>
-                                        <condition id="4" name="On finished" sid="494174091858356" type="InstaShield">
-                                            <param id="0" name="Animation">&quot;Insta&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="362948708638045" type="Sensor_Hitbox">
-                                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="737215392503684" type="Values_Player">
-                                            <param id="0" name="Instance variable">Attacking</param>
-                                            <param id="1" name="Value">&quot;True&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="931877856559131">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="512168646929452" type="Values_Player">
-                                            <param id="0" name="Instance variable">CanControl</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="760478982299298" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="748805103991924" type="Values_Player">
-                                            <param id="0" name="Instance variable">Shield</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;None&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="351620381375154" type="Values_Player">
-                                            <param id="0" name="Instance variable">Character</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
+                                <event-group description="" sid="423499360042624" title="Insta-shield ">
                                     <sub-events>
-                                        <event-block sid="144992689015008">
+                                        <event-block sid="642451756398429">
                                             <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="865607438770529" type="Values_Input">
-                                                    <param id="0" name="Instance variable">KeyAHold</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="882225155697117" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="302944680129893">
-                                                    <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="883810141489994" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseShield</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="186153713896474" type="InstaShield">
-                                                            <param id="0" name="Animation">&quot;Insta&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="434615603382006" type="Sensor_Hitbox">
-                                                            <param id="0" name="Animation">&quot;InstaShield&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Play" sid="658062952660071" type="Audio">
-                                                            <param id="0" name="Audio file">SFX_InstaShield</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;SFX_InstaShield&quot;</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="278655483956003" type="Values_Player">
-                                                            <param id="0" name="Instance variable">Attacking</param>
-                                                            <param id="1" name="Value">&quot;InstaShield&quot;</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="430851795152700" type="System">
-                                                            <param id="0" name="Seconds">0.1</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="618511311022224" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseShield</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="437819845251752">
-                                            <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="985473733290452" type="System" />
-                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="943996054522902" type="Sensor_Main">
-                                                    <param id="0" name="Object">Gimmick_HangingIdle_Bar</param>
-                                                </condition>
-                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="573103128700973" type="Sensor_ObjectDown">
-                                                    <param id="0" name="Object">Gimmick_HangingIdle_Bar</param>
+                                                <condition id="4" name="On finished" sid="494174091858356" type="InstaShield">
+                                                    <param id="0" name="Animation">&quot;Insta&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-13" name="Set boolean" sid="255826026415362" type="Values_Player">
-                                                    <param id="0" name="Instance variable">CanUseShield</param>
-                                                    <param id="1" name="Value">1</param>
+                                                <action id="4" name="Set animation" sid="362948708638045" type="Sensor_Hitbox">
+                                                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="737215392503684" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Attacking</param>
+                                                    <param id="1" name="Value">&quot;True&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="118544610442981" title="Light-shield">
-                            <sub-events>
-                                <event-group description="" sid="898011620067936" title="Attraction of rings">
-                                    <sub-events>
-                                        <event-block sid="102590049025089">
+                                        <event-block sid="931877856559131">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="269845414908639" type="Values_Player">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="512168646929452" type="Values_Player">
+                                                    <param id="0" name="Instance variable">CanControl</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="760478982299298" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="748805103991924" type="Values_Player">
                                                     <param id="0" name="Instance variable">Shield</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Light&quot;</param>
+                                                    <param id="2" name="Value">&quot;None&quot;</param>
                                                 </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="355697378612635">
-                                                    <conditions>
-                                                        <condition id="-11" name="For Each" sid="494617019260698" type="System">
-                                                            <param id="0" name="Object">Ring</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="912106440692770">
-                                                            <conditions>
-                                                                <condition id="-3" name="Is on-screen" sid="144111113322377" type="Ring" />
-                                                                <condition id="-4" name="Trigger once while true" sid="480882614008972" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-13" name="Set boolean" sid="860718659249775" type="Ring">
-                                                                    <param id="0" name="Instance variable">FollowPlayer</param>
-                                                                    <param id="1" name="Value">1</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="5" name="Set enabled" sid="305088525975176" type="Ring">
-                                                                    <param id="0" name="State">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="901541492220719">
-                                                            <conditions>
-                                                                <condition id="-8" name="Is boolean instance variable set" sid="119067951357200" type="Ring">
-                                                                    <param id="0" name="Instance variable">FollowPlayer</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="922727311234875" type="Ring">
-                                                                    <param id="0" name="Angle">angle(Self.X, Self.Y, Sensor_Main.X, Sensor_Main.Y)</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="756762510049362">
-                                            <conditions>
-                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="816319926088253" type="Values_Player">
-                                                    <param id="0" name="Instance variable">Shield</param>
+                                                <condition id="-7" name="Compare instance variable" sid="351620381375154" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Character</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Light&quot;</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="550420709011874" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="109198639990655" type="Ring">
-                                                    <param id="0" name="Instance variable">FollowPlayer</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action behavior="Bullet" id="5" name="Set enabled" sid="213230100247524" type="Ring">
-                                                    <param id="0" name="State">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-group>
-                                <event-block sid="130641459637235">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="944048803315107" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="609255731776640" type="Values_Player">
-                                            <param id="0" name="Instance variable">Shield</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Light&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="359638263367484" type="Values_Player">
-                                            <param id="0" name="Instance variable">Character</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="717707906807953">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="343672346342971" type="Values_Input">
-                                                    <param id="0" name="Instance variable">KeyAHold</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="924155297897701" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="878130818488787">
-                                                    <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="698284033184635" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseShield</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="137280380202184" type="ShieldTop">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="783739186522872" type="ShieldBottom">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                        <action id="0" name="Play" sid="766663498957751" type="Audio">
-                                                            <param id="0" name="Audio file">SFX_ThunderJump</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;SFX_ThunderJump&quot;</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="178198894181827" type="System">
-                                                            <param id="0" name="Seconds">0.1</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="313275155175099" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseShield</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                    <sub-events>
-                                                        <event-block sid="474856407939674">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="525804616909484" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="124503374839383" type="Sensor_Main">
-                                                                    <param id="0" name="Vector Y">-400</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="499124058522417" type="System">
-                                                                    <param id="0" name="Object to create">ThunderSpark</param>
-                                                                    <param id="1" name="Layer">LightShield.LayerNumber</param>
-                                                                    <param id="2" name="X">Sensor_Main.X</param>
-                                                                    <param id="3" name="Y">Sensor_Main.Y</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="756049698124058" type="ThunderSpark">
-                                                                    <param id="0" name="Angle">315</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="637057014363432" type="System">
-                                                                    <param id="0" name="Object to create">ThunderSpark</param>
-                                                                    <param id="1" name="Layer">LightShield.LayerNumber</param>
-                                                                    <param id="2" name="X">Sensor_Main.X</param>
-                                                                    <param id="3" name="Y">Sensor_Main.Y</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="739902591953594" type="ThunderSpark">
-                                                                    <param id="0" name="Angle">225</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="287690557290347" type="System">
-                                                                    <param id="0" name="Object to create">ThunderSpark</param>
-                                                                    <param id="1" name="Layer">LightShield.LayerNumber</param>
-                                                                    <param id="2" name="X">Sensor_Main.X</param>
-                                                                    <param id="3" name="Y">Sensor_Main.Y</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="198997937556864" type="ThunderSpark">
-                                                                    <param id="0" name="Angle">135</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="342399669970482" type="System">
-                                                                    <param id="0" name="Object to create">ThunderSpark</param>
-                                                                    <param id="1" name="Layer">LightShield.LayerNumber</param>
-                                                                    <param id="2" name="X">Sensor_Main.X</param>
-                                                                    <param id="3" name="Y">Sensor_Main.Y</param>
-                                                                </action>
-                                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="916789358520574" type="ThunderSpark">
-                                                                    <param id="0" name="Angle">45</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="383808115559169">
-                                            <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="190804060439281" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="974037528052522" type="Values_Player">
-                                                    <param id="0" name="Instance variable">CanUseShield</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="354506026699399">
-                                            <conditions>
-                                                <condition id="-18" name="On created" sid="728341673477608" type="ThunderSpark" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Wait" sid="597946748222635" type="System">
-                                                    <param id="0" name="Seconds">0.3</param>
-                                                </action>
-                                                <action id="-9" name="Destroy" sid="427726556546513" type="ThunderSpark" />
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="827538511276030" title="Aquatic-Shield">
-                            <sub-events>
-                                <event-block sid="827436382112738">
-                                    <conditions>
-                                        <condition id="4" name="On finished" sid="967449196393814" type="ShieldTop">
-                                            <param id="0" name="Animation">&quot;Aquatic_Bouncing&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="357247310705636" type="ShieldTop">
-                                            <param id="0" name="Animation">&quot;Aquatic&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="801449563193923">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="536332658482489" type="Values_Input">
-                                            <param id="0" name="Instance variable">KeyAHold</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="530049025125502" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="703115364798106" type="Values_Player">
-                                            <param id="0" name="Instance variable">ShieldTrigger</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="154166043553334">
-                                    <conditions>
-                                        <condition behavior="SonicPhysics" id="9" name="On landed" sid="216736570803793" type="Sensor_Main" />
-                                        <condition id="-8" name="Is boolean instance variable set" sid="359916026463651" type="Values_Input">
-                                            <param id="0" name="Instance variable">KeyAHold</param>
-                                        </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="804817683201499" type="Values_Player">
-                                            <param id="0" name="Instance variable">CanUseShield</param>
-                                        </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="514915619727703" type="Values_Player">
-                                            <param id="0" name="Instance variable">ShieldTrigger</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="360183688352971" type="Values_Player">
-                                            <param id="0" name="Instance variable">ShieldTimer</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="946646337173657" type="Values_Player">
-                                            <param id="0" name="Instance variable">Shield</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Aquatic&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="208170457985643" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Value">&quot;Jump&quot;</param>
-                                        </action>
-                                        <action id="0" name="Play" sid="666608477515173" type="Audio">
-                                            <param id="0" name="Audio file">SFX_BubbleBounce</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;SFX_BubbleBounce&quot;</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="826712249168870" type="Values_Player">
-                                            <param id="0" name="Instance variable">ShieldTrigger</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="414248590796881" type="ShieldTop">
-                                            <param id="0" name="Animation">&quot;Aquatic_Bouncing&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="495350053546196" type="Sensor_Main">
-                                            <param id="0" name="Vector Y">-400</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block disabled="1" sid="870284145858720">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="144642406819650" type="Values_Player">
-                                                    <param id="0" name="Instance variable">ShieldTimer</param>
-                                                    <param id="1" name="Comparison">3</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
-                                        </event-block>
-                                        <event-block disabled="1" sid="780535353306568">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="425029385916433" type="Values_Player">
-                                                    <param id="0" name="Instance variable">ShieldTimer</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="375971214322183">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="405635003304476" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="836112469163564" type="Values_Player">
-                                            <param id="0" name="Instance variable">Shield</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Aquatic&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="488105554213692" type="Values_Player">
-                                            <param id="0" name="Instance variable">Character</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="120059217717015">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="488649077683240" type="Values_Input">
-                                                    <param id="0" name="Instance variable">KeyAHold</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
                                             <sub-events>
-                                                <event-block sid="408412271909035">
+                                                <event-block sid="144992689015008">
                                                     <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="870096829858911" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Set value" sid="475767701100095" type="Values_Player">
-                                                            <param id="0" name="Instance variable">ShieldTimer</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="486265157878849">
-                                                    <conditions>
-                                                        <condition behavior="SonicPhysics" id="2" inverted="1" name="Is on floor" sid="578585004769260" type="Sensor_Main" />
-                                                        <condition id="-8" name="Compare two values" sid="996746212103462" type="System">
-                                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
-                                                            <param id="1" name="Comparison">4</param>
-                                                            <param id="2" name="Second value">0</param>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="865607438770529" type="Values_Input">
+                                                            <param id="0" name="Instance variable">KeyAHold</param>
                                                         </condition>
-                                                        <condition id="-6" name="Every X seconds" sid="608218447140876" type="System">
-                                                            <param id="0" name="Interval (seconds)">0.05</param>
-                                                        </condition>
-                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="525228112215700" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseShield</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-11" name="Add to" sid="268098277749777" type="Values_Player">
-                                                            <param id="0" name="Instance variable">ShieldTimer</param>
-                                                            <param id="1" name="Value">0.05</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="790465789807750">
-                                                    <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="766547763107967" type="System" />
+                                                        <condition id="-4" name="Trigger once while true" sid="882225155697117" type="System" />
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="608671603493993">
+                                                        <event-block sid="302944680129893">
                                                             <conditions>
-                                                                <condition id="-8" name="Is boolean instance variable set" sid="868204781277128" type="Values_Player">
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="883810141489994" type="Values_Player">
                                                                     <param id="0" name="Instance variable">CanUseShield</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-15" name="Set visible" sid="157482901842316" type="ShieldTop">
-                                                                    <param id="0" name="Visibility">0</param>
+                                                                <action id="4" name="Set animation" sid="186153713896474" type="InstaShield">
+                                                                    <param id="0" name="Animation">&quot;Insta&quot;</param>
+                                                                    <param id="1" name="From">1</param>
                                                                 </action>
-                                                                <action id="-15" name="Set visible" sid="664414845313555" type="ShieldBottom">
-                                                                    <param id="0" name="Visibility">0</param>
+                                                                <action id="4" name="Set animation" sid="434615603382006" type="Sensor_Hitbox">
+                                                                    <param id="0" name="Animation">&quot;InstaShield&quot;</param>
+                                                                    <param id="1" name="From">1</param>
                                                                 </action>
-                                                                <action disabled="1" id="0" name="Play" sid="215587063985712" type="Audio">
-                                                                    <param id="0" name="Audio file">SFX_ThunderJump</param>
+                                                                <action id="0" name="Play" sid="658062952660071" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_InstaShield</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>
-                                                                    <param id="1" name="Tag (optional)">&quot;SFX_ThunderJump&quot;</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_InstaShield&quot;</param>
                                                                 </action>
-                                                                <action id="-16" name="Wait" sid="865666047514368" type="System">
-                                                                    <param id="0" name="Seconds">0</param>
+                                                                <action id="-10" name="Set value" sid="278655483956003" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Attacking</param>
+                                                                    <param id="1" name="Value">&quot;InstaShield&quot;</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="316575364904693" type="Values_Player">
+                                                                <action id="-16" name="Wait" sid="430851795152700" type="System">
+                                                                    <param id="0" name="Seconds">0.1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="618511311022224" type="Values_Player">
                                                                     <param id="0" name="Instance variable">CanUseShield</param>
                                                                     <param id="1" name="Value">0</param>
                                                                 </action>
                                                             </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="437819845251752">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="985473733290452" type="System" />
+                                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="943996054522902" type="Sensor_Main">
+                                                            <param id="0" name="Object">Gimmick_HangingIdle_Bar</param>
+                                                        </condition>
+                                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="573103128700973" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">Gimmick_HangingIdle_Bar</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="255826026415362" type="Values_Player">
+                                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="118544610442981" title="Light-shield">
+                                    <sub-events>
+                                        <event-group description="" sid="898011620067936" title="Attraction of rings">
+                                            <sub-events>
+                                                <event-block sid="102590049025089">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="269845414908639" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Shield</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Light&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="355697378612635">
+                                                            <conditions>
+                                                                <condition id="-11" name="For Each" sid="494617019260698" type="System">
+                                                                    <param id="0" name="Object">Ring</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
                                                             <sub-events>
-                                                                <event-block sid="613508135200459">
-                                                                    <conditions />
+                                                                <event-block sid="912106440692770">
+                                                                    <conditions>
+                                                                        <condition id="-3" name="Is on-screen" sid="144111113322377" type="Ring" />
+                                                                        <condition id="-4" name="Trigger once while true" sid="480882614008972" type="System" />
+                                                                    </conditions>
                                                                     <actions>
-                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="227237543940282" type="Sensor_Main">
-                                                                            <param id="0" name="Vector Y">400</param>
+                                                                        <action id="-13" name="Set boolean" sid="860718659249775" type="Ring">
+                                                                            <param id="0" name="Instance variable">FollowPlayer</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="305088525975176" type="Ring">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="901541492220719">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="119067951357200" type="Ring">
+                                                                            <param id="0" name="Instance variable">FollowPlayer</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="922727311234875" type="Ring">
+                                                                            <param id="0" name="Angle">angle(Self.X, Self.Y, Sensor_Main.X, Sensor_Main.Y)</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
-                                                        <event-block sid="160010019353805">
-                                                            <conditions />
-                                                            <actions>
-                                                                <action id="-13" name="Set boolean" sid="873806004139614" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">CanUseShield</param>
-                                                                    <param id="1" name="Value">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
                                                     </sub-events>
                                                 </event-block>
+                                                <event-block sid="756762510049362">
+                                                    <conditions>
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="816319926088253" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Shield</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Light&quot;</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="550420709011874" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="109198639990655" type="Ring">
+                                                            <param id="0" name="Instance variable">FollowPlayer</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="213230100247524" type="Ring">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                             </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="294203685108208" title="Fire shield ability">
-                            <sub-events>
-                                <event-block sid="943825720651595">
-                                    <conditions>
-                                        <condition id="4" name="On finished" sid="996553020739112" type="FireShieldDash">
-                                            <param id="0" name="Animation">&quot;Fire&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="612065748314100" type="Sensor_Hitbox">
-                                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="597938236675592" type="ShieldTop">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="116562235601004" type="ShieldBottom">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="867687947613895">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="541558559684702" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="551537330994272" type="Values_Player">
-                                            <param id="0" name="Instance variable">Shield</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Fire&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="219046394592206" type="Values_Player">
-                                            <param id="0" name="Instance variable">Character</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="517255350006138">
+                                        </event-group>
+                                        <event-block sid="130641459637235">
                                             <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="383946668968644" type="Values_Input">
-                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                <condition id="-7" name="Compare instance variable" sid="944048803315107" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
                                                 </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="624653515480075" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="609255731776640" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Light&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="359638263367484" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Character</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="563558320025825">
+                                                <event-block sid="717707906807953">
                                                     <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="456384469876343" type="Values_Player">
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="343672346342971" type="Values_Input">
+                                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="924155297897701" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="878130818488787">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="698284033184635" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="137280380202184" type="ShieldTop">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="783739186522872" type="ShieldBottom">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="766663498957751" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_ThunderJump</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_ThunderJump&quot;</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="178198894181827" type="System">
+                                                                    <param id="0" name="Seconds">0.1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="313275155175099" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="474856407939674">
+                                                                    <conditions>
+                                                                        <condition id="-4" name="Trigger once while true" sid="525804616909484" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="124503374839383" type="Sensor_Main">
+                                                                            <param id="0" name="Vector Y">-400</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Create object" sid="499124058522417" type="System">
+                                                                            <param id="0" name="Object to create">ThunderSpark</param>
+                                                                            <param id="1" name="Layer">LightShield.LayerNumber</param>
+                                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                                            <param id="3" name="Y">Sensor_Main.Y</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="756049698124058" type="ThunderSpark">
+                                                                            <param id="0" name="Angle">315</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Create object" sid="637057014363432" type="System">
+                                                                            <param id="0" name="Object to create">ThunderSpark</param>
+                                                                            <param id="1" name="Layer">LightShield.LayerNumber</param>
+                                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                                            <param id="3" name="Y">Sensor_Main.Y</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="739902591953594" type="ThunderSpark">
+                                                                            <param id="0" name="Angle">225</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Create object" sid="287690557290347" type="System">
+                                                                            <param id="0" name="Object to create">ThunderSpark</param>
+                                                                            <param id="1" name="Layer">LightShield.LayerNumber</param>
+                                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                                            <param id="3" name="Y">Sensor_Main.Y</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="198997937556864" type="ThunderSpark">
+                                                                            <param id="0" name="Angle">135</param>
+                                                                        </action>
+                                                                        <action id="-3" name="Create object" sid="342399669970482" type="System">
+                                                                            <param id="0" name="Object to create">ThunderSpark</param>
+                                                                            <param id="1" name="Layer">LightShield.LayerNumber</param>
+                                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                                            <param id="3" name="Y">Sensor_Main.Y</param>
+                                                                        </action>
+                                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="916789358520574" type="ThunderSpark">
+                                                                            <param id="0" name="Angle">45</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="383808115559169">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="190804060439281" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="974037528052522" type="Values_Player">
                                                             <param id="0" name="Instance variable">CanUseShield</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="354506026699399">
+                                                    <conditions>
+                                                        <condition id="-18" name="On created" sid="728341673477608" type="ThunderSpark" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="597946748222635" type="System">
+                                                            <param id="0" name="Seconds">0.3</param>
+                                                        </action>
+                                                        <action id="-9" name="Destroy" sid="427726556546513" type="ThunderSpark" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="827538511276030" title="Aquatic-Shield">
+                                    <sub-events>
+                                        <event-block sid="827436382112738">
+                                            <conditions>
+                                                <condition id="4" name="On finished" sid="967449196393814" type="ShieldTop">
+                                                    <param id="0" name="Animation">&quot;Aquatic_Bouncing&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="357247310705636" type="ShieldTop">
+                                                    <param id="0" name="Animation">&quot;Aquatic&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="801449563193923">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="536332658482489" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="530049025125502" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="703115364798106" type="Values_Player">
+                                                    <param id="0" name="Instance variable">ShieldTrigger</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="154166043553334">
+                                            <conditions>
+                                                <condition behavior="SonicPhysics" id="9" name="On landed" sid="216736570803793" type="Sensor_Main" />
+                                                <condition id="-8" name="Is boolean instance variable set" sid="359916026463651" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="804817683201499" type="Values_Player">
+                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="514915619727703" type="Values_Player">
+                                                    <param id="0" name="Instance variable">ShieldTrigger</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="360183688352971" type="Values_Player">
+                                                    <param id="0" name="Instance variable">ShieldTimer</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="946646337173657" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Aquatic&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="208170457985643" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Value">&quot;Jump&quot;</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="666608477515173" type="Audio">
+                                                    <param id="0" name="Audio file">SFX_BubbleBounce</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFX_BubbleBounce&quot;</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="826712249168870" type="Values_Player">
+                                                    <param id="0" name="Instance variable">ShieldTrigger</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="414248590796881" type="ShieldTop">
+                                                    <param id="0" name="Animation">&quot;Aquatic_Bouncing&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="870284145858720">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="144642406819650" type="Values_Player">
+                                                            <param id="0" name="Instance variable">ShieldTimer</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0.05</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-15" name="Set visible" sid="584452478277567" type="ShieldTop">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="576448852851396" type="ShieldBottom">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="301735726453312" type="FireShieldDash">
-                                                            <param id="0" name="Animation">&quot;Fire&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="943625456000911" type="Sensor_Hitbox">
-                                                            <param id="0" name="Animation">&quot;FireShieldDash&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Play" sid="867876687896025" type="Audio">
-                                                            <param id="0" name="Audio file">SFX_ShieldFireDash</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;SFX_ShieldFireDash&quot;</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="375160770314538" type="System">
-                                                            <param id="0" name="Seconds">0.1</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="375260802570375" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseShield</param>
-                                                            <param id="1" name="Value">0</param>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="279375409099194" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-550</param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="189153245633224">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="215678811037706" type="Values_Player">
+                                                            <param id="0" name="Instance variable">ShieldTimer</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0.10</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="495350053546196" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-500</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="975360877771602">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="560014605835173" type="Values_Player">
+                                                            <param id="0" name="Instance variable">ShieldTimer</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">0.15</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="263593032746217" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-400</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="375971214322183">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="405635003304476" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="836112469163564" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Aquatic&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="488105554213692" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Character</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="120059217717015">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="488649077683240" type="Values_Input">
+                                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
                                                     <sub-events>
-                                                        <event-block sid="220080957873587">
+                                                        <event-block sid="408412271909035">
                                                             <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="567760028071004" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;right&quot;</param>
-                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="870096829858911" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="593139335174164" type="Sensor_Main">
-                                                                    <param id="0" name="Vector X">Values_Player.ForcedSpeed4</param>
-                                                                </action>
-                                                                <action id="7" name="Set mirrored" sid="598820899377814" type="FireShieldDash">
-                                                                    <param id="0" name="State">1</param>
+                                                                <action id="-10" name="Set value" sid="475767701100095" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">ShieldTimer</param>
+                                                                    <param id="1" name="Value">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <event-block sid="719076770016618">
+                                                        <event-block sid="486265157878849">
                                                             <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="140915333338292" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                <condition behavior="SonicPhysics" id="2" inverted="1" name="Is on floor" sid="578585004769260" type="Sensor_Main" />
+                                                                <condition id="-8" name="Compare two values" sid="996746212103462" type="System">
+                                                                    <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                                <condition id="-6" name="Every X seconds" sid="608218447140876" type="System">
+                                                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                                                </condition>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="525228112215700" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="456847299294240" type="Sensor_Main">
-                                                                    <param id="0" name="Vector X">-Values_Player.ForcedSpeed4</param>
-                                                                </action>
-                                                                <action id="7" name="Set mirrored" sid="472595091338299" type="FireShieldDash">
-                                                                    <param id="0" name="State">0</param>
+                                                                <action id="-11" name="Add to" sid="268098277749777" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">ShieldTimer</param>
+                                                                    <param id="1" name="Value">0.05</param>
                                                                 </action>
                                                             </actions>
+                                                        </event-block>
+                                                        <event-block sid="790465789807750">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="766547763107967" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="608671603493993">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="868204781277128" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-15" name="Set visible" sid="157482901842316" type="ShieldTop">
+                                                                            <param id="0" name="Visibility">0</param>
+                                                                        </action>
+                                                                        <action id="-15" name="Set visible" sid="664414845313555" type="ShieldBottom">
+                                                                            <param id="0" name="Visibility">0</param>
+                                                                        </action>
+                                                                        <action disabled="1" id="0" name="Play" sid="215587063985712" type="Audio">
+                                                                            <param id="0" name="Audio file">SFX_ThunderJump</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;SFX_ThunderJump&quot;</param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="865666047514368" type="System">
+                                                                            <param id="0" name="Seconds">0</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="316575364904693" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="613508135200459">
+                                                                            <conditions />
+                                                                            <actions>
+                                                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="227237543940282" type="Sensor_Main">
+                                                                                    <param id="0" name="Vector Y">400</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="160010019353805">
+                                                                    <conditions />
+                                                                    <actions>
+                                                                        <action id="-13" name="Set boolean" sid="873806004139614" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="948496574792360">
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="294203685108208" title="Fire shield ability">
+                                    <sub-events>
+                                        <event-block sid="943825720651595">
                                             <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="877222388012405" type="System" />
+                                                <condition id="4" name="On finished" sid="996553020739112" type="FireShieldDash">
+                                                    <param id="0" name="Animation">&quot;Fire&quot;</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-13" name="Set boolean" sid="566432549372508" type="Values_Player">
-                                                    <param id="0" name="Instance variable">CanUseShield</param>
-                                                    <param id="1" name="Value">1</param>
+                                                <action id="4" name="Set animation" sid="612065748314100" type="Sensor_Hitbox">
+                                                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="597938236675592" type="ShieldTop">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="116562235601004" type="ShieldBottom">
+                                                    <param id="0" name="Visibility">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="867687947613895">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="541558559684702" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="551537330994272" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Fire&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="219046394592206" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Character</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="517255350006138">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="383946668968644" type="Values_Input">
+                                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="624653515480075" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="563558320025825">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="456384469876343" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="584452478277567" type="ShieldTop">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="576448852851396" type="ShieldBottom">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="301735726453312" type="FireShieldDash">
+                                                                    <param id="0" name="Animation">&quot;Fire&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="943625456000911" type="Sensor_Hitbox">
+                                                                    <param id="0" name="Animation">&quot;FireShieldDash&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="867876687896025" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_ShieldFireDash</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_ShieldFireDash&quot;</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="375160770314538" type="System">
+                                                                    <param id="0" name="Seconds">0.1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="375260802570375" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseShield</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="220080957873587">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="567760028071004" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="593139335174164" type="Sensor_Main">
+                                                                            <param id="0" name="Vector X">Values_Player.ForcedSpeed4</param>
+                                                                        </action>
+                                                                        <action id="7" name="Set mirrored" sid="598820899377814" type="FireShieldDash">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="719076770016618">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="140915333338292" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="456847299294240" type="Sensor_Main">
+                                                                            <param id="0" name="Vector X">-Values_Player.ForcedSpeed4</param>
+                                                                        </action>
+                                                                        <action id="7" name="Set mirrored" sid="472595091338299" type="FireShieldDash">
+                                                                            <param id="0" name="State">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="948496574792360">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="877222388012405" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="566432549372508" type="Values_Player">
+                                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                     </sub-events>
-                                </event-block>
+                                </event-group>
                             </sub-events>
-                        </event-group>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="551282258609036" title="Badniks">
@@ -11763,7 +11792,7 @@
         </event-group>
         <event-group description="" sid="331206807603223" title="UI stuff">
             <sub-events>
-                <event-group description="" sid="868516338001849" title="GameOver_Text">
+                <event-group description="" sid="868516338001849" title="GameOver">
                     <sub-events>
                         <event-block sid="234624847920943">
                             <conditions>
