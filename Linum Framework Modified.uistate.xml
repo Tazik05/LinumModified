@@ -10,10 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Linum_Level</layout>
+        <layout order="1">Linum_Level</layout>
         <layout order="2">Linum_mainMenu</layout>
+        <layout order="3">Linum_logo</layout>
         <event-sheet order="0">E_Level</event-sheet>
-        <event-sheet order="1">E_Engine</event-sheet>
+        <event-sheet active="1" order="1">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -34,7 +35,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="AndroidButtons" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/.System Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />

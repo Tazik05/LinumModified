@@ -56,6 +56,39 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="107133773228799">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="729396806464649" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="978690189479631" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="890187598525426" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="576161119083435" type="Spr_Car">
+                                                    <param id="0" name="Instance variable">PlayerInCar</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="903211729389174" type="GamepadButton2">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="240304147568995" type="GamepadButton">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="874735527392626" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="803903473967082" type="Sensor_Main">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                                <action behavior="Platform" id="11" name="Set enabled" sid="593275241267789" type="Spr_Car">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="731629456035980">
                                             <conditions>
                                                 <condition behavior="Platform" id="0" name="Is moving" sid="369632352019943" type="Spr_Car" />
@@ -189,6 +222,9 @@
                                                 <condition id="-4" name="Trigger once while true" sid="751656900230651" type="System" />
                                             </conditions>
                                             <actions>
+                                                <action id="-16" name="Wait" sid="812724003730807" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
                                                 <action id="-13" name="Set boolean" sid="141678607933624" type="Spr_Car">
                                                     <param id="0" name="Instance variable">PlayerInCar</param>
                                                     <param id="1" name="Value">1</param>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Linum Framework</name>
+    <name>Linum Framework Modified</name>
     <description>Sonic Framework using SonicPhysics add-on</description>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <author>Halatnikov &amp; stas&apos;s ports</author>
     <author-email></author-email>
     <author-website>halatnikov.github.io</author-website>

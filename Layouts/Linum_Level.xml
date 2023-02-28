@@ -29974,15 +29974,15 @@
                 <NewSpeedShoesAudio>true</NewSpeedShoesAudio>
                 <EnablePause>true</EnablePause>
                 <EnableOptimization>true</EnableOptimization>
-                <EnableEventOptimization>false</EnableEventOptimization>
+                <EnableEventOptimization>true</EnableEventOptimization>
                 <EnableDebuggingMessages>true</EnableDebuggingMessages>
-                <EnableConsole>false</EnableConsole>
+                <EnableConsole>true</EnableConsole>
                 <EnableDebug>true</EnableDebug>
                 <SmartWatchSupport>false</SmartWatchSupport>
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
                 <HUD>Linum</HUD>
-                <Platform>Desktop</Platform>
+                <Platform>Mobile</Platform>
                 <ScreenSize>2x</ScreenSize>
                 <FpsCounter>0</FpsCounter>
                 <FpsFix>false</FpsFix>
