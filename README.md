@@ -11,9 +11,9 @@ Linum Framework Modified is a redesigned original Linum Framework engine with a 
 
 #### Game controls
 
-Arrows - walk
+Arrows - Walk
 
-Z -Action
+Z - Action
 
 ESC - Pause
 
@@ -39,6 +39,14 @@ Find the folder `.System objects` and click on `GlobalSettings`
 Here you can change the parameters, at the bottom there is a description of what it is responsible for and what can be entered there
 
 
+## Features
+
+
+- This modification is one of the few whose capabilities are preserved on any platform, so you can easily make a game for PC and then easily port it to Android
+
+- There is a lot of content from other engines in this modification, so you don't have to think about how to implement this or that thing
+
+- The stable operation of the engine does not require a lot of resources, a smartphone with 1 GB of RAM and an MTK6580 processor is enough, or a PC with a pentium 4 and at least 2 GB of RAM `p.s the video card also plays a significant role`
 ## Authors
 
 - [@stas's ports](https://gamejolt.com/@stas_ports) `The creator of the modification`
@@ -83,3 +91,12 @@ If you have any suggestions, feedback, ideas or anything else, then you can cont
 - [Telegram](https://t.me/SpyDillon)  `(There is a chance that I won't see your message)`
 - [GameJolt](https://gamejolt.com/@stas_ports)
 - [YouTube](https://www.youtube.com/channel/UC1vIRUxLINoL7pMIqIh-PkQ)
+# Linum Framework Modified
+
+A brief description of what this project does and who it's for
+
+
+## Appendix
+
+Any additional information goes here
+
