@@ -11241,10 +11241,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3096</x>
+                        <x>3015</x>
                         <y>328</y>
                         <z>0</z>
-                        <width>232</width>
+                        <width>394</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -24645,8 +24645,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3096</x>
-                        <y>296</y>
+                        <x>3200</x>
+                        <y>-52</y>
                         <z>0</z>
                         <width>122</width>
                         <height>40</height>
@@ -25839,9 +25839,9 @@
                         <Invincibility>false</Invincibility>
                         <CurrentLayer>0</CurrentLayer>
                         <CanFly>false</CanFly>
-                        <IsFlying>false</IsFlying>
-                        <IsTired>false</IsTired>
-                        <IsRotate>false</IsRotate>
+                        <Flying>false</Flying>
+                        <Tired>false</Tired>
+                        <Rotate>false</Rotate>
                         <TiredTimer>0</TiredTimer>
                         <ConveyorBeltSpeed>3</ConveyorBeltSpeed>
                         <InTunnel>false</InTunnel>
@@ -25856,6 +25856,8 @@
                         <Hurt>false</Hurt>
                         <Falling>false</Falling>
                         <CanFall>false</CanFall>
+                        <ClimbingOffset>6</ClimbingOffset>
+                        <Slide>false</Slide>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -26156,7 +26158,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-136</x>
-                        <y>36</y>
+                        <y>38</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
@@ -26573,8 +26575,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3054</x>
-                        <y>668</y>
+                        <x>2880</x>
+                        <y>264</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
@@ -29588,7 +29590,7 @@
                 </instance>
                 <instance type="GamepadButton" uid="855">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>
@@ -29615,7 +29617,7 @@
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
                         <text>confirm</text>
                         <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Right</hotspot>

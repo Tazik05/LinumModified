@@ -10,11 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="3">Linum_Continue</layout>
-        <layout order="6">Linum_Level</layout>
-        <event-sheet order="2">E_GameOver</event-sheet>
-        <event-sheet order="4">E_Level</event-sheet>
-        <event-sheet active="1" order="5">E_Engine</event-sheet>
+        <layout order="1">Linum_Level</layout>
+        <event-sheet order="0">E_Level</event-sheet>
+        <event-sheet order="2">E_global</event-sheet>
+        <event-sheet active="1" order="3">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,16 +21,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
         <family expanded="0" name="SolidObjects" />
         <family expanded="0" name="Collisions_Layer0" />
         <family expanded="0" name="Collisions_Layer1" />
-        <family expanded="1" name="Behavior_Solid" />
+        <family expanded="0" name="Behavior_Solid" />
         <family expanded="0" name="Behavior_Jumpthru" />
         <family expanded="0" name="Animals" />
-        <family expanded="0" name="obj" />
+        <family expanded="1" name="obj" />
         <family expanded="0" name="AndroidButtons" />
     </families-expanded>
     <folders-expanded>
