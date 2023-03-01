@@ -10,9 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Linum_Level</layout>
-        <event-sheet order="2">E_Level</event-sheet>
-        <event-sheet active="1" order="3">E_Engine</event-sheet>
+        <layout order="3">Linum_Continue</layout>
+        <layout order="6">Linum_Level</layout>
+        <event-sheet order="2">E_GameOver</event-sheet>
+        <event-sheet order="4">E_Level</event-sheet>
+        <event-sheet active="1" order="5">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -33,8 +35,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="AndroidButtons" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/.System Objects/" />
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="0" path="object-folder/.System Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
         <folder expanded="0" path="object-folder/Level Collisions/" />
@@ -57,7 +59,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Font/MotelKing/" />
         <folder expanded="1" path="file-folder/Icons/" />

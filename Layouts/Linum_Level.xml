@@ -25846,14 +25846,16 @@
                         <ConveyorBeltSpeed>3</ConveyorBeltSpeed>
                         <InTunnel>false</InTunnel>
                         <HurtingState>0</HurtingState>
-                        <IsClimbing>false</IsClimbing>
+                        <Climbing>false</Climbing>
                         <RingsToLiveLimit>0</RingsToLiveLimit>
                         <Power>100</Power>
                         <PTSTimer>1</PTSTimer>
                         <LastPTS>0</LastPTS>
                         <ShieldTimer>0</ShieldTimer>
                         <ShieldTrigger>false</ShieldTrigger>
-                        <IsHurt>false</IsHurt>
+                        <Hurt>false</Hurt>
+                        <Falling>false</Falling>
+                        <CanFall>false</CanFall>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -28616,13 +28618,13 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>424</width>
-                        <height>240</height>
+                        <width>428</width>
+                        <height>242</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="PauseBG" uid="1029">

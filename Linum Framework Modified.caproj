@@ -149,14 +149,16 @@
                     <instance-variable name="ConveyorBeltSpeed" sid="831852401901188" type="number" />
                     <instance-variable name="InTunnel" sid="783331658584542" type="boolean" />
                     <instance-variable name="HurtingState" sid="724721204955455" type="number" />
-                    <instance-variable name="IsClimbing" sid="766198515810566" type="boolean" />
+                    <instance-variable name="Climbing" sid="766198515810566" type="boolean" />
                     <instance-variable name="RingsToLiveLimit" sid="604224927416592" type="number" />
                     <instance-variable name="Power" sid="853772095970707" type="number" />
                     <instance-variable name="PTSTimer" sid="875690953160355" type="number" />
                     <instance-variable name="LastPTS" sid="367798282381673" type="number" />
                     <instance-variable name="ShieldTimer" sid="654778540999989" type="number" />
                     <instance-variable name="ShieldTrigger" sid="401757578402107" type="boolean" />
-                    <instance-variable name="IsHurt" sid="838965631354767" type="boolean" />
+                    <instance-variable name="Hurt" sid="838965631354767" type="boolean" />
+                    <instance-variable name="Falling" sid="377114696484392" type="boolean" />
+                    <instance-variable name="CanFall" sid="821285694819315" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Timer" sid="760925343406501">
@@ -2340,6 +2342,22 @@
                                 <image-point name="Imagepoint 2" x="0.625" y="0.958333" />
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="1" name="Falling_3" pingpong="0" repeatcount="1" repeatto="0" sid="793243140492397" speed="8">
+                            <frame duration="1" hotspotX="0.512821" hotspotY="0.510638" original-source="C:\Users\Tazik05\Desktop\1.png">
+                                <image-point name="Imagepoint 1" x="0.512821" y="-0.12766" />
+                                <image-point name="Imagepoint 2" x="0.615385" y="0.978723" />
+                                <collision-poly>
+                                    <point x="0.230769" y="0.191489" />
+                                    <point x="0.487179" y="0" />
+                                    <point x="0.794872" y="0.170213" />
+                                    <point x="0.692308" y="0.489362" />
+                                    <point x="0.769231" y="0.808511" />
+                                    <point x="0.487179" y="0.978723" />
+                                    <point x="0.410256" y="0.659574" />
+                                    <point x="0" y="0.489362" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                         <animation framecount="4" loop="0" name="Rotate_3" pingpong="0" repeatcount="1" repeatto="0" sid="890472197954726" speed="6">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\214.png">
                                 <image-point name="Imagepoint 2" x="0.625" y="0.958333" />
@@ -2551,6 +2569,10 @@
                         <animation framecount="2" loop="0" name="Crouch_3" pingpong="0" repeatcount="1" repeatto="0" sid="374570480689774" speed="5">
                             <frame duration="1" hotspotX="0.428571" hotspotY="0.5" original-source="D:\двиг\11.png" />
                             <frame duration="1" hotspotX="0.37037" hotspotY="0.5" original-source="D:\двиг\12.png" />
+                        </animation>
+                        <animation framecount="2" loop="0" name="CrouchRev_3" pingpong="0" repeatcount="1" repeatto="0" sid="508367416739254" speed="5">
+                            <frame duration="1" hotspotX="0.37037" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.428571" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
                     <animation-folder name="Amy">
