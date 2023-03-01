@@ -25811,7 +25811,7 @@
                         <CanControl>false</CanControl>
                         <CanJump>false</CanJump>
                         <State>Idle</State>
-                        <Character>1</Character>
+                        <Character>3</Character>
                         <Rings>1000</Rings>
                         <SpeedShoes>false</SpeedShoes>
                         <SpinDashProgress>0</SpinDashProgress>
@@ -26571,8 +26571,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3176</x>
-                        <y>226</y>
+                        <x>3054</x>
+                        <y>668</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>

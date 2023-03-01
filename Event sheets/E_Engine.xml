@@ -8133,10 +8133,10 @@
                                     <sub-events>
                                         <event-block sid="691264297012319">
                                             <conditions>
+                                                <condition behavior="SonicPhysics" id="9" name="On landed" sid="680688680572258" type="Sensor_Main" />
                                                 <condition id="1" name="Is overlapping another object" sid="966413773061832" type="Sensor_ObjectDown">
                                                     <param id="0" name="Object">Gimmick_CollapsingPlatform</param>
                                                 </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="370244230252834" type="System" />
                                             </conditions>
                                             <actions />
                                             <sub-events>
