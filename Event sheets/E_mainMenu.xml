@@ -101,24 +101,73 @@
                             <param id="2" name="Value">&quot;mainmenu&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="516779930116800" type="System">
-                            <param id="0" name="Layer">&quot;mainmenu&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="206598208949026" type="System">
-                            <param id="0" name="Layer">&quot;settings&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="744725689919940">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="580257914861345" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="730945742075144" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="234629781631216">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="416675446536276" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="427738805214729" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="963922410955868">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="510480108778439" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyUpHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="329268957734403" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="559721375651520" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="610280006267364">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="426224607431511" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyDownHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="551529312647750" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="374992788216282" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="606513031713378">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="232246491166393" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="748747261689101" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="0" name="Instance variable">Selected_Main</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="LiteTween" id="10" name="Start" sid="720838157824924" type="Menu_BigBlueButtonBG">
@@ -133,169 +182,98 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Scrolling lock</comment>
-                        <event-block sid="263332192193637">
+                        <event-block sid="489832203728339">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="672464161047613" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected</param>
+                                <condition id="-7" name="Compare instance variable" sid="869394160639238" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="195316312566528" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="668871602885831" type="Values_Menus">
-                                    <param id="0" name="Instance variable">CanScrollUp</param>
-                                    <param id="1" name="Value">0</param>
+                                <action behavior="LiteTween" id="10" name="Start" sid="132123070947713" type="Menu_BigBlueButtonBG">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="304563986539465">
+                        <event-block sid="534169285838284">
                             <conditions>
-                                <condition id="-22" name="Else" sid="483255275315450" type="System" />
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="280058987397824" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="690561230512127" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="751759302022456" type="Values_Menus">
-                                    <param id="0" name="Instance variable">CanScrollUp</param>
-                                    <param id="1" name="Value">1</param>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="807659787038674" type="Menu_BigBlueButtonBG">
+                                    <param id="0" name="Reverse mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="194884622998897">
+                        <event-block sid="914795103287990">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="882389643525477" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected</param>
+                                <condition id="-7" name="Compare instance variable" sid="896559459394234" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="629655027694913" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="10" name="Start" sid="471894808637389" type="Menu_SmallGrayButton1BG">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="478925841826449">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="329908006966946" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="883108642159461" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="730906170611464" type="Menu_SmallGrayButton1BG">
+                                    <param id="0" name="Reverse mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="395182323709109">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="790433735325812" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="997951355452736" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="748618384426898" type="Values_Menus">
-                                    <param id="0" name="Instance variable">CanScrollDown</param>
-                                    <param id="1" name="Value">0</param>
+                                <action behavior="LiteTween" id="10" name="Start" sid="859617835965150" type="Menu_SmallGrayButton2BG">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="865633228348672">
+                        <event-block sid="563617559115285">
                             <conditions>
-                                <condition id="-22" name="Else" sid="823853433707193" type="System" />
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="461869120194631" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="644189792041006" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="782854784608569" type="Values_Menus">
-                                    <param id="0" name="Instance variable">CanScrollDown</param>
-                                    <param id="1" name="Value">1</param>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="546271302295557" type="Menu_SmallGrayButton2BG">
+                                    <param id="0" name="Reverse mode">0</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <comment>Buttons animations</comment>
-                        <event-block sid="302527927056547">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="669734441607578" type="Values_Input">
-                                    <param id="0" name="Instance variable">KeyUpHold</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="975249943838227" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="758575125409139" type="Values_Menus">
-                                    <param id="0" name="Instance variable">CanScrollUp</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="806760887655988" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="489832203728339">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="869394160639238" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="LiteTween" id="10" name="Start" sid="132123070947713" type="Menu_BigBlueButtonBG">
-                                            <param id="0" name="Start Mode">0</param>
-                                            <param id="1" name="Force use current">0</param>
-                                        </action>
-                                        <action behavior="LiteTween" id="11" name="Reverse" sid="256241499179376" type="Menu_SmallGrayButton1BG">
-                                            <param id="0" name="Reverse mode">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="914795103287990">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="896559459394234" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="LiteTween" id="10" name="Start" sid="471894808637389" type="Menu_SmallGrayButton1BG">
-                                            <param id="0" name="Start Mode">0</param>
-                                            <param id="1" name="Force use current">0</param>
-                                        </action>
-                                        <action behavior="LiteTween" id="11" name="Reverse" sid="562200387065891" type="Menu_SmallGrayButton2BG">
-                                            <param id="0" name="Reverse mode">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="418618689259760">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="856379036891326" type="Values_Input">
-                                    <param id="0" name="Instance variable">KeyDownHold</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="983248592197781" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="555865762724499" type="Values_Menus">
-                                    <param id="0" name="Instance variable">CanScrollDown</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="201921418111898" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="752375776095278">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="471929288877157" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="LiteTween" id="11" name="Reverse" sid="535450000683796" type="Menu_BigBlueButtonBG">
-                                            <param id="0" name="Reverse mode">1</param>
-                                        </action>
-                                        <action behavior="LiteTween" id="10" name="Start" sid="694800610368533" type="Menu_SmallGrayButton1BG">
-                                            <param id="0" name="Start Mode">0</param>
-                                            <param id="1" name="Force use current">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="395182323709109">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="790433735325812" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="LiteTween" id="11" name="Reverse" sid="526702035067311" type="Menu_SmallGrayButton1BG">
-                                            <param id="0" name="Reverse mode">1</param>
-                                        </action>
-                                        <action behavior="LiteTween" id="10" name="Start" sid="199907864554080" type="Menu_SmallGrayButton2BG">
-                                            <param id="0" name="Start Mode">0</param>
-                                            <param id="1" name="Force use current">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="737097673705331">
                             <conditions>
@@ -310,7 +288,7 @@
                                 <event-block sid="716646528032069">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="105877874005787" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="0" name="Instance variable">Selected_Main</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
@@ -333,7 +311,7 @@
                                 <event-block sid="915472896681924">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="406508082428489" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="0" name="Instance variable">Selected_Main</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">2</param>
                                         </condition>
@@ -392,7 +370,7 @@
                                 <event-block sid="817087416686709">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="673938768849700" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="0" name="Instance variable">Selected_Main</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">3</param>
                                         </condition>
@@ -405,6 +383,232 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="342229328011789" title="Data select">
+            <sub-events>
+                <event-block sid="748187335357713">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="729850284490272" type="Values_Menus">
+                            <param id="0" name="Instance variable">CurrentMenu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dataselect&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="532752834047442">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="443482690030846" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="923722361397890" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="124655703132431">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="751871531816417" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="452147045481099" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="386927803696322">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="773077016407478" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyLeftHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="216616700835083" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="192297319491220" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="905776872791141">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="393349692946334" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyRightHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="372281927225677" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="190422738820406" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="889212042193513">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="437990233366300" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="248774297185831" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 57 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="926465889056990" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="853337614480426">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="915338432760474" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="572698269830606" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 168 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="433408620450649" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="427507094019008">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="111143546971708" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="702001645421932" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 272 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="309112101149977" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="176845611653482">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="442596226041217" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="795750248796153" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 376 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="985361184170469" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="260205201339992">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="196772529647390" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="815501197606639" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 480 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="706263257523056" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="491447242359857">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="542815723722394" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="480464285775141" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 584 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="975540282854864" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="419005483600589">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="476113919395162" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="493449988621378" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 688 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="612587222676693" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="264918013770897">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="498495416674064" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="724721428012381" type="9patch2">
+                                    <param id="0" name="X">lerp(Self.X, 807 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="960452528744956" type="9patch2">
+                                    <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -424,5 +628,52 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="670602287132164">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="511928269921275" type="Values_Menus">
+                    <param id="0" name="Instance variable">CurrentMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;mainmenu&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="274631234139910" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="311795247712373" type="BigStaticText">
+                    <param id="0" name="Text">&quot;MAIN MENU&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="288286195183894" type="System">
+                    <param id="0" name="Layer">&quot;DataSelect&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="846762411478360" type="System">
+                    <param id="0" name="Layer">&quot;MainMenu&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="636236723289758">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="315290469020710" type="Values_Menus">
+                    <param id="0" name="Instance variable">CurrentMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;dataselect&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="151136264175911" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="525882682841757" type="BigStaticText">
+                    <param id="0" name="Text">&quot;DATA SELECT&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="764520201622848" type="System">
+                    <param id="0" name="Layer">&quot;DataSelect&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="383281341391174" type="System">
+                    <param id="0" name="Layer">&quot;MainMenu&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>1 - 57, 105&#x0D;&#x0A;      75, 83</comment>
     </events>
 </c2eventsheet>

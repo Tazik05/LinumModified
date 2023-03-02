@@ -10,10 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Linum_Level</layout>
-        <event-sheet order="0">E_Level</event-sheet>
-        <event-sheet order="2">E_global</event-sheet>
-        <event-sheet active="1" order="3">E_Engine</event-sheet>
+        <layout order="0">Linum_Continue</layout>
+        <layout order="1">Linum_mainMenu</layout>
+        <event-sheet order="0">E_mainMenu</event-sheet>
+        <event-sheet active="1" order="1">E_global</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -55,6 +55,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Test/" />
         <folder expanded="0" path="object-folder/manual/" />
         <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/[ System ]/" />
+        <folder expanded="1" path="layout-folder/[ Engine ]/" />
+        <folder expanded="0" path="layout-folder/[ Tests ]/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
@@ -261,5 +264,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Spr_Car/" />
         <folder expanded="1" path="animation-folder/spr_wheel1/" />
         <folder expanded="1" path="animation-folder/spr_wheel2/" />
+        <folder expanded="1" path="animation-folder/SaveSlot/" />
+        <folder expanded="1" path="animation-folder/Slot/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
     </folders-expanded>
 </c2uistate>

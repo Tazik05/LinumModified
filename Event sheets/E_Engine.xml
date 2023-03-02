@@ -4258,6 +4258,27 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
+                                                        <event-block sid="634916937242355">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="401592473310772" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Slide</param>
+                                                                </condition>
+                                                                <condition id="2" name="Is playing" sid="179290733907893" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Slide1_&quot;&amp;Values_Player.Character</param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="787428776329670" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="755823682730700" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">State</param>
+                                                                    <param id="1" name="Value">&quot;Idle&quot;</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="788975974696101" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Idle_&quot;&amp;Values_Player.Character</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block sid="478646817105466">
                                                             <conditions>
                                                                 <condition id="-8" name="Is boolean instance variable set" sid="847956307802095" type="Values_Player">
@@ -4317,14 +4338,6 @@
                                                                         <action id="-13" name="Set boolean" sid="883928907391208" type="Values_Player">
                                                                             <param id="0" name="Instance variable">Slide</param>
                                                                             <param id="1" name="Value">0</param>
-                                                                        </action>
-                                                                        <action id="-10" name="Set value" sid="755823682730700" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">State</param>
-                                                                            <param id="1" name="Value">&quot;Idle&quot;</param>
-                                                                        </action>
-                                                                        <action id="4" name="Set animation" sid="788975974696101" type="PlayerSprite">
-                                                                            <param id="0" name="Animation">&quot;Idle_&quot;&amp;Values_Player.Character</param>
-                                                                            <param id="1" name="From">1</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -4485,17 +4498,6 @@
                                                                 <comment></comment>
                                                             </sub-events>
                                                         </event-block>
-                                                        <event-block disabled="1" sid="220442077489232">
-                                                            <conditions>
-                                                                <condition id="4" name="On finished" sid="860274358655140" type="PlayerSprite">
-                                                                    <param id="0" name="Animation">&quot;CrouchRev_&quot;&amp;Values_Player.Character</param>
-                                                                </condition>
-                                                                <condition id="-8" name="Is boolean instance variable set" sid="876058592693453" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Falling</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions />
-                                                        </event-block>
                                                     </sub-events>
                                                 </event-block>
                                             </sub-events>
@@ -4627,20 +4629,6 @@
                                                                     <actions>
                                                                         <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="330064867524346" type="Sensor_Main">
                                                                             <param id="0" name="Vector Y">-100</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                                <event-block disabled="1" sid="723254311825757">
-                                                                    <conditions>
-                                                                        <condition id="-8" name="Compare two values" sid="104281229831878" type="System">
-                                                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
-                                                                            <param id="1" name="Comparison">4</param>
-                                                                            <param id="2" name="Second value">500</param>
-                                                                        </condition>
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="188926078147340" type="Sensor_Main">
-                                                                            <param id="0" name="Vector Y">500</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>

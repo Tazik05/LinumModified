@@ -30,6 +30,7 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
         <plugin author="JohnnySheffield" id="nwk" version="1.100000024">Node-Webkit Gui</plugin>
     </used-plugins>
@@ -224,11 +225,13 @@
             <object-type name="Values_Menus" sid="769577895218290">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="CurrentMenu" sid="180796411271984" type="string" />
-                    <instance-variable name="Selected" sid="577157649964068" type="number" />
+                    <instance-variable comment="mainmenu \ dataselect" name="CurrentMenu" sid="180796411271984" type="string" />
+                    <instance-variable name="Selected_Main" sid="577157649964068" type="number" />
+                    <instance-variable name="Selected_DataSelect" sid="841610766808996" type="number" />
                     <instance-variable name="CanScrollUp" sid="938062188155715" type="boolean" />
                     <instance-variable name="CanScrollDown" sid="433446514436596" type="boolean" />
                     <instance-variable name="IsSettings" sid="520201615548376" type="boolean" />
+                    <instance-variable name="AnimSpeed" sid="649234098534000" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979092329227831" speed="5">
@@ -6770,6 +6773,53 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="WebStorage" sid="568491992888857">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="SaveSlot" sid="856075492355445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="838347141572372" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503106" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Slot" sid="171371827740490">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="920218755852761" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="423289052127925">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="584646495737323" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="798123445701212">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722457315979325" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="9patch2" sid="361911006947945">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Flash" sid="464809051218853">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="900591830622572">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -6966,16 +7016,22 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Linum_preloader.xml</layout>
-        <layout>Linum_logo.xml</layout>
-        <layout>Linum_mainMenu.xml</layout>
-        <layout>Linum_MenuNew.xml</layout>
-        <layout>Linum_Level.xml</layout>
-        <layout>Linum_Continue.xml</layout>
-        <layout>UpdateTest.xml</layout>
-        <layout>TestLayout.xml</layout>
-        <layout>ConsoleUI.xml</layout>
-        <layout>ButtonSetup(android).xml</layout>
+        <layout-folder name="[ System ]">
+            <layout>ConsoleUI.xml</layout>
+        </layout-folder>
+        <layout-folder name="[ Engine ]">
+            <layout>Linum_preloader.xml</layout>
+            <layout>Linum_logo.xml</layout>
+            <layout>Linum_mainMenu.xml</layout>
+            <layout>Linum_Level.xml</layout>
+            <layout>Linum_MenuNew.xml</layout>
+            <layout>Linum_Continue.xml</layout>
+            <layout>ButtonSetup(android).xml</layout>
+        </layout-folder>
+        <layout-folder name="[ Tests ]">
+            <layout>TestLayout.xml</layout>
+            <layout>UpdateTest.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="Engine">
@@ -7036,6 +7092,7 @@
                 <enable-wrap>Yes</enable-wrap>
             </properties>
         </global-instance>
+        <global-instance type="WebStorage" uid="848" />
     </global-instances>
     <sounds-folder>
         <file name="SFX_Explosion.ogg" />
