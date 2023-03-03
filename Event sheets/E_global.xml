@@ -2647,7 +2647,12 @@
                 </event-block>
                 <event-block sid="145703733265583">
                     <conditions>
-                        <condition id="-9" inverted="1" name="Is visible" sid="273183386922496" type="CmdText2" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="273183386922496" type="Values_PauseMenu">
+                            <param id="0" name="Instance variable">CanPause</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="629635217826464" type="GlobalSettings">
+                            <param id="0" name="Instance variable">AllowPause</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -2798,6 +2803,42 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="689027714726401">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="175191706928049" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Linum_mainMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="320201710123440">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Is visible" sid="873515557081681" type="CmdText2" />
+                                <condition id="-4" name="Trigger once while true" sid="349647636948067" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="605100508576410" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">CanPause</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="405683754771582">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="747151373853704" type="CmdText2" />
+                                <condition id="-4" name="Trigger once while true" sid="433655925642032" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="163904778242592" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">CanPause</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

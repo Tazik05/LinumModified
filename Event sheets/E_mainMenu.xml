@@ -116,7 +116,7 @@
                                 </action>
                                 <action id="-7" name="Set size" sid="520106830666438" type="Menu_ButtonsBG">
                                     <param id="0" name="Width">lerp(Self.Width, 426, Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 64, Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 80, Values_Menus.AnimSpeed)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -131,7 +131,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="730945742075144" type="Values_Menus">
                                     <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Value">3</param>
+                                    <param id="1" name="Value">4</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -140,7 +140,7 @@
                                 <condition id="-7" name="Compare instance variable" sid="416675446536276" type="Values_Menus">
                                     <param id="0" name="Instance variable">Selected_Main</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -212,7 +212,7 @@
                                 <action behavior="LiteTween" id="14" name="Stop" sid="252203115255753" type="Menu_SmallGrayButton1BG">
                                     <param id="0" name="Stop Mode">1</param>
                                 </action>
-                                <action behavior="LiteTween" id="14" name="Stop" sid="159907975857220" type="Menu_SmallGrayButton2BG">
+                                <action behavior="LiteTween" id="14" name="Stop" sid="159907975857220" type="Menu_SmallGrayButton3BG">
                                     <param id="0" name="Stop Mode">1</param>
                                 </action>
                             </actions>
@@ -289,7 +289,7 @@
                                 <condition id="-4" name="Trigger once while true" sid="997951355452736" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="10" name="Start" sid="859617835965150" type="Menu_SmallGrayButton2BG">
+                                <action behavior="LiteTween" id="10" name="Start" sid="859617835965150" type="Menu_SmallGrayButton1BG2">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -305,7 +305,38 @@
                                 <condition id="-4" name="Trigger once while true" sid="644189792041006" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="546271302295557" type="Menu_SmallGrayButton2BG">
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="546271302295557" type="Menu_SmallGrayButton1BG2">
+                                    <param id="0" name="Reverse mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="326479978875421">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="166729813770150" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="944376658400240" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="10" name="Start" sid="669662462786072" type="Menu_SmallGrayButton3BG">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="760900959353335">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="100012829064724" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="102437490838683" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="844402866039617" type="Menu_SmallGrayButton3BG">
                                     <param id="0" name="Reverse mode">0</param>
                                 </action>
                             </actions>
@@ -347,7 +378,7 @@
                                     </actions>
                                 </event-block>
                                 <comment>Go to website</comment>
-                                <event-block sid="915472896681924">
+                                <event-block disabled="1" sid="915472896681924">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="406508082428489" type="Values_Menus">
                                             <param id="0" name="Instance variable">Selected_Main</param>
@@ -358,7 +389,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>Can&apos;t do an &quot;OR&quot; here because web version can be launched from mobile</comment>
-                                        <event-block sid="173456896965371">
+                                        <event-block disabled="1" sid="173456896965371">
                                             <conditions>
                                                 <condition id="-32" name="Is on platform" sid="443183441962506" type="System">
                                                     <param id="0" name="Platform">0</param>
@@ -374,7 +405,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="647187694218149">
+                                        <event-block disabled="1" sid="647187694218149">
                                             <conditions>
                                                 <condition id="-20" name="Is on mobile device" sid="405623139740707" type="System" />
                                             </conditions>
@@ -388,7 +419,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="523918662940293">
+                                        <event-block disabled="1" sid="523918662940293">
                                             <conditions>
                                                 <condition id="-32" name="Is on platform" sid="281323407414908" type="System">
                                                     <param id="0" name="Platform">10</param>
@@ -411,7 +442,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="673938768849700" type="Values_Menus">
                                             <param id="0" name="Instance variable">Selected_Main</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">3</param>
+                                            <param id="2" name="Value">4</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -695,6 +726,10 @@
                                     <param id="0" name="Instance variable">CurrentMenu</param>
                                     <param id="1" name="Value">&quot;mainmenu&quot;</param>
                                 </action>
+                                <action disabled="1" id="-3" name="Set position" sid="662614962677796" type="Menu_BigBlueButtonBG">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">104</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -712,6 +747,10 @@
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_menu&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="306893295210220" type="Values_PauseMenu">
+                    <param id="0" name="Instance variable">CanPause</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

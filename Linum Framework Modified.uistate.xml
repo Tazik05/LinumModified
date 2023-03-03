@@ -13,8 +13,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">Linum_Continue</layout>
         <layout order="1">Linum_mainMenu</layout>
         <layout order="2">Linum_logo</layout>
-        <layout active="1" order="3">Linum_Level</layout>
-        <event-sheet order="0">E_mainMenu</event-sheet>
+        <layout order="3">Linum_Level</layout>
+        <layout order="4">Linum_preloader</layout>
+        <event-sheet active="1" order="0">E_mainMenu</event-sheet>
         <event-sheet order="1">E_global</event-sheet>
         <event-sheet order="2">E_Level</event-sheet>
         <event-sheet order="3">E_Engine</event-sheet>
@@ -38,8 +39,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="AndroidButtons" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
-        <folder expanded="0" path="object-folder/.System Objects/" />
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/.System Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
         <folder expanded="0" path="object-folder/Level Collisions/" />
@@ -167,12 +168,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/MenuHeader/" />
         <folder expanded="1" path="animation-folder/Menu_BigBlueButtonBG/" />
         <folder expanded="1" path="animation-folder/Menu_SmallGrayButton1BG/" />
-        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton2BG/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton3BG/" />
         <folder expanded="1" path="animation-folder/Menu_BigBlueButton/" />
         <folder expanded="1" path="animation-folder/Menu_SmallGrayButton/" />
         <folder expanded="1" path="animation-folder/Menu_BigIcon/" />
         <folder expanded="1" path="animation-folder/Menu_SmallIcon/" />
         <folder expanded="1" path="animation-folder/GamepadButton/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton3BG2/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton1BG2/" />
         <folder expanded="1" path="animation-folder/Loading/" />
         <folder expanded="1" path="animation-folder/Logo/" />
         <folder expanded="1" path="animation-folder/Logo2/" />

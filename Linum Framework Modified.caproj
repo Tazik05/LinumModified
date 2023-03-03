@@ -266,6 +266,7 @@
                     <instance-variable name="Paused" sid="623315182901064" type="boolean" />
                     <instance-variable name="Selected" sid="230527403524582" type="number" />
                     <instance-variable name="FadeBG" sid="758471611322732" type="number" />
+                    <instance-variable name="CanPause" sid="300135044096084" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="851404119065814" speed="5">
@@ -297,6 +298,7 @@
                     <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
                     <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
                     <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
+                    <instance-variable name="AllowPause" sid="389575281345055" type="boolean" />
                 </instance-variables>
             </object-type>
             <object-type name="cursor" sid="832183731288467">
@@ -4303,7 +4305,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="Menu_SmallGrayButton2BG" sid="300632618676824">
+                <object-type name="Menu_SmallGrayButton3BG" sid="300632618676824">
                     <plugin id="Sprite" />
                     <behaviors>
                         <behavior-type name="LiteTween" sid="292835719036329">
@@ -4367,6 +4369,32 @@
                 <object-type name="Menu_ButtonsBG" sid="167002130284925">
                     <plugin id="TiledBg" />
                     <texture />
+                </object-type>
+                <object-type name="Menu_SmallGrayButton3BG2" sid="862030538663940">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="906602812719888">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686340023377935" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Menu_SmallGrayButton1BG2" sid="693813310113404">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="501682468838030">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346289159076132" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
                 </object-type>
             </object-folder>
             <object-folder name="Logo">

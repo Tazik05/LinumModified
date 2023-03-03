@@ -24926,8 +24926,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-282</x>
-                        <y>494</y>
+                        <x>1230</x>
+                        <y>1164</y>
                         <z>0</z>
                         <width>122</width>
                         <height>40</height>
@@ -28020,6 +28020,7 @@
                         <Paused>false</Paused>
                         <Selected>0</Selected>
                         <FadeBG>0</FadeBG>
+                        <CanPause>true</CanPause>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -30167,6 +30168,7 @@
                 <FpsFix>false</FpsFix>
                 <PauseStyle>SSW</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
+                <AllowPause>true</AllowPause>
             </instance-variables>
         </instance>
     </nonworld-instances>
