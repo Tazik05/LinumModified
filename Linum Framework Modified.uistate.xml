@@ -12,8 +12,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Linum_Continue</layout>
         <layout order="1">Linum_mainMenu</layout>
+        <layout order="2">Linum_logo</layout>
+        <layout active="1" order="3">Linum_Level</layout>
         <event-sheet order="0">E_mainMenu</event-sheet>
-        <event-sheet active="1" order="1">E_global</event-sheet>
+        <event-sheet order="1">E_global</event-sheet>
+        <event-sheet order="2">E_Level</event-sheet>
+        <event-sheet order="3">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
         <family expanded="0" name="SolidObjects" />
@@ -62,10 +66,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
-        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="music-folder/" />
         <folder expanded="1" path="file-folder/Font/MotelKing/" />
-        <folder expanded="1" path="file-folder/Icons/" />
-        <folder expanded="1" path="file-folder/Font/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="0" path="file-folder/Font/" />
+        <folder expanded="1" path="file-folder/TempFiles/" />
         <folder expanded="1" path="animation-folder/Values_Player/" />
         <folder expanded="1" path="animation-folder/Values_Level/" />
         <folder expanded="1" path="animation-folder/Values_Input/" />
@@ -199,6 +204,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Gimmick_Fan/" />
         <folder expanded="1" path="animation-folder/Gimmick_CNZBarrel/" />
         <folder expanded="1" path="animation-folder/Gimmick_Accelerator_Right/" />
+        <folder expanded="1" path="animation-folder/DisposableSpring_Yellow/" />
+        <folder expanded="1" path="animation-folder/DisposableSpring_Red/" />
         <folder expanded="1" path="animation-folder/Help1/" />
         <folder expanded="1" path="animation-folder/help11/" />
         <folder expanded="1" path="animation-folder/Help2/" />
@@ -268,5 +275,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Slot/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/NoSaveText/" />
+        <folder expanded="1" path="animation-folder/DisposableSpringPart/" />
     </folders-expanded>
 </c2uistate>

@@ -10805,6 +10805,123 @@
                                 </event-group>
                                 <event-group description="" sid="211465146959644" title="Springs ">
                                     <sub-events>
+                                        <event-block sid="376958908123679">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="899792002781715" type="DisposableSpringPart">
+                                                    <param id="0" name="Object">Behavior_Solid</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="886194528090713" type="DisposableSpringPart">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="11" name="Set collisions enabled" sid="804932498751441" type="DisposableSpringPart">
+                                                    <param id="0" name="Collisions">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-group description="" sid="141128546061034" title="Red Disposable Spring">
+                                            <sub-events>
+                                                <event-block sid="812210853207320">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="998051661002488" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">DisposableSpring_Red</param>
+                                                        </condition>
+                                                        <condition id="3" name="Compare frame" sid="620107722497023" type="DisposableSpring_Red">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Number">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="105140012592253" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="805512588758251" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="560182217796768" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="872827839813975" type="DisposableSpring_Red">
+                                                            <param id="0" name="Frame number">1</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="960918150835034" type="System">
+                                                            <param id="0" name="Object to create">DisposableSpringPart</param>
+                                                            <param id="1" name="Layer">DisposableSpring_Red.LayerNumber</param>
+                                                            <param id="2" name="X">DisposableSpring_Red.ImagePointX(1)</param>
+                                                            <param id="3" name="Y">DisposableSpring_Red.ImagePointY(1)</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="815717982109289" type="DisposableSpringPart">
+                                                            <param id="0" name="Frame number">0</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="581523687685172" type="DisposableSpringPart">
+                                                            <param id="0" name="Angle">int(random(235,305))</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="976154003364139" type="DisposableSpringPart">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                        <action id="11" name="Set collisions enabled" sid="689560108647210" type="DisposableSpring_Red">
+                                                            <param id="0" name="Collisions">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                        <event-group description="" sid="945182870642000" title="Yellow Disposable Spring">
+                                            <sub-events>
+                                                <event-block sid="161998540354449">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="441706523429429" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">DisposableSpring_Yellow</param>
+                                                        </condition>
+                                                        <condition id="3" name="Compare frame" sid="186884136925454" type="DisposableSpring_Yellow">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Number">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="457850668884516" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="436969327542608" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="733106763631092" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="853288005787351" type="DisposableSpring_Yellow">
+                                                            <param id="0" name="Frame number">1</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="936576935698550" type="System">
+                                                            <param id="0" name="Object to create">DisposableSpringPart</param>
+                                                            <param id="1" name="Layer">DisposableSpring_Yellow.LayerNumber</param>
+                                                            <param id="2" name="X">DisposableSpring_Yellow.ImagePointX(1)</param>
+                                                            <param id="3" name="Y">DisposableSpring_Yellow.ImagePointY(1)</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="627209834779885" type="DisposableSpringPart">
+                                                            <param id="0" name="Frame number">1</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="816419496270220" type="DisposableSpringPart">
+                                                            <param id="0" name="Angle">int(random(235,305))</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="634786205505022" type="DisposableSpringPart">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                        <action id="11" name="Set collisions enabled" sid="422745568143357" type="DisposableSpring_Yellow">
+                                                            <param id="0" name="Collisions">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
                                         <event-group description="" sid="892751820576081" title="Yellow springs">
                                             <sub-events>
                                                 <comment>Up spring</comment>

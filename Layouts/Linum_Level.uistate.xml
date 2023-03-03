@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>138.773</position-x>
-        <position-y>272.559</position-y>
-        <position-z>77.5941</position-z>
-        <lookat-x>138.773</lookat-x>
-        <lookat-y>272.559</lookat-y>
+        <position-x>-504.3</position-x>
+        <position-y>451.256</position-y>
+        <position-z>76.9011</position-z>
+        <lookat-x>-504.3</lookat-x>
+        <lookat-y>451.256</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -25,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <active-layer name="Collisions_LayerBlue" />
     <layers>
-        <layer locked="1" name="BG" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="BG" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Collisions_General" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Collisions_LayerBlue" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Objects_Level" parallax-in-editor="0" visible="1" />

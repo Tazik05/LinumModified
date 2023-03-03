@@ -103,6 +103,23 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="146901372702404">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="650882757132436" type="Menu_ButtonsBG">
+                                    <param id="0" name="Unique ID">396</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="856084550451488" type="Menu_ButtonsBG">
+                                    <param id="0" name="X">lerp(Self.X, 0, Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 88, Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="520106830666438" type="Menu_ButtonsBG">
+                                    <param id="0" name="Width">lerp(Self.Width, 426, Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 64, Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="744725689919940">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="580257914861345" type="Values_Menus">
@@ -145,6 +162,15 @@
                                     <param id="0" name="Instance variable">Selected_Main</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
+                                <action id="6" name="Stop" sid="533038297305648" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="906587823322341" type="Audio">
+                                    <param id="0" name="Audio file">SFX_Beep</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="610280006267364">
@@ -158,6 +184,15 @@
                                 <action id="-11" name="Add to" sid="374992788216282" type="Values_Menus">
                                     <param id="0" name="Instance variable">Selected_Main</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="6" name="Stop" sid="492179380636346" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="113063321798903" type="Audio">
+                                    <param id="0" name="Audio file">SFX_Beep</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -294,16 +329,20 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="789461813119798" type="TransitionIn">
+                                        <action disabled="1" id="-15" name="Set visible" sid="789461813119798" type="TransitionIn">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action behavior="Fade" id="1" name="Start fade" sid="633408227265283" type="TransitionIn" />
-                                        <action id="-16" name="Wait" sid="821037944985703" type="System">
+                                        <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="633408227265283" type="TransitionIn" />
+                                        <action disabled="1" id="-16" name="Wait" sid="821037944985703" type="System">
                                             <param id="0" name="Seconds">0.25</param>
                                         </action>
-                                        <action id="33" name="Stop all" sid="748709491408659" type="Audio" />
-                                        <action id="-2" name="Go to layout" sid="441421628915749" type="System">
+                                        <action disabled="1" id="33" name="Stop all" sid="748709491408659" type="Audio" />
+                                        <action disabled="1" id="-2" name="Go to layout" sid="441421628915749" type="System">
                                             <param id="0" name="Layout">Linum_Level</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="355842915850115" type="Values_Menus">
+                                            <param id="0" name="Instance variable">CurrentMenu</param>
+                                            <param id="1" name="Value">&quot;dataselect&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -400,6 +439,23 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="784783752704381">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="843272217221716" type="Menu_ButtonsBG">
+                                    <param id="0" name="Unique ID">396</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="114357894310575" type="Menu_ButtonsBG">
+                                    <param id="0" name="X">lerp(Self.X, 0, Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 34, Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="421755689856636" type="Menu_ButtonsBG">
+                                    <param id="0" name="Width">lerp(Self.Width, 426, Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 206, Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="532752834047442">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="443482690030846" type="Values_Menus">
@@ -442,6 +498,15 @@
                                     <param id="0" name="Instance variable">Selected_DataSelect</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
+                                <action id="6" name="Stop" sid="409463169362305" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX_DataSelect&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="869154047644135" type="Audio">
+                                    <param id="0" name="Audio file">S3K_B7</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_DataSelect&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="905776872791141">
@@ -455,6 +520,15 @@
                                 <action id="-11" name="Add to" sid="190422738820406" type="Values_Menus">
                                     <param id="0" name="Instance variable">Selected_DataSelect</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="6" name="Stop" sid="500752568863726" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX_DataSelect&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="210764855707157" type="Audio">
+                                    <param id="0" name="Audio file">S3K_B7</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_DataSelect&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -610,6 +684,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="309240271771390">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="162528531060647" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyESCHold</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="825340931322538" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CurrentMenu</param>
+                                    <param id="1" name="Value">&quot;mainmenu&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -638,9 +725,6 @@
                 <condition id="-4" name="Trigger once while true" sid="274631234139910" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="311795247712373" type="BigStaticText">
-                    <param id="0" name="Text">&quot;MAIN MENU&quot;</param>
-                </action>
                 <action id="-4" name="Set layer visible" sid="288286195183894" type="System">
                     <param id="0" name="Layer">&quot;DataSelect&quot;</param>
                     <param id="1" name="Visibility">0</param>
@@ -650,6 +734,20 @@
                     <param id="1" name="Visibility">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="565817145515129">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="944636416911607" type="BigStaticText">
+                            <param id="0" name="Unique ID">371</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="311795247712373" type="BigStaticText">
+                            <param id="0" name="Text">&quot;MAIN MENU&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="636236723289758">
             <conditions>
@@ -661,9 +759,6 @@
                 <condition id="-4" name="Trigger once while true" sid="151136264175911" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="525882682841757" type="BigStaticText">
-                    <param id="0" name="Text">&quot;DATA SELECT&quot;</param>
-                </action>
                 <action id="-4" name="Set layer visible" sid="764520201622848" type="System">
                     <param id="0" name="Layer">&quot;DataSelect&quot;</param>
                     <param id="1" name="Visibility">1</param>
@@ -673,6 +768,20 @@
                     <param id="1" name="Visibility">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="111333650403025">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="757606137672185" type="BigStaticText">
+                            <param id="0" name="Unique ID">371</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="525882682841757" type="BigStaticText">
+                            <param id="0" name="Text">&quot;DATA SELECT&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>1 - 57, 105&#x0D;&#x0A;      75, 83</comment>
     </events>

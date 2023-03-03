@@ -1,0 +1,18 @@
+{
+  "Saved": "[SaveData]",
+  "Ver": "[GameVersion]"
+  "Save": {
+  "Preview": "[PreviewImage]",
+  "Data": "[SomeData]",
+  "Rings": "[PlayerRings]",
+  "Score": "[PlayerScore]",
+  "PlayerX": "[PlayerPosX]",
+  "PlayerY": "[PlayerPosY]",
+  "Layout": "[LayoutName]",
+  "Emeralds": {
+  "Green": "[GreenCheck]",
+  "[Later]": "[Later]"
+	},
+	
+  },
+}

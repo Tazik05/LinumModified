@@ -190,7 +190,7 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
-                        <CurrentMenu>dataselect</CurrentMenu>
+                        <CurrentMenu>mainmenu</CurrentMenu>
                         <Selected_Main>1</Selected_Main>
                         <Selected_DataSelect>0</Selected_DataSelect>
                         <CanScrollUp>false</CanScrollUp>
@@ -269,8 +269,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-214</x>
-                        <y>0</y>
+                        <x>-220</x>
+                        <y>-2</y>
                         <z>0</z>
                         <width>-768</width>
                         <height>192</height>
@@ -343,25 +343,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="MainMenu" sid="208237642262059">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
                 <instance type="Menu_ButtonsBG" uid="396">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -382,6 +363,25 @@
                         <opacity>0.400000006</opacity>
                     </world>
                 </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="MainMenu" sid="208237642262059">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
                 <instance type="Menu_SmallGrayButton2BG" uid="389">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1009,6 +1009,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NoSaveText" uid="865">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>60</x>
+                        <y>156</y>
+                        <z>0</z>
+                        <width>56</width>
+                        <height>7</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.571428597</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

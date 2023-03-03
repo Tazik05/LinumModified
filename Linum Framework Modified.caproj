@@ -5483,6 +5483,64 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="DisposableSpring_Yellow" sid="299722562249308">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="703644882682642">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="554794830955133" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\DoorOpener\Desktop\C2andWADs\multiplatformer\titanic tower\yelspringup2.png">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.28125" />
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DisposableSpring_Red" sid="570169235016827">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="931224087529187">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216309626206284" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\DoorOpener\Desktop\C2andWADs\multiplatformer\titanic tower\yelspringup2.png">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.28125" />
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Test">
             <object-type name="Button" sid="732215937502373">
@@ -6820,6 +6878,28 @@
             </behaviors>
             <texture />
         </object-type>
+        <object-type name="NoSaveText" sid="852756898901443">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999386184843062" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DisposableSpringPart" sid="100692317281315">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="485636073880617">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="638702100597092" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -6871,6 +6951,8 @@
         </family>
         <family name="SolidObjects" plugin-id="Sprite" sid="879586858756211">
             <members>
+                <member>DisposableSpring_Red</member>
+                <member>DisposableSpring_Yellow</member>
                 <member>Gimmick_CNZBarrel</member>
                 <member>Monitor</member>
                 <member>SpringRed_Down</member>
@@ -6962,6 +7044,8 @@
                 <member>Convex</member>
                 <member>Convex_Layer0</member>
                 <member>Convex_Layer1</member>
+                <member>DisposableSpring_Red</member>
+                <member>DisposableSpring_Yellow</member>
                 <member>Gimmick_Accelerator_Right</member>
                 <member>Gimmick_ConveyorBelt</member>
                 <member>Gimmick_HangingIdle_Bar</member>
@@ -7149,6 +7233,18 @@
         <file name="SFX_ObjectSignpost.m4a" />
         <file name="SFX_ObjectSignpost.ogg" />
         <file name="SFX_1UP.ogg" />
+        <file name="S3K_B7.m4a" />
+        <file name="S3K_B7.ogg" />
+        <file name="S3K_AC.m4a" />
+        <file name="S3K_AC.ogg" />
+        <file name="S3K_A1.m4a" />
+        <file name="S3K_A1.ogg" />
+        <file name="S3K_63.m4a" />
+        <file name="S3K_63.ogg" />
+        <file name="S3K_55.m4a" />
+        <file name="S3K_55.ogg" />
+        <file name="S3K_6A.m4a" />
+        <file name="S3K_6A.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MUS_level.ogg" />
@@ -7175,7 +7271,11 @@
                 <file name="MotelKing.woff2" />
             </file-folder>
         </file-folder>
-        <file name="sonicXtailsREAL.png" />
-        <file name="danik.png" />
+        <file-folder name="TempFiles">
+            <file name="1677877363313 (1).png" />
+            <file name="danik.png" />
+            <file name="sonicXtailsREAL.png" />
+        </file-folder>
+        <file name="SaveBlant.json" />
     </files-folder>
 </c2project>
