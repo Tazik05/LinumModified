@@ -6,6 +6,19 @@
         <include>E_global</include>
         <event-group description="" sid="423914286752749" title="Menu Background">
             <sub-events>
+                <event-block sid="664641259712352">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="777959667306909" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="141026115042006" type="MenuGrid2">
+                            <param id="0" name="X">-214</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="144702441430311" type="MenuGrid1">
+                            <param id="0" name="X">-278</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="868634386226924">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="387769689643117" type="System">

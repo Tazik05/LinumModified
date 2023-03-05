@@ -26139,6 +26139,7 @@
                         <CanFall>false</CanFall>
                         <ClimbingOffset>6</ClimbingOffset>
                         <Slide>false</Slide>
+                        <CanUseSkills>false</CanUseSkills>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

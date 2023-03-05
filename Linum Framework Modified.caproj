@@ -72,7 +72,7 @@
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
-        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
@@ -162,6 +162,7 @@
                     <instance-variable name="CanFall" sid="821285694819315" type="boolean" />
                     <instance-variable name="ClimbingOffset" sid="606048357806615" type="number" />
                     <instance-variable name="Slide" sid="422022696127119" type="boolean" />
+                    <instance-variable name="CanUseSkills" sid="715297227222819" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Timer" sid="760925343406501">
