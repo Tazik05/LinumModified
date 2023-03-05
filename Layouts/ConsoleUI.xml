@@ -127,6 +127,7 @@
                         <SavingCommands></SavingCommands>
                         <Logger></Logger>
                         <CanExecute>false</CanExecute>
+                        <CMDIsActive>false</CMDIsActive>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

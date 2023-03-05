@@ -28998,13 +28998,13 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>564</x>
-                        <y>-152</y>
+                        <x>214</x>
+                        <y>122</y>
                         <z>0</z>
                         <width>101</width>
                         <height>64</height>

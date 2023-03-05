@@ -72,7 +72,7 @@
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
-        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
@@ -232,6 +232,11 @@
                     <instance-variable name="CanScrollDown" sid="433446514436596" type="boolean" />
                     <instance-variable name="IsSettings" sid="520201615548376" type="boolean" />
                     <instance-variable name="AnimSpeed" sid="649234098534000" type="number" />
+                    <instance-variable name="Selected_SettingsMain" sid="550330313212819" type="number" />
+                    <instance-variable name="Selected_Settings_Gameplay" sid="652792849276748" type="number" />
+                    <instance-variable name="Selected_Settings_Video" sid="720411023952050" type="number" />
+                    <instance-variable name="Selected_Settings_Controls" sid="562906361171127" type="number" />
+                    <instance-variable name="Selected_Settings_Other" sid="696442552560433" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979092329227831" speed="5">
@@ -298,7 +303,7 @@
                     <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
                     <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
                     <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
-                    <instance-variable name="AllowPause" sid="389575281345055" type="boolean" />
+                    <instance-variable comment="this function is used to temporarily disable the pause, for example in the menu (so as not to use the global setting) This parameter will be ignored if the pause in the game is disabled by the setting above" name="AllowPause" sid="389575281345055" type="boolean" />
                 </instance-variables>
             </object-type>
             <object-type name="cursor" sid="832183731288467">
@@ -335,6 +340,7 @@
                     <instance-variable name="SavingCommands" sid="834165657581466" type="string" />
                     <instance-variable name="Logger" sid="201316599880618" type="string" />
                     <instance-variable name="CanExecute" sid="322752440572885" type="boolean" />
+                    <instance-variable name="CMDIsActive" sid="472955883678579" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274578314064615" speed="5">
@@ -4347,7 +4353,10 @@
                 <object-type name="Menu_SmallIcon" sid="899667623355256">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237305572113761" speed="0">
+                        <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237305572113761" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         </animation>

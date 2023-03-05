@@ -127,6 +127,7 @@
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="350057373690801" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="730945742075144" type="Values_Menus">
@@ -142,6 +143,7 @@
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">4</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="527468031118078" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="427738805214729" type="Values_Menus">
@@ -193,27 +195,6 @@
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="606513031713378">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="232246491166393" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="748747261689101" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="720838157824924" type="Menu_BigBlueButtonBG">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">0</param>
-                                </action>
-                                <action behavior="LiteTween" id="14" name="Stop" sid="252203115255753" type="Menu_SmallGrayButton1BG">
-                                    <param id="0" name="Stop Mode">1</param>
-                                </action>
-                                <action behavior="LiteTween" id="14" name="Stop" sid="159907975857220" type="Menu_SmallGrayButton3BG">
-                                    <param id="0" name="Stop Mode">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -378,7 +359,7 @@
                                     </actions>
                                 </event-block>
                                 <comment>Go to website</comment>
-                                <event-block disabled="1" sid="915472896681924">
+                                <event-block sid="915472896681924">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="406508082428489" type="Values_Menus">
                                             <param id="0" name="Instance variable">Selected_Main</param>
@@ -386,55 +367,12 @@
                                             <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <comment>Can&apos;t do an &quot;OR&quot; here because web version can be launched from mobile</comment>
-                                        <event-block disabled="1" sid="173456896965371">
-                                            <conditions>
-                                                <condition id="-32" name="Is on platform" sid="443183441962506" type="System">
-                                                    <param id="0" name="Platform">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Wait" sid="316673630541042" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="7" name="Go to URL" sid="926009413381396" type="Browser">
-                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
-                                                    <param id="1" name="Target">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="647187694218149">
-                                            <conditions>
-                                                <condition id="-20" name="Is on mobile device" sid="405623139740707" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Wait" sid="872702200479033" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="7" name="Go to URL" sid="686987781595761" type="Browser">
-                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
-                                                    <param id="1" name="Target">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="523918662940293">
-                                            <conditions>
-                                                <condition id="-32" name="Is on platform" sid="281323407414908" type="System">
-                                                    <param id="0" name="Platform">10</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Wait" sid="529801472437511" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="29" name="Open browser" sid="847366891969452" type="NWjs">
-                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="610299190779332" type="Values_Menus">
+                                            <param id="0" name="Instance variable">CurrentMenu</param>
+                                            <param id="1" name="Value">&quot;settings&quot;</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                                 <event-block sid="744805463246104">
                                     <conditions>
@@ -450,12 +388,6 @@
                                             <param id="1" name="Value">&quot;credits&quot;</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block sid="161552544523056">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="878211000408107" type="System" />
-                                    </conditions>
-                                    <actions />
                                 </event-block>
                                 <comment>Quit game</comment>
                                 <event-block sid="817087416686709">
@@ -474,6 +406,239 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="448395589322673" title="Settings">
+            <sub-events>
+                <event-block sid="525030786339384">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="615957563381862" type="Values_Menus">
+                            <param id="0" name="Instance variable">CurrentMenu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;settings&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-group description="" sid="501605101901222" title="Settings text top">
+                            <sub-events>
+                                <event-block sid="720605521348699">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="691366790984259" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="746916500462938" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="374808132980272">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="540974272832734" type="StaticText">
+                                                    <param id="0" name="Unique ID">886</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="811866636500934" type="StaticText">
+                                                    <param id="0" name="Text">&quot;*Gameplay*     -Video-     -Controls-     -Other-&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="490041349270562">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="768169031991955" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="785956852240972" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="729302144354476">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="593290299836936" type="StaticText">
+                                                    <param id="0" name="Unique ID">886</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="133015336953933" type="StaticText">
+                                                    <param id="0" name="Text">&quot;-Gameplay-     *Video*     -Controls-     -Other-&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="804637110164041">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="901325867547612" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="330931876624209" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="800435576241002">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="310865861600594" type="StaticText">
+                                                    <param id="0" name="Unique ID">886</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="456670055105981" type="StaticText">
+                                                    <param id="0" name="Text">&quot;-Gameplay-     -Video-     *Controls*     -Other-&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="822211382284915">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="744675293229617" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="185314142360931" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="502463931270670">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="376597562951050" type="StaticText">
+                                                    <param id="0" name="Unique ID">886</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="954622684298415" type="StaticText">
+                                                    <param id="0" name="Text">&quot;-Gameplay-     -Video-     -Controls-     *Other*&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="851436828026441">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="456363211205687" type="Menu_ButtonsBG">
+                                    <param id="0" name="Unique ID">396</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="571415689467705" type="Menu_ButtonsBG">
+                                    <param id="0" name="X">lerp(Self.X, 0, Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 34, Values_Menus.AnimSpeed)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="486511560099001" type="Menu_ButtonsBG">
+                                    <param id="0" name="Width">lerp(Self.Width, 426, Values_Menus.AnimSpeed)</param>
+                                    <param id="1" name="Height">lerp(Self.Height, 206, Values_Menus.AnimSpeed)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="797078045755084">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="667602600222306" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="164505308632213" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="185048781290657">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="586812546132850" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="196686776002856" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="844817317529540">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="361464201208720" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyLeftHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="345812554594636" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="433424509911885" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="6" name="Stop" sid="729924060465623" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="789439853018874" type="Audio">
+                                    <param id="0" name="Audio file">SFX_Beep</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="177771891839567">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="575113748715648" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyRightHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="794573629783265" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="919821716363629" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_SettingsMain</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="6" name="Stop" sid="976688891066201" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="208011909850185" type="Audio">
+                                    <param id="0" name="Audio file">SFX_Beep</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="295672709040318">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="259509569206154" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyESCHold</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="109891194541020" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CurrentMenu</param>
+                                    <param id="1" name="Value">&quot;mainmenu&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="476088453571060" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="968288357914257" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1140,6 +1305,10 @@
                     <param id="0" name="Instance variable">CanPause</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-10" name="Set value" sid="566141403963526" type="Values_Menus">
+                    <param id="0" name="Instance variable">Selected_Main</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="670602287132164">
@@ -1162,6 +1331,10 @@
                 </action>
                 <action id="-4" name="Set layer visible" sid="473953277413973" type="System">
                     <param id="0" name="Layer">&quot;Credits&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="147208207689734" type="System">
+                    <param id="0" name="Layer">&quot;Settings&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
             </actions>
@@ -1202,6 +1375,10 @@
                     <param id="0" name="Layer">&quot;Credits&quot;</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="532508130223656" type="System">
+                    <param id="0" name="Layer">&quot;Settings&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="111333650403025">
@@ -1240,6 +1417,10 @@
                     <param id="0" name="Layer">&quot;Credits&quot;</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="771504894000427" type="System">
+                    <param id="0" name="Layer">&quot;Settings&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="408689538745842">
@@ -1251,6 +1432,48 @@
                     <actions>
                         <action id="0" name="Set text" sid="620883245535169" type="BigStaticText">
                             <param id="0" name="Text">&quot;CREDITS&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="277920906628640">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="408392808574053" type="Values_Menus">
+                    <param id="0" name="Instance variable">CurrentMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;settings&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="841571807542861" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="152868147033374" type="System">
+                    <param id="0" name="Layer">&quot;DataSelect&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="577203040463360" type="System">
+                    <param id="0" name="Layer">&quot;MainMenu&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="223174597736822" type="System">
+                    <param id="0" name="Layer">&quot;Credits&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="191212646698574" type="System">
+                    <param id="0" name="Layer">&quot;Settings&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="562106512114152">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="129465838182463" type="BigStaticText">
+                            <param id="0" name="Unique ID">371</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="855423281959973" type="BigStaticText">
+                            <param id="0" name="Text">&quot;SETTINGS&quot;</param>
                         </action>
                     </actions>
                 </event-block>
