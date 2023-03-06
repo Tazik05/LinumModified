@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="277307929170319">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="482531615413353" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="200516589402472" type="Audio">
+                    <param id="0" name="Audio file">MUS_SpecialStage_S1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="824077277757492">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="249903252734019" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="294917578168197" type="Keyboard">
+                    <param id="0" name="Key">65</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="835227832749894" type="Block_SpecialStage_S1">
+                    <param id="0" name="Angle">Self.Angle-15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="141082894486446">
+            <conditions>
+                <condition id="2" name="Key is down" sid="945122634302674" type="Keyboard">
+                    <param id="0" name="Key">83</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="592015293112256" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="944809780031559">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="273802674686989" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Set layer angle" sid="212597707745697" type="System">
+                    <param id="0" name="Layer">&quot;Map&quot;</param>
+                    <param id="1" name="Angle">LayerAngle(&quot;Map&quot;)+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="400072291011272">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="130073490109281" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="10" name="Set angle of gravity" sid="342085274913704" type="Sprite4">
+                    <param id="0" name="Angle">int(LayerAngle(&quot;Map&quot;)+90)</param>
+                </action>
+                <action disabled="1" id="0" name="Set text" sid="850948409649858" type="TestCounter">
+                    <param id="0" name="Text">int(LayerAngle(&quot;Map&quot;)-90)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="954014499065567">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="335119039092010" type="Sprite4" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="8" name="Set vector X" sid="292721778443322" type="Sprite4">
+                    <param id="0" name="Vector X">-40</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="230642635563961">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="881875873674184" type="Sprite4">
+                    <param id="0" name="Side">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="188830288635815" type="Sprite4">
+                    <param id="0" name="Vector Y">-15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="681039160569276">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="912208558591059" type="Sprite4">
+                    <param id="0" name="Side">1</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

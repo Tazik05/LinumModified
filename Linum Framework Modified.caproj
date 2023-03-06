@@ -5,7 +5,7 @@
     <version>0.1.3</version>
     <author>Halatnikov &amp; stas&apos;s ports</author>
     <author-email></author-email>
-    <author-website>halatnikov.github.io</author-website>
+    <author-website>https://gitlab.com/TheStazik/linum-framework-modified</author-website>
     <app-id>com.linum.sonic</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
     <saved-with-version>28000</saved-with-version>
@@ -22,7 +22,9 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
         <plugin author="Rex.Rainbow" id="Rex_PromptWrap" version="0.100000001">Prompt wrap</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_TimeLine" version="1">TimeLine</plugin>
         <plugin author="Rex.Rainbow" id="Rex_audio_helper" version="0.100000001">Audio helper</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
@@ -41,6 +43,8 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_pushOutSolid" version="1">Push Out Solid</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_text_typing" version="1">Typing</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="PixelMonkey" id="SonicPhysics" version="0.100000001">Sonic Physics</behavior>
@@ -53,7 +57,9 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="R0J0hound" id="mode7">mode7</effect>
         <effect author="Scirra" id="tintmask">Tint Mask</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
         <effect author="Scirra" id="warpmask">Warp Mask</effect>
     </used-effects>
     <configurations>
@@ -293,7 +299,7 @@
                     <instance-variable comment="Disables or enables events depending on the needs of the game (a useful thing for portable devices like android)" name="EnableEventOptimization" sid="377479759631122" type="boolean" />
                     <instance-variable comment="These messages are shown in the middle in the left corner" name="EnableDebuggingMessages" sid="715809938242144" type="boolean" />
                     <instance-variable comment="Allows the player to open the console, this function will be ignored if the debag mod is disabled" name="EnableConsole" sid="162506579789277" type="boolean" />
-                    <instance-variable name="EnableDebug" sid="828358601987480" type="boolean" />
+                    <instance-variable comment="a function that allows you to enable or disable debug" name="EnableDebug" sid="828358601987480" type="boolean" />
                     <instance-variable comment="this adds support for smartwatch, if the screen is the same size and width (for example 240x240), then the interface for smart watches will be changed" name="SmartWatchSupport" sid="381159046024383" type="boolean" />
                     <instance-variable comment="Creates a bluish effect during Transition" name="SonicTransition" sid="309773902682918" type="boolean" />
                     <instance-variable comment="Now, if a player falls from a great height, he will die" name="RealPhysic" sid="767528260121738" type="boolean" />
@@ -305,6 +311,7 @@
                     <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
                     <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
                     <instance-variable comment="this function is used to temporarily disable the pause, for example in the menu (so as not to use the global setting) This parameter will be ignored if the pause in the game is disabled by the setting above" name="AllowPause" sid="389575281345055" type="boolean" />
+                    <instance-variable comment="it is better not to touch this value. This is necessary for the save system, initially it costs -1, this means that the game will not save progress, starting from 0 these are the save slots that are selected in data select" name="UsedSaveSlot" sid="586003597813597" type="number" />
                 </instance-variables>
             </object-type>
             <object-type name="cursor" sid="832183731288467">
@@ -368,6 +375,30 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type global="1" name="Date" sid="409138719820826">
+                <plugin id="Rex_Date" />
+            </object-type>
+            <object-type global="1" name="TimeLine" sid="690187045155520">
+                <plugin id="Rex_TimeLine" />
+            </object-type>
+            <object-type name="WebStorage" sid="568491992888857">
+                <plugin id="WebStorage" />
+            </object-type>
+            <object-type name="Values_Continue" sid="380752313897791">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CanContinue" sid="979891868910808" type="boolean" />
+                    <instance-variable name="IsMoving" sid="757693685905375" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148652501287206" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="SaveMaster" sid="635233275873635">
+                <plugin id="JSON" />
             </object-type>
         </object-folder>
         <object-folder name="Player Objects">
@@ -4604,6 +4635,15 @@
                 </behaviors>
                 <texture />
             </object-type>
+            <object-type name="SaveText" sid="741761640996077">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Typing" sid="533553338796376">
+                        <behavior id="Rex_text_typing" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Level Objects">
             <object-folder name="Effects and Misc">
@@ -6717,18 +6757,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Values_Continue" sid="380752313897791">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="CanContinue" sid="979891868910808" type="boolean" />
-                <instance-variable name="IsMoving" sid="757693685905375" type="boolean" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148652501287206" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="obj_sign_post" sid="607062196168441">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6869,9 +6897,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="WebStorage" sid="568491992888857">
-            <plugin id="WebStorage" />
-        </object-type>
         <object-type name="SaveSlot" sid="856075492355445">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6885,14 +6910,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="920218755852761" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.505618" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="423289052127925">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="584646495737323" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -6935,6 +6952,132 @@
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="638702100597092" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SaveIco" sid="697309478118026">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="305582022430493" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Block_SpecialStage_S1" sid="451974830930679">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="333595390822500">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="430505034171084" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Goal_SpecialStage_S1" sid="764790321131122">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667177638799938" speed="8">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BG_SpecialStage_S1" sid="756188807175241">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Warp">
+                    <effect id="warp" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="906793016677599" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BG1_SpecialStage_S1" sid="501130899786935">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="678987286258171" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="639673639980004">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="506422529990453">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="793107308807880">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="PushOutSolid" sid="294724473300233">
+                    <behavior id="Rex_pushOutSolid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="615659064207582" speed="15">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="246660540812593">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="mode7">
+                    <effect id="mode7" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="744282576355563" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="961102798764076">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Xpos" sid="577171707700629" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314144398160932" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NewText_DataSelect" sid="463109833487092">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="570972468418932" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Static_DataSelect" sid="496760910378808">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="498703807013613" speed="15">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -7148,11 +7291,13 @@
             <layout>Linum_Level.xml</layout>
             <layout>Linum_MenuNew.xml</layout>
             <layout>Linum_Continue.xml</layout>
-            <layout>ButtonSetup(android).xml</layout>
         </layout-folder>
         <layout-folder name="[ Tests ]">
             <layout>TestLayout.xml</layout>
             <layout>UpdateTest.xml</layout>
+            <layout>ButtonSetup(android).xml</layout>
+            <layout>Linum_SpecialStage_S1.xml</layout>
+            <layout>Linum_SpecialStage_S16B.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -7165,11 +7310,14 @@
             <event-sheet>CREDITS.xml</event-sheet>
             <event-sheet>E_Level.xml</event-sheet>
             <event-sheet>E_GameOver.xml</event-sheet>
+            <event-sheet>E_SaveSystem.xml</event-sheet>
         </event-folder>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
         <event-sheet>Event sheet 4.xml</event-sheet>
         <event-sheet>Event sheet 5.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 6.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">
@@ -7291,6 +7439,7 @@
         <file name="MUS_invincibility.ogg" />
         <file name="MUS_test_zone_2.ogg" />
         <file name="MUS_continue.ogg" />
+        <file name="MUS_SpecialStage_S1.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
@@ -7314,6 +7463,6 @@
             <file name="danik.png" />
             <file name="sonicXtailsREAL.png" />
         </file-folder>
-        <file name="SaveBlant.json" />
+        <file name="SaveBlank.json" />
     </files-folder>
 </c2project>

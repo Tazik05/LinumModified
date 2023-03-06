@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_mainMenu</name>
     <events>
+        <include>E_SaveSystem</include>
         <include>E_global</include>
         <event-group description="" sid="423914286752749" title="Menu Background">
             <sub-events>
@@ -669,6 +670,20 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="440967839511396">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="961472577083210" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="793826241433060" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="945876226823143" type="Function">
+                                    <param id="0" name="Name">&quot;NewSave&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Linum_Level&quot;{###}1{###}Values_Menus.Selected_DataSelect-1{###}&quot;Param 0: Level, Param 1: Character, Param 2: Slot number&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="784783752704381">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="843272217221716" type="Menu_ButtonsBG">

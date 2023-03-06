@@ -11,8 +11,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">Linum_Level</layout>
-        <event-sheet order="3">E_Level</event-sheet>
-        <event-sheet active="1" order="0">E_Engine</event-sheet>
+        <layout order="4">Linum_mainMenu</layout>
+        <layout order="5">Linum_logo</layout>
+        <layout order="6">Linum_Continue</layout>
+        <layout order="7">Linum_MenuNew</layout>
+        <event-sheet order="0">E_Level</event-sheet>
+        <event-sheet active="1" order="2">E_SaveSystem</event-sheet>
+        <event-sheet order="3">E_mainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,7 +34,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Behavior_Solid" />
         <family expanded="0" name="Behavior_Jumpthru" />
         <family expanded="0" name="Animals" />
-        <family expanded="1" name="obj" />
+        <family expanded="0" name="obj" />
         <family expanded="0" name="AndroidButtons" />
     </families-expanded>
     <folders-expanded>
@@ -60,7 +65,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
         <folder expanded="1" path="file-folder/Font/MotelKing/" />
         <folder expanded="0" path="file-folder/Icons/" />
@@ -75,6 +80,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/cursor/" />
         <folder expanded="1" path="animation-folder/Values_CMD/" />
         <folder expanded="1" path="animation-folder/Values_SignPost/" />
+        <folder expanded="1" path="animation-folder/Values_Continue/" />
         <folder expanded="1" path="animation-folder/FireShieldDash/" />
         <folder expanded="1" path="animation-folder/InstaShield/" />
         <folder expanded="1" path="animation-folder/Invincibility/" />
@@ -257,7 +263,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/SpritesGameOver/" />
         <folder expanded="1" path="animation-folder/BG_Continue/" />
         <folder expanded="1" path="animation-folder/Text_CountGAMEOVER/" />
-        <folder expanded="1" path="animation-folder/Values_Continue/" />
         <folder expanded="1" path="animation-folder/obj_sign_post/" />
         <folder expanded="1" path="animation-folder/spr_results_name/" />
         <folder expanded="1" path="animation-folder/spr_results_through/" />
@@ -270,9 +275,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/spr_wheel2/" />
         <folder expanded="1" path="animation-folder/SaveSlot/" />
         <folder expanded="1" path="animation-folder/Slot/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/NoSaveText/" />
         <folder expanded="1" path="animation-folder/DisposableSpringPart/" />
+        <folder expanded="1" path="animation-folder/SaveIco/" />
+        <folder expanded="1" path="animation-folder/Block_SpecialStage_S1/" />
+        <folder expanded="1" path="animation-folder/Goal_SpecialStage_S1/" />
+        <folder expanded="1" path="animation-folder/BG_SpecialStage_S1/" />
+        <folder expanded="1" path="animation-folder/BG1_SpecialStage_S1/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/NewText_DataSelect/" />
+        <folder expanded="1" path="animation-folder/Static_DataSelect/" />
     </folders-expanded>
 </c2uistate>

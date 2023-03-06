@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 6</name>
+    <events>
+        <event-block sid="556342346744794">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="485196325974684" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="974811452781558" type="System">
+                    <param id="0" name="Object to create">Sprite5</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">128</param>
+                    <param id="3" name="Y">-128</param>
+                </action>
+                <action id="-11" name="Add to" sid="337257546637689" type="Sprite8">
+                    <param id="0" name="Instance variable">Xpos</param>
+                    <param id="1" name="Value">5*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="903060040741664">
+            <conditions />
+            <actions>
+                <action disabled="1" id="-2" name="Set Y" sid="809094144871579" type="Sprite5">
+                    <param id="0" name="Y">Self.Y+3</param>
+                </action>
+                <action disabled="1" id="-2" name="Set Y" sid="416045879975160" type="Sprite5">
+                    <param id="0" name="Y">Self.Y+3</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="134550332316189" type="Sprite5">
+                    <param id="0" name="Effect">&quot;mode7&quot;</param>
+                    <param id="1" name="Parameter index">2</param>
+                    <param id="2" name="Value">Sprite8.Xpos</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

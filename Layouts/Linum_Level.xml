@@ -29881,8 +29881,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>408</x>
-                        <y>224</y>
+                        <x>502</x>
+                        <y>226</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
@@ -29911,13 +29911,73 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>396</x>
-                        <y>226</y>
+                        <x>490</x>
+                        <y>228</y>
                         <z>0</z>
                         <width>60</width>
                         <height>12</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SaveText" uid="890">
+                    <properties>
+                        <character-width>8</character-width>
+                        <character-height>7</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
+                        <text>Saved!</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Typing">
+                            <properties>
+                                <typing-mode>Left to right</typing-mode>
+                                <line-break>No</line-break>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>246</y>
+                        <z>0</z>
+                        <width>102</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SaveIco" uid="889">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>310</x>
+                        <y>230</y>
+                        <z>0</z>
+                        <width>14</width>
+                        <height>14</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -30170,7 +30230,13 @@
                 <PauseStyle>SSW</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
                 <AllowPause>true</AllowPause>
+                <UsedSaveSlot>-1</UsedSaveSlot>
             </instance-variables>
+        </instance>
+        <instance type="TimeLine" uid="891">
+            <properties>
+                <game-time>Yes</game-time>
+            </properties>
         </instance>
     </nonworld-instances>
     <effects />

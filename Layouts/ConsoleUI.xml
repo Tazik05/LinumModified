@@ -270,6 +270,8 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="SaveMaster" uid="1185" />
+    </nonworld-instances>
     <effects />
 </c2layout>
