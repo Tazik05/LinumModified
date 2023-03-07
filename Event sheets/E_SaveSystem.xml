@@ -4,7 +4,13 @@
     <name>E_SaveSystem</name>
     <events>
         <event-block sid="126990003340670">
-            <conditions />
+            <conditions>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="378375593915901" type="Global_Settings">
+                    <param id="0" name="Instance variable">UsedSaveSlot</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
             <actions />
             <sub-events>
                 <event-group description="" sid="839093858680483" title="Save system ">
@@ -161,192 +167,609 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
+                        <event-group description="" sid="576382144598705" title="New save">
+                            <sub-events>
+                                <event-block any="1" sid="872876543583506">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="669453569291646" type="Function">
+                                            <param id="0" name="Name">&quot;NewSave&quot;</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="521686298115068" type="Keyboard">
+                                            <param id="0" name="Key">55</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Request project file" sid="270336050753174" type="AJAX">
+                                            <param id="0" name="Tag">&quot;SaveBlank&quot;</param>
+                                            <param id="1" name="File">SaveBlank.json</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="179417143494747" type="Save_Helper">
+                                            <param id="0" name="Instance variable">Level</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="285766935054673" type="Save_Helper">
+                                            <param id="0" name="Instance variable">Character</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="450544390939523" type="Save_Helper">
+                                            <param id="0" name="Instance variable">Slot</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="691954343826475">
+                                    <conditions>
+                                        <condition id="0" name="On completed" sid="620452443124506" type="AJAX">
+                                            <param id="0" name="Tag">&quot;SaveBlank&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="60" name="LoadJSON" sid="516302882060220" type="SaveMaster">
+                                            <param id="0" name="JSON">AJAX.LastData</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="972694615225608">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="337880952202225" type="Keyboard">
+                                            <param id="0" name="Key">86</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Alert" sid="489402821999531" type="Browser">
+                                            <param id="0" name="Message">SaveMaster.AsJson(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="737838379123328">
+                                    <conditions>
+                                        <condition id="70" inverted="1" name="Is Empty" sid="799288839110384" type="SaveMaster">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="377607515276218" type="System">
+                                            <param id="0" name="First value">SaveMaster.Value(0,&quot;NewSave&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Yes&quot;</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="657567451702611" type="Save_Helper">
+                                            <param id="0" name="Instance variable">SnapshotDone</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="248207456996303" type="Save_Helper">
+                                            <param id="0" name="Instance variable">CanSave</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="832773324001059" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="20" name="Set Value" sid="529034169052339" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;No&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;NewSave&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="650173185983690" type="SaveMaster">
+                                            <param id="0" name="Value">Date.LocalExpression</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Saved&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="996580678211510" type="SaveMaster">
+                                            <param id="0" name="Value">projectversion</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Ver&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="476718161597626" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Preview&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="855489985345059" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Data&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="647577488333804" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;DataBlank1&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="668934665471527" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Rings&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="747133656535418" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Score&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="295194431604842" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Lives&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="747317725041106" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Continue&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="573486467632506" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;PlayerX&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="601867615746189" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;PlayerY&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="527977994286716" type="SaveMaster">
+                                            <param id="0" name="Value">Save_Helper.Level</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Layout&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="884003933518809" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Zone&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="189697555391973" type="SaveMaster">
+                                            <param id="0" name="Value">Save_Helper.Character</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Character&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="652136793976082" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Green&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="650840925583022" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Cyan&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="900977351810523" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Blue&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="831074390844698" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Red&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="384746899841106" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Purple&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="398813750469273" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Yellow&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="549093736143778" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Gray&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="734605607279935" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="711844768727733" type="WebStorage">
+                                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                                            <param id="1" name="Value">SaveMaster.AsJson(0)</param>
+                                        </action>
+                                        <action id="0" name="Alert" sid="808195160465733" type="Browser">
+                                            <param id="0" name="Message">SaveMaster.AsJson(0)</param>
+                                        </action>
+                                        <action disabled="1" id="55" name="Clear" sid="889455934172643" type="SaveMaster">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </action>
+                                        <action id="0" name="Alert" sid="572793619430004" type="Browser">
+                                            <param id="0" name="Message">&quot;done&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>creating an empty save for further writing values to a file</comment>
+                            </sub-events>
+                        </event-group>
                         <event-group description="" sid="162666442147714" title="Working with saves">
                             <sub-events>
-                                <event-group description="" sid="576382144598705" title="Create save">
+                                <event-group description="" sid="217961701119652" title="Create save">
                                     <sub-events>
-                                        <variable constant="0" name="Temp_Level" sid="842918377461806" static="0" type="text"></variable>
-                                        <variable constant="0" name="Temp_Character" sid="837948414463008" static="0" type="number">0</variable>
-                                        <variable constant="0" name="Temp_Slot" sid="903782137004149" static="0" type="number">0</variable>
-                                        <event-block sid="872876543583506">
+                                        <event-block sid="146313370451862">
                                             <conditions>
-                                                <condition id="0" name="On function" sid="669453569291646" type="Function">
-                                                    <param id="0" name="Name">&quot;NewSave&quot;</param>
+                                                <condition id="0" name="On key pressed" sid="241902822868973" type="Keyboard">
+                                                    <param id="0" name="Key">54</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="1" name="Request project file" sid="270336050753174" type="AJAX">
-                                                    <param id="0" name="Tag">&quot;SaveBlank&quot;</param>
-                                                    <param id="1" name="File">SaveBlank.json</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="179417143494747" type="System">
-                                                    <param id="0" name="Variable">Temp_Level</param>
-                                                    <param id="1" name="Value">Function.Param(0)</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="285766935054673" type="System">
-                                                    <param id="0" name="Variable">Temp_Character</param>
-                                                    <param id="1" name="Value">Function.Param(1)</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="450544390939523" type="System">
-                                                    <param id="0" name="Variable">Temp_Slot</param>
-                                                    <param id="1" name="Value">Function.Param(2)</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="844539975868006" type="GlobalSettings">
-                                                    <param id="0" name="Instance variable">UsedSaveSlot</param>
-                                                    <param id="1" name="Value">Temp_Slot</param>
+                                                <action id="0" name="Alert" sid="754982703058721" type="Browser">
+                                                    <param id="0" name="Message">WebStorage.LocalValue(&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="691954343826475">
+                                        <event-block sid="133201532581813">
                                             <conditions>
-                                                <condition id="0" name="On completed" sid="620452443124506" type="AJAX">
-                                                    <param id="0" name="Tag">&quot;SaveBlank&quot;</param>
+                                                <condition id="0" name="On key pressed" sid="216522739800235" type="Keyboard">
+                                                    <param id="0" name="Key">53</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="60" name="LoadJSON" sid="516302882060220" type="SaveMaster">
-                                                    <param id="0" name="JSON">AJAX.LastData</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="972694615225608">
-                                            <conditions>
-                                                <condition id="0" name="On key pressed" sid="337880952202225" type="Keyboard">
-                                                    <param id="0" name="Key">86</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Alert" sid="489402821999531" type="Browser">
+                                                <action id="0" name="Alert" sid="986868987318961" type="Browser">
                                                     <param id="0" name="Message">SaveMaster.AsJson(0)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="737838379123328">
+                                        <event-block sid="324303739862644">
                                             <conditions>
-                                                <condition id="70" inverted="1" name="Is Empty" sid="799288839110384" type="SaveMaster">
+                                                <condition id="0" name="On function" sid="301549773753480" type="Function">
+                                                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="60" name="LoadJSON" sid="192113790644148" type="SaveMaster">
+                                                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot)</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}"></param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="387482294386087" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">CanSave</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="724370587561306" type="System">
+                                                    <param id="0" name="Layer">&quot;HUD_Custom&quot;</param>
+                                                    <param id="1" name="Opacity">0</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="844288349727224" type="System">
+                                                    <param id="0" name="Layer">&quot;HUD_Linum&quot;</param>
+                                                    <param id="1" name="Opacity">0</param>
+                                                </action>
+                                                <action id="-27" name="Snapshot canvas" sid="596945827666723" type="System">
+                                                    <param id="0" name="Format">0</param>
+                                                    <param id="1" name="JPEG quality">75</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="551983128859291" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">PlayerPosX</param>
+                                                    <param id="1" name="Value">Function.Param(0)</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="932490643130490" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">PlayerPosY</param>
+                                                    <param id="1" name="Value">Function.Param(1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1" sid="992029683136985">
+                                            <conditions>
+                                                <condition id="-2" name="On start of layout" sid="734585252209798" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="950867401967806" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">CanSave</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="936204070244905">
+                                            <conditions>
+                                                <condition id="-26" name="On canvas snapshot" sid="463108685353209" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="368185968433885" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">SnapshotDone</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="589842792644760" type="System">
+                                                    <param id="0" name="Layer">&quot;HUD_Custom&quot;</param>
+                                                    <param id="1" name="Opacity">100</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="679484178571364" type="System">
+                                                    <param id="0" name="Layer">&quot;HUD_Linum&quot;</param>
+                                                    <param id="1" name="Opacity">100</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="650282217390598" type="Function">
+                                                    <param id="0" name="Name">&quot;SaveAnimation&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="865063599948881">
+                                            <conditions>
+                                                <condition id="70" inverted="1" name="Is Empty" sid="442391533577517" type="SaveMaster">
                                                     <param id="0" name="Reference point">0</param>
                                                     <param id="1" name="Key {n}"></param>
                                                 </condition>
-                                                <condition id="-8" name="Compare two values" sid="377607515276218" type="System">
-                                                    <param id="0" name="First value">SaveMaster.Value(0,&quot;NewSave&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;Yes&quot;</param>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="321323674257659" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">SnapshotDone</param>
                                                 </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="832773324001059" type="System" />
+                                                <condition id="-8" name="Is boolean instance variable set" sid="721549394403354" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">CanSave</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="809396438844774" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="20" name="Set Value" sid="529034169052339" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;No&quot;</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;NewSave&quot;</param>
-                                                </action>
-                                                <action id="20" name="Set Value" sid="650173185983690" type="SaveMaster">
+                                                <action id="20" name="Set Value" sid="321684006298080" type="SaveMaster">
                                                     <param id="0" name="Value">Date.LocalExpression</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Saved&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="996580678211510" type="SaveMaster">
-                                                    <param id="0" name="Value">projectversion</param>
-                                                    <param id="1" name="Reference point">0</param>
-                                                    <param id="2" name="Key {n}">&quot;Ver&quot;</param>
-                                                </action>
-                                                <action id="20" name="Set Value" sid="476718161597626" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="142878190115120" type="SaveMaster">
+                                                    <param id="0" name="Value">CanvasSnapshot</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Preview&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="855489985345059" type="SaveMaster">
+                                                <action id="20" name="Set Value" sid="858236529538433" type="SaveMaster">
                                                     <param id="0" name="Value">&quot;&quot;</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Data&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="647577488333804" type="SaveMaster">
+                                                <action id="20" name="Set Value" sid="463368596570541" type="SaveMaster">
                                                     <param id="0" name="Value">&quot;&quot;</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;DataBlank1&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="668934665471527" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="905001197827489" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Player.Rings</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Rings&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="747133656535418" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="101084342968388" type="SaveMaster">
+                                                    <param id="0" name="Value">Global_Settings.Score</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Score&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="295194431604842" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="600789688983199" type="SaveMaster">
+                                                    <param id="0" name="Value">Global_Settings.Lives</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Lives&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="747317725041106" type="SaveMaster">
+                                                <action id="20" name="Set Value" sid="589772935360370" type="SaveMaster">
                                                     <param id="0" name="Value">&quot;&quot;</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Continue&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="573486467632506" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="656066002726623" type="SaveMaster">
+                                                    <param id="0" name="Value">Save_Helper.PlayerPosX</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;PlayerX&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="601867615746189" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="316410073102425" type="SaveMaster">
+                                                    <param id="0" name="Value">Save_Helper.PlayerPosY</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;PlayerY&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="527977994286716" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="676562383042260" type="SaveMaster">
+                                                    <param id="0" name="Value">LayoutName</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Layout&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="652136793976082" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="339329457310930" type="SaveMaster">
+                                                    <param id="0" name="Value">&quot;2&quot;</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Zone&quot;</param>
+                                                </action>
+                                                <action id="20" name="Set Value" sid="602705495633816" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Player.Character</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Character&quot;</param>
+                                                </action>
+                                                <action id="20" name="Set Value" sid="787058726039159" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Emeralds.Green</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Green&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="650840925583022" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="746039629822720" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Emeralds.Cyan</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Cyan&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="900977351810523" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="969228303426936" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Emeralds.Blue</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Blue&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="831074390844698" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="602891496558481" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Emeralds.Red</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Red&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="384746899841106" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="747352775370459" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Emeralds.Purple</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Purple&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="398813750469273" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="437034009366931" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Emeralds.Yellow</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Yellow&quot;</param>
                                                 </action>
-                                                <action id="20" name="Set Value" sid="549093736143778" type="SaveMaster">
-                                                    <param id="0" name="Value">&quot;&quot;</param>
+                                                <action id="20" name="Set Value" sid="904750553561503" type="SaveMaster">
+                                                    <param id="0" name="Value">Values_Emeralds.Gray</param>
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Emeralds&quot;{###}&quot;Gray&quot;</param>
                                                 </action>
-                                                <action id="-16" name="Wait" sid="734605607279935" type="System">
-                                                    <param id="0" name="Seconds">0</param>
+                                                <action id="27" name="Set clipboard text" sid="924501927856196" type="NWjs">
+                                                    <param id="0" name="Text">SaveMaster.AsJson(0)</param>
                                                 </action>
-                                                <action id="0" name="Set local value" sid="711844768727733" type="WebStorage">
-                                                    <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;GlobalSettings.UsedSaveSlot</param>
-                                                    <param id="1" name="Value">SaveMaster.Value(0)</param>
+                                                <action id="0" name="Set local value" sid="771761535856019" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                                                    <param id="1" name="Value">SaveMaster.AsJson(0)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <comment>creating an empty save for further writing values to a file</comment>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="471407370980662" title="LoadSlots">
+                                    <sub-events>
+                                        <event-block sid="963064265704255">
+                                            <conditions>
+                                                <condition id="0" name="On function" sid="528163875742168" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadSaveData&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="611733685577294" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">IsLoadingSaves</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="259600604655178">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="786399143220033" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_0&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="60" name="LoadJSON" sid="851938461550110" type="SaveSlot0">
+                                                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_0&quot;)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="182680502147603">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="649625311370802" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_1&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="60" name="LoadJSON" sid="470333901756964" type="SaveSlot1">
+                                                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_1&quot;)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="723223748351842">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="494520272198410" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_2&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="60" name="LoadJSON" sid="761634534554375" type="SaveSlot2">
+                                                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_2&quot;)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="260970490082952">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="498480038856796" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_3&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="60" name="LoadJSON" sid="288412095342693" type="SaveSlot3">
+                                                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_3&quot;)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="954190027385811">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="136323477463533" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_4&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="60" name="LoadJSON" sid="637348206602815" type="SaveSlot4">
+                                                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_4&quot;)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="578084186025858">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="951662344656661" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_5&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="60" name="LoadJSON" sid="729351725405759" type="SaveSlot5">
+                                                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_5&quot;)</param>
+                                                            <param id="1" name="Reference point">0</param>
+                                                            <param id="2" name="Key {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="820864802113097">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="400360441561884" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">IsLoadingSaves</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="659825783691155">
+                                                    <conditions>
+                                                        <condition id="70" inverted="1" name="Is Empty" sid="157334508885478" type="SaveSlot0">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}"></param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="239080573764982" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="10" name="Load image from URL" sid="707341010093294" type="NewText_DataSelect_0">
+                                                            <param id="0" name="URI">SaveSlot0.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                                                            <param id="1" name="Size">1</param>
+                                                            <param id="2" name="Cross-origin">0</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="186050634246441" type="System">
+                                                            <param id="0" name="Object to create">StaticText_Red</param>
+                                                            <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                            <param id="2" name="X">169</param>
+                                                            <param id="3" name="Y">142</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="130890705450932" type="StaticText_Red">
+                                                            <param id="0" name="Text">&quot;Zone &quot;&amp;SaveSlot0.Value(0,&quot;Save&quot;,&quot;Zone&quot;)</param>
+                                                        </action>
+                                                        <action id="7" name="Set horizontal alignment" sid="806622667739194" type="StaticText_Red">
+                                                            <param id="0" name="Horizontal alignment">1</param>
+                                                        </action>
+                                                        <action id="-25" name="Move to bottom" sid="219682035320286" type="StaticText_Red" />
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="408034012188389">
+                                                            <conditions>
+                                                                <condition id="-14" name="Pick by unique ID" sid="135457412781738" type="Static_DataSelect">
+                                                                    <param id="0" name="Unique ID">859</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="408306184541270" type="Static_DataSelect">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="456279748662870">
+                                                    <conditions>
+                                                        <condition id="3" inverted="1" name="Local key exists" sid="583002519832147" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="581569544436812" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="10" name="Load image from URL" sid="675041151637110" type="NewText_DataSelect_0">
+                                                            <param id="0" name="URI">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                                                            <param id="1" name="Size">1</param>
+                                                            <param id="2" name="Cross-origin">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                     </sub-events>
                                 </event-group>
                             </sub-events>
@@ -361,7 +784,12 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="708282022281773" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Call function" sid="817725847581082" type="Function">
+                            <param id="0" name="Name">&quot;LoadSaveData&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

@@ -678,7 +678,7 @@
                                 <condition id="-4" name="Trigger once while true" sid="793826241433060" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="945876226823143" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="945876226823143" type="Function">
                                     <param id="0" name="Name">&quot;NewSave&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;Linum_Level&quot;{###}1{###}Values_Menus.Selected_DataSelect-1{###}&quot;Param 0: Level, Param 1: Character, Param 2: Slot number&quot;</param>
                                 </action>

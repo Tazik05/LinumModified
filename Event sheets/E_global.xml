@@ -646,7 +646,7 @@
                 <event-block sid="391482400350851">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="672199217753893" type="System">
-                            <param id="0" name="First value">lowercase(GlobalSettings.ScreenSize)</param>
+                            <param id="0" name="First value">lowercase(Global_Settings.ScreenSize)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">lowercase(&quot;Disable&quot;)</param>
                         </condition>
@@ -662,7 +662,7 @@
                 <event-block sid="601920809172457">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="718961138552000" type="System">
-                            <param id="0" name="First value">lowercase(GlobalSettings.ScreenSize)</param>
+                            <param id="0" name="First value">lowercase(Global_Settings.ScreenSize)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">lowercase(&quot;Original&quot;)</param>
                         </condition>
@@ -690,7 +690,7 @@
                 <event-block sid="803186507209845">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="963868801456449" type="System">
-                            <param id="0" name="First value">lowercase(GlobalSettings.ScreenSize)</param>
+                            <param id="0" name="First value">lowercase(Global_Settings.ScreenSize)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">lowercase(&quot;2x&quot;)</param>
                         </condition>
@@ -718,7 +718,7 @@
                 <event-block sid="604656948781392">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="683110440351631" type="System">
-                            <param id="0" name="First value">lowercase(GlobalSettings.ScreenSize)</param>
+                            <param id="0" name="First value">lowercase(Global_Settings.ScreenSize)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">lowercase(&quot;3x&quot;)</param>
                         </condition>
@@ -746,7 +746,7 @@
                 <event-block sid="559668345860538">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="558884498576995" type="System">
-                            <param id="0" name="First value">lowercase(GlobalSettings.ScreenSize)</param>
+                            <param id="0" name="First value">lowercase(Global_Settings.ScreenSize)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">lowercase(&quot;4x&quot;)</param>
                         </condition>
@@ -774,7 +774,7 @@
                 <event-block sid="445838065832719">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="645056338426890" type="System">
-                            <param id="0" name="First value">lowercase(GlobalSettings.ScreenSize)</param>
+                            <param id="0" name="First value">lowercase(Global_Settings.ScreenSize)</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">lowercase(&quot;FullScreen&quot;)</param>
                         </condition>
@@ -793,7 +793,7 @@
             <sub-events>
                 <event-block sid="165352445172323">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="605615849052245" type="GlobalSettings">
+                        <condition id="-8" name="Is boolean instance variable set" sid="605615849052245" type="Global_Settings">
                             <param id="0" name="Instance variable">EnableOptimization</param>
                         </condition>
                     </conditions>
@@ -808,7 +808,7 @@
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Second value">50</param>
                                         </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="661531349875826" type="GlobalSettings">
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="661531349875826" type="Global_Settings">
                                             <param id="0" name="Instance variable">FpsFix</param>
                                         </condition>
                                     </conditions>
@@ -819,14 +819,14 @@
                                                 <condition id="-6" name="Every X seconds" sid="557985626504072" type="System">
                                                     <param id="0" name="Interval (seconds)">1.0</param>
                                                 </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="744304857358756" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="744304857358756" type="Global_Settings">
                                                     <param id="0" name="Instance variable">FpsCounter</param>
                                                     <param id="1" name="Comparison">2</param>
                                                     <param id="2" name="Value">3</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="920991126457045" type="GlobalSettings">
+                                                <action id="-11" name="Add to" sid="920991126457045" type="Global_Settings">
                                                     <param id="0" name="Instance variable">FpsCounter</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
@@ -836,13 +836,13 @@
                                 </event-block>
                                 <event-block sid="953490417198558">
                                     <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="469963380669821" type="GlobalSettings">
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="469963380669821" type="Global_Settings">
                                             <param id="0" name="Instance variable">FpsFix</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="374954553963522" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="832454051756385" type="GlobalSettings">
+                                        <action id="-10" name="Set value" sid="832454051756385" type="Global_Settings">
                                             <param id="0" name="Instance variable">FpsCounter</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
@@ -850,7 +850,7 @@
                                 </event-block>
                                 <event-block sid="360030187439194">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="303419463720186" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="303419463720186" type="Global_Settings">
                                             <param id="0" name="Instance variable">FpsCounter</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Value">3</param>
@@ -858,7 +858,7 @@
                                         <condition id="-4" name="Trigger once while true" sid="436472468452539" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="809034460365639" type="GlobalSettings">
+                                        <action id="-13" name="Set boolean" sid="809034460365639" type="Global_Settings">
                                             <param id="0" name="Instance variable">FpsFix</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -866,7 +866,7 @@
                                 </event-block>
                                 <event-block sid="283598985653087">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="821853981783624" type="GlobalSettings">
+                                        <condition id="-8" name="Is boolean instance variable set" sid="821853981783624" type="Global_Settings">
                                             <param id="0" name="Instance variable">FpsFix</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="495147313721269" type="System" />
@@ -876,7 +876,7 @@
                                             <param id="0" name="Instance variable">mode</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="576963413031282" type="GlobalSettings">
+                                        <action id="-10" name="Set value" sid="576963413031282" type="Global_Settings">
                                             <param id="0" name="Instance variable">FpsCounter</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
@@ -1254,7 +1254,7 @@
                                                     <param id="0" name="Instance variable">CanExecute</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="836784970861438" type="GlobalSettings">
+                                                <action id="-10" name="Set value" sid="836784970861438" type="Global_Settings">
                                                     <param id="0" name="Instance variable">ScreenSize</param>
                                                     <param id="1" name="Value">tokenat(TextBoxMask.Text, 2, &quot; &quot;)</param>
                                                 </action>
@@ -1280,7 +1280,7 @@
                                                     <param id="0" name="Instance variable">CanExecute</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="993771367732003" type="GlobalSettings">
+                                                <action id="-10" name="Set value" sid="993771367732003" type="Global_Settings">
                                                     <param id="0" name="Instance variable">HUD</param>
                                                     <param id="1" name="Value">trim(replace(TextBoxMask.Text,&quot;Set HUDStyle&quot;,&quot;&quot;))</param>
                                                 </action>
@@ -1302,7 +1302,7 @@
                                                     <param id="0" name="Instance variable">CanExecute</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="919122322178161" type="GlobalSettings">
+                                                <action id="-10" name="Set value" sid="919122322178161" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Lives</param>
                                                     <param id="1" name="Value">float(tokenat(TextBoxMask.Text, 2, &quot; &quot;))</param>
                                                 </action>
@@ -1533,7 +1533,7 @@
                                 </event-block>
                                 <event-block sid="820866646637266">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="109604721507360" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="109604721507360" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Desktop&quot;</param>
@@ -1582,7 +1582,7 @@
                                 </event-block>
                                 <event-block sid="986448328331441">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="783123509109212" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="783123509109212" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -1687,7 +1687,7 @@
                         </event-block>
                         <event-block sid="613254086867897">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="535875152970700" type="GlobalSettings">
+                                <condition id="-7" name="Compare instance variable" sid="535875152970700" type="Global_Settings">
                                     <param id="0" name="Instance variable">Platform</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -1703,7 +1703,7 @@
                         <comment>hiding or showing the icon depending on the platform</comment>
                         <event-block sid="483105580503854">
                             <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="650343559560360" type="GlobalSettings">
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="650343559560360" type="Global_Settings">
                                     <param id="0" name="Instance variable">Platform</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -2219,7 +2219,7 @@
                     <sub-events>
                         <event-block sid="554915790761004">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="278002244856801" type="GlobalSettings">
+                                <condition id="-8" name="Is boolean instance variable set" sid="278002244856801" type="Global_Settings">
                                     <param id="0" name="Instance variable">RingHighEffect</param>
                                 </condition>
                             </conditions>
@@ -2227,7 +2227,7 @@
                                 <action id="-16" name="Wait" sid="136139185829170" type="System">
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="720312869660774" type="GlobalSettings">
+                                <action id="-13" name="Set boolean" sid="720312869660774" type="Global_Settings">
                                     <param id="0" name="Instance variable">RingHighEffect</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -2238,7 +2238,7 @@
                         </event-block>
                         <event-block sid="115341536249631">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="680108778794398" type="GlobalSettings">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="680108778794398" type="Global_Settings">
                                     <param id="0" name="Instance variable">RingHighEffect</param>
                                 </condition>
                             </conditions>
@@ -2246,7 +2246,7 @@
                                 <action id="-16" name="Wait" sid="175107183761460" type="System">
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="666845543086710" type="GlobalSettings">
+                                <action id="-13" name="Set boolean" sid="666845543086710" type="Global_Settings">
                                     <param id="0" name="Instance variable">RingHighEffect</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -2340,7 +2340,7 @@
                     <sub-events>
                         <event-block sid="855750941475875">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="295814481483186" type="GlobalSettings">
+                                <condition id="-7" name="Compare instance variable" sid="295814481483186" type="Global_Settings">
                                     <param id="0" name="Instance variable">Platform</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Desktop&quot;</param>
@@ -2462,7 +2462,7 @@
                         </event-block>
                         <event-block sid="897970591126358">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="180648547671213" type="GlobalSettings">
+                                <condition id="-7" name="Compare instance variable" sid="180648547671213" type="Global_Settings">
                                     <param id="0" name="Instance variable">Platform</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -2599,7 +2599,7 @@
             <sub-events>
                 <event-block sid="440028390009310">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="724981223741659" type="GlobalSettings">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="724981223741659" type="Global_Settings">
                             <param id="0" name="Instance variable">SonicTransition</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="228826677403540" type="System" />
@@ -2734,10 +2734,10 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="321598080824544" type="Values_PauseMenu">
                             <param id="0" name="Instance variable">CanPause</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="452856711046331" type="GlobalSettings">
+                        <condition id="-8" name="Is boolean instance variable set" sid="452856711046331" type="Global_Settings">
                             <param id="0" name="Instance variable">AllowPause</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="718376743966757" type="GlobalSettings">
+                        <condition id="-8" name="Is boolean instance variable set" sid="718376743966757" type="Global_Settings">
                             <param id="0" name="Instance variable">EnablePause</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="185011503682585" type="System" />
@@ -2828,7 +2828,7 @@
                 </event-block>
                 <event-block sid="568630636716201">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="648986935637620" type="GlobalSettings">
+                        <condition id="-7" name="Compare instance variable" sid="648986935637620" type="Global_Settings">
                             <param id="0" name="Instance variable">PauseStyle</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;SSW&quot;</param>
@@ -2925,7 +2925,7 @@
             <sub-events>
                 <event-block sid="409848287420929">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="286098519002170" type="GlobalSettings">
+                        <condition id="-8" name="Is boolean instance variable set" sid="286098519002170" type="Global_Settings">
                             <param id="0" name="Instance variable">EnableOptimization</param>
                         </condition>
                     </conditions>
@@ -2935,7 +2935,7 @@
                         <comment>CMD OPTIMIZATION</comment>
                         <event-block sid="923248268242849">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="648002374408456" type="GlobalSettings">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="648002374408456" type="Global_Settings">
                                     <param id="0" name="Instance variable">EnableConsole</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="680234628018423" type="System" />
@@ -2964,7 +2964,7 @@
                         </event-block>
                         <event-block sid="967249809857294">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="947987734145289" type="GlobalSettings">
+                                <condition id="-8" name="Is boolean instance variable set" sid="947987734145289" type="Global_Settings">
                                     <param id="0" name="Instance variable">EnableConsole</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="424489810452301" type="System" />
@@ -2978,7 +2978,7 @@
                         </event-block>
                         <event-block sid="970028917690222">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="719557262718456" type="GlobalSettings">
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="719557262718456" type="Global_Settings">
                                     <param id="0" name="Instance variable">EnableDebug</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="992294504009190" type="System" />
@@ -3001,7 +3001,7 @@
                         </event-block>
                         <event-block sid="334206579980847">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="284210284956450" type="GlobalSettings">
+                                <condition id="-8" name="Is boolean instance variable set" sid="284210284956450" type="Global_Settings">
                                     <param id="0" name="Instance variable">EnableDebug</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="813553901268290" type="System" />

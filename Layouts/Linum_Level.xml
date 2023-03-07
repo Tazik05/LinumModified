@@ -23912,6 +23912,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Checkpoint" uid="1188">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2270</x>
+                        <y>528</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -26376,8 +26398,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-136</x>
-                        <y>40</y>
+                        <x>-100</x>
+                        <y>42</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -30253,7 +30275,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="GlobalSettings" uid="998">
+        <instance type="Global_Settings" uid="998">
             <instance-variables>
                 <Lives>1</Lives>
                 <Score>0</Score>
@@ -30266,18 +30288,19 @@
                 <EnableDebuggingMessages>true</EnableDebuggingMessages>
                 <EnableConsole>true</EnableConsole>
                 <EnableDebug>true</EnableDebug>
+                <LimitTheSoundOfRings>true</LimitTheSoundOfRings>
                 <SmartWatchSupport>false</SmartWatchSupport>
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
                 <HUD>Linum</HUD>
-                <Platform>Mobile</Platform>
+                <Platform>Desktop</Platform>
                 <ScreenSize>2x</ScreenSize>
                 <FpsCounter>0</FpsCounter>
                 <FpsFix>false</FpsFix>
                 <PauseStyle>SSW</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
                 <AllowPause>true</AllowPause>
-                <UsedSaveSlot>-1</UsedSaveSlot>
+                <UsedSaveSlot>0</UsedSaveSlot>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">

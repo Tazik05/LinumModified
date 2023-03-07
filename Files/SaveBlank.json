@@ -12,7 +12,9 @@
   "Continue": "[PlayerContinueCounter]",
   "PlayerX": "[PlayerPosX]",
   "PlayerY": "[PlayerPosY]",
-  "Layout": "[LayoutName]"
+  "Layout": "[LayoutName]",
+  "Zone": "[ZoneName]",
+  "Character": "[CharacterNumber]"
   },
   "Emeralds": {
   "Green": "[GreenCheck]",

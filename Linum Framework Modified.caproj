@@ -91,6 +91,299 @@
     </configuration-settings>
     <object-folder>
         <object-folder name=".System Objects">
+            <object-folder name="Values">
+                <object-type name="Values_Continue" sid="380752313897791">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="CanContinue" sid="979891868910808" type="boolean" />
+                        <instance-variable name="IsMoving" sid="757693685905375" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148652501287206" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type global="1" name="Values_Emeralds" sid="807106678964267">
+                    <plugin id="Globals" />
+                    <instance-variables>
+                        <instance-variable name="Green" sid="345800172171412" type="boolean" />
+                        <instance-variable name="Cyan" sid="684909002799977" type="boolean" />
+                        <instance-variable name="Blue" sid="605754862997271" type="boolean" />
+                        <instance-variable name="Red" sid="750115415456555" type="boolean" />
+                        <instance-variable name="Purple" sid="215286910764493" type="boolean" />
+                        <instance-variable name="Yellow" sid="859158160824617" type="boolean" />
+                        <instance-variable name="Gray" sid="577067785825715" type="boolean" />
+                    </instance-variables>
+                </object-type>
+                <object-type global="1" name="Global_Settings" sid="605093691658359">
+                    <plugin id="Globals" />
+                    <instance-variables>
+                        <instance-variable comment="The lives that the player has left" name="Lives" sid="684804664556508" type="number" />
+                        <instance-variable comment="All scores that the player has received" name="Score" sid="278343489314950" type="number" />
+                        <instance-variable comment="0 - The player will not roll through the tunnel if he is next to it, the player needs to use a spindash to get there  1 - The player will roll through the tunnel if he is near the tunnel" name="TunnelMode" sid="132382478874901" type="number" />
+                        <instance-variable comment="If enabled, it uses improved ring animation, but it will be disabled if the device does not support effects." name="RingHighEffect" sid="911570543725178" type="boolean" />
+                        <instance-variable comment="If true, it enables acceleration of level music, if false, it plays standard music" name="NewSpeedShoesAudio" sid="613472315708983" type="boolean" />
+                        <instance-variable comment="allow the player to be allowed to pause" name="EnablePause" sid="459384249461671" type="boolean" />
+                        <instance-variable comment="if the game detects that the device has a small fps or there is no support for effects, then the game will try to remove the effects and optimize the entire game" name="EnableOptimization" sid="479754521522838" type="boolean" />
+                        <instance-variable comment="Disables or enables events depending on the needs of the game (a useful thing for portable devices like android)" name="EnableEventOptimization" sid="377479759631122" type="boolean" />
+                        <instance-variable comment="These messages are shown in the middle in the left corner" name="EnableDebuggingMessages" sid="715809938242144" type="boolean" />
+                        <instance-variable comment="Allows the player to open the console, this function will be ignored if the debag mod is disabled" name="EnableConsole" sid="162506579789277" type="boolean" />
+                        <instance-variable comment="a function that allows you to enable or disable debug" name="EnableDebug" sid="828358601987480" type="boolean" />
+                        <instance-variable comment="sometimes it can help, when a player collects a lot of rings, the sounds can cause discomfort, and this is why the restriction was created" name="LimitTheSoundOfRings" sid="592124349806055" type="boolean" />
+                        <instance-variable comment="this adds support for smartwatch, if the screen is the same size and width (for example 240x240), then the interface for smart watches will be changed" name="SmartWatchSupport" sid="381159046024383" type="boolean" />
+                        <instance-variable comment="Creates a bluish effect during Transition" name="SonicTransition" sid="309773902682918" type="boolean" />
+                        <instance-variable comment="Now, if a player falls from a great height, he will die" name="RealPhysic" sid="767528260121738" type="boolean" />
+                        <instance-variable comment="Linum\Sonic3\SSW" name="HUD" sid="350632080388041" type="string" />
+                        <instance-variable comment="Desktop/Mobile/Automatically(the game will try to determine the platform on which it is located)" name="Platform" sid="252663215722053" type="string" />
+                        <instance-variable comment="Disable/Original/2x/3x/4x/FullScreen" name="ScreenSize" sid="667462344946972" type="string" />
+                        <instance-variable name="FpsCounter" sid="270356192948968" type="number" />
+                        <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
+                        <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
+                        <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
+                        <instance-variable comment="this function is used to temporarily disable the pause, for example in the menu (so as not to use the global setting) This parameter will be ignored if the pause in the game is disabled by the setting above" name="AllowPause" sid="389575281345055" type="boolean" />
+                        <instance-variable comment="it is better not to touch this value. This is necessary for the save system, initially it costs -1, this means that the game will not save progress, starting from 0 these are the save slots that are selected in data select" name="UsedSaveSlot" sid="586003597813597" type="number" />
+                    </instance-variables>
+                </object-type>
+                <object-type global="1" name="Values_CMD" sid="641292112205211">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Visible" sid="518144605291079" type="boolean" />
+                        <instance-variable name="SymbolAtTheEnd" sid="790798683876858" type="string" />
+                        <instance-variable name="SavingCommands" sid="834165657581466" type="string" />
+                        <instance-variable name="Logger" sid="201316599880618" type="string" />
+                        <instance-variable name="CanExecute" sid="322752440572885" type="boolean" />
+                        <instance-variable name="CMDIsActive" sid="472955883678579" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274578314064615" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Values_PauseMenu" sid="948017666550827">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Paused" sid="623315182901064" type="boolean" />
+                        <instance-variable name="Selected" sid="230527403524582" type="number" />
+                        <instance-variable name="FadeBG" sid="758471611322732" type="number" />
+                        <instance-variable name="CanPause" sid="300135044096084" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="851404119065814" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Values_Player" sid="831139980231693">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="SpriteBaseOffset" sid="865701477129132" type="number" />
+                        <instance-variable name="SpriteOffset" sid="910378828722675" type="number" />
+                        <instance-variable name="CanChangeDirection" sid="674393735913863" type="boolean" />
+                        <instance-variable name="CanControl" sid="870758677640517" type="boolean" />
+                        <instance-variable name="CanJump" sid="608488151842079" type="boolean" />
+                        <instance-variable name="State" sid="876743333776767" type="string" />
+                        <instance-variable comment="1 - Sonic, 2 - Tails, 3 - Knux, 4 - Amy, 5 - Sally, 6 - Cream, 7  - Eggman, 8 - Shadow, 9 - MetalSonic, 10 - Amy (Sonic World Delta) 11 - Eggman (Sonic 1) " name="Character" sid="732019306186113" type="number" />
+                        <instance-variable name="Rings" sid="450499771189096" type="number" />
+                        <instance-variable name="SpeedShoes" sid="946043393932028" type="boolean" />
+                        <instance-variable name="SpinDashProgress" sid="357303769565568" type="number" />
+                        <instance-variable comment="Unused" name="SonicPhysicsEnabled" sid="850416392286480" type="boolean" />
+                        <instance-variable name="MinimumSpeed" sid="284552976349854" type="number" />
+                        <instance-variable name="MaximumSpeed" sid="428154643494822" type="number" />
+                        <instance-variable name="ForcedSpeed1" sid="127864983938018" type="number" />
+                        <instance-variable name="ForcedSpeed2" sid="855311843769211" type="number" />
+                        <instance-variable name="ForcedSpeed3" sid="484617214936288" type="number" />
+                        <instance-variable name="ForcedSpeed4" sid="343183281607261" type="number" />
+                        <instance-variable name="ForcedSpeed5" sid="602526199907973" type="number" />
+                        <instance-variable name="FlyingSpeedTails" sid="571396974467341" type="number" />
+                        <instance-variable name="FlyingSpeedKnux" sid="983120335699918" type="number" />
+                        <instance-variable name="Gravity" sid="654187890125439" type="number" />
+                        <instance-variable name="BumperPushSpeed" sid="530786030822207" type="number" />
+                        <instance-variable name="CanUseShield" sid="838769502964013" type="boolean" />
+                        <instance-variable name="MovingState" sid="795119211591148" type="number" />
+                        <instance-variable name="Direction" sid="771561790569359" type="string" />
+                        <instance-variable name="AllowMovingOnFloor" sid="376880258148424" type="boolean" />
+                        <instance-variable name="AllowIdle" sid="168985753432060" type="boolean" />
+                        <instance-variable name="RollingFixLanding" sid="116288939738211" type="boolean" />
+                        <instance-variable name="RollingFixSprings" sid="328533344938979" type="boolean" />
+                        <instance-variable name="Shield" sid="370095621997118" type="string" />
+                        <instance-variable comment="Unused" name="Attacking" sid="625299297013081" type="string" />
+                        <instance-variable name="Invincibility" sid="526144869811410" type="boolean" />
+                        <instance-variable name="CurrentLayer" sid="390873285642377" type="number" />
+                        <instance-variable name="CanFly" sid="732864379653796" type="boolean" />
+                        <instance-variable name="Flying" sid="170267376894074" type="boolean" />
+                        <instance-variable name="Tired" sid="623707961003614" type="boolean" />
+                        <instance-variable name="Rotate" sid="648442449365048" type="boolean" />
+                        <instance-variable name="TiredTimer" sid="737152836322445" type="number" />
+                        <instance-variable name="ConveyorBeltSpeed" sid="831852401901188" type="number" />
+                        <instance-variable name="InTunnel" sid="783331658584542" type="boolean" />
+                        <instance-variable name="HurtingState" sid="724721204955455" type="number" />
+                        <instance-variable name="Climbing" sid="766198515810566" type="boolean" />
+                        <instance-variable name="RingsToLiveLimit" sid="604224927416592" type="number" />
+                        <instance-variable name="Power" sid="853772095970707" type="number" />
+                        <instance-variable name="PTSTimer" sid="875690953160355" type="number" />
+                        <instance-variable name="LastPTS" sid="367798282381673" type="number" />
+                        <instance-variable name="ShieldTimer" sid="654778540999989" type="number" />
+                        <instance-variable name="ShieldTrigger" sid="401757578402107" type="boolean" />
+                        <instance-variable name="Hurt" sid="838965631354767" type="boolean" />
+                        <instance-variable name="Falling" sid="377114696484392" type="boolean" />
+                        <instance-variable name="CanFall" sid="821285694819315" type="boolean" />
+                        <instance-variable name="ClimbingOffset" sid="606048357806615" type="number" />
+                        <instance-variable name="Slide" sid="422022696127119" type="boolean" />
+                        <instance-variable name="CanUseSkills" sid="715297227222819" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Timer" sid="760925343406501">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                        <behavior-type name="Timer2" sid="241017043082005">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184868628425656" speed="1">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Values_Level" sid="768270000902021">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="IsLevelTimerActive" sid="170471594627885" type="boolean" />
+                        <instance-variable name="LevelTimer_Minutes" sid="368085838608368" type="number" />
+                        <instance-variable name="LevelTimer_Seconds" sid="523826685611176" type="number" />
+                        <instance-variable name="LevelTimer_Global" sid="756519872759758" type="number" />
+                        <instance-variable name="AudioPlaybackRate" sid="570403042418185" type="number" />
+                        <instance-variable name="AudioSpeedup" sid="751186382342340" type="boolean" />
+                        <instance-variable name="AnimalToCreate" sid="569120911420477" type="number" />
+                        <instance-variable name="IsGameOver" sid="422546119378439" type="boolean" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="LevelTimer" sid="395648443610515">
+                            <behavior id="Timer" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262648200595154" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Values_Input" sid="937680277257267">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="KeyUpHold" sid="773019993835598" type="boolean" />
+                        <instance-variable name="KeyDownHold" sid="199062270661266" type="boolean" />
+                        <instance-variable name="KeyLeftHold" sid="949717152114236" type="boolean" />
+                        <instance-variable name="KeyRightHold" sid="324166765388569" type="boolean" />
+                        <instance-variable name="KeyAHold" sid="826115471794588" type="boolean" />
+                        <instance-variable name="KeyESCHold" sid="194769702175625" type="boolean" />
+                        <instance-variable name="KeyCMDHold" sid="599905634123669" type="boolean" />
+                        <instance-variable name="Gamepad" sid="412280474540619" type="boolean" />
+                        <instance-variable name="IgnoreInput" sid="503764158089819" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="771943124886850" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Values_SignPost" sid="382411722973745">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="CanPass" sid="746940035761485" type="boolean" />
+                        <instance-variable name="StartScoringPointsAnimation" sid="116539956672202" type="boolean" />
+                        <instance-variable name="StartScoringPoints" sid="750558350039942" type="boolean" />
+                        <instance-variable name="UIScrollSpeed" sid="448667294147980" type="number" />
+                        <instance-variable name="TimeBonus" sid="125518200611597" type="number" />
+                        <instance-variable name="RingsBonus" sid="706353674154303" type="number" />
+                        <instance-variable name="TotalBonus" sid="114097172025383" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241352453011895" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Values_Camera" sid="106569709898835">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="pX" sid="850935678550471" type="number" />
+                        <instance-variable name="pY" sid="176525162183086" type="number" />
+                        <instance-variable name="targetX" sid="627151781433323" type="number" />
+                        <instance-variable name="targetY" sid="290216108989330" type="number" />
+                        <instance-variable name="Speed" sid="309518794023432" type="number" />
+                        <instance-variable name="groundOffset" sid="565095142276711" type="number" />
+                        <instance-variable name="PreviousGroundState" sid="398481184087215" type="number" />
+                        <instance-variable comment="0 - Standart, 1 - SSW" name="mode" sid="861752189551598" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392523471446769" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Values_Menus" sid="769577895218290">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable comment="mainmenu \ dataselect" name="CurrentMenu" sid="180796411271984" type="string" />
+                        <instance-variable name="Selected_Main" sid="577157649964068" type="number" />
+                        <instance-variable name="Selected_DataSelect" sid="841610766808996" type="number" />
+                        <instance-variable name="CanScrollUp" sid="938062188155715" type="boolean" />
+                        <instance-variable name="CanScrollDown" sid="433446514436596" type="boolean" />
+                        <instance-variable name="IsSettings" sid="520201615548376" type="boolean" />
+                        <instance-variable name="AnimSpeed" sid="649234098534000" type="number" />
+                        <instance-variable name="Selected_SettingsMain" sid="550330313212819" type="number" />
+                        <instance-variable name="Selected_Settings_Gameplay" sid="652792849276748" type="number" />
+                        <instance-variable name="Selected_Settings_Video" sid="720411023952050" type="number" />
+                        <instance-variable name="Selected_Settings_Controls" sid="562906361171127" type="number" />
+                        <instance-variable name="Selected_Settings_Other" sid="696442552560433" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979092329227831" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type global="1" name="Save_Helper" sid="278201911558860">
+                    <plugin id="Globals" />
+                    <instance-variables>
+                        <instance-variable name="PlayerPosX" sid="999029542184926" type="number" />
+                        <instance-variable name="PlayerPosY" sid="320394159213523" type="number" />
+                        <instance-variable name="SnapshotDone" sid="465567897191579" type="boolean" />
+                        <instance-variable name="CanSave" sid="216117749443438" type="boolean" />
+                        <instance-variable name="Level" sid="157111832279933" type="string" />
+                        <instance-variable name="Character" sid="605249858247500" type="number" />
+                        <instance-variable name="Slot" sid="691575566215650" type="number" />
+                        <instance-variable name="IsLoadingSaves" sid="940640392079904" type="boolean" />
+                        <instance-variable name="LoadSlot" sid="658225496743006" type="number" />
+                    </instance-variables>
+                </object-type>
+            </object-folder>
+            <object-folder name="Save Objects">
+                <object-type global="1" name="SaveMaster" sid="635233275873635">
+                    <plugin id="JSON" />
+                </object-type>
+                <object-type global="1" name="SaveSlot0" sid="176322700819918">
+                    <plugin id="JSON" />
+                </object-type>
+                <object-type global="1" name="SaveSlot2" sid="926006589205399">
+                    <plugin id="JSON" />
+                </object-type>
+                <object-type global="1" name="SaveSlot4" sid="266166618487127">
+                    <plugin id="JSON" />
+                </object-type>
+                <object-type global="1" name="SaveSlot3" sid="377376891340594">
+                    <plugin id="JSON" />
+                </object-type>
+                <object-type global="1" name="SaveSlot1" sid="442358595313764">
+                    <plugin id="JSON" />
+                </object-type>
+                <object-type global="1" name="SaveSlot5" sid="193441811300227">
+                    <plugin id="JSON" />
+                </object-type>
+            </object-folder>
             <object-type name="Audio" sid="2722091819329769">
                 <plugin id="Audio" />
             </object-type>
@@ -112,207 +405,11 @@
             <object-type name="NWjs" sid="702456341840890">
                 <plugin id="NodeWebkit" />
             </object-type>
-            <object-type name="Values_Player" sid="831139980231693">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="SpriteBaseOffset" sid="865701477129132" type="number" />
-                    <instance-variable name="SpriteOffset" sid="910378828722675" type="number" />
-                    <instance-variable name="CanChangeDirection" sid="674393735913863" type="boolean" />
-                    <instance-variable name="CanControl" sid="870758677640517" type="boolean" />
-                    <instance-variable name="CanJump" sid="608488151842079" type="boolean" />
-                    <instance-variable name="State" sid="876743333776767" type="string" />
-                    <instance-variable comment="1 - Sonic, 2 - Tails, 3 - Knux, 4 - Amy, 5 - Sally, 6 - Cream, 7  - Eggman, 8 - Shadow, 9 - MetalSonic, 10 - Amy (Sonic World Delta) 11 - Eggman (Sonic 1) " name="Character" sid="732019306186113" type="number" />
-                    <instance-variable name="Rings" sid="450499771189096" type="number" />
-                    <instance-variable name="SpeedShoes" sid="946043393932028" type="boolean" />
-                    <instance-variable name="SpinDashProgress" sid="357303769565568" type="number" />
-                    <instance-variable comment="Unused" name="SonicPhysicsEnabled" sid="850416392286480" type="boolean" />
-                    <instance-variable name="MinimumSpeed" sid="284552976349854" type="number" />
-                    <instance-variable name="MaximumSpeed" sid="428154643494822" type="number" />
-                    <instance-variable name="ForcedSpeed1" sid="127864983938018" type="number" />
-                    <instance-variable name="ForcedSpeed2" sid="855311843769211" type="number" />
-                    <instance-variable name="ForcedSpeed3" sid="484617214936288" type="number" />
-                    <instance-variable name="ForcedSpeed4" sid="343183281607261" type="number" />
-                    <instance-variable name="ForcedSpeed5" sid="602526199907973" type="number" />
-                    <instance-variable name="FlyingSpeedTails" sid="571396974467341" type="number" />
-                    <instance-variable name="FlyingSpeedKnux" sid="983120335699918" type="number" />
-                    <instance-variable name="Gravity" sid="654187890125439" type="number" />
-                    <instance-variable name="BumperPushSpeed" sid="530786030822207" type="number" />
-                    <instance-variable name="CanUseShield" sid="838769502964013" type="boolean" />
-                    <instance-variable name="MovingState" sid="795119211591148" type="number" />
-                    <instance-variable name="Direction" sid="771561790569359" type="string" />
-                    <instance-variable name="AllowMovingOnFloor" sid="376880258148424" type="boolean" />
-                    <instance-variable name="AllowIdle" sid="168985753432060" type="boolean" />
-                    <instance-variable name="RollingFixLanding" sid="116288939738211" type="boolean" />
-                    <instance-variable name="RollingFixSprings" sid="328533344938979" type="boolean" />
-                    <instance-variable name="Shield" sid="370095621997118" type="string" />
-                    <instance-variable comment="Unused" name="Attacking" sid="625299297013081" type="string" />
-                    <instance-variable name="Invincibility" sid="526144869811410" type="boolean" />
-                    <instance-variable name="CurrentLayer" sid="390873285642377" type="number" />
-                    <instance-variable name="CanFly" sid="732864379653796" type="boolean" />
-                    <instance-variable name="Flying" sid="170267376894074" type="boolean" />
-                    <instance-variable name="Tired" sid="623707961003614" type="boolean" />
-                    <instance-variable name="Rotate" sid="648442449365048" type="boolean" />
-                    <instance-variable name="TiredTimer" sid="737152836322445" type="number" />
-                    <instance-variable name="ConveyorBeltSpeed" sid="831852401901188" type="number" />
-                    <instance-variable name="InTunnel" sid="783331658584542" type="boolean" />
-                    <instance-variable name="HurtingState" sid="724721204955455" type="number" />
-                    <instance-variable name="Climbing" sid="766198515810566" type="boolean" />
-                    <instance-variable name="RingsToLiveLimit" sid="604224927416592" type="number" />
-                    <instance-variable name="Power" sid="853772095970707" type="number" />
-                    <instance-variable name="PTSTimer" sid="875690953160355" type="number" />
-                    <instance-variable name="LastPTS" sid="367798282381673" type="number" />
-                    <instance-variable name="ShieldTimer" sid="654778540999989" type="number" />
-                    <instance-variable name="ShieldTrigger" sid="401757578402107" type="boolean" />
-                    <instance-variable name="Hurt" sid="838965631354767" type="boolean" />
-                    <instance-variable name="Falling" sid="377114696484392" type="boolean" />
-                    <instance-variable name="CanFall" sid="821285694819315" type="boolean" />
-                    <instance-variable name="ClimbingOffset" sid="606048357806615" type="number" />
-                    <instance-variable name="Slide" sid="422022696127119" type="boolean" />
-                    <instance-variable name="CanUseSkills" sid="715297227222819" type="boolean" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Timer" sid="760925343406501">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                    <behavior-type name="Timer2" sid="241017043082005">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184868628425656" speed="1">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Values_Level" sid="768270000902021">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="IsLevelTimerActive" sid="170471594627885" type="boolean" />
-                    <instance-variable name="LevelTimer_Minutes" sid="368085838608368" type="number" />
-                    <instance-variable name="LevelTimer_Seconds" sid="523826685611176" type="number" />
-                    <instance-variable name="LevelTimer_Global" sid="756519872759758" type="number" />
-                    <instance-variable name="AudioPlaybackRate" sid="570403042418185" type="number" />
-                    <instance-variable name="AudioSpeedup" sid="751186382342340" type="boolean" />
-                    <instance-variable name="AnimalToCreate" sid="569120911420477" type="number" />
-                    <instance-variable name="IsGameOver" sid="422546119378439" type="boolean" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="LevelTimer" sid="395648443610515">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262648200595154" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="Touch" sid="963398558642750">
                 <plugin id="Touch" />
             </object-type>
-            <object-type name="Values_Input" sid="937680277257267">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="KeyUpHold" sid="773019993835598" type="boolean" />
-                    <instance-variable name="KeyDownHold" sid="199062270661266" type="boolean" />
-                    <instance-variable name="KeyLeftHold" sid="949717152114236" type="boolean" />
-                    <instance-variable name="KeyRightHold" sid="324166765388569" type="boolean" />
-                    <instance-variable name="KeyAHold" sid="826115471794588" type="boolean" />
-                    <instance-variable name="KeyESCHold" sid="194769702175625" type="boolean" />
-                    <instance-variable name="KeyCMDHold" sid="599905634123669" type="boolean" />
-                    <instance-variable name="Gamepad" sid="412280474540619" type="boolean" />
-                    <instance-variable name="IgnoreInput" sid="503764158089819" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="771943124886850" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Values_Menus" sid="769577895218290">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable comment="mainmenu \ dataselect" name="CurrentMenu" sid="180796411271984" type="string" />
-                    <instance-variable name="Selected_Main" sid="577157649964068" type="number" />
-                    <instance-variable name="Selected_DataSelect" sid="841610766808996" type="number" />
-                    <instance-variable name="CanScrollUp" sid="938062188155715" type="boolean" />
-                    <instance-variable name="CanScrollDown" sid="433446514436596" type="boolean" />
-                    <instance-variable name="IsSettings" sid="520201615548376" type="boolean" />
-                    <instance-variable name="AnimSpeed" sid="649234098534000" type="number" />
-                    <instance-variable name="Selected_SettingsMain" sid="550330313212819" type="number" />
-                    <instance-variable name="Selected_Settings_Gameplay" sid="652792849276748" type="number" />
-                    <instance-variable name="Selected_Settings_Video" sid="720411023952050" type="number" />
-                    <instance-variable name="Selected_Settings_Controls" sid="562906361171127" type="number" />
-                    <instance-variable name="Selected_Settings_Other" sid="696442552560433" type="number" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979092329227831" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="AudioHelper" sid="563999461879419">
                 <plugin id="Rex_audio_helper" />
-            </object-type>
-            <object-type name="Values_Camera" sid="106569709898835">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="pX" sid="850935678550471" type="number" />
-                    <instance-variable name="pY" sid="176525162183086" type="number" />
-                    <instance-variable name="targetX" sid="627151781433323" type="number" />
-                    <instance-variable name="targetY" sid="290216108989330" type="number" />
-                    <instance-variable name="Speed" sid="309518794023432" type="number" />
-                    <instance-variable name="groundOffset" sid="565095142276711" type="number" />
-                    <instance-variable name="PreviousGroundState" sid="398481184087215" type="number" />
-                    <instance-variable comment="0 - Standart, 1 - SSW" name="mode" sid="861752189551598" type="number" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="392523471446769" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Values_PauseMenu" sid="948017666550827">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="Paused" sid="623315182901064" type="boolean" />
-                    <instance-variable name="Selected" sid="230527403524582" type="number" />
-                    <instance-variable name="FadeBG" sid="758471611322732" type="number" />
-                    <instance-variable name="CanPause" sid="300135044096084" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="851404119065814" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type global="1" name="GlobalSettings" sid="605093691658359">
-                <plugin id="Globals" />
-                <instance-variables>
-                    <instance-variable comment="The lives that the player has left" name="Lives" sid="684804664556508" type="number" />
-                    <instance-variable comment="All scores that the player has received" name="Score" sid="278343489314950" type="number" />
-                    <instance-variable comment="0 - The player will not roll through the tunnel if he is next to it, the player needs to use a spindash to get there  1 - The player will roll through the tunnel if he is near the tunnel" name="TunnelMode" sid="132382478874901" type="number" />
-                    <instance-variable comment="If enabled, it uses improved ring animation, but it will be disabled if the device does not support effects." name="RingHighEffect" sid="911570543725178" type="boolean" />
-                    <instance-variable comment="If true, it enables acceleration of level music, if false, it plays standard music" name="NewSpeedShoesAudio" sid="613472315708983" type="boolean" />
-                    <instance-variable comment="allow the player to be allowed to pause" name="EnablePause" sid="459384249461671" type="boolean" />
-                    <instance-variable comment="if the game detects that the device has a small fps or there is no support for effects, then the game will try to remove the effects and optimize the entire game" name="EnableOptimization" sid="479754521522838" type="boolean" />
-                    <instance-variable comment="Disables or enables events depending on the needs of the game (a useful thing for portable devices like android)" name="EnableEventOptimization" sid="377479759631122" type="boolean" />
-                    <instance-variable comment="These messages are shown in the middle in the left corner" name="EnableDebuggingMessages" sid="715809938242144" type="boolean" />
-                    <instance-variable comment="Allows the player to open the console, this function will be ignored if the debag mod is disabled" name="EnableConsole" sid="162506579789277" type="boolean" />
-                    <instance-variable comment="a function that allows you to enable or disable debug" name="EnableDebug" sid="828358601987480" type="boolean" />
-                    <instance-variable comment="this adds support for smartwatch, if the screen is the same size and width (for example 240x240), then the interface for smart watches will be changed" name="SmartWatchSupport" sid="381159046024383" type="boolean" />
-                    <instance-variable comment="Creates a bluish effect during Transition" name="SonicTransition" sid="309773902682918" type="boolean" />
-                    <instance-variable comment="Now, if a player falls from a great height, he will die" name="RealPhysic" sid="767528260121738" type="boolean" />
-                    <instance-variable comment="Linum\Sonic3\SSW" name="HUD" sid="350632080388041" type="string" />
-                    <instance-variable comment="Desktop/Mobile/Automatically(the game will try to determine the platform on which it is located)" name="Platform" sid="252663215722053" type="string" />
-                    <instance-variable comment="Disable/Original/2x/3x/4x/FullScreen" name="ScreenSize" sid="667462344946972" type="string" />
-                    <instance-variable name="FpsCounter" sid="270356192948968" type="number" />
-                    <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
-                    <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
-                    <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
-                    <instance-variable comment="this function is used to temporarily disable the pause, for example in the menu (so as not to use the global setting) This parameter will be ignored if the pause in the game is disabled by the setting above" name="AllowPause" sid="389575281345055" type="boolean" />
-                    <instance-variable comment="it is better not to touch this value. This is necessary for the save system, initially it costs -1, this means that the game will not save progress, starting from 0 these are the save slots that are selected in data select" name="UsedSaveSlot" sid="586003597813597" type="number" />
-                </instance-variables>
             </object-type>
             <object-type name="cursor" sid="832183731288467">
                 <plugin id="Sprite" />
@@ -340,41 +437,8 @@
             <object-type name="Comment" sid="740988223975305">
                 <plugin id="Comment" />
             </object-type>
-            <object-type global="1" name="Values_CMD" sid="641292112205211">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="Visible" sid="518144605291079" type="boolean" />
-                    <instance-variable name="SymbolAtTheEnd" sid="790798683876858" type="string" />
-                    <instance-variable name="SavingCommands" sid="834165657581466" type="string" />
-                    <instance-variable name="Logger" sid="201316599880618" type="string" />
-                    <instance-variable name="CanExecute" sid="322752440572885" type="boolean" />
-                    <instance-variable name="CMDIsActive" sid="472955883678579" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274578314064615" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="PromptWrap" sid="212329042939811">
                 <plugin id="Rex_PromptWrap" />
-            </object-type>
-            <object-type name="Values_SignPost" sid="382411722973745">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="CanPass" sid="746940035761485" type="boolean" />
-                    <instance-variable name="StartScoringPointsAnimation" sid="116539956672202" type="boolean" />
-                    <instance-variable name="StartScoringPoints" sid="750558350039942" type="boolean" />
-                    <instance-variable name="UIScrollSpeed" sid="448667294147980" type="number" />
-                    <instance-variable name="TimeBonus" sid="125518200611597" type="number" />
-                    <instance-variable name="RingsBonus" sid="706353674154303" type="number" />
-                    <instance-variable name="TotalBonus" sid="114097172025383" type="number" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="241352453011895" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
             </object-type>
             <object-type global="1" name="Date" sid="409138719820826">
                 <plugin id="Rex_Date" />
@@ -384,21 +448,6 @@
             </object-type>
             <object-type name="WebStorage" sid="568491992888857">
                 <plugin id="WebStorage" />
-            </object-type>
-            <object-type name="Values_Continue" sid="380752313897791">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="CanContinue" sid="979891868910808" type="boolean" />
-                    <instance-variable name="IsMoving" sid="757693685905375" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148652501287206" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type global="1" name="SaveMaster" sid="635233275873635">
-                <plugin id="JSON" />
             </object-type>
         </object-folder>
         <object-folder name="Player Objects">
@@ -4307,6 +4356,10 @@
                     <plugin id="Spritefont2" />
                     <texture />
                 </object-type>
+                <object-type name="StaticText_Red" sid="838799562174075">
+                    <plugin id="Spritefont2" />
+                    <texture />
+                </object-type>
             </object-folder>
             <object-folder name="Menu">
                 <object-type name="MenuHeader" sid="719187090112795">
@@ -7062,7 +7115,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="NewText_DataSelect" sid="463109833487092">
+        <object-type name="NewText_DataSelect_0" sid="463109833487092">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="570972468418932" speed="5">
@@ -7139,6 +7192,265 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.648649" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Checkpoint" sid="746300047005904">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Checkpoint" pingpong="0" repeatcount="1" repeatto="0" sid="390847038965903" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="23" loop="0" name="Animation" pingpong="0" repeatcount="1" repeatto="0" sid="779096162657750" speed="25">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="227375365740123" speed="25">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NewText_DataSelect_1" sid="769277350282900">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="565701792294325" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NewText_DataSelect_2" sid="930303177577286">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571243464518546" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NewText_DataSelect_3" sid="944080036344071">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="140481870436104" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NewText_DataSelect_4" sid="398532851545025">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148870892833619" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NewText_DataSelect_5" sid="384788898558529">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641114074157349" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>

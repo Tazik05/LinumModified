@@ -272,6 +272,31 @@
     </layers>
     <nonworld-instances>
         <instance type="SaveMaster" uid="1185" />
+        <instance type="Values_Emeralds" uid="1190">
+            <instance-variables>
+                <Green>false</Green>
+                <Cyan>false</Cyan>
+                <Blue>false</Blue>
+                <Red>false</Red>
+                <Purple>false</Purple>
+                <Yellow>false</Yellow>
+                <Gray>false</Gray>
+            </instance-variables>
+        </instance>
+        <instance type="Save_Helper" uid="1193">
+            <instance-variables>
+                <PlayerPosX>0</PlayerPosX>
+                <PlayerPosY>0</PlayerPosY>
+                <SnapshotDone>false</SnapshotDone>
+                <CanSave>false</CanSave>
+                <Level></Level>
+                <Character>0</Character>
+                <Slot>0</Slot>
+                <IsLoadingSaves>false</IsLoadingSaves>
+                <LoadSlot>0</LoadSlot>
+            </instance-variables>
+        </instance>
+        <instance type="SaveSlot0" uid="1240" />
     </nonworld-instances>
     <effects />
 </c2layout>

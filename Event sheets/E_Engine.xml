@@ -408,7 +408,7 @@
                         </event-group>
                         <event-block sid="497581473529751">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="204421802780876" type="GlobalSettings">
+                                <condition id="-8" name="Is boolean instance variable set" sid="204421802780876" type="Global_Settings">
                                     <param id="0" name="Instance variable">RealPhysic</param>
                                 </condition>
                             </conditions>
@@ -5763,7 +5763,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-11" name="Add to" sid="869408626290887" type="GlobalSettings">
+                                        <action id="-11" name="Add to" sid="869408626290887" type="Global_Settings">
                                             <param id="0" name="Instance variable">Lives</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
@@ -5771,7 +5771,7 @@
                                     <sub-events>
                                         <event-block sid="664129426391381">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="837498877638040" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="837498877638040" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Lives</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">0</param>
@@ -5845,7 +5845,7 @@
                                         </event-block>
                                         <event-block sid="536237116258493">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="565423638596375" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="565423638596375" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Lives</param>
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">0</param>
@@ -6101,7 +6101,7 @@
                                     <sub-events>
                                         <event-block sid="596378866268674">
                                             <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="693211833080219" type="GlobalSettings">
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="693211833080219" type="Global_Settings">
                                                     <param id="0" name="Instance variable">NewSpeedShoesAudio</param>
                                                 </condition>
                                             </conditions>
@@ -6136,7 +6136,7 @@
                                         </event-block>
                                         <event-block sid="424368892999450">
                                             <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="152291540959726" type="GlobalSettings">
+                                                <condition id="-8" name="Is boolean instance variable set" sid="152291540959726" type="Global_Settings">
                                                     <param id="0" name="Instance variable">NewSpeedShoesAudio</param>
                                                 </condition>
                                             </conditions>
@@ -8218,6 +8218,54 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-group description="" sid="909989700271954" title="Checkpoint">
+                                    <sub-events>
+                                        <event-block sid="214279317247346">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="186973503716363" type="Checkpoint">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                                <condition id="2" name="Is playing" sid="739583479027467" type="Checkpoint">
+                                                    <param id="0" name="Animation">&quot;Checkpoint&quot;</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="952971024036441" type="Sensor_Main">
+                                                    <param id="0" name="Object">Checkpoint</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="881534568744567" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="218488162292629" type="Function">
+                                                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Checkpoint.X{###}Checkpoint.Y-20</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="951929529851600" type="Checkpoint">
+                                                    <param id="0" name="Animation">&quot;Animation&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="995810879627635" type="Audio">
+                                                    <param id="0" name="Audio file">S3K_63</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="104818981610180">
+                                            <conditions>
+                                                <condition id="4" name="On finished" sid="761122426398396" type="Checkpoint">
+                                                    <param id="0" name="Animation">&quot;Animation&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="911750098961776" type="Checkpoint">
+                                                    <param id="0" name="Animation">&quot;Active&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                                 <event-group description="" sid="994771570927211" title="Sign Post">
                                     <sub-events>
                                         <event-block sid="782640208098436">
@@ -10020,6 +10068,18 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
+                                                <event-block sid="241771330180683">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="934085500983241" type="Global_Settings">
+                                                            <param id="0" name="Instance variable">LimitTheSoundOfRings</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="6" name="Stop" sid="275387181816881" type="Audio">
+                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <variable comment="Right/Left" constant="0" name="RingSoundPlay" sid="103165554458692" static="1" type="text">Left</variable>
                                                 <event-block sid="866521065885779">
                                                     <conditions>
@@ -10030,9 +10090,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="275387181816881" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="808990279109804" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingLeft</param>
                                                             <param id="2" name="Loop">0</param>
@@ -10057,9 +10114,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="931201491048106" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="115293615439670" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingRight</param>
                                                             <param id="2" name="Loop">0</param>
@@ -10077,7 +10131,7 @@
                                                 </event-block>
                                                 <event-block sid="597112712465501">
                                                     <conditions>
-                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="702686343048008" type="GlobalSettings">
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="702686343048008" type="Global_Settings">
                                                             <param id="0" name="Instance variable">RingHighEffect</param>
                                                         </condition>
                                                     </conditions>
@@ -10090,7 +10144,7 @@
                                                 </event-block>
                                                 <event-block sid="210721318598026">
                                                     <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="160743308379359" type="GlobalSettings">
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="160743308379359" type="Global_Settings">
                                                             <param id="0" name="Instance variable">RingHighEffect</param>
                                                         </condition>
                                                     </conditions>
@@ -10136,8 +10190,23 @@
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;SFX_Ring&quot;</param>
                                                 </action>
+                                                <action disabled="1" id="6" name="Stop" sid="206479560848432" type="Audio">
+                                                    <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
+                                                </action>
                                             </actions>
                                             <sub-events>
+                                                <event-block sid="405269392588944">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="199270301734070" type="Global_Settings">
+                                                            <param id="0" name="Instance variable">LimitTheSoundOfRings</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="6" name="Stop" sid="112063483991275" type="Audio">
+                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <variable comment="Right/Left" constant="0" name="RingSoundPlay" sid="292540001083236" static="1" type="text">Left</variable>
                                                 <event-block sid="811600281377334">
                                                     <conditions>
@@ -10148,9 +10217,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="206479560848432" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="911906433887000" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingLeft</param>
                                                             <param id="2" name="Loop">0</param>
@@ -10175,9 +10241,6 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="6" name="Stop" sid="609695956886893" type="Audio">
-                                                            <param id="0" name="Tag">&quot;SFX_Ring&quot;</param>
-                                                        </action>
                                                         <action id="0" name="Play" sid="494998436810018" type="Audio">
                                                             <param id="0" name="Audio file">SFX_RingRight</param>
                                                             <param id="2" name="Loop">0</param>
@@ -10195,7 +10258,7 @@
                                                 </event-block>
                                                 <event-block sid="638658976895725">
                                                     <conditions>
-                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="813452020247871" type="GlobalSettings">
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="813452020247871" type="Global_Settings">
                                                             <param id="0" name="Instance variable">RingHighEffect</param>
                                                         </condition>
                                                     </conditions>
@@ -10208,7 +10271,7 @@
                                                 </event-block>
                                                 <event-block sid="160677446645896">
                                                     <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="599964105340923" type="GlobalSettings">
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="599964105340923" type="Global_Settings">
                                                             <param id="0" name="Instance variable">RingHighEffect</param>
                                                         </condition>
                                                     </conditions>
@@ -10774,7 +10837,7 @@
                                                             <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
                                                             <param id="1" name="dB">-100</param>
                                                         </action>
-                                                        <action id="-11" name="Add to" sid="802525531375445" type="GlobalSettings">
+                                                        <action id="-11" name="Add to" sid="802525531375445" type="Global_Settings">
                                                             <param id="0" name="Instance variable">Lives</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
@@ -10866,7 +10929,7 @@
                                                                     <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
                                                                     <param id="1" name="dB">-100</param>
                                                                 </action>
-                                                                <action id="-11" name="Add to" sid="717222114145731" type="GlobalSettings">
+                                                                <action id="-11" name="Add to" sid="717222114145731" type="Global_Settings">
                                                                     <param id="0" name="Instance variable">Lives</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
@@ -11894,7 +11957,7 @@
                                 </event-block>
                                 <event-block sid="511992180837898">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="304656367026289" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="304656367026289" type="Global_Settings">
                                             <param id="0" name="Instance variable">TunnelMode</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
@@ -12154,7 +12217,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-11" name="Add to" sid="857560071876507" type="GlobalSettings">
+                                                                <action id="-11" name="Add to" sid="857560071876507" type="Global_Settings">
                                                                     <param id="0" name="Instance variable">Score</param>
                                                                     <param id="1" name="Value">100</param>
                                                                 </action>
@@ -12196,7 +12259,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-11" name="Add to" sid="310233836531523" type="GlobalSettings">
+                                                                <action id="-11" name="Add to" sid="310233836531523" type="Global_Settings">
                                                                     <param id="0" name="Instance variable">Score</param>
                                                                     <param id="1" name="Value">200</param>
                                                                 </action>
@@ -12238,7 +12301,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-11" name="Add to" sid="426968006378978" type="GlobalSettings">
+                                                                <action id="-11" name="Add to" sid="426968006378978" type="Global_Settings">
                                                                     <param id="0" name="Instance variable">Score</param>
                                                                     <param id="1" name="Value">500</param>
                                                                 </action>
@@ -12280,7 +12343,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-11" name="Add to" sid="346073030504647" type="GlobalSettings">
+                                                                <action id="-11" name="Add to" sid="346073030504647" type="Global_Settings">
                                                                     <param id="0" name="Instance variable">Score</param>
                                                                     <param id="1" name="Value">1000</param>
                                                                 </action>
@@ -12322,7 +12385,7 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-11" name="Add to" sid="674337656270952" type="GlobalSettings">
+                                                                <action id="-11" name="Add to" sid="674337656270952" type="Global_Settings">
                                                                     <param id="0" name="Instance variable">Score</param>
                                                                     <param id="1" name="Value">1000</param>
                                                                 </action>
@@ -12361,7 +12424,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="891058406313507" type="GlobalSettings">
+                                                <action id="-11" name="Add to" sid="891058406313507" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Score</param>
                                                     <param id="1" name="Value">10</param>
                                                 </action>
@@ -12396,7 +12459,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="451271855161258" type="GlobalSettings">
+                                                <action id="-11" name="Add to" sid="451271855161258" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Score</param>
                                                     <param id="1" name="Value">100</param>
                                                 </action>
@@ -12431,7 +12494,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="138924219913998" type="GlobalSettings">
+                                                <action id="-11" name="Add to" sid="138924219913998" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Score</param>
                                                     <param id="1" name="Value">200</param>
                                                 </action>
@@ -12466,7 +12529,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="587678268597018" type="GlobalSettings">
+                                                <action id="-11" name="Add to" sid="587678268597018" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Score</param>
                                                     <param id="1" name="Value">500</param>
                                                 </action>
@@ -12501,7 +12564,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="963707369319816" type="GlobalSettings">
+                                                <action id="-11" name="Add to" sid="963707369319816" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Score</param>
                                                     <param id="1" name="Value">1000</param>
                                                 </action>
@@ -12536,7 +12599,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="959372842738042" type="GlobalSettings">
+                                                <action id="-11" name="Add to" sid="959372842738042" type="Global_Settings">
                                                     <param id="0" name="Instance variable">Score</param>
                                                     <param id="1" name="Value">10000</param>
                                                 </action>
@@ -12791,7 +12854,7 @@
                                             <param id="0" name="Seconds">1.0</param>
                                         </action>
                                         <action id="33" name="Stop all" sid="726443122517845" type="Audio" />
-                                        <action id="-10" name="Set value" sid="405583131659499" type="GlobalSettings">
+                                        <action id="-10" name="Set value" sid="405583131659499" type="Global_Settings">
                                             <param id="0" name="Instance variable">LayoutSaver</param>
                                             <param id="1" name="Value">LayoutName</param>
                                         </action>
@@ -12952,7 +13015,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-11" name="Add to" sid="118378348241425" type="GlobalSettings">
+                                        <action id="-11" name="Add to" sid="118378348241425" type="Global_Settings">
                                             <param id="0" name="Instance variable">Score</param>
                                             <param id="1" name="Value">100</param>
                                         </action>
@@ -12978,7 +13041,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-11" name="Add to" sid="750850671694846" type="GlobalSettings">
+                                        <action id="-11" name="Add to" sid="750850671694846" type="Global_Settings">
                                             <param id="0" name="Instance variable">Score</param>
                                             <param id="1" name="Value">100</param>
                                         </action>
@@ -13392,7 +13455,7 @@
                     <sub-events>
                         <event-block sid="439648486296224">
                             <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="678819300619869" type="GlobalSettings">
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="678819300619869" type="Global_Settings">
                                     <param id="0" name="Instance variable">Platform</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -13411,7 +13474,7 @@
                         </event-block>
                         <event-block sid="714826377897953">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="619020050030377" type="GlobalSettings">
+                                <condition id="-7" name="Compare instance variable" sid="619020050030377" type="Global_Settings">
                                     <param id="0" name="Instance variable">Platform</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -13430,7 +13493,7 @@
                         </event-block>
                         <event-block sid="928178433914233">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="769060143583770" type="GlobalSettings">
+                                <condition id="-7" name="Compare instance variable" sid="769060143583770" type="Global_Settings">
                                     <param id="0" name="Instance variable">HUD</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Linum&quot;</param>
@@ -13467,7 +13530,7 @@
                                 </event-block>
                                 <event-block sid="207251883250940">
                                     <conditions>
-                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="548344433702529" type="GlobalSettings">
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="548344433702529" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -13518,7 +13581,7 @@
                                 </event-block>
                                 <event-block sid="613127840583914">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="880232384635034" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="880232384635034" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -13601,7 +13664,7 @@
                                 </event-block>
                                 <event-block sid="474509943678532">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="532493837353555" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="532493837353555" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Automatically&quot;</param>
@@ -13613,7 +13676,7 @@
                         </event-block>
                         <event-block sid="180438255448629">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="680838871843878" type="GlobalSettings">
+                                <condition id="-7" name="Compare instance variable" sid="680838871843878" type="Global_Settings">
                                     <param id="0" name="Instance variable">HUD</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;SSW&quot;</param>
@@ -13685,7 +13748,7 @@
                                 </event-block>
                                 <event-block sid="516199962848288">
                                     <conditions>
-                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="232884362727948" type="GlobalSettings">
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="232884362727948" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -13752,7 +13815,7 @@
                                 </event-block>
                                 <event-block sid="236240829433369">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="969640784710566" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="969640784710566" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -13821,7 +13884,7 @@
                         </event-block>
                         <event-block sid="657538161070360">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="985253530119012" type="GlobalSettings">
+                                <condition id="-7" name="Compare instance variable" sid="985253530119012" type="Global_Settings">
                                     <param id="0" name="Instance variable">HUD</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Sonic3&quot;</param>
@@ -13896,7 +13959,7 @@
                                 </event-block>
                                 <event-block sid="801427536240473">
                                     <conditions>
-                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="298382405705723" type="GlobalSettings">
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="298382405705723" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -13971,7 +14034,7 @@
                                 </event-block>
                                 <event-block sid="671620456973367">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="569486049794030" type="GlobalSettings">
+                                        <condition id="-7" name="Compare instance variable" sid="569486049794030" type="Global_Settings">
                                             <param id="0" name="Instance variable">Platform</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Mobile&quot;</param>
@@ -14146,13 +14209,13 @@
                                     <conditions />
                                     <actions>
                                         <action id="0" name="Set text" sid="412141779828897" type="HUD_ScoreFont">
-                                            <param id="0" name="Text">&quot;*&quot;&amp;zeropad(GlobalSettings.Score,8)</param>
+                                            <param id="0" name="Text">&quot;*&quot;&amp;zeropad(Global_Settings.Score,8)</param>
                                         </action>
                                         <action id="0" name="Set text" sid="879487316453632" type="SSWScoreCounter">
-                                            <param id="0" name="Text">GlobalSettings.Score</param>
+                                            <param id="0" name="Text">Global_Settings.Score</param>
                                         </action>
                                         <action id="0" name="Set text" sid="861506533677883" type="S3ScoreCounter">
-                                            <param id="0" name="Text">GlobalSettings.Score</param>
+                                            <param id="0" name="Text">Global_Settings.Score</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -14164,13 +14227,13 @@
                                     <conditions />
                                     <actions>
                                         <action id="0" name="Set text" sid="974313855420533" type="Player_Lives_Linum">
-                                            <param id="0" name="Text">zeropad(GlobalSettings.Lives,2)</param>
+                                            <param id="0" name="Text">zeropad(Global_Settings.Lives,2)</param>
                                         </action>
                                         <action id="0" name="Set text" sid="125901700016276" type="PlayerLivesSonic3">
-                                            <param id="0" name="Text">GlobalSettings.Lives</param>
+                                            <param id="0" name="Text">Global_Settings.Lives</param>
                                         </action>
                                         <action id="0" name="Set text" sid="244944498916623" type="SSWLivesCounter">
-                                            <param id="0" name="Text">GlobalSettings.Lives</param>
+                                            <param id="0" name="Text">Global_Settings.Lives</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -14312,7 +14375,7 @@
                                     <sub-events>
                                         <event-block sid="397254220336528">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="260093179156436" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="260093179156436" type="Global_Settings">
                                                     <param id="0" name="Instance variable">HUD</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;SSW&quot;</param>
@@ -14326,7 +14389,7 @@
                                         </event-block>
                                         <event-block sid="485312459536300">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="954882289283251" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="954882289283251" type="Global_Settings">
                                                     <param id="0" name="Instance variable">HUD</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Sonic3&quot;</param>
@@ -14361,7 +14424,7 @@
                                     <sub-events>
                                         <event-block sid="107003469902783">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="655165676922114" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="655165676922114" type="Global_Settings">
                                                     <param id="0" name="Instance variable">HUD</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;SSW&quot;</param>
@@ -14379,7 +14442,7 @@
                                         </event-block>
                                         <event-block sid="807142648845716">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="673357971758426" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="673357971758426" type="Global_Settings">
                                                     <param id="0" name="Instance variable">HUD</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Sonic3&quot;</param>
@@ -14417,7 +14480,7 @@
                                     <sub-events>
                                         <event-block sid="147490903278696">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="224163337095642" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="224163337095642" type="Global_Settings">
                                                     <param id="0" name="Instance variable">HUD</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;SSW&quot;</param>
@@ -14435,7 +14498,7 @@
                                         </event-block>
                                         <event-block sid="996392540151544">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="719746745744109" type="GlobalSettings">
+                                                <condition id="-7" name="Compare instance variable" sid="719746745744109" type="Global_Settings">
                                                     <param id="0" name="Instance variable">HUD</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;Sonic3&quot;</param>
