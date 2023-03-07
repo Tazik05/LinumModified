@@ -38,6 +38,122 @@
             <sub-events>
                 <event-group description="" sid="158973237713220" title="*Fun mods*">
                     <sub-events>
+                        <event-group description="by...... danik, yea" sid="452973950278072" title="Weapon">
+                            <sub-events>
+                                <event-block sid="199160179598945">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="551018458310826" type="Weapon" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="319777258743855" type="spr_wheel1">
+                                            <param id="0" name="Object">Spr_Car</param>
+                                            <param id="1" name="Image point (optional)">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="517886798450056" type="spr_wheel2">
+                                            <param id="0" name="Object">Spr_Car</param>
+                                            <param id="1" name="Image point (optional)">2</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="175306205897117">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="660924719750214" type="Weapon">
+                                                    <param id="0" name="Instance variable">InWeapon</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="816538012349625">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="348599483733180" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="136240553705632" type="Values_Player">
+                                                            <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="671371415743892" type="Sensor_Main">
+                                                            <param id="0" name="Input">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="396483503829088">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="603846207128474" type="Values_Input">
+                                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="481749820405314" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="145075326510052" type="System">
+                                                            <param id="0" name="Seconds">0.1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="890465445610366" type="Weapon">
+                                                            <param id="0" name="Instance variable">InWeapon</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="239887085023584" type="GamepadButton2">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="147876336073440" type="GamepadButton">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="334029818220828" type="Values_Player">
+                                                            <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="996611534131802" type="Sensor_Main">
+                                                            <param id="0" name="Input">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="981868086877443">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="511004575364744" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="583342952352611" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Idle_&quot;&amp;Values_Player.Character</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="553736892008475">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="454410553631117" type="Sensor_Main">
+                                                    <param id="0" name="Object">Weapon</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="574359434392231" type="Weapon">
+                                                    <param id="0" name="Instance variable">InWeapon</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="577996736927089">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="899389472036218" type="Values_Input">
+                                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="816526405279228" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="814592284605164" type="System">
+                                                            <param id="0" name="Seconds">0.1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="759468082176063" type="Spr_Car">
+                                                            <param id="0" name="Instance variable">PlayerInCar</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-group description="By danik" sid="725772900262883" title="Car(WTFFFFFFFFFFFFFFFF)">
                             <sub-events>
                                 <event-block sid="511251651408778">
@@ -548,86 +664,6 @@
                 </event-group>
                 <event-group description="" sid="322296367967619" title="Player&apos;s states">
                     <sub-events>
-                        <event-group description="" sid="257034888139195" title="SkillsFix">
-                            <sub-events>
-                                <event-block sid="170907232054337">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="886811112410683" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="258760751320716">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="791201762286293" type="Values_Input">
-                                                    <param id="0" name="Instance variable">KeyAHold</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="256193283798717" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="516825601650371">
-                                                    <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="941939787718588" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseSkills</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-16" name="Wait" sid="184322974315676" type="System">
-                                                            <param id="0" name="Seconds">0.1</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="268485423607623" type="Values_Player">
-                                                            <param id="0" name="Instance variable">CanUseSkills</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="227027736434028">
-                                            <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="742120686463824" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="759196422105320" type="Values_Player">
-                                                    <param id="0" name="Instance variable">CanUseSkills</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="947300976964878">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="132994373701232" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;OnSpring&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="917871375414445" type="Values_Player">
-                                            <param id="0" name="Instance variable">CanUseSkills</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="721107776192158">
-                                    <conditions>
-                                        <condition behavior="SonicPhysics" id="9" name="On landed" sid="574050253752782" type="Sensor_Main" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="958886399237111" type="Values_Player">
-                                            <param id="0" name="Instance variable">CanUseSkills</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
                         <event-block sid="825121243407782">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="516238135421164" type="Values_Player">
@@ -2796,6 +2832,84 @@
                                 </event-group>
                                 <event-group description="" sid="426051470158070" title="Character-specific states">
                                     <sub-events>
+                                        <event-group description="" sid="257034888139195" title="SkillsFix">
+                                            <sub-events>
+                                                <event-block sid="170907232054337">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="886811112410683" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="258760751320716">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="791201762286293" type="Values_Input">
+                                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="256193283798717" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="516825601650371">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="941939787718588" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanUseSkills</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-13" name="Set boolean" sid="268485423607623" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanUseSkills</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="227027736434028">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="742120686463824" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-13" name="Set boolean" sid="759196422105320" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanUseSkills</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="947300976964878">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="132994373701232" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;OnSpring&quot;</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="606968559477939" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="917871375414445" type="Values_Player">
+                                                            <param id="0" name="Instance variable">CanUseSkills</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="721107776192158">
+                                                    <conditions>
+                                                        <condition behavior="SonicPhysics" id="9" name="On landed" sid="574050253752782" type="Sensor_Main" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="958886399237111" type="Values_Player">
+                                                            <param id="0" name="Instance variable">CanUseSkills</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
                                         <event-group description="" sid="289990916007747" title="Knux: Falling">
                                             <sub-events>
                                                 <event-block sid="107207002718435">
@@ -3816,12 +3930,6 @@
                                                                     <param id="0" name="Instance variable">Rotate</param>
                                                                     <param id="1" name="Value">0</param>
                                                                 </action>
-                                                                <action id="6" name="Stop" sid="346391676146413" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
-                                                                </action>
-                                                                <action id="6" name="Stop" sid="244408509652697" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;SFX_TailsTired&quot;</param>
-                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                         <event-block sid="436218138956286">
@@ -3845,12 +3953,6 @@
                                                                 <action id="-13" name="Set boolean" sid="749790718651769" type="Values_Player">
                                                                     <param id="0" name="Instance variable">Flying</param>
                                                                     <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="6" name="Stop" sid="105795848927197" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
-                                                                </action>
-                                                                <action id="6" name="Stop" sid="484746746298319" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;SFX_TailsTired&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -3929,9 +4031,6 @@
                                                                                     <conditions>
                                                                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="384976002364895" type="Values_Player">
                                                                                             <param id="0" name="Instance variable">Flying</param>
-                                                                                        </condition>
-                                                                                        <condition id="-8" name="Is boolean instance variable set" sid="203052199361502" type="Values_Player">
-                                                                                            <param id="0" name="Instance variable">CanUseSkills</param>
                                                                                         </condition>
                                                                                     </conditions>
                                                                                     <actions>
@@ -4315,6 +4414,10 @@
                                                                                 <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="754050305543126" type="Sensor_Main">
                                                                                     <param id="0" name="Vector Y">-260</param>
                                                                                 </action>
+                                                                                <action id="-13" name="Set boolean" sid="633565769144725" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">CanUseSkills</param>
+                                                                                    <param id="1" name="Value">1</param>
+                                                                                </action>
                                                                             </actions>
                                                                         </event-block>
                                                                         <event-block sid="715577332832733">
@@ -4359,6 +4462,10 @@
                                                                                 <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="786105934117071" type="Sensor_Main">
                                                                                     <param id="0" name="Vector Y">-260</param>
                                                                                 </action>
+                                                                                <action id="-13" name="Set boolean" sid="910255888017824" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">CanUseSkills</param>
+                                                                                    <param id="1" name="Value">1</param>
+                                                                                </action>
                                                                             </actions>
                                                                         </event-block>
                                                                     </sub-events>
@@ -4393,28 +4500,12 @@
                                                                     <param id="0" name="Instance variable">Climbing</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="266752590477033" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">CanFly</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="457559581565520" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Flying</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="636445412526549" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Rotate</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="638713172989744" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">CanChangeDirection</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="177297494541253" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">CanControl</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
                                                                 <action behavior="SonicPhysics" id="14" name="Set enabled" sid="501025658620019" type="Sensor_Main">
                                                                     <param id="0" name="State">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="115049232817280" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanFly</param>
+                                                                    <param id="1" name="Value">1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -4446,28 +4537,12 @@
                                                                     <param id="0" name="Instance variable">Climbing</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
-                                                                <action id="-13" name="Set boolean" sid="734719681463547" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">CanFly</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="789154036855346" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Flying</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="630422414231692" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Rotate</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="736019333159876" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">CanChangeDirection</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action id="-13" name="Set boolean" sid="992783963176932" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">CanControl</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
                                                                 <action behavior="SonicPhysics" id="14" name="Set enabled" sid="206666636775828" type="Sensor_Main">
                                                                     <param id="0" name="State">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="544327441519395" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanFly</param>
+                                                                    <param id="1" name="Value">1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -4502,39 +4577,6 @@
                                                             </actions>
                                                         </event-block>
                                                         <comment></comment>
-                                                        <event-block disabled="1" sid="779259967035731">
-                                                            <conditions>
-                                                                <condition behavior="SonicPhysics" id="9" name="On landed" sid="560439505484292" type="Sensor_Main" />
-                                                                <condition id="-8" inverted="1" name="Compare two values" sid="633815904034408" type="System">
-                                                                    <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorX</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Second value">0</param>
-                                                                </condition>
-                                                                <condition id="-8" name="Is boolean instance variable set" sid="828072569541158" type="Values_Input">
-                                                                    <param id="0" name="Instance variable">KeyAHold</param>
-                                                                </condition>
-                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="628053335494912" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Falling</param>
-                                                                </condition>
-                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="777840440369408" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Flying</param>
-                                                                </condition>
-                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="966540985730179" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Slide</param>
-                                                                </condition>
-                                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="888856464758506" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">State</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;Slide&quot;</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-13" name="Set boolean" sid="402998402000176" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Slide</param>
-                                                                    <param id="1" name="Value">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
                                                         <event-block sid="634916937242355">
                                                             <conditions>
                                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="401592473310772" type="Values_Player">
@@ -14435,7 +14477,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="941072514271414" type="TestCounter">
-                    <param id="0" name="Text">Values_Player.Flying</param>
+                    <param id="0" name="Text">Values_Player.CanUseSkills</param>
                 </action>
             </actions>
         </event-block>

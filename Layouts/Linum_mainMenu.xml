@@ -190,7 +190,7 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
-                        <CurrentMenu>dataselect</CurrentMenu>
+                        <CurrentMenu>mainmenu</CurrentMenu>
                         <Selected_Main>1</Selected_Main>
                         <Selected_DataSelect>0</Selected_DataSelect>
                         <CanScrollUp>false</CanScrollUp>

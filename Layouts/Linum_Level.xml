@@ -24926,8 +24926,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1230</x>
-                        <y>1164</y>
+                        <x>1342</x>
+                        <y>1178</y>
                         <z>0</z>
                         <width>122</width>
                         <height>40</height>
@@ -24986,6 +24986,53 @@
                         <depth>0</depth>
                         <hotspotX>0.519999981</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="WeaponStand" uid="1186">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1126</x>
+                        <y>1188</y>
+                        <z>0</z>
+                        <width>17</width>
+                        <height>13</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Weapon" uid="1187">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <InWeapon>false</InWeapon>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1134</x>
+                        <y>1188</y>
+                        <z>0</z>
+                        <width>37</width>
+                        <height>13</height>
+                        <depth>0</depth>
+                        <hotspotX>0.32432431</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -26857,8 +26904,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2616</x>
-                        <y>688</y>
+                        <x>2836</x>
+                        <y>602</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
@@ -30223,7 +30270,7 @@
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
                 <HUD>Linum</HUD>
-                <Platform>Desktop</Platform>
+                <Platform>Mobile</Platform>
                 <ScreenSize>2x</ScreenSize>
                 <FpsCounter>0</FpsCounter>
                 <FpsFix>false</FpsFix>
