@@ -3,6 +3,45 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_mainMenu</name>
     <events>
+        <event-block sid="579283931367090">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="321533598759489" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="947350841315463" type="Save_Helper">
+                    <param id="0" name="Instance variable">Base64</param>
+                    <param id="1" name="Value">NewText_DataSelect_ref.ExtractImage.currentImage</param>
+                </action>
+                <action id="10" name="Load image from URL" sid="718977363370235" type="DataSelect">
+                    <param id="0" name="URI">NewText_DataSelect_ref.ExtractImage.currentImage</param>
+                    <param id="1" name="Size">0</param>
+                    <param id="2" name="Cross-origin">0</param>
+                </action>
+                <action id="0" name="Play" sid="214090899290803" type="Audio">
+                    <param id="0" name="Audio file">MUS_menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MUS_menu&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="306893295210220" type="Values_PauseMenu">
+                    <param id="0" name="Instance variable">CanPause</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="566141403963526" type="Values_Menus">
+                    <param id="0" name="Instance variable">Selected_Main</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="761473744756709" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="162821072788530" type="DataSelect_Selector">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">Infinity</param>
+                </action>
+            </actions>
+        </event-block>
         <include>E_SaveSystem</include>
         <include>E_global</include>
         <event-group description="" sid="423914286752749" title="Menu Background">
@@ -670,6 +709,17 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="454463879209217">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="554775713598736" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="919614713275887" type="Function">
+                                    <param id="0" name="Name">&quot;LoadSaveData&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-group description="" sid="222250248259398" title="Slots">
                             <sub-events>
                                 <event-group description="" sid="584077289706681" title="Load">
@@ -1354,6 +1404,162 @@
                                 </event-group>
                             </sub-events>
                         </event-group>
+                        <event-group description="" sid="490598774525935" title="Select Position">
+                            <sub-events>
+                                <event-block sid="889212042193513">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="437990233366300" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="248774297185831" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 57 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="926465889056990" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="853337614480426">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="915338432760474" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="572698269830606" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 168 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="433408620450649" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="427507094019008">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="111143546971708" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="702001645421932" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 272 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="309112101149977" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="176845611653482">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="442596226041217" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="795750248796153" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 376 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="985361184170469" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="260205201339992">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="196772529647390" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="815501197606639" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 480 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="706263257523056" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="491447242359857">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="542815723722394" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="480464285775141" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 584 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="975540282854864" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="419005483600589">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="476113919395162" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="493449988621378" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 688 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="612587222676693" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="264918013770897">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="498495416674064" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="724721428012381" type="DataSelect_Selector">
+                                            <param id="0" name="X">lerp(Self.X, 807 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="960452528744956" type="DataSelect_Selector">
+                                            <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
+                                            <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-block sid="440967839511396">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="961472577083210" type="Values_Input">
@@ -1385,35 +1591,85 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="532752834047442">
+                        <event-block sid="943361007337469">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="443482690030846" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="455897707721943" type="Values_Menus">
+                                    <param id="0" name="Instance variable">IsDelete</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="923722361397890" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Value">7</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="532752834047442">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="443482690030846" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="923722361397890" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Value">7</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="124655703132431">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="751871531816417" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="452147045481099" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="124655703132431">
+                        <event-block sid="365774311705107">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="751871531816417" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">7</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="287565133628582" type="Values_Menus">
+                                    <param id="0" name="Instance variable">IsDelete</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="452147045481099" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="223108147285391">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="639645043222132" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="432305198814531" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Value">7</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="555632777028663">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="211461924339863" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="534172072472191" type="Values_Menus">
+                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="386927803696322">
                             <conditions>
@@ -1427,16 +1683,45 @@
                                     <param id="0" name="Instance variable">Selected_DataSelect</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
-                                <action id="6" name="Stop" sid="409463169362305" type="Audio">
-                                    <param id="0" name="Tag">&quot;SFX_DataSelect&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="869154047644135" type="Audio">
-                                    <param id="0" name="Audio file">S3K_B7</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SFX_DataSelect&quot;</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="996272701061810">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="785461272235605" type="Values_Menus">
+                                            <param id="0" name="Instance variable">IsDelete</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="429719294635778" type="Audio">
+                                            <param id="0" name="Tag">&quot;SFX_Delete&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="352001463767053" type="Audio">
+                                            <param id="0" name="Audio file">без названия</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_Delete&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="816831722139959">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="520273652578478" type="Values_Menus">
+                                            <param id="0" name="Instance variable">IsDelete</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="409463169362305" type="Audio">
+                                            <param id="0" name="Tag">&quot;SFX_DataSelect&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="869154047644135" type="Audio">
+                                            <param id="0" name="Audio file">S3K_B7</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_DataSelect&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="905776872791141">
                             <conditions>
@@ -1450,168 +1735,45 @@
                                     <param id="0" name="Instance variable">Selected_DataSelect</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="6" name="Stop" sid="500752568863726" type="Audio">
-                                    <param id="0" name="Tag">&quot;SFX_DataSelect&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="210764855707157" type="Audio">
-                                    <param id="0" name="Audio file">S3K_B7</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SFX_DataSelect&quot;</param>
-                                </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="889212042193513">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="437990233366300" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="248774297185831" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 57 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="926465889056990" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="853337614480426">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="915338432760474" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="572698269830606" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 168 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="433408620450649" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="427507094019008">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="111143546971708" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="702001645421932" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 272 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="309112101149977" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="176845611653482">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="442596226041217" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="795750248796153" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 376 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="985361184170469" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="260205201339992">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="196772529647390" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="815501197606639" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 480 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="706263257523056" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="491447242359857">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="542815723722394" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">5</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="480464285775141" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 584 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="975540282854864" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="419005483600589">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="476113919395162" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="493449988621378" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 688 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="612587222676693" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="264918013770897">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="498495416674064" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">7</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="724721428012381" type="DataSelect_Selector">
-                                    <param id="0" name="X">lerp(Self.X, 807 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="960452528744956" type="DataSelect_Selector">
-                                    <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="509026621159657">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="934616656631867" type="Values_Menus">
+                                            <param id="0" name="Instance variable">IsDelete</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="987483561369885" type="Audio">
+                                            <param id="0" name="Tag">&quot;SFX_Delete&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="878738000068010" type="Audio">
+                                            <param id="0" name="Audio file">без названия</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_Delete&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="725441275007233">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="467086284144551" type="Values_Menus">
+                                            <param id="0" name="Instance variable">IsDelete</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="901638257627160" type="Audio">
+                                            <param id="0" name="Tag">&quot;SFX_DataSelect&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="912420887669933" type="Audio">
+                                            <param id="0" name="Audio file">S3K_B7</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_DataSelect&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="309240271771390">
                             <conditions>
@@ -2004,38 +2166,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="579283931367090">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="321533598759489" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Fade" id="0" name="Restart fade" sid="454232651757764" type="Transition" />
-                <action id="0" name="Play" sid="214090899290803" type="Audio">
-                    <param id="0" name="Audio file">MUS_menu</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;MUS_menu&quot;</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="306893295210220" type="Values_PauseMenu">
-                    <param id="0" name="Instance variable">CanPause</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="566141403963526" type="Values_Menus">
-                    <param id="0" name="Instance variable">Selected_Main</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action disabled="1" id="4" name="Clear local storage" sid="787271463936342" type="WebStorage" />
-                <action id="0" name="Call function" sid="761473744756709" type="Function">
-                    <param id="0" name="Name">&quot;Transition&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="162821072788530" type="DataSelect_Selector">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">Infinity</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="670602287132164">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="511928269921275" type="Values_Menus">
@@ -2205,5 +2335,68 @@
             </sub-events>
         </event-block>
         <comment>1 - 57, 105&#x0D;&#x0A;      75, 83</comment>
+        <event-block sid="165981136848990">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="706235491338645" type="Keyboard">
+                    <param id="0" name="Key">75</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="597764691841138">
+                    <conditions>
+                        <condition id="3" name="Local key exists" sid="401192522919548" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="55" name="Clear" sid="349945698723184" type="SaveSlots">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </action>
+                        <action id="2" name="Remove local value" sid="968573820095707" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
+                        </action>
+                        <action id="0" name="Play" sid="527346150670608" type="Audio">
+                            <param id="0" name="Audio file">00096</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="10" name="Load image from URL" sid="480690770435933" type="DataSelect">
+                            <param id="0" name="URI">Save_Helper.Base64</param>
+                            <param id="1" name="Size">1</param>
+                            <param id="2" name="Cross-origin">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="191047260809542" type="PlayerSprite" />
+                        <action id="0" name="Call function" sid="276252696305424" type="Function">
+                            <param id="0" name="Name">&quot;LoadSaveData&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="983324382491556">
+                            <conditions>
+                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="235879545023544" type="StaticText_Red">
+                                    <param id="0" name="Unique ID">1229</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="196249077411184" type="StaticText_Red">
+                                    <param id="0" name="Unique ID">1233</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="990951214351397" type="StaticText_Red">
+                                    <param id="0" name="Unique ID">1234</param>
+                                </condition>
+                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="105897302415686" type="StaticText_Red">
+                                    <param id="0" name="Unique ID">1235</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="824223064150190" type="StaticText_Red" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

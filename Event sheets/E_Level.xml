@@ -48,7 +48,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="111812435157262">
+        <event-block disabled="1" sid="111812435157262">
             <conditions>
                 <condition id="-26" name="On canvas snapshot" sid="869869844160032" type="System" />
             </conditions>

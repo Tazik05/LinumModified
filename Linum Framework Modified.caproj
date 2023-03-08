@@ -52,6 +52,7 @@
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Gregory Georges" id="datalist" version="1.00999999">Datalist for Textbox</behavior>
+        <behavior author="JP Deblonde" id="extractImage" version="1">Extract Image</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -362,6 +363,7 @@
                         <instance-variable name="LoadSlot" sid="658225496743006" type="number" />
                         <instance-variable name="SaveIsReady" sid="453848359509574" type="boolean" />
                         <instance-variable name="JSONC2SAVE" sid="159335622606050" type="string" />
+                        <instance-variable name="Base64" sid="983633817973730" type="string" />
                     </instance-variables>
                 </object-type>
             </object-folder>
@@ -7510,6 +7512,19 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="NewText_DataSelect_ref" sid="518473926125862">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ExtractImage" sid="234406354366336">
+                    <behavior id="extractImage" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320485351446167" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\44444444.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -7708,6 +7723,25 @@
                 <member>Android_UpZone</member>
             </members>
         </family>
+        <family name="DataSelect" plugin-id="Sprite" sid="753560213087646">
+            <members>
+                <member>NewText_DataSelect_0</member>
+                <member>NewText_DataSelect_1</member>
+                <member>NewText_DataSelect_2</member>
+                <member>NewText_DataSelect_3</member>
+                <member>NewText_DataSelect_4</member>
+                <member>NewText_DataSelect_5</member>
+            </members>
+        </family>
+        <family name="SaveSlots" plugin-id="JSON" sid="134999284560636">
+            <members>
+                <member>SaveSlot0</member>
+                <member>SaveSlot1</member>
+                <member>SaveSlot2</member>
+                <member>SaveSlot3</member>
+                <member>SaveSlot4</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="[ System ]">
@@ -7869,6 +7903,8 @@
         <file name="SFX_SOUND1.ogg" />
         <file name="S3K_B8.m4a" />
         <file name="S3K_B8.ogg" />
+        <file name="00096.ogg" />
+        <file name="без названия.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MUS_level.ogg" />
@@ -7878,6 +7914,7 @@
         <file name="MUS_test_zone_2.ogg" />
         <file name="MUS_continue.ogg" />
         <file name="MUS_SpecialStage_S1.ogg" />
+        <file name="00079.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

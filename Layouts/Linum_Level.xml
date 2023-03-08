@@ -26161,7 +26161,7 @@
                         <CanControl>false</CanControl>
                         <CanJump>false</CanJump>
                         <State>Idle</State>
-                        <Character>1</Character>
+                        <Character>2</Character>
                         <Rings>1000</Rings>
                         <SpeedShoes>false</SpeedShoes>
                         <SpinDashProgress>0</SpinDashProgress>
@@ -30300,7 +30300,7 @@
                 <PauseStyle>SSW</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
                 <AllowPause>true</AllowPause>
-                <UsedSaveSlot>2</UsedSaveSlot>
+                <UsedSaveSlot>4</UsedSaveSlot>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">

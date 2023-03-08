@@ -276,7 +276,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-212</x>
-                        <y>-4</y>
+                        <y>0</y>
                         <z>0</z>
                         <width>-768</width>
                         <height>192</height>
@@ -1508,40 +1508,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DataSelect_Selector" uid="867">
-                    <properties>
-                        <left-margin>8</left-margin>
-                        <right-margin>8</right-margin>
-                        <top-margin>8</top-margin>
-                        <bottom-margin>8</bottom-margin>
-                        <edges>Stretch</edges>
-                        <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Center</hotspot>
-                        <seams>Overlap</seams>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>57</x>
-                        <y>105</y>
-                        <z>0</z>
-                        <width>75</width>
-                        <height>83</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="DataSelect_Arrows" uid="1246">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1574,8 +1540,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>268</x>
-                        <y>-20</y>
+                        <x>168</x>
+                        <y>-76</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -1651,8 +1617,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>136</x>
-                        <y>-24</y>
+                        <x>516</x>
+                        <y>272</y>
                         <z>0</z>
                         <width>56</width>
                         <height>16</height>
@@ -1676,11 +1642,95 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>388</x>
-                        <y>268</y>
+                        <x>724</x>
+                        <y>284</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerSprite" uid="0">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>560</x>
+                        <y>-32</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DataSelect_Selector" uid="867">
+                    <properties>
+                        <left-margin>8</left-margin>
+                        <right-margin>8</right-margin>
+                        <top-margin>8</top-margin>
+                        <bottom-margin>8</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Center</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>57</x>
+                        <y>105</y>
+                        <z>0</z>
+                        <width>75</width>
+                        <height>83</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NewText_DataSelect_ref" uid="528">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ExtractImage" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>44</x>
+                        <y>-72</y>
+                        <z>0</z>
+                        <width>80</width>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

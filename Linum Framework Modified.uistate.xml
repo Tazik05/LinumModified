@@ -29,7 +29,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="Collisions_Slopes" />
+        <family expanded="1" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
         <family expanded="0" name="SolidObjects" />
         <family expanded="0" name="Collisions_Layer0" />
@@ -39,12 +39,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Animals" />
         <family expanded="0" name="obj" />
         <family expanded="0" name="AndroidButtons" />
+        <family expanded="0" name="DataSelect" />
+        <family expanded="0" name="SaveSlots" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
-        <folder expanded="0" path="object-folder/.System Objects/" />
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/.System Objects/" />
         <folder expanded="1" path="object-folder/.System Objects/Values/" />
-        <folder expanded="1" path="object-folder/.System Objects/Save Objects/" />
+        <folder expanded="0" path="object-folder/.System Objects/Save Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
         <folder expanded="0" path="object-folder/Level Collisions/" />
@@ -67,8 +69,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/[ System ]/" />
         <folder expanded="1" path="layout-folder/[ Engine ]/" />
         <folder expanded="1" path="layout-folder/[ Tests ]/" />
-        <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/Engine/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
@@ -305,5 +307,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DataSelect_Player/" />
         <folder expanded="1" path="animation-folder/Sprite10/" />
         <folder expanded="1" path="animation-folder/DataSelect_Eggman/" />
+        <folder expanded="1" path="animation-folder/NewText_DataSelect_ref/" />
     </folders-expanded>
 </c2uistate>
