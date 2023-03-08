@@ -336,12 +336,14 @@
                         <instance-variable name="CanScrollDown" sid="433446514436596" type="boolean" />
                         <instance-variable name="IsSettings" sid="520201615548376" type="boolean" />
                         <instance-variable name="IsDelete" sid="268511015583987" type="boolean" />
+                        <instance-variable name="ConfirmDelete" sid="544620872450654" type="boolean" />
                         <instance-variable name="AnimSpeed" sid="649234098534000" type="number" />
                         <instance-variable name="Selected_SettingsMain" sid="550330313212819" type="number" />
                         <instance-variable name="Selected_Settings_Gameplay" sid="652792849276748" type="number" />
                         <instance-variable name="Selected_Settings_Video" sid="720411023952050" type="number" />
                         <instance-variable name="Selected_Settings_Controls" sid="562906361171127" type="number" />
                         <instance-variable name="Selected_Settings_Other" sid="696442552560433" type="number" />
+                        <instance-variable name="CanUse" sid="406246674502761" type="boolean" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979092329227831" speed="5">
@@ -7905,6 +7907,8 @@
         <file name="S3K_B8.ogg" />
         <file name="00096.ogg" />
         <file name="без названия.ogg" />
+        <file name="S3K_B2.m4a" />
+        <file name="S3K_B2.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MUS_level.ogg" />
@@ -7939,5 +7943,6 @@
             <file name="sonicXtailsREAL.png" />
         </file-folder>
         <file name="SaveBlank.json" />
+        <file name="testsave.txt" />
     </files-folder>
 </c2project>

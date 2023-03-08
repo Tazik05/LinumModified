@@ -10,14 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Linum_mainMenu</layout>
+        <layout order="0">Linum_mainMenu</layout>
         <layout order="1">Linum_Level</layout>
         <layout order="2">Linum_logo</layout>
         <layout order="4">Linum_Continue</layout>
         <layout order="5">Linum_MenuNew</layout>
         <layout order="6">Linum_SpecialStage_S1</layout>
         <event-sheet order="3">E_Level</event-sheet>
-        <event-sheet order="0">E_mainMenu</event-sheet>
+        <event-sheet active="1" order="0">E_mainMenu</event-sheet>
         <event-sheet order="1">E_SaveSystem</event-sheet>
         <event-sheet order="2">E_Engine</event-sheet>
         <event-sheet order="7">E_global</event-sheet>
@@ -28,7 +28,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="1" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
         <family expanded="0" name="SolidObjects" />

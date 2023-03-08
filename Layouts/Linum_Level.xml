@@ -30300,7 +30300,7 @@
                 <PauseStyle>SSW</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
                 <AllowPause>true</AllowPause>
-                <UsedSaveSlot>4</UsedSaveSlot>
+                <UsedSaveSlot>3</UsedSaveSlot>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">

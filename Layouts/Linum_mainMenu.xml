@@ -197,12 +197,14 @@
                         <CanScrollDown>false</CanScrollDown>
                         <IsSettings>false</IsSettings>
                         <IsDelete>false</IsDelete>
+                        <ConfirmDelete>false</ConfirmDelete>
                         <AnimSpeed>0.1</AnimSpeed>
                         <Selected_SettingsMain>0</Selected_SettingsMain>
                         <Selected_Settings_Gameplay>0</Selected_Settings_Gameplay>
                         <Selected_Settings_Video>0</Selected_Settings_Video>
                         <Selected_Settings_Controls>0</Selected_Settings_Controls>
                         <Selected_Settings_Other>0</Selected_Settings_Other>
+                        <CanUse>true</CanUse>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1112,8 +1114,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>-16</y>
+                        <x>-144</x>
+                        <y>28</y>
                         <z>0</z>
                         <width>56</width>
                         <height>7</height>
@@ -1518,8 +1520,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>180</x>
-                        <y>-128</y>
+                        <x>-120</x>
+                        <y>76</y>
                         <z>0</z>
                         <width>16</width>
                         <height>81</height>
@@ -1562,8 +1564,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>72</x>
-                        <y>-32</y>
+                        <x>-148</x>
+                        <y>48</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -1592,36 +1594,6 @@
                         <z>0</z>
                         <width>48</width>
                         <height>72</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="StaticText_Red" uid="1250">
-                    <properties>
-                        <character-width>8</character-width>
-                        <character-height>7</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
-                        <text>NO SAVE</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>516</x>
-                        <y>272</y>
-                        <z>0</z>
-                        <width>56</width>
-                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1726,11 +1698,41 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>44</x>
+                        <x>68</x>
                         <y>-72</y>
                         <z>0</z>
                         <width>80</width>
                         <height>56</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="StaticText_Red" uid="1253">
+                    <properties>
+                        <character-width>8</character-width>
+                        <character-height>7</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
+                        <text>this is a global image, edit it if necessary!</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>80</x>
+                        <y>-112</y>
+                        <z>0</z>
+                        <width>184</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
