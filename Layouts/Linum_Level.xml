@@ -23922,8 +23922,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2270</x>
-                        <y>528</y>
+                        <x>2898</x>
+                        <y>316</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -26162,7 +26162,7 @@
                         <CanJump>false</CanJump>
                         <State>Idle</State>
                         <Character>2</Character>
-                        <Rings>1000</Rings>
+                        <Rings>21</Rings>
                         <SpeedShoes>false</SpeedShoes>
                         <SpinDashProgress>0</SpinDashProgress>
                         <SonicPhysicsEnabled>true</SonicPhysicsEnabled>
@@ -26926,8 +26926,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2836</x>
-                        <y>602</y>
+                        <x>2326</x>
+                        <y>492</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
@@ -30277,7 +30277,7 @@
     <nonworld-instances>
         <instance type="Global_Settings" uid="998">
             <instance-variables>
-                <Lives>1</Lives>
+                <Lives>5</Lives>
                 <Score>0</Score>
                 <TunnelMode>1</TunnelMode>
                 <RingHighEffect>true</RingHighEffect>
@@ -30300,7 +30300,7 @@
                 <PauseStyle>SSW</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
                 <AllowPause>true</AllowPause>
-                <UsedSaveSlot>3</UsedSaveSlot>
+                <UsedSaveSlot>5</UsedSaveSlot>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">

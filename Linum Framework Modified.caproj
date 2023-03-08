@@ -344,6 +344,7 @@
                         <instance-variable name="Selected_Settings_Controls" sid="562906361171127" type="number" />
                         <instance-variable name="Selected_Settings_Other" sid="696442552560433" type="number" />
                         <instance-variable name="CanUse" sid="406246674502761" type="boolean" />
+                        <instance-variable name="PlayerSelect" sid="886346230049034" type="number" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="979092329227831" speed="5">
@@ -366,6 +367,7 @@
                         <instance-variable name="SaveIsReady" sid="453848359509574" type="boolean" />
                         <instance-variable name="JSONC2SAVE" sid="159335622606050" type="string" />
                         <instance-variable name="Base64" sid="983633817973730" type="string" />
+                        <instance-variable name="LoadSave" sid="670460206016401" type="boolean" />
                     </instance-variables>
                 </object-type>
             </object-folder>

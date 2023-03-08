@@ -297,6 +297,7 @@
                 <SaveIsReady>false</SaveIsReady>
                 <JSONC2SAVE></JSONC2SAVE>
                 <Base64></Base64>
+                <LoadSave>false</LoadSave>
             </instance-variables>
         </instance>
         <instance type="SaveSlot0" uid="1240" />

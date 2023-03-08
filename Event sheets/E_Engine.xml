@@ -16,10 +16,6 @@
                     <param id="0" name="Name">&quot;Transition&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="324577738225633" type="Sensor_Main">
-                    <param id="0" name="Object">PlayerSpawn</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
                 <action id="0" name="Play" sid="897521069790325" type="Audio">
                     <param id="0" name="Audio file">MUS_level</param>
                     <param id="2" name="Loop">1</param>
@@ -33,6 +29,90 @@
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="462028231426742">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="918512954540510" type="System">
+                            <param id="0" name="First value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="131115319155637" type="Values_Player">
+                            <param id="0" name="Instance variable">Character</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="707459351939843" type="Values_Player">
+                            <param id="0" name="Instance variable">Rings</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Rings&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="321516475581104" type="Global_Settings">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Score&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="717018307709107" type="Global_Settings">
+                            <param id="0" name="Instance variable">Lives</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Lives&quot;)</param>
+                        </action>
+                        <action disabled="1" id="0" name="Alert" sid="980415993911621" type="Browser">
+                            <param id="0" name="Message">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="947381408710300" type="Sensor_Main">
+                            <param id="0" name="X">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
+                            <param id="1" name="Y">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerY&quot;)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="564207675989628" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="439692455230593" type="Save_Helper">
+                            <param id="0" name="Instance variable">LoadSave</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="824290646958304">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="160381457972274" type="System">
+                            <param id="0" name="First value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="439763764131767" type="Values_Player">
+                            <param id="0" name="Instance variable">Character</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="228225673988095" type="Values_Player">
+                            <param id="0" name="Instance variable">Rings</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Rings&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="628364260854029" type="Global_Settings">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Score&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="255043057601660" type="Global_Settings">
+                            <param id="0" name="Instance variable">Lives</param>
+                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Lives&quot;)</param>
+                        </action>
+                        <action disabled="1" id="0" name="Alert" sid="371016898632100" type="Browser">
+                            <param id="0" name="Message">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="775146810037378" type="Sensor_Main">
+                            <param id="0" name="X">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
+                            <param id="1" name="Y">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerY&quot;)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="911797859103046" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="230897272978296" type="Save_Helper">
+                            <param id="0" name="Instance variable">LoadSave</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.3" sid="505369909762492" title="Linum Framework: Legacy">
             <sub-events>

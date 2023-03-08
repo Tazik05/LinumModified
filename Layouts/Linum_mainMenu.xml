@@ -205,6 +205,7 @@
                         <Selected_Settings_Controls>0</Selected_Settings_Controls>
                         <Selected_Settings_Other>0</Selected_Settings_Other>
                         <CanUse>true</CanUse>
+                        <PlayerSelect>1</PlayerSelect>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1594,31 +1595,6 @@
                         <z>0</z>
                         <width>48</width>
                         <height>72</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="PlayerSprite" uid="1231">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>724</x>
-                        <y>284</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

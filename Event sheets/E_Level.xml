@@ -33,9 +33,20 @@
                     <param id="0" name="Name">&quot;AndroidKeysShow&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action disabled="1" id="0" name="Call function" sid="978501283328015" type="Function">
+                    <param id="0" name="Name">&quot;NewSave&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="766275708451537" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="0" name="Call function" sid="439756507831224" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}">Sensor_Main.X{###}Sensor_Main.Y</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="260725480388344">
+        <event-block disabled="1" sid="260725480388344">
             <conditions>
                 <condition id="0" name="On key pressed" sid="767680457339424" type="Keyboard">
                     <param id="0" name="Key">113</param>
@@ -59,7 +70,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="718690887534827">
+        <event-block disabled="1" sid="718690887534827">
             <conditions>
                 <condition id="3" name="On key released" sid="809374586559286" type="Keyboard">
                     <param id="0" name="Key">114</param>
