@@ -670,6 +670,670 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-group description="" sid="222250248259398" title="Slots">
+                            <sub-events>
+                                <event-group description="" sid="641417044996054" title="Delete">
+                                    <sub-events>
+                                        <event-block sid="339684900234868">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="310912527421578" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="567346539698647" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">7</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="433472410405620" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                </condition>
+                                                <condition id="-1" inverted="1" name="Compare X" sid="293478498930803" type="DataSelect_Eggman">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">803</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="225283823836448" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="545103134793577" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="280392514561679">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="161432611948619" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyESCHold</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="549414095614260" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="581238326583732" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="195309197319991" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="825966644222488">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="993751141616076" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="142817778416588" type="DataSelect_Eggman">
+                                                    <param id="0" name="X">DataSelect_Selector.X</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="558573945020777">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="809783134842264" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="379009202875009" type="DataSelect_Eggman">
+                                                            <param id="0" name="Animation">&quot;Animation&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="231241225342631">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="954960503732892" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                </condition>
+                                                <condition id="-1" name="Compare X" sid="480048135376159" type="DataSelect_Eggman">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">803</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-17" name="Move forward" sid="961219122590112" type="DataSelect_Eggman">
+                                                    <param id="0" name="Distance">8</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="583759610923359">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="830948648063697" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                </condition>
+                                                <condition id="-1" inverted="1" name="Compare X" sid="116147567097705" type="DataSelect_Eggman">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">803</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="474295753093105" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="821779552883538" type="DataSelect_Eggman">
+                                                    <param id="0" name="X">803</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="348434774782622">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="476123171235355" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="604774781275124" type="DataSelect_Eggman">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment></comment>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="458854052869385" title="Static status">
+                                    <sub-events>
+                                        <comment></comment>
+                                        <event-block sid="973921236322050">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="624333570352253" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="612600697594358" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_0&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="884458543624673">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="966316425270360" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">859</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="965229518547624" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="275783790324416">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="294268447955723" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="765986004286126" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_0&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="974543065278577">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="170690638428155" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">859</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="665413774201904" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="669396974640416">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="786904702079890" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="134890986859017" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="155642143767242">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="538808403055389" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1232</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="317672751562629" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="925999324335649">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="125773272303838" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="144262592947020" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="972591527015800">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="235302515439259" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1232</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="906174179072053" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="661712673853612">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="258707101173316" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="160641158275946" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="769012240314563">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="827788618741221" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1236</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="708905448170319" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="486439632820073">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="451253812628789" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="576838233219519" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="401269709457679">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="517504379144461" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1236</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="746545898610250" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="213180512630556">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="460763513082470" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="716937529941462" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_3&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="596694941357958">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="897994016449757" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1237</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="179536452603491" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="779857071918054">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="543648629970447" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="468905661163163" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_3&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="562571266276257">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="395811311436978" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1237</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="346064041384976" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="759175284592216">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="737473176137955" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="463799744105494" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_4&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="922353665448697">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="173455233830276" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1238</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="652985561498341" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="320191762520745">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="617243774811993" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="214898239975539" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_4&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="608894098671956">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="266047053642238" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1238</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="127500908135775" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="696323586419372">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="998161920313232" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="102830841960977" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_5&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="393507825504189">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="887983092245086" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1239</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="196349522736446" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="401722279386545">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="742699328383372" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">6</param>
+                                                </condition>
+                                                <condition id="3" inverted="1" name="Local key exists" sid="225460710867972" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_5&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="906996135765447">
+                                                    <conditions>
+                                                        <condition id="-14" name="Pick by unique ID" sid="706053036451331" type="Static_DataSelect">
+                                                            <param id="0" name="Unique ID">1239</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="776588365265833" type="Static_DataSelect">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="890493542324257" title="Arrows &amp; Character select">
+                                    <sub-events>
+                                        <event-block sid="356684710053897">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="805546031694026" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="252994271432769">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="770225130359827" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">7</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="252710834185465" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="515512784633816">
+                                                            <conditions>
+                                                                <condition id="3" inverted="1" name="Local key exists" sid="982295355829986" type="WebStorage">
+                                                                    <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="441597243490952" type="DataSelect_Arrows">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="326905936079300" type="DataSelect_Player">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="625102629322854">
+                                                            <conditions>
+                                                                <condition id="3" name="Local key exists" sid="151369824830811" type="WebStorage">
+                                                                    <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="481775866185525" type="DataSelect_Arrows">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="625022140362954" type="DataSelect_Player">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="141426491479160">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="824938059405645" type="System" />
+                                                        <condition id="-4" name="Trigger once while true" sid="542435658244541" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="735794837410333" type="DataSelect_Arrows">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="438804314601573" type="DataSelect_Player">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment></comment>
+                                                <event-block sid="143422206003594">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="992243024325082" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="177168310460216" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="731959054914098" type="DataSelect_Arrows">
+                                                            <param id="0" name="X">172</param>
+                                                            <param id="1" name="Y">172</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="141083956401952" type="DataSelect_Player">
+                                                            <param id="0" name="X">168</param>
+                                                            <param id="1" name="Y">168</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="909629315844424">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="471065187269783" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="833677638166447" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="580245233661885" type="DataSelect_Arrows">
+                                                            <param id="0" name="X">276</param>
+                                                            <param id="1" name="Y">172</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="666823520095816" type="DataSelect_Player">
+                                                            <param id="0" name="X">272</param>
+                                                            <param id="1" name="Y">168</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="560996352397944">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="807802383376510" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="751285224578591" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="716858216524193" type="DataSelect_Arrows">
+                                                            <param id="0" name="X">380</param>
+                                                            <param id="1" name="Y">172</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="543666416720264" type="DataSelect_Player">
+                                                            <param id="0" name="X">376</param>
+                                                            <param id="1" name="Y">168</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="285234606175941">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="658685587081410" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">4</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="924400509108541" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="307669021356454" type="DataSelect_Arrows">
+                                                            <param id="0" name="X">484</param>
+                                                            <param id="1" name="Y">172</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="833641509934564" type="DataSelect_Player">
+                                                            <param id="0" name="X">480</param>
+                                                            <param id="1" name="Y">168</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="311306136424107">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="693171431563452" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">5</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="491206372561865" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="926963146300761" type="DataSelect_Arrows">
+                                                            <param id="0" name="X">588</param>
+                                                            <param id="1" name="Y">172</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="731598184973347" type="DataSelect_Player">
+                                                            <param id="0" name="X">584</param>
+                                                            <param id="1" name="Y">168</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="704540002035524">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="658553847712012" type="Values_Menus">
+                                                            <param id="0" name="Instance variable">Selected_DataSelect</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">6</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="238044925384482" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="176869796903597" type="DataSelect_Arrows">
+                                                            <param id="0" name="X">692</param>
+                                                            <param id="1" name="Y">172</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="610418454102712" type="DataSelect_Player">
+                                                            <param id="0" name="X">688</param>
+                                                            <param id="1" name="Y">168</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="817372606156041">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="626590686995313" type="Values_Menus">
+                                                    <param id="0" name="Instance variable">IsDelete</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="148002924230133" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="998792106424816" type="DataSelect_Arrows">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="443218650341671" type="DataSelect_Player">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                            </sub-events>
+                        </event-group>
                         <event-block sid="440967839511396">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="961472577083210" type="Values_Input">
@@ -786,11 +1450,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="248774297185831" type="9patch2">
+                                <action id="-3" name="Set position" sid="248774297185831" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 57 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="926465889056990" type="9patch2">
+                                <action id="-7" name="Set size" sid="926465889056990" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -805,11 +1469,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="572698269830606" type="9patch2">
+                                <action id="-3" name="Set position" sid="572698269830606" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 168 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="433408620450649" type="9patch2">
+                                <action id="-7" name="Set size" sid="433408620450649" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -824,11 +1488,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="702001645421932" type="9patch2">
+                                <action id="-3" name="Set position" sid="702001645421932" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 272 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="309112101149977" type="9patch2">
+                                <action id="-7" name="Set size" sid="309112101149977" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -843,11 +1507,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="795750248796153" type="9patch2">
+                                <action id="-3" name="Set position" sid="795750248796153" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 376 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="985361184170469" type="9patch2">
+                                <action id="-7" name="Set size" sid="985361184170469" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -862,11 +1526,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="815501197606639" type="9patch2">
+                                <action id="-3" name="Set position" sid="815501197606639" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 480 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="706263257523056" type="9patch2">
+                                <action id="-7" name="Set size" sid="706263257523056" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -881,11 +1545,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="480464285775141" type="9patch2">
+                                <action id="-3" name="Set position" sid="480464285775141" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 584 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="975540282854864" type="9patch2">
+                                <action id="-7" name="Set size" sid="975540282854864" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -900,11 +1564,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="493449988621378" type="9patch2">
+                                <action id="-3" name="Set position" sid="493449988621378" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 688 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 142 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="612587222676693" type="9patch2">
+                                <action id="-7" name="Set size" sid="612587222676693" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 78 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 170 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -919,11 +1583,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="724721428012381" type="9patch2">
+                                <action id="-3" name="Set position" sid="724721428012381" type="DataSelect_Selector">
                                     <param id="0" name="X">lerp(Self.X, 807 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 105 ,Values_Menus.AnimSpeed)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="960452528744956" type="9patch2">
+                                <action id="-7" name="Set size" sid="960452528744956" type="DataSelect_Selector">
                                     <param id="0" name="Width">lerp(Self.Width, 75 ,Values_Menus.AnimSpeed)</param>
                                     <param id="1" name="Height">lerp(Self.Height, 83 ,Values_Menus.AnimSpeed)</param>
                                 </action>
@@ -934,15 +1598,18 @@
                                 <condition id="-8" name="Is boolean instance variable set" sid="162528531060647" type="Values_Input">
                                     <param id="0" name="Instance variable">KeyESCHold</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="841252207375157" type="Values_Menus">
+                                    <param id="0" name="Instance variable">IsDelete</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="204849620760438" type="System" />
                             </conditions>
                             <actions>
+                                <action id="-16" name="Wait" sid="209765500553878" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="825340931322538" type="Values_Menus">
                                     <param id="0" name="Instance variable">CurrentMenu</param>
                                     <param id="1" name="Value">&quot;mainmenu&quot;</param>
-                                </action>
-                                <action disabled="1" id="-3" name="Set position" sid="662614962677796" type="Menu_BigBlueButtonBG">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">104</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1337,6 +2004,7 @@
                     <param id="0" name="Instance variable">Selected_Main</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="4" name="Clear local storage" sid="787271463936342" type="WebStorage" />
             </actions>
         </event-block>
         <event-block sid="670602287132164">

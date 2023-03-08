@@ -702,7 +702,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="820864802113097">
+                                        <event-block disabled="1" sid="820864802113097">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="400360441561884" type="Save_Helper">
                                                     <param id="0" name="Instance variable">IsLoadingSaves</param>
@@ -710,63 +710,70 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="659825783691155">
+                                                <event-block sid="984915764815879">
                                                     <conditions>
-                                                        <condition id="70" inverted="1" name="Is Empty" sid="157334508885478" type="SaveSlot0">
-                                                            <param id="0" name="Reference point">0</param>
-                                                            <param id="1" name="Key {n}"></param>
+                                                        <condition id="3" name="Local key exists" sid="895834959136663" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot</param>
                                                         </condition>
-                                                        <condition id="-4" name="Trigger once while true" sid="239080573764982" type="System" />
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="10" name="Load image from URL" sid="707341010093294" type="NewText_DataSelect_0">
-                                                            <param id="0" name="URI">SaveSlot0.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
-                                                            <param id="1" name="Size">1</param>
-                                                            <param id="2" name="Cross-origin">0</param>
-                                                        </action>
-                                                        <action id="-3" name="Create object" sid="186050634246441" type="System">
-                                                            <param id="0" name="Object to create">StaticText_Red</param>
-                                                            <param id="1" name="Layer">&quot;DataSelect&quot;</param>
-                                                            <param id="2" name="X">169</param>
-                                                            <param id="3" name="Y">142</param>
-                                                        </action>
-                                                        <action id="0" name="Set text" sid="130890705450932" type="StaticText_Red">
-                                                            <param id="0" name="Text">&quot;Zone &quot;&amp;SaveSlot0.Value(0,&quot;Save&quot;,&quot;Zone&quot;)</param>
-                                                        </action>
-                                                        <action id="7" name="Set horizontal alignment" sid="806622667739194" type="StaticText_Red">
-                                                            <param id="0" name="Horizontal alignment">1</param>
-                                                        </action>
-                                                        <action id="-25" name="Move to bottom" sid="219682035320286" type="StaticText_Red" />
-                                                    </actions>
+                                                    <actions />
                                                     <sub-events>
-                                                        <event-block sid="408034012188389">
+                                                        <event-block sid="659825783691155">
                                                             <conditions>
-                                                                <condition id="-14" name="Pick by unique ID" sid="135457412781738" type="Static_DataSelect">
-                                                                    <param id="0" name="Unique ID">859</param>
+                                                                <condition id="70" inverted="1" name="Is Empty" sid="157334508885478" type="SaveSlot0">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}"></param>
                                                                 </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="239080573764982" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-15" name="Set visible" sid="408306184541270" type="Static_DataSelect">
-                                                                    <param id="0" name="Visibility">0</param>
+                                                                <action id="10" name="Load image from URL" sid="707341010093294" type="NewText_DataSelect_0">
+                                                                    <param id="0" name="URI">SaveSlot0.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                                                                    <param id="1" name="Size">1</param>
+                                                                    <param id="2" name="Cross-origin">0</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="186050634246441" type="System">
+                                                                    <param id="0" name="Object to create">StaticText_Red</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">169</param>
+                                                                    <param id="3" name="Y">142</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="130890705450932" type="StaticText_Red">
+                                                                    <param id="0" name="Text">&quot;Zone &quot;&amp;SaveSlot0.Value(0,&quot;Save&quot;,&quot;Zone&quot;)</param>
+                                                                </action>
+                                                                <action id="7" name="Set horizontal alignment" sid="806622667739194" type="StaticText_Red">
+                                                                    <param id="0" name="Horizontal alignment">1</param>
+                                                                </action>
+                                                                <action id="-25" name="Move to bottom" sid="219682035320286" type="StaticText_Red" />
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="408034012188389">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="135457412781738" type="Static_DataSelect">
+                                                                            <param id="0" name="Unique ID">859</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-15" name="Set visible" sid="408306184541270" type="Static_DataSelect">
+                                                                            <param id="0" name="Visibility">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="456279748662870">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="581569544436812" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="10" name="Load image from URL" sid="675041151637110" type="NewText_DataSelect_0">
+                                                                    <param id="0" name="URI">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                                                                    <param id="1" name="Size">1</param>
+                                                                    <param id="2" name="Cross-origin">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
-                                                </event-block>
-                                                <event-block sid="456279748662870">
-                                                    <conditions>
-                                                        <condition id="3" inverted="1" name="Local key exists" sid="583002519832147" type="WebStorage">
-                                                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot</param>
-                                                        </condition>
-                                                        <condition id="-4" name="Trigger once while true" sid="581569544436812" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="10" name="Load image from URL" sid="675041151637110" type="NewText_DataSelect_0">
-                                                            <param id="0" name="URI">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
-                                                            <param id="1" name="Size">1</param>
-                                                            <param id="2" name="Cross-origin">0</param>
-                                                        </action>
-                                                    </actions>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>

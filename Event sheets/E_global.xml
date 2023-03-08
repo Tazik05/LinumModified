@@ -68,7 +68,7 @@
                 </action>
                 <action id="-24" name="Move to top" sid="558860146047482" type="CmdText" />
                 <action id="-24" name="Move to top" sid="303842830224210" type="CmdText2" />
-                <action behavior="Flash" id="0" name="Flash" sid="585625695906066" type="9patch2">
+                <action behavior="Flash" id="0" name="Flash" sid="585625695906066" type="DataSelect_Selector">
                     <param id="0" name="&apos;On&apos; time">0.1</param>
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">Infinity</param>

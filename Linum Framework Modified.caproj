@@ -33,6 +33,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Eren Ertuğrul" id="eren_DiscordRPC_edit" version="1">DiscordRPC (edit)</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
         <plugin author="JohnnySheffield" id="nwk" version="1.100000024">Node-Webkit Gui</plugin>
     </used-plugins>
@@ -333,6 +334,7 @@
                         <instance-variable name="CanScrollUp" sid="938062188155715" type="boolean" />
                         <instance-variable name="CanScrollDown" sid="433446514436596" type="boolean" />
                         <instance-variable name="IsSettings" sid="520201615548376" type="boolean" />
+                        <instance-variable name="IsDelete" sid="268511015583987" type="boolean" />
                         <instance-variable name="AnimSpeed" sid="649234098534000" type="number" />
                         <instance-variable name="Selected_SettingsMain" sid="550330313212819" type="number" />
                         <instance-variable name="Selected_Settings_Gameplay" sid="652792849276748" type="number" />
@@ -448,6 +450,9 @@
             </object-type>
             <object-type name="WebStorage" sid="568491992888857">
                 <plugin id="WebStorage" />
+            </object-type>
+            <object-type name="DiscordRPCedit" sid="973723311657315">
+                <plugin id="eren_DiscordRPC_edit" />
             </object-type>
         </object-folder>
         <object-folder name="Player Objects">
@@ -6974,7 +6979,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="9patch2" sid="361911006947945">
+        <object-type name="DataSelect_Selector" sid="361911006947945">
             <plugin id="NinePatch" />
             <behaviors>
                 <behavior-type name="Flash" sid="464809051218853">
@@ -7454,6 +7459,54 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="DataSelect_Arrows" sid="963429367451872">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643561453342484" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506173" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DataSelect_Player" sid="555490289207555">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="590839825909537" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="646666685317714">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602651525849294" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DataSelect_Eggman" sid="888873343033045">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="X1" sid="152680944353423" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759431776962765" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="1" name="Animation" pingpong="1" repeatcount="1" repeatto="0" sid="205181393557939" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Confirm" pingpong="0" repeatcount="1" repeatto="0" sid="932152240135728" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -7736,6 +7789,12 @@
             </properties>
         </global-instance>
         <global-instance type="WebStorage" uid="848" />
+        <global-instance type="DiscordRPCedit" uid="1230">
+            <properties>
+                <client-id>0</client-id>
+                <preview_mode>True</preview_mode>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder>
         <file name="SFX_Explosion.ogg" />
@@ -7805,6 +7864,8 @@
         <file name="S3K_6A.m4a" />
         <file name="S3K_6A.ogg" />
         <file name="SFX_SOUND1.ogg" />
+        <file name="S3K_B8.m4a" />
+        <file name="S3K_B8.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MUS_level.ogg" />

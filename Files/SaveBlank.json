@@ -14,7 +14,8 @@
   "PlayerY": "[PlayerPosY]",
   "Layout": "[LayoutName]",
   "Zone": "[ZoneName]",
-  "Character": "[CharacterNumber]"
+  "Character": "[CharacterNumber]",
+  "C2SAVEDATA": "[C2SAVE]"
   },
   "Emeralds": {
   "Green": "[GreenCheck]",
