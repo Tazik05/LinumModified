@@ -294,6 +294,8 @@
                 <Slot>0</Slot>
                 <IsLoadingSaves>false</IsLoadingSaves>
                 <LoadSlot>0</LoadSlot>
+                <SaveIsReady>false</SaveIsReady>
+                <JSONC2SAVE></JSONC2SAVE>
             </instance-variables>
         </instance>
         <instance type="SaveSlot0" uid="1240" />

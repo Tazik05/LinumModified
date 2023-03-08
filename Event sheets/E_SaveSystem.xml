@@ -318,6 +318,11 @@
                                             <param id="1" name="Reference point">0</param>
                                             <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Character&quot;</param>
                                         </action>
+                                        <action id="20" name="Set Value" sid="330975055615584" type="SaveMaster">
+                                            <param id="0" name="Value">&quot;&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;C2SAVEDATA&quot;</param>
+                                        </action>
                                         <action id="20" name="Set Value" sid="652136793976082" type="SaveMaster">
                                             <param id="0" name="Value">&quot;&quot;</param>
                                             <param id="1" name="Reference point">0</param>
@@ -377,9 +382,48 @@
                         </event-group>
                         <event-group description="" sid="162666442147714" title="Working with saves">
                             <sub-events>
-                                <event-group description="" sid="217961701119652" title="Create save">
+                                <event-group description="" sid="138341389092111" title="Load Save">
                                     <sub-events>
-                                        <event-block sid="146313370451862">
+                                        <event-block sid="790776693488340">
+                                            <conditions>
+                                                <condition id="0" name="On function" sid="450023924973834" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadSave&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set local value" sid="320168053278392" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;LoadSave&quot;</param>
+                                                    <param id="1" name="Value">&quot;Yes&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="732929759879285" type="Global_Settings">
+                                                    <param id="0" name="Instance variable">UsedSaveSlot</param>
+                                                    <param id="1" name="Value">Values_Menus.Selected_DataSelect-1</param>
+                                                </action>
+                                                <action id="60" name="LoadJSON" sid="943457298626002" type="SaveMaster">
+                                                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot)</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="862627302803831">
+                                            <conditions>
+                                                <condition id="70" inverted="1" name="Is Empty" sid="641941531717399" type="SaveMaster">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}"></param>
+                                                </condition>
+                                                <condition id="3" name="Local key exists" sid="829126083717289" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;LoadSave&quot;</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="130080676464614" type="System" />
+                                            </conditions>
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="217961701119652" title="Create Save">
+                                    <sub-events>
+                                        <event-block disabled="1" sid="146313370451862">
                                             <conditions>
                                                 <condition id="0" name="On key pressed" sid="241902822868973" type="Keyboard">
                                                     <param id="0" name="Key">54</param>
@@ -391,7 +435,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="133201532581813">
+                                        <event-block disabled="1" sid="133201532581813">
                                             <conditions>
                                                 <condition id="0" name="On key pressed" sid="216522739800235" type="Keyboard">
                                                     <param id="0" name="Key">53</param>
@@ -439,16 +483,8 @@
                                                     <param id="0" name="Instance variable">PlayerPosY</param>
                                                     <param id="1" name="Value">Function.Param(1)</param>
                                                 </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="992029683136985">
-                                            <conditions>
-                                                <condition id="-2" name="On start of layout" sid="734585252209798" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="950867401967806" type="Save_Helper">
-                                                    <param id="0" name="Instance variable">CanSave</param>
-                                                    <param id="1" name="Value">1</param>
+                                                <action disabled="1" id="-36" name="Save" sid="385960689673250" type="System">
+                                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -475,6 +511,21 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block disabled="1" sid="609695462006092">
+                                            <conditions>
+                                                <condition id="-28" name="On save complete" sid="275877480668225" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="533261370499147" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">JSONC2SAVE</param>
+                                                    <param id="1" name="Value">SaveStateJSON</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="137543110397476" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">SaveIsReady</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="865063599948881">
                                             <conditions>
                                                 <condition id="70" inverted="1" name="Is Empty" sid="442391533577517" type="SaveMaster">
@@ -486,6 +537,9 @@
                                                 </condition>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="721549394403354" type="Save_Helper">
                                                     <param id="0" name="Instance variable">CanSave</param>
+                                                </condition>
+                                                <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="176472025998885" type="Save_Helper">
+                                                    <param id="0" name="Instance variable">SaveIsReady</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="809396438844774" type="System" />
                                             </conditions>
@@ -555,6 +609,11 @@
                                                     <param id="1" name="Reference point">0</param>
                                                     <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;Character&quot;</param>
                                                 </action>
+                                                <action id="20" name="Set Value" sid="780403270463442" type="SaveMaster">
+                                                    <param id="0" name="Value">Save_Helper.JSONC2SAVE</param>
+                                                    <param id="1" name="Reference point">0</param>
+                                                    <param id="2" name="Key {n}">&quot;Save&quot;{###}&quot;C2SAVEDATA&quot;</param>
+                                                </action>
                                                 <action id="20" name="Set Value" sid="787058726039159" type="SaveMaster">
                                                     <param id="0" name="Value">Values_Emeralds.Green</param>
                                                     <param id="1" name="Reference point">0</param>
@@ -601,7 +660,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-group>
-                                <event-group description="" sid="471407370980662" title="LoadSlots">
+                                <event-group description="" sid="471407370980662" title="Load Slots">
                                     <sub-events>
                                         <event-block sid="963064265704255">
                                             <conditions>
@@ -702,7 +761,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block disabled="1" sid="820864802113097">
+                                        <event-block sid="820864802113097">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="400360441561884" type="Save_Helper">
                                                     <param id="0" name="Instance variable">IsLoadingSaves</param>
@@ -710,10 +769,26 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
+                                                <event-block sid="357441745866488">
+                                                    <conditions>
+                                                        <condition id="-18" name="On created" sid="336716693771099" type="StaticText_Red" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-25" name="Move to bottom" sid="583597953683832" type="StaticText_Red" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="414324548025561">
+                                                    <conditions>
+                                                        <condition id="-18" name="On created" sid="603785559861166" type="PlayerSprite" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-25" name="Move to bottom" sid="734481599511073" type="PlayerSprite" />
+                                                    </actions>
+                                                </event-block>
                                                 <event-block sid="984915764815879">
                                                     <conditions>
                                                         <condition id="3" name="Local key exists" sid="895834959136663" type="WebStorage">
-                                                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                                                            <param id="0" name="Key">&quot;SaveSlot_0&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
@@ -744,7 +819,16 @@
                                                                 <action id="7" name="Set horizontal alignment" sid="806622667739194" type="StaticText_Red">
                                                                     <param id="0" name="Horizontal alignment">1</param>
                                                                 </action>
-                                                                <action id="-25" name="Move to bottom" sid="219682035320286" type="StaticText_Red" />
+                                                                <action id="-3" name="Create object" sid="752903816881027" type="System">
+                                                                    <param id="0" name="Object to create">PlayerSprite</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">272</param>
+                                                                    <param id="3" name="Y">168</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="503177495110637" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Idle_&quot;&amp;SaveSlot0.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
                                                             </actions>
                                                             <sub-events>
                                                                 <event-block sid="408034012188389">
@@ -761,17 +845,191 @@
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
-                                                        <event-block sid="456279748662870">
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="504160033153256">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="951351542104560" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_1&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="484379883647981">
                                                             <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="581569544436812" type="System" />
+                                                                <condition id="70" inverted="1" name="Is Empty" sid="429588495704238" type="SaveSlot1">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}"></param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="417336147123060" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="10" name="Load image from URL" sid="675041151637110" type="NewText_DataSelect_0">
-                                                                    <param id="0" name="URI">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                                                                <action id="10" name="Load image from URL" sid="714762555354492" type="NewText_DataSelect_1">
+                                                                    <param id="0" name="URI">SaveSlot1.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
                                                                     <param id="1" name="Size">1</param>
                                                                     <param id="2" name="Cross-origin">0</param>
                                                                 </action>
+                                                                <action id="-3" name="Create object" sid="284674742793985" type="System">
+                                                                    <param id="0" name="Object to create">StaticText_Red</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">274</param>
+                                                                    <param id="3" name="Y">142</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="120915225714483" type="StaticText_Red">
+                                                                    <param id="0" name="Text">&quot;Zone &quot;&amp;SaveSlot1.Value(0,&quot;Save&quot;,&quot;Zone&quot;)</param>
+                                                                </action>
+                                                                <action id="7" name="Set horizontal alignment" sid="180484833593739" type="StaticText_Red">
+                                                                    <param id="0" name="Horizontal alignment">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="231041588416660" type="System">
+                                                                    <param id="0" name="Object to create">PlayerSprite</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">272</param>
+                                                                    <param id="3" name="Y">172</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="426989342079366" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Idle_&quot;&amp;SaveSlot1.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
                                                             </actions>
+                                                            <sub-events>
+                                                                <event-block sid="363223508894874">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="888785843208244" type="Static_DataSelect">
+                                                                            <param id="0" name="Unique ID">1232</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-15" name="Set visible" sid="224004188258422" type="Static_DataSelect">
+                                                                            <param id="0" name="Visibility">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="336099634400446">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="264998985636573" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_2&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="841278810479189">
+                                                            <conditions>
+                                                                <condition id="70" inverted="1" name="Is Empty" sid="939708779605464" type="SaveSlot2">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}"></param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="994555375612425" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="10" name="Load image from URL" sid="176318317135682" type="NewText_DataSelect_2">
+                                                                    <param id="0" name="URI">SaveSlot2.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                                                                    <param id="1" name="Size">1</param>
+                                                                    <param id="2" name="Cross-origin">0</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="919274368392107" type="System">
+                                                                    <param id="0" name="Object to create">StaticText_Red</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">376</param>
+                                                                    <param id="3" name="Y">142</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="176266391612076" type="StaticText_Red">
+                                                                    <param id="0" name="Text">&quot;Zone &quot;&amp;SaveSlot2.Value(0,&quot;Save&quot;,&quot;Zone&quot;)</param>
+                                                                </action>
+                                                                <action id="7" name="Set horizontal alignment" sid="668542992463416" type="StaticText_Red">
+                                                                    <param id="0" name="Horizontal alignment">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="607153561696836" type="System">
+                                                                    <param id="0" name="Object to create">PlayerSprite</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">376</param>
+                                                                    <param id="3" name="Y">172</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="314167635980265" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Idle_&quot;&amp;SaveSlot2.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="292560374797196">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="534641036413139" type="Static_DataSelect">
+                                                                            <param id="0" name="Unique ID">1236</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-15" name="Set visible" sid="312640687997551" type="Static_DataSelect">
+                                                                            <param id="0" name="Visibility">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="327933216337008">
+                                                    <conditions>
+                                                        <condition id="3" name="Local key exists" sid="874309355123717" type="WebStorage">
+                                                            <param id="0" name="Key">&quot;SaveSlot_3&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="136846786232267">
+                                                            <conditions>
+                                                                <condition id="70" inverted="1" name="Is Empty" sid="159907627637904" type="SaveSlot2">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}"></param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="866708862814106" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="10" name="Load image from URL" sid="208924307676846" type="NewText_DataSelect_2">
+                                                                    <param id="0" name="URI">SaveSlot2.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
+                                                                    <param id="1" name="Size">1</param>
+                                                                    <param id="2" name="Cross-origin">0</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="208212533033263" type="System">
+                                                                    <param id="0" name="Object to create">StaticText_Red</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">376</param>
+                                                                    <param id="3" name="Y">142</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="699352796209793" type="StaticText_Red">
+                                                                    <param id="0" name="Text">&quot;Zone &quot;&amp;SaveSlot2.Value(0,&quot;Save&quot;,&quot;Zone&quot;)</param>
+                                                                </action>
+                                                                <action id="7" name="Set horizontal alignment" sid="359703931733763" type="StaticText_Red">
+                                                                    <param id="0" name="Horizontal alignment">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="358422781906568" type="System">
+                                                                    <param id="0" name="Object to create">PlayerSprite</param>
+                                                                    <param id="1" name="Layer">&quot;DataSelect&quot;</param>
+                                                                    <param id="2" name="X">376</param>
+                                                                    <param id="3" name="Y">172</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="461997533723032" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Idle_&quot;&amp;SaveSlot1.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="633873737055632">
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="269775842319544" type="Static_DataSelect">
+                                                                            <param id="0" name="Unique ID">1236</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-15" name="Set visible" sid="719433197571004" type="Static_DataSelect">
+                                                                            <param id="0" name="Visibility">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>

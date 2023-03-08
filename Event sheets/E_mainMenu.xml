@@ -672,6 +672,26 @@
                     <sub-events>
                         <event-group description="" sid="222250248259398" title="Slots">
                             <sub-events>
+                                <event-group description="" sid="584077289706681" title="Load">
+                                    <sub-events>
+                                        <event-block sid="721233871362719">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="711737231690560" type="Values_Input">
+                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                </condition>
+                                                <condition id="3" name="Local key exists" sid="624044238701641" type="WebStorage">
+                                                    <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="245743007850707" type="Function">
+                                                    <param id="0" name="Name">&quot;LoadSave&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Values_Menus.Selected_DataSelect-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                                 <event-group description="" sid="641417044996054" title="Delete">
                                     <sub-events>
                                         <event-block sid="339684900234868">
@@ -2004,7 +2024,16 @@
                     <param id="0" name="Instance variable">Selected_Main</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="4" name="Clear local storage" sid="787271463936342" type="WebStorage" />
+                <action disabled="1" id="4" name="Clear local storage" sid="787271463936342" type="WebStorage" />
+                <action id="0" name="Call function" sid="761473744756709" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="162821072788530" type="DataSelect_Selector">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">Infinity</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="670602287132164">

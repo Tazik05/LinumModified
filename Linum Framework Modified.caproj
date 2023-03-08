@@ -360,6 +360,8 @@
                         <instance-variable name="Slot" sid="691575566215650" type="number" />
                         <instance-variable name="IsLoadingSaves" sid="940640392079904" type="boolean" />
                         <instance-variable name="LoadSlot" sid="658225496743006" type="number" />
+                        <instance-variable name="SaveIsReady" sid="453848359509574" type="boolean" />
+                        <instance-variable name="JSONC2SAVE" sid="159335622606050" type="string" />
                     </instance-variables>
                 </object-type>
             </object-folder>
@@ -7462,7 +7464,8 @@
         <object-type name="DataSelect_Arrows" sid="963429367451872">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643561453342484" speed="5">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643561453342484" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506173" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.506173" />
                 </animation>
             </animation-folder>
