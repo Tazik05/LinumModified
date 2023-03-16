@@ -18,165 +18,530 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="533674484085070" title="Police Bot">
+        <event-group description="" sid="906497006655251" title="Boss">
             <sub-events>
-                <event-block sid="801414195032670">
+                <comment>3316, 520</comment>
+                <event-block sid="241065395842321">
                     <conditions>
-                        <condition id="5" name="On any finished" sid="778964585943855" type="PoliceFlame" />
+                        <condition id="0" name="On function" sid="594292534867377" type="Function">
+                            <param id="0" name="Name">&quot;StartBoss&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="581920716033847" type="PoliceFlame" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="808389072721466">
-            <conditions>
-                <condition id="-11" name="For Each" sid="384450905180996" type="System">
-                    <param id="0" name="Object">PoliceBot</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="889474329127803">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="996482491301212" type="PoliceBot" />
-                        <condition id="-4" name="Trigger once while true" sid="481009557865967" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="507200412935540" type="PoliceBot">
-                            <param id="0" name="Instance variable">FollowPlayer</param>
+                        <action id="-4" name="Set position to another object" sid="856924281480264" type="BossMechaPod">
+                            <param id="0" name="Object">BossSpawn</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="889146964460062" type="BossMechaPod">
+                            <param id="0" name="Instance variable">Action</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="606472147401229" type="BossMechaPod">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="517122334876067" type="BossMechaPod">
+                            <param id="0" name="Instance variable">Defeated</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="483469706317678" type="Values_Camera">
+                            <param id="0" name="Instance variable">Speed</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="274509680365848" type="Values_Camera">
+                            <param id="0" name="Instance variable">BossActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" sid="484948189924060" type="BossTrigger">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="472749725180877">
+                <event-block sid="100390893472105">
                     <conditions>
-                        <condition behavior="Platform" id="1" name="Compare speed" sid="699887975008164" type="PoliceBot">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Speed">10</param>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="656524799612435" type="BossMechaPod">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
                         </condition>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="682274731456447" type="PoliceBot" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="296537107425963">
+                        <event-block sid="428141481110373">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="444895825629504" type="System">
-                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                <condition id="1" name="Is overlapping another object" sid="233329021376608" type="Sensor_Hitbox">
+                                    <param id="0" name="Object">BossMechaPod</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="735534771838156" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="156623457861161" type="PoliceBot">
-                                    <param id="0" name="Control">2</param>
+                                <action id="-13" name="Set boolean" sid="847985916854905" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">Hit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="485244680800177">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="332968214482318" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="486872048047871" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="450126904294303">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="608405592160187" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Play" sid="194664062884784" type="Audio">
+                                                    <param id="0" name="Audio file">SFX_BossHit</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFX_BossHit&quot;</param>
+                                                </action>
+                                                <action id="-11" name="Add to" sid="970275556162309" type="BossMechaPod">
+                                                    <param id="0" name="Instance variable">HP</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="913844314413428" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="792789338419595" type="BossMechaPod">
+                                                    <param id="0" name="Instance variable">Hit</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="765293827400003">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="824223782320918" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="585213241059210" type="BossMechaPod">
+                                                    <param id="0" name="Effect">&quot;Inverse&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="565766345086496" type="System">
+                                                    <param id="0" name="Seconds">0.04</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="810136528061571" type="BossMechaPod">
+                                                    <param id="0" name="Effect">&quot;Inverse&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">100</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="254746490877724" type="System">
+                                                    <param id="0" name="Seconds">0.04</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="758853537339288" type="BossMechaPod">
+                                                    <param id="0" name="Effect">&quot;Inverse&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="840834689441426" type="System">
+                                                    <param id="0" name="Seconds">0.04</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="605175982921167" type="BossMechaPod">
+                                                    <param id="0" name="Effect">&quot;Inverse&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">100</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="598079500238435" type="System">
+                                                    <param id="0" name="Seconds">0.04</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="853002269837881" type="BossMechaPod">
+                                                    <param id="0" name="Effect">&quot;Inverse&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="736395616648900" type="System">
+                                                    <param id="0" name="Seconds">0.04</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="339885027897079" type="BossMechaPod">
+                                                    <param id="0" name="Effect">&quot;Inverse&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">100</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="436576158857796" type="System">
+                                                    <param id="0" name="Seconds">0.04</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="479231232507548" type="BossMechaPod">
+                                                    <param id="0" name="Effect">&quot;Inverse&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="581493013112299">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="845074193334488" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.Y</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">BossMechaPod.Y+16</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="864386887234363" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="311084474265352" type="Sensor_Main">
+                                                    <param id="0" name="Vector Y">Values_Player.BumperPushSpeed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="939410557972381">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="297654923488120" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.Y</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">BossMechaPod.Y-16</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="255477986892269" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="689091245601233" type="Sensor_Main">
+                                                    <param id="0" name="Vector Y">-Values_Player.BumperPushSpeed*3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="842153371379991">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="743945839306234" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.X</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">BossMechaPod.X</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="941831149820527" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="296537989501627" type="Sensor_Main">
+                                                    <param id="0" name="Vector X">Values_Player.BumperPushSpeed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="880765604437278">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="659419543075593" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.X</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">BossMechaPod.X</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="914230489240270" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="629952225684022" type="Sensor_Main">
+                                                    <param id="0" name="Vector X">-Values_Player.BumperPushSpeed</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="346597974681446">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="867507486820525" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">Defeated</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="433502391134818">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="572825336567233" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="116337073775346" type="BossMechaPod">
+                                            <param id="0" name="Target is">0</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">BossPos_2.X</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="196271685927937" type="BossMechaPod">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">BossPos_2.Y</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="658365237907283" type="BossMechaPod">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="684444247243504" type="BossMechaPod">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="737333031653699" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="788920956315345" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="760196953344960">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="317712479865963" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="234965477662006" type="BossMechaPod">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="187293211226932" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="262771457536278" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="825785632570986">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="707578872167519" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="230924759001297" type="BossMechaPod">
+                                            <param id="0" name="Target is">0</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">BossPos_1.X</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="201082938511457" type="BossMechaPod">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">BossPos_1.Y</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="341967787759320" type="BossMechaPod">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="218426195753235" type="BossMechaPod">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="831329051688298" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="557515028041593" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Value">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="460633212993216">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="147580445695853" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="985689003064004" type="BossMechaPod">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="259386285467826" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="307482671822284" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="250005101575555">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="189222888375043" type="Sensor_Hitbox">
+                                    <param id="0" name="Object">BossArea</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="181668236323058" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">Defeated</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="667027252684188" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="180084951483665" type="Function">
+                                    <param id="0" name="Name">&quot;StartBoss&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="741789071810453" type="BossArea" />
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="747191958226337">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="128566135106876" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="785489408409827" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="241668827920452" type="Function">
+                                    <param id="0" name="Name">&quot;StartBoss&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="163888431236376">
-                    <conditions>
-                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="380540456623073" type="PoliceBot" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="662401419399583" type="PoliceBot">
-                            <param id="0" name="Instance variable">Moving</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="551346735718025">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="358743528766110" type="System">
-                            <param id="0" name="First value">PoliceBot.X+30</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">Sensor_Main.X</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="838096986144299" type="PoliceBot">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="851285480056736">
+                        <event-block sid="207830792972493">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="569324228321208" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="283287092514639" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="620068118875623" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="846181289569167" type="PoliceBot">
+                                <action id="-13" name="Set boolean" sid="410265662106014" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">Defeated</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="710390396482053">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="398430684725074" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">Defeated</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="512331789991077">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="988417753386075" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="817206029797425" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="979208371367674" type="BossMechaPod">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="949235190331056">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="773485416718741" type="System">
+                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="284708979120750" type="System">
+                                            <param id="0" name="Object to create">Explosion1</param>
+                                            <param id="1" name="Layer">BossMechaPod.LayerNumber</param>
+                                            <param id="2" name="X">choose(BossMechaPod.X-int(random(0,40)),BossMechaPod.X+int(random(0,40)))</param>
+                                            <param id="3" name="Y">choose(BossMechaPod.Y-int(random(0,40)),BossMechaPod.Y+int(random(0,40)))</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="797584723573370" type="Audio">
+                                            <param id="0" name="Audio file">SFX_BossHit</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_BossHit&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="847648404822695">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="180244008265713" type="BossMechaPod">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="994655736937240" type="BossMechaPod">
+                            <param id="0" name="Instance variable">Defeated</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="135255405389626">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="736642923769223" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="14" name="Stop" sid="310637611608986" type="BossMechaPod">
+                                    <param id="0" name="Stop Mode">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="447136803932824" type="BossMechaPod">
                                     <param id="0" name="State">1</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="589913061029778" type="System">
+                                    <param id="0" name="Seconds">2.0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="338799478310070" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">GoAway</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="579405891120353">
+                <event-block sid="641984462371137">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="554173222802601" type="System">
-                            <param id="0" name="First value">PoliceBot.X-30</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">Sensor_Main.X</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="740322802990513" type="BossMechaPod">
+                            <param id="0" name="Instance variable">GoAway</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="774724347956742" type="PoliceBot">
-                            <param id="0" name="Control">0</param>
+                        <action id="-17" name="Move forward" sid="206888981177687" type="BossMechaPod">
+                            <param id="0" name="Distance">4</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="342619326318849">
+                        <event-block sid="125602535266754">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="537320556374975" type="System" />
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="362226229504301" type="BossMechaPod" />
+                                <condition id="-4" name="Trigger once while true" sid="601268575659931" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="449211225875908" type="PoliceBot">
+                                <action id="-13" name="Set boolean" sid="459248180903113" type="BossMechaPod">
+                                    <param id="0" name="Instance variable">GoAway</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="706095781386165" type="BossMechaPod" />
+                                <action id="-16" name="Wait" sid="712074904740174" type="System">
+                                    <param id="0" name="Seconds">2.0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="656247136211478" type="Values_Camera">
+                                    <param id="0" name="Instance variable">BossActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="242544060199171" type="Values_Camera">
+                                    <param id="0" name="Instance variable">Speed</param>
+                                    <param id="1" name="Value">16</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="927548258717738" type="BossTrigger">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block any="1" sid="288013703975140">
-                    <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="963790448148346" type="PoliceBot">
-                            <param id="0" name="Side">0</param>
-                        </condition>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="245925782934304" type="PoliceBot">
-                            <param id="0" name="Side">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="417967926668931">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="453821282783984" type="System">
-                                    <param id="0" name="First value">PoliceBot.Platform.Speed</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">100</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="323084452274774" type="PoliceBot">
-                                    <param id="0" name="Vector X">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="388806655519320">
-                            <conditions>
-                                <condition id="-6" name="Every X seconds" sid="573027465529038" type="System">
-                                    <param id="0" name="Interval (seconds)">0.1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="408467154359474" type="PoliceBot">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>

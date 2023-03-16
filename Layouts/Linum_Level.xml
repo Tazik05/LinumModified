@@ -27704,6 +27704,7 @@
                         <groundOffset>0</groundOffset>
                         <PreviousGroundState>0</PreviousGroundState>
                         <mode>1</mode>
+                        <BossActive>false</BossActive>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -30281,21 +30282,22 @@
             <instance-variables>
                 <Lives>5</Lives>
                 <Score>0</Score>
+                <ScoreTemp>0</ScoreTemp>
                 <TunnelMode>1</TunnelMode>
                 <RingHighEffect>true</RingHighEffect>
                 <NewSpeedShoesAudio>true</NewSpeedShoesAudio>
                 <EnablePause>true</EnablePause>
                 <EnableOptimization>true</EnableOptimization>
                 <EnableEventOptimization>true</EnableEventOptimization>
-                <EnableDebuggingMessages>true</EnableDebuggingMessages>
-                <EnableConsole>true</EnableConsole>
-                <EnableDebug>true</EnableDebug>
+                <EnableDebuggingMessages>false</EnableDebuggingMessages>
+                <EnableConsole>false</EnableConsole>
+                <EnableDebug>false</EnableDebug>
                 <LimitTheSoundOfRings>true</LimitTheSoundOfRings>
                 <SmartWatchSupport>false</SmartWatchSupport>
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
                 <IgnoreAngleInLoops>true</IgnoreAngleInLoops>
-                <HUD>Linum</HUD>
+                <HUD>SSW</HUD>
                 <Platform>Desktop</Platform>
                 <ScreenSize>2x</ScreenSize>
                 <FpsCounter>0</FpsCounter>
@@ -30304,6 +30306,7 @@
                 <LayoutSaver>Linum_Level</LayoutSaver>
                 <AllowPause>true</AllowPause>
                 <UsedSaveSlot>-1</UsedSaveSlot>
+                <CheckPoint>0</CheckPoint>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">

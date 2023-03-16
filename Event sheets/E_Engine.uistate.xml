@@ -4,14 +4,12 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <show-addaction-links>1</show-addaction-links>
-    <scroll-pos>50</scroll-pos>
-    <conditions-column>232</conditions-column>
-    <actions-namecolumn>18</actions-namecolumn>
+    <scroll-pos>1650</scroll-pos>
+    <conditions-column>210</conditions-column>
+    <actions-namecolumn>21</actions-namecolumn>
     <condition-namecolumns>
         <nest>20</nest>
-        <nest>16</nest>
-        <nest>16</nest>
-        <nest>15</nest>
+        <nest>18</nest>
     </condition-namecolumns>
     <events>
         <event collapsed="1" sid="158973237713220" />
@@ -21,10 +19,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="731629456035980" />
         <event collapsed="1" sid="600535542948398" />
         <event collapsed="1" sid="497581473529751" />
-        <event collapsed="1" sid="587376476922956" />
+        <event collapsed="1" sid="403129830859741" />
+        <event collapsed="1" sid="109260426941530" />
         <event collapsed="1" sid="686974246408816" />
         <event collapsed="1" sid="236790580165037" />
         <event collapsed="1" sid="125042174657503" />
+        <event collapsed="1" sid="322296367967619" />
+        <event collapsed="1" sid="867964237495668" />
+        <event collapsed="1" sid="912509754699637" />
         <event collapsed="1" sid="168801600422491" />
         <event collapsed="1" sid="684051315655910" />
         <event collapsed="1" sid="242315911668651" />
@@ -84,7 +86,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="294203685108208" />
         <event collapsed="1" sid="517255350006138" />
         <event collapsed="1" sid="563558320025825" />
-        <event collapsed="1" sid="551282258609036" />
         <event collapsed="1" sid="894633385725672" />
         <event collapsed="1" sid="302737537612250" />
         <event collapsed="1" sid="988042014534833" />
@@ -92,6 +93,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="334127463834831" />
         <event collapsed="1" sid="756724646140271" />
         <event collapsed="1" sid="969218384526149" />
+        <event collapsed="1" sid="343771654067753" />
+        <event collapsed="1" sid="158526628154344" />
+        <event collapsed="1" sid="315570296691604" />
+        <event collapsed="1" sid="796165464757221" />
+        <event collapsed="1" sid="672223803691223" />
         <event collapsed="1" sid="293794414786801" />
         <event collapsed="1" sid="688570509942104" />
         <event collapsed="1" sid="406526867781543" />
@@ -99,8 +105,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="751578934225592" />
         <event collapsed="1" sid="665600267356722" />
         <event collapsed="1" sid="804946171681154" />
-        <event collapsed="1" sid="558186621176637" />
         <event collapsed="1" sid="909989700271954" />
+        <event collapsed="1" sid="994771570927211" />
         <event collapsed="1" sid="154007207566537" />
         <event collapsed="1" sid="138447015236319" />
         <event collapsed="1" sid="651136752577685" />
@@ -124,7 +130,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="907149660075168" />
         <event collapsed="1" sid="808429121758072" />
         <event collapsed="1" sid="740853329907960" />
-        <event collapsed="1" sid="191227295797771" />
         <event collapsed="1" sid="507738426548456" />
         <event collapsed="1" sid="568751775748662" />
         <event collapsed="1" sid="831373365324959" />
@@ -138,8 +143,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="164425958096997" />
         <event collapsed="1" sid="515968714812672" />
         <event collapsed="1" sid="627700543249761" />
-        <event collapsed="1" sid="850242972233295" />
-        <event collapsed="1" sid="234130582573207" />
+        <event collapsed="1" sid="191043617653289" />
+        <event collapsed="1" sid="827209120653799" />
         <event collapsed="1" sid="456057511694521" />
         <event collapsed="1" sid="461533518624237" />
         <event collapsed="1" sid="511992180837898" />

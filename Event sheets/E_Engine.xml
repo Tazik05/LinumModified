@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_Engine</name>
     <events>
+        <comment>&#x0D;&#x0A;&#x09;╔=============================================╗&#x0D;&#x0A;&#x09;║Crutches in the code are our temporary rescuers,&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║but the ability to replace them with more effective solutions&#x09;&#x09;║&#x0D;&#x0A;&#x09;║is a sign of true professionalism.&#x09;&#x09;&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║  - ChatGPT                                                              &#x09;             ║&#x0D;&#x0A;&#x09;╚=============================================╝&#x0D;&#x0A;</comment>
         <event-block sid="967682403201665">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="599573048864463" type="System" />
@@ -28,7 +29,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.3" sid="505369909762492" title="Linum Framework: Legacy">
+        <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.4" sid="505369909762492" title="Linum Framework: Legacy">
             <sub-events>
                 <event-group description="a little variety in these boring engines... In any case, you can disable this group" sid="158973237713220" title="Fun mods">
                     <sub-events>
@@ -497,70 +498,6 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
-                                <event-block disabled="1" sid="643029336640587">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="104100981421391" type="System">
-                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">270</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="850349906815261" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="486436161467899" type="Values_Player">
-                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
-                                            <param id="1" name="Value">-5</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="857861222148056">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Compare two values" sid="603528611728594" type="System">
-                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">270</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="448970773323666" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="932289604313304" type="Values_Player">
-                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="662591438357325">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="944551312722562" type="System">
-                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">90</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="289207146694020" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="157935506507883" type="Values_Player">
-                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
-                                            <param id="1" name="Value">5</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="565827836329750">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Compare two values" sid="158138849703928" type="System">
-                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">90</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="984356767537311" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="658087119170763" type="Values_Player">
-                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                                 <event-block sid="894825527374757">
                                     <conditions>
@@ -7883,6 +7820,427 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
+                        <event-group description="from SSW" sid="343771654067753" title="Police Bot">
+                            <sub-events>
+                                <event-block sid="978521139565790">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="538079994689553" type="PoliceFragment" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="175381833106563" type="System">
+                                            <param id="0" name="Seconds">5.0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="433431096038580" type="PoliceFragment" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="537310988107132">
+                                    <conditions>
+                                        <condition id="5" name="On any finished" sid="460650392442431" type="PoliceFlame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="698649648871597" type="PoliceFlame" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="839367529152679">
+                                    <conditions>
+                                        <condition id="-18" name="On created" sid="252323091697001" type="PoliceBot" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="515021957785946" type="PoliceBot">
+                                            <param id="0" name="Max Speed">PoliceBot.MaxSpeed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="439992919727759">
+                                    <conditions>
+                                        <condition behavior="Timer" id="0" name="On timer" sid="648264556803194" type="PoliceBot">
+                                            <param id="0" name="Tag">&quot;Fire&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="619836514955536" type="PoliceBot">
+                                            <param id="0" name="Animation">&quot;Open&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="444294343165309" type="PoliceBot">
+                                            <param id="0" name="Max Speed">PoliceBot.MinSpeed</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="791535349116111" type="System">
+                                            <param id="0" name="Seconds">1.5</param>
+                                        </action>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="133009122080113" type="PoliceBot">
+                                            <param id="0" name="Max Speed">PoliceBot.MaxSpeed</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="971847301592877" type="PoliceBot">
+                                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="148225581119498">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="426607778899937" type="PoliceBot">
+                                            <param id="0" name="Animation">&quot;Close&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="684602316028759" type="PoliceBot">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="504725459785316">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="799995677472421" type="PoliceBot" />
+                                        <condition id="-4" name="Trigger once while true" sid="911837216400053" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="838670400232530" type="PoliceBot">
+                                            <param id="0" name="Instance variable">FollowPlayer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="131390249360908" type="PoliceBot">
+                                            <param id="0" name="Duration">3.0</param>
+                                            <param id="1" name="Type">1</param>
+                                            <param id="2" name="Tag">&quot;Fire&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="357758005441833">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="326995296041907" type="System">
+                                            <param id="0" name="Object">PoliceBot</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="158526628154344">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="315873158020028" type="PoliceBot">
+                                                    <param id="0" name="Instance variable">FollowPlayer</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="345220109584017">
+                                                    <conditions>
+                                                        <condition behavior="Platform" id="1" name="Compare speed" sid="625047208321740" type="PoliceBot">
+                                                            <param id="0" name="Comparison">2</param>
+                                                            <param id="1" name="Speed">10</param>
+                                                        </condition>
+                                                        <condition id="-3" inverted="1" name="Is on-screen" sid="511413678406425" type="PoliceBot" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="335567016966936">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="917047816876166" type="System">
+                                                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Platform" id="7" name="Simulate control" sid="172898701040000" type="PoliceBot">
+                                                                    <param id="0" name="Control">2</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="840618271352826">
+                                                    <conditions>
+                                                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="312821198125079" type="PoliceBot" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="578001387401270" type="PoliceBot">
+                                                            <param id="0" name="Instance variable">Moving</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="211122692626360">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="427672669195585" type="System">
+                                                            <param id="0" name="First value">PoliceBot.X+5</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">Sensor_Main.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="7" name="Simulate control" sid="674224377689412" type="PoliceBot">
+                                                            <param id="0" name="Control">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="166459468516306">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="175543761699217" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="433622566499209" type="PoliceBot">
+                                                                    <param id="0" name="State">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="717807236458923">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="104590712359342" type="System">
+                                                            <param id="0" name="First value">PoliceBot.X-5</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Second value">Sensor_Main.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="7" name="Simulate control" sid="600043525564886" type="PoliceBot">
+                                                            <param id="0" name="Control">0</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="524848306025308">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="418301417072734" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="898524815992455" type="PoliceBot">
+                                                                    <param id="0" name="State">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block any="1" sid="315570296691604">
+                                                    <conditions>
+                                                        <condition behavior="Platform" id="10" name="Is by wall" sid="536483362619067" type="PoliceBot">
+                                                            <param id="0" name="Side">0</param>
+                                                        </condition>
+                                                        <condition behavior="Platform" id="10" name="Is by wall" sid="649010197757433" type="PoliceBot">
+                                                            <param id="0" name="Side">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="258981358289666">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="559595287975390" type="System">
+                                                                    <param id="0" name="First value">PoliceBot.Platform.Speed</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Second value">100</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Platform" id="8" name="Set vector X" sid="771363376547986" type="PoliceBot">
+                                                                    <param id="0" name="Vector X">100</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="372020873453493">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="813714769695597" type="System">
+                                                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Platform" id="7" name="Simulate control" sid="426013784342987" type="PoliceBot">
+                                                                    <param id="0" name="Control">2</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="794528528682089">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="143419719893722" type="Sensor_Hitbox">
+                                                    <param id="0" name="Object">PoliceFlame</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="710433952672714" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Hurt</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="718259986876722">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="655745368368691" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                </condition>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="431361059146863" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="353915036793595" type="Sensor_Hitbox">
+                                                    <param id="0" name="Object">PoliceBot</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="830936379737604" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Hurt</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="796165464757221">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="882416700716760" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="758187543896663" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="782597586091929">
+                                                    <conditions>
+                                                        <condition id="1" name="Is overlapping another object" sid="557824015095070" type="Sensor_Hitbox">
+                                                            <param id="0" name="Object">PoliceBot</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="414243851235984" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="323907332092789">
+                                                            <conditions>
+                                                                <condition id="7" inverted="1" name="Is mirrored" sid="181872022182929" type="PlayerSprite" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="319002368207189" type="System">
+                                                                    <param id="0" name="Object to create">PoliceFragment</param>
+                                                                    <param id="1" name="Layer">PoliceBot.LayerNumber</param>
+                                                                    <param id="2" name="X">PoliceBot.X</param>
+                                                                    <param id="3" name="Y">PoliceBot.Y</param>
+                                                                </action>
+                                                                <action behavior="Bullet" id="0" name="Set speed" sid="272483104449677" type="PoliceFragment">
+                                                                    <param id="0" name="Speed">abs(Sensor_Main.SonicPhysics.VectorX)/2</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="837804922041216">
+                                                            <conditions>
+                                                                <condition id="7" name="Is mirrored" sid="481153198979957" type="PlayerSprite" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="328434971981090" type="System">
+                                                                    <param id="0" name="Object to create">PoliceFragment</param>
+                                                                    <param id="1" name="Layer">PoliceBot.LayerNumber</param>
+                                                                    <param id="2" name="X">PoliceBot.X</param>
+                                                                    <param id="3" name="Y">PoliceBot.Y</param>
+                                                                </action>
+                                                                <action behavior="Bullet" id="0" name="Set speed" sid="564657828639806" type="PoliceFragment">
+                                                                    <param id="0" name="Speed">-(Sensor_Main.SonicPhysics.Speed/2)</param>
+                                                                </action>
+                                                                <action behavior="Rotate" id="0" name="Set speed" sid="265776186590321" type="PoliceFragment">
+                                                                    <param id="0" name="Speed">-800</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="433079248960485">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="0" name="Play" sid="912798397927417" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_DestroyMedium</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_DestroyMedium&quot;</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="851146952092356" type="System">
+                                                                    <param id="0" name="Object to create">Explosion1</param>
+                                                                    <param id="1" name="Layer">PoliceBot.LayerNumber</param>
+                                                                    <param id="2" name="X">PoliceBot.X</param>
+                                                                    <param id="3" name="Y">PoliceBot.Y</param>
+                                                                </action>
+                                                                <action id="-9" name="Destroy" sid="869497405707133" type="PoliceBot" />
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="698190893084601">
+                                                                    <conditions>
+                                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="874493364669366" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">State</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="308342378382821" type="Sensor_Main">
+                                                                            <param id="0" name="Vector Y">-200</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="697716093178272">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="315022262464792" type="PoliceBot">
+                                                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="341750719680834" type="PoliceBot">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="335011309102977">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="229112345960009" type="System">
+                                                            <param id="0" name="Interval (seconds)">0.08</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="681001435810893" type="System">
+                                                            <param id="0" name="Object to create">PoliceFlame</param>
+                                                            <param id="1" name="Layer">PoliceBot.LayerNumber</param>
+                                                            <param id="2" name="X">PoliceBot.X-12</param>
+                                                            <param id="3" name="Y">PoliceBot.Y+5</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="659282915805455" type="PoliceFlame">
+                                                            <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="796120173395292" type="System">
+                                                            <param id="0" name="Object to create">PoliceFlame</param>
+                                                            <param id="1" name="Layer">PoliceBot.LayerNumber</param>
+                                                            <param id="2" name="X">PoliceBot.X+8</param>
+                                                            <param id="3" name="Y">PoliceBot.Y+5</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="963254275804342">
+                                                            <conditions>
+                                                                <condition id="-3" name="Is on-screen" sid="230113070235489" type="PoliceBot" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Play" sid="199330928283264" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_ShieldFireDash</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_ShieldFireDash&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-group description="" sid="672223803691223" title="MotoBug">
                             <sub-events>
                                 <event-block sid="139878771813056">
@@ -9472,17 +9830,11 @@
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFX_Bumper&quot;</param>
                                                         </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="523003709727101" type="Bumper">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
                                                         <action id="-16" name="Wait" sid="220358383692694" type="System">
                                                             <param id="0" name="Seconds">0.2</param>
                                                         </action>
                                                         <action id="5" name="Set frame" sid="239138980468253" type="Bumper">
                                                             <param id="0" name="Frame number">0</param>
-                                                        </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="749728215975416" type="Bumper">
-                                                            <param id="0" name="State">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -9512,17 +9864,11 @@
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFX_Bumper&quot;</param>
                                                         </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="533148369670046" type="Bumper">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
                                                         <action id="-16" name="Wait" sid="229741879918782" type="System">
                                                             <param id="0" name="Seconds">0.2</param>
                                                         </action>
                                                         <action id="5" name="Set frame" sid="946892791665466" type="Bumper">
                                                             <param id="0" name="Frame number">0</param>
-                                                        </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="636951969215315" type="Bumper">
-                                                            <param id="0" name="State">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -9552,17 +9898,11 @@
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFX_Bumper&quot;</param>
                                                         </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="571332423337060" type="Bumper">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
                                                         <action id="-16" name="Wait" sid="979234232038752" type="System">
                                                             <param id="0" name="Seconds">0.2</param>
                                                         </action>
                                                         <action id="5" name="Set frame" sid="625648150694254" type="Bumper">
                                                             <param id="0" name="Frame number">0</param>
-                                                        </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="411504377173860" type="Bumper">
-                                                            <param id="0" name="State">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -9592,17 +9932,11 @@
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;SFX_Bumper&quot;</param>
                                                         </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="175530471642312" type="Bumper">
-                                                            <param id="0" name="State">1</param>
-                                                        </action>
                                                         <action id="-16" name="Wait" sid="928009829572657" type="System">
                                                             <param id="0" name="Seconds">0.2</param>
                                                         </action>
                                                         <action id="5" name="Set frame" sid="904828548386096" type="Bumper">
                                                             <param id="0" name="Frame number">0</param>
-                                                        </action>
-                                                        <action behavior="Solid" disabled="1" id="0" name="Set enabled" sid="270416500956781" type="Bumper">
-                                                            <param id="0" name="State">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -11940,6 +12274,9 @@
                                                         <condition id="-8" name="Is boolean instance variable set" sid="450856534185186" type="Values_SignPost">
                                                             <param id="0" name="Instance variable">CanPass</param>
                                                         </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="736744170011805" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">BossActive</param>
+                                                        </condition>
                                                     </conditions>
                                                     <actions>
                                                         <action id="-10" name="Set value" sid="726848549780515" type="Values_Camera">
@@ -11951,6 +12288,39 @@
                                                             <param id="1" name="Value">Sensor_Main.Y</param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="426580457144028">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="854912735983760" type="Values_SignPost">
+                                                            <param id="0" name="Instance variable">CanPass</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="262154170232229" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">BossActive</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="336841629995484" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">targetX</param>
+                                                            <param id="1" name="Value">BossSpawn.X</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="468328250800793" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">targetY</param>
+                                                            <param id="1" name="Value">BossSpawn.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="230358960586192">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="114144069043081" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="280592106855105" type="Values_Camera">
+                                                                    <param id="0" name="Instance variable">pY</param>
+                                                                    <param id="1" name="Value">BossSpawn.Y</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -12418,7 +12788,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="143646131056743" title="pts">
+                        <event-group description="" sid="143646131056743" title="Points">
                             <sub-events>
                                 <event-block sid="547524096212515">
                                     <conditions>
@@ -14823,7 +15193,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="941072514271414" type="TestCounter">
-                    <param id="0" name="Text">Values_Camera.Speed</param>
+                    <param id="0" name="Text">abs(Sensor_Main.SonicPhysics.VectorX)/2</param>
                 </action>
             </actions>
         </event-block>
