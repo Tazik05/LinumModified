@@ -10,12 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Linum_mainMenu</layout>
-        <layout order="3">Linum_Level</layout>
-        <layout order="4">Linum_logo</layout>
-        <event-sheet order="1">E_SaveSystem</event-sheet>
-        <event-sheet order="2">E_Level</event-sheet>
-        <event-sheet order="5">E_Engine</event-sheet>
+        <layout order="0">Linum_SimpleWorldsLevel</layout>
+        <event-sheet order="1">E_Level</event-sheet>
+        <event-sheet active="1" order="2">E_Engine</event-sheet>
+        <event-sheet order="3">E_LevelSSW</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,9 +21,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="1" name="Collisions_Slopes" />
-        <family expanded="0" name="BalancingTriggers" />
+        <family expanded="1" name="BalancingTriggers" />
         <family expanded="0" name="SolidObjects" />
         <family expanded="0" name="Collisions_Layer0" />
         <family expanded="0" name="Collisions_Layer1" />
@@ -64,15 +62,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/[ System ]/" />
         <folder expanded="1" path="layout-folder/[ Engine ]/" />
         <folder expanded="0" path="layout-folder/[ Tests ]/" />
-        <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/Engine/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
-        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Font/MotelKing/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="0" path="file-folder/Font/" />
-        <folder expanded="0" path="file-folder/TempFiles/" />
+        <folder expanded="1" path="file-folder/TempFiles/" />
         <folder expanded="1" path="animation-folder/Values_Continue/" />
         <folder expanded="1" path="animation-folder/Values_CMD/" />
         <folder expanded="1" path="animation-folder/Values_PauseMenu/" />
@@ -303,5 +301,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite10/" />
         <folder expanded="1" path="animation-folder/DataSelect_Eggman/" />
         <folder expanded="1" path="animation-folder/NewText_DataSelect_ref/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/Sprite12/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/Sprite15/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/Level_Layer0_05/" />
+        <folder expanded="1" path="animation-folder/Level_Layer1_08/" />
+        <folder expanded="1" path="animation-folder/PoliceBot/" />
+        <folder expanded="1" path="animation-folder/PoliceFragment/" />
+        <folder expanded="1" path="animation-folder/PoliceFlame/" />
     </folders-expanded>
 </c2uistate>

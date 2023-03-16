@@ -2328,6 +2328,10 @@
                     </conditions>
                     <actions>
                         <action id="33" name="Stop all" sid="327470267482181" type="Audio" />
+                        <action id="0" name="Call function" sid="855231678912429" type="Function">
+                            <param id="0" name="Name">&quot;LoadSave&quot;</param>
+                            <param id="1" name="Parameter {n}">Values_Menus.Selected_DataSelect-1</param>
+                        </action>
                         <action id="-26" name="Restart layout" sid="896040471032556" type="System" />
                     </actions>
                 </event-block>

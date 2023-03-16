@@ -26157,12 +26157,14 @@
                     <instance-variables>
                         <SpriteBaseOffset>8.3</SpriteBaseOffset>
                         <SpriteOffset>8.3</SpriteOffset>
+                        <SpriteOffsetXFix>0</SpriteOffsetXFix>
+                        <SpriteOffsetYFix>0</SpriteOffsetYFix>
                         <CanChangeDirection>false</CanChangeDirection>
                         <CanControl>false</CanControl>
                         <CanJump>false</CanJump>
                         <State>Idle</State>
-                        <Character>2</Character>
-                        <Rings>21</Rings>
+                        <Character>1</Character>
+                        <Rings>0</Rings>
                         <SpeedShoes>false</SpeedShoes>
                         <SpinDashProgress>0</SpinDashProgress>
                         <SonicPhysicsEnabled>true</SonicPhysicsEnabled>
@@ -30292,6 +30294,7 @@
                 <SmartWatchSupport>false</SmartWatchSupport>
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
+                <IgnoreAngleInLoops>true</IgnoreAngleInLoops>
                 <HUD>Linum</HUD>
                 <Platform>Desktop</Platform>
                 <ScreenSize>2x</ScreenSize>
@@ -30300,7 +30303,7 @@
                 <PauseStyle>SSW</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
                 <AllowPause>true</AllowPause>
-                <UsedSaveSlot>5</UsedSaveSlot>
+                <UsedSaveSlot>-1</UsedSaveSlot>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">

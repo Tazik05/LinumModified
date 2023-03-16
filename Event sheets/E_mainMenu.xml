@@ -41,23 +41,6 @@
                     <param id="2" name="Duration">Infinity</param>
                 </action>
             </actions>
-            <sub-events>
-                <event-block sid="234543162378778">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="989400803098704" type="Global_Settings">
-                            <param id="0" name="Instance variable">UsedSaveSlot</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">-1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="695105873230222" type="Sensor_Main">
-                            <param id="0" name="Object">PlayerSpawn</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <include>E_SaveSystem</include>
         <include>E_global</include>

@@ -29,7 +29,7 @@
                 <condition id="-2" name="On start of layout" sid="754055169826174" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="667258813755448" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="667258813755448" type="Function">
                     <param id="0" name="Name">&quot;AndroidKeysShow&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
@@ -37,12 +37,18 @@
                     <param id="0" name="Name">&quot;NewSave&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="-16" name="Wait" sid="766275708451537" type="System">
+                <action disabled="1" id="-16" name="Wait" sid="766275708451537" type="System">
                     <param id="0" name="Seconds">2.0</param>
                 </action>
-                <action id="0" name="Call function" sid="439756507831224" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="439756507831224" type="Function">
                     <param id="0" name="Name">&quot;SaveGame&quot;</param>
                     <param id="1" name="Parameter {n}">Sensor_Main.X{###}Sensor_Main.Y</param>
+                </action>
+                <action id="0" name="Play" sid="201775280423510" type="Audio">
+                    <param id="0" name="Audio file">MUS_level</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
                 </action>
             </actions>
         </event-block>

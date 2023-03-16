@@ -16,107 +16,21 @@
                     <param id="0" name="Name">&quot;Transition&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                 </action>
-                <action id="0" name="Play" sid="897521069790325" type="Audio">
-                    <param id="0" name="Audio file">MUS_level</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
-                </action>
                 <action id="-15" name="Set visible" sid="655031519711380" type="InDebug">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="952462863528380" type="Android_FPS">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-4" name="Set position to another object" sid="311964761269417" type="Sensor_Main">
+                    <param id="0" name="Object">PlayerSpawn</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block sid="462028231426742">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="918512954540510" type="System">
-                            <param id="0" name="First value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">&quot;&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="131115319155637" type="Values_Player">
-                            <param id="0" name="Instance variable">Character</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="707459351939843" type="Values_Player">
-                            <param id="0" name="Instance variable">Rings</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Rings&quot;)</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="321516475581104" type="Global_Settings">
-                            <param id="0" name="Instance variable">Score</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Score&quot;)</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="717018307709107" type="Global_Settings">
-                            <param id="0" name="Instance variable">Lives</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Lives&quot;)</param>
-                        </action>
-                        <action disabled="1" id="0" name="Alert" sid="980415993911621" type="Browser">
-                            <param id="0" name="Message">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Set position" sid="947381408710300" type="Sensor_Main">
-                            <param id="0" name="X">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
-                            <param id="1" name="Y">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerY&quot;)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="564207675989628" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="439692455230593" type="Save_Helper">
-                            <param id="0" name="Instance variable">LoadSave</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="824290646958304">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Compare two values" sid="160381457972274" type="System">
-                            <param id="0" name="First value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Preview&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">&quot;&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="439763764131767" type="Values_Player">
-                            <param id="0" name="Instance variable">Character</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Character&quot;)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="228225673988095" type="Values_Player">
-                            <param id="0" name="Instance variable">Rings</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Rings&quot;)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="628364260854029" type="Global_Settings">
-                            <param id="0" name="Instance variable">Score</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Score&quot;)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="255043057601660" type="Global_Settings">
-                            <param id="0" name="Instance variable">Lives</param>
-                            <param id="1" name="Value">SaveMaster.Value(0,&quot;Save&quot;,&quot;Lives&quot;)</param>
-                        </action>
-                        <action disabled="1" id="0" name="Alert" sid="371016898632100" type="Browser">
-                            <param id="0" name="Message">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="775146810037378" type="Sensor_Main">
-                            <param id="0" name="X">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerX&quot;)</param>
-                            <param id="1" name="Y">SaveMaster.Value(0,&quot;Save&quot;,&quot;PlayerY&quot;)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="911797859103046" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="230897272978296" type="Save_Helper">
-                            <param id="0" name="Instance variable">LoadSave</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.3" sid="505369909762492" title="Linum Framework: Legacy">
             <sub-events>
-                <event-group description="" sid="158973237713220" title="*Fun mods*">
+                <event-group description="a little variety in these boring engines... In any case, you can disable this group" sid="158973237713220" title="Fun mods">
                     <sub-events>
                         <event-group description="by...... danik, yea" sid="452973950278072" title="Weapon">
                             <sub-events>
@@ -234,7 +148,7 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="By danik" sid="725772900262883" title="Car(WTFFFFFFFFFFFFFFFF)">
+                        <event-group description="By danik" sid="725772900262883" title="Car(0_0)">
                             <sub-events>
                                 <event-block sid="511251651408778">
                                     <conditions>
@@ -520,12 +434,160 @@
                 </event-group>
                 <event-group description="" sid="403129830859741" title="Sensors">
                     <sub-events>
+                        <event-group description="" sid="109260426941530" title="Offset fix">
+                            <sub-events>
+                                <event-block sid="587376476922956">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="550109523636388" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="409206673901641">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="606169798872443" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">120</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="277754467886386" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">230</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="443810227442691" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SpriteOffsetYFix</param>
+                                                    <param id="1" name="Value">lerp(Self.SpriteOffsetYFix, 12, 0.1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="932819001296140">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="310522184140671" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">120</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="614904190646886" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SpriteOffsetYFix</param>
+                                                    <param id="1" name="Value">lerp(Self.SpriteOffsetYFix, 0, 0.1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="695162944371534">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="514286643255859" type="System">
+                                                    <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">230</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="659445034699203" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SpriteOffsetYFix</param>
+                                                    <param id="1" name="Value">lerp(Self.SpriteOffsetYFix, 0, 0.1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block disabled="1" sid="643029336640587">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="104100981421391" type="System">
+                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">270</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="850349906815261" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="486436161467899" type="Values_Player">
+                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
+                                            <param id="1" name="Value">-5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="857861222148056">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="603528611728594" type="System">
+                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">270</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="448970773323666" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="932289604313304" type="Values_Player">
+                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="662591438357325">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="944551312722562" type="System">
+                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">90</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="289207146694020" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="157935506507883" type="Values_Player">
+                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="565827836329750">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="158138849703928" type="System">
+                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">90</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="984356767537311" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="658087119170763" type="Values_Player">
+                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="894825527374757">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="970297211535263" type="System">
+                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.SurfaceAngle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="246236208821315" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="704645358757257" type="Values_Player">
+                                            <param id="0" name="Instance variable">SpriteOffsetXFix</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="637885643369854" type="Values_Player">
+                                            <param id="0" name="Instance variable">SpriteOffsetYFix</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <comment>Set positions of all sensors</comment>
                         <event-block sid="805094845438264">
                             <conditions />
                             <actions>
-                                <action id="0" name="Add comment (normal)" sid="725554507253277" type="Comment">
-                                    <param id="0" name="Comment">&quot;Set positions of all sensors&quot;</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="558251826097872" type="Sensor_Environment">
                                     <param id="0" name="Object">Sensor_Main</param>
                                     <param id="1" name="Image point (optional)">0</param>
@@ -559,18 +621,15 @@
                                     <param id="1" name="Y">Sensor_Main.Y+cos(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset</param>
                                 </action>
                                 <action id="-8" name="Set angle" sid="275609041561224" type="Sensor_Hitbox">
-                                    <param id="0" name="Angle">PlayerSprite.Angle</param>
-                                </action>
-                                <action id="0" name="Add comment (normal)" sid="370623557218459" type="Comment">
-                                    <param id="0" name="Comment">&quot;Set position of player&apos;s sprite&quot;</param>
+                                    <param id="0" name="Angle">Sensor_Main.SonicPhysics.SurfaceAngle</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="422942771199000" type="Values_Player">
                                     <param id="0" name="Instance variable">SpriteOffset</param>
                                     <param id="1" name="Value">((sin(Sensor_Main.SonicPhysics.SurfaceAngle*4-90)+1)/2)*Values_Player.SpriteBaseOffset</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="551820986180018" type="PlayerSprite">
-                                    <param id="0" name="X">Sensor_Main.X-sin(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset</param>
-                                    <param id="1" name="Y">Sensor_Main.Y+cos(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset</param>
+                                    <param id="0" name="X">(Sensor_Main.X-sin(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset)-Values_Player.SpriteOffsetXFix</param>
+                                    <param id="1" name="Y">(Sensor_Main.Y+cos(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset)-Values_Player.SpriteOffsetYFix</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -769,29 +828,73 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block any="1" sid="607270317045164">
+                                        <event-block sid="912509754699637">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="643451351806761" type="Values_Player">
-                                                    <param id="0" name="Instance variable">State</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
-                                                </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="799688370232973" type="Values_Player">
-                                                    <param id="0" name="Instance variable">State</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Skidding&quot;</param>
-                                                </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="284849061696331" type="Values_Player">
-                                                    <param id="0" name="Instance variable">State</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="681387624240718" type="Global_Settings">
+                                                    <param id="0" name="Instance variable">IgnoreAngleInLoops</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-8" name="Set angle" sid="817559574396794" type="PlayerSprite">
-                                                    <param id="0" name="Angle">0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="607270317045164">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="643451351806761" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="799688370232973" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Skidding&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="284849061696331" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-8" name="Set angle" sid="817559574396794" type="PlayerSprite">
+                                                            <param id="0" name="Angle">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="648794743449353">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="564555805542765" type="Global_Settings">
+                                                    <param id="0" name="Instance variable">IgnoreAngleInLoops</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="561467315772062">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="606436505280880" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="191783640873885" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Skidding&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="907790823324644" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-8" name="Set angle" sid="959586402473994" type="PlayerSprite">
+                                                            <param id="0" name="Angle">anglelerp(self.Angle,Sensor_Main.SonicPhysics.SurfaceAngle,0.3)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="634874973848506">
                                             <conditions>
@@ -11747,22 +11850,109 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="578470979111487">
+                                        <event-block sid="191043617653289">
                                             <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="450856534185186" type="Values_SignPost">
-                                                    <param id="0" name="Instance variable">CanPass</param>
+                                                <condition id="-7" name="Compare instance variable" sid="686336410367206" type="camera">
+                                                    <param id="0" name="Instance variable">CameraMode</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;LookUp&quot;</param>
                                                 </condition>
                                             </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="421791594624904">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="518005611574578" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="180012507857004" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">Speed</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="773781860545501" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">targetY</param>
+                                                            <param id="1" name="Value">Sensor_Main.Y-80</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="827209120653799">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="231502665275375" type="camera">
+                                                    <param id="0" name="Instance variable">CameraMode</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;LookDown&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="106995377287601">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="809832571322391" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="534523668512270" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">Speed</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="983585691275280" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">targetY</param>
+                                                            <param id="1" name="Value">Sensor_Main.Y+100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="685693043205940">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="503364914107829" type="camera">
+                                                    <param id="0" name="Instance variable">CameraMode</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;ReturnToNormal&quot;</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="130460624003285" type="System" />
+                                            </conditions>
                                             <actions>
-                                                <action id="-10" name="Set value" sid="726848549780515" type="Values_Camera">
-                                                    <param id="0" name="Instance variable">targetX</param>
-                                                    <param id="1" name="Value">Sensor_Main.X</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="324826916971542" type="Values_Camera">
-                                                    <param id="0" name="Instance variable">targetY</param>
-                                                    <param id="1" name="Value">Sensor_Main.Y</param>
+                                                <action id="-10" name="Set value" sid="528150667018868" type="Values_Camera">
+                                                    <param id="0" name="Instance variable">Speed</param>
+                                                    <param id="1" name="Value">16</param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                        <event-block sid="234130582573207">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="945562268361290" type="camera">
+                                                    <param id="0" name="Instance variable">CameraMode</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;LookUp&quot;</param>
+                                                </condition>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="257757300161696" type="camera">
+                                                    <param id="0" name="Instance variable">CameraMode</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;LookDown&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="578470979111487">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="450856534185186" type="Values_SignPost">
+                                                            <param id="0" name="Instance variable">CanPass</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="726848549780515" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">targetX</param>
+                                                            <param id="1" name="Value">Sensor_Main.X</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="324826916971542" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">targetY</param>
+                                                            <param id="1" name="Value">Sensor_Main.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="456057511694521">
                                             <conditions>
@@ -11807,7 +11997,7 @@
                                                     <param id="0" name="State">0</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="128028642093908" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
+                                                    <param id="0" name="Seconds">0</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="677496122506577" type="Values_Camera">
                                                     <param id="0" name="Instance variable">Speed</param>
@@ -11825,49 +12015,62 @@
                                                     <param id="1" name="Value">self.pY - self.targetY</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="420581837294436">
-                                            <conditions>
-                                                <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="649244077478796" type="Sensor_Main" />
-                                                <condition id="-7" name="Compare instance variable" sid="701278378062116" type="Values_Camera">
-                                                    <param id="0" name="Instance variable">groundOffset</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">0.0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="602802246186777" type="Values_Camera">
-                                                    <param id="0" name="Instance variable">groundOffset</param>
-                                                    <param id="1" name="Value">min(self.groundOffset + 6.0, 0.0)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="688783833034843">
-                                            <conditions>
-                                                <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="297055107019587" type="Sensor_Main" />
-                                                <condition id="-7" name="Compare instance variable" sid="283381044234277" type="Values_Camera">
-                                                    <param id="0" name="Instance variable">groundOffset</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">0.0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="938380143284764" type="Values_Camera">
-                                                    <param id="0" name="Instance variable">groundOffset</param>
-                                                    <param id="1" name="Value">max(self.groundOffset - 6.0, 0.0)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="950431092562370">
-                                            <conditions>
-                                                <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="103421160375541" type="Sensor_Main" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="639936948784991" type="Values_Camera">
-                                                    <param id="0" name="Instance variable">pY</param>
-                                                    <param id="1" name="Value">self.targetY + self.groundOffset</param>
-                                                </action>
-                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="843051418772194">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="484326563081976" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">groundOffset</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">0.0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="374758797920103" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">groundOffset</param>
+                                                            <param id="1" name="Value">min(self.groundOffset + 6.0, 0.0)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="250343575334801">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="700408660086025" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">groundOffset</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">0.0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="660610022559796" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">groundOffset</param>
+                                                            <param id="1" name="Value">max(self.groundOffset - 6.0, 0.0)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="688783833034843">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="283381044234277" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">groundOffset</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">0.0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="938380143284764" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">groundOffset</param>
+                                                            <param id="1" name="Value">max(self.groundOffset - 6.0, 0.0)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="950431092562370">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="639936948784991" type="Values_Camera">
+                                                            <param id="0" name="Instance variable">pY</param>
+                                                            <param id="1" name="Value">self.targetY + self.groundOffset</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="621014018518750">
                                             <conditions>
@@ -14620,7 +14823,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="941072514271414" type="TestCounter">
-                    <param id="0" name="Text">Values_Player.CanUseSkills</param>
+                    <param id="0" name="Text">Values_Camera.Speed</param>
                 </action>
             </actions>
         </event-block>

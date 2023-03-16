@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_LevelSSW</name>
+    <events>
+        <include>E_Engine</include>
+        <include>E_global</include>
+        <event-block sid="448470589600640">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="246692222083259" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="419346596561910" type="Audio">
+                    <param id="0" name="Audio file">MUS_LevelSSW</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="533674484085070" title="Police Bot">
+            <sub-events>
+                <event-block sid="801414195032670">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="778964585943855" type="PoliceFlame" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="581920716033847" type="PoliceFlame" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="808389072721466">
+            <conditions>
+                <condition id="-11" name="For Each" sid="384450905180996" type="System">
+                    <param id="0" name="Object">PoliceBot</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="889474329127803">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="996482491301212" type="PoliceBot" />
+                        <condition id="-4" name="Trigger once while true" sid="481009557865967" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="507200412935540" type="PoliceBot">
+                            <param id="0" name="Instance variable">FollowPlayer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="472749725180877">
+                    <conditions>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="699887975008164" type="PoliceBot">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Speed">10</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="682274731456447" type="PoliceBot" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="296537107425963">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="444895825629504" type="System">
+                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="156623457861161" type="PoliceBot">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="163888431236376">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="380540456623073" type="PoliceBot" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="662401419399583" type="PoliceBot">
+                            <param id="0" name="Instance variable">Moving</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="551346735718025">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="358743528766110" type="System">
+                            <param id="0" name="First value">PoliceBot.X+30</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Sensor_Main.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="838096986144299" type="PoliceBot">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="851285480056736">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="569324228321208" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="846181289569167" type="PoliceBot">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="579405891120353">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="554173222802601" type="System">
+                            <param id="0" name="First value">PoliceBot.X-30</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Sensor_Main.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="774724347956742" type="PoliceBot">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="342619326318849">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="537320556374975" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="449211225875908" type="PoliceBot">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="288013703975140">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="963790448148346" type="PoliceBot">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="245925782934304" type="PoliceBot">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="417967926668931">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="453821282783984" type="System">
+                                    <param id="0" name="First value">PoliceBot.Platform.Speed</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="323084452274774" type="PoliceBot">
+                                    <param id="0" name="Vector X">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="388806655519320">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="573027465529038" type="System">
+                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="408467154359474" type="PoliceBot">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

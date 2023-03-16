@@ -118,35 +118,6 @@
                         <instance-variable name="Gray" sid="577067785825715" type="boolean" />
                     </instance-variables>
                 </object-type>
-                <object-type global="1" name="Global_Settings" sid="605093691658359">
-                    <plugin id="Globals" />
-                    <instance-variables>
-                        <instance-variable comment="The lives that the player has left" name="Lives" sid="684804664556508" type="number" />
-                        <instance-variable comment="All scores that the player has received" name="Score" sid="278343489314950" type="number" />
-                        <instance-variable comment="0 - The player will not roll through the tunnel if he is next to it, the player needs to use a spindash to get there  1 - The player will roll through the tunnel if he is near the tunnel" name="TunnelMode" sid="132382478874901" type="number" />
-                        <instance-variable comment="If enabled, it uses improved ring animation, but it will be disabled if the device does not support effects." name="RingHighEffect" sid="911570543725178" type="boolean" />
-                        <instance-variable comment="If true, it enables acceleration of level music, if false, it plays standard music" name="NewSpeedShoesAudio" sid="613472315708983" type="boolean" />
-                        <instance-variable comment="allow the player to be allowed to pause" name="EnablePause" sid="459384249461671" type="boolean" />
-                        <instance-variable comment="if the game detects that the device has a small fps or there is no support for effects, then the game will try to remove the effects and optimize the entire game" name="EnableOptimization" sid="479754521522838" type="boolean" />
-                        <instance-variable comment="Disables or enables events depending on the needs of the game (a useful thing for portable devices like android)" name="EnableEventOptimization" sid="377479759631122" type="boolean" />
-                        <instance-variable comment="These messages are shown in the middle in the left corner" name="EnableDebuggingMessages" sid="715809938242144" type="boolean" />
-                        <instance-variable comment="Allows the player to open the console, this function will be ignored if the debag mod is disabled" name="EnableConsole" sid="162506579789277" type="boolean" />
-                        <instance-variable comment="a function that allows you to enable or disable debug" name="EnableDebug" sid="828358601987480" type="boolean" />
-                        <instance-variable comment="sometimes it can help, when a player collects a lot of rings, the sounds can cause discomfort, and this is why the restriction was created" name="LimitTheSoundOfRings" sid="592124349806055" type="boolean" />
-                        <instance-variable comment="this adds support for smartwatch, if the screen is the same size and width (for example 240x240), then the interface for smart watches will be changed" name="SmartWatchSupport" sid="381159046024383" type="boolean" />
-                        <instance-variable comment="Creates a bluish effect during Transition" name="SonicTransition" sid="309773902682918" type="boolean" />
-                        <instance-variable comment="Now, if a player falls from a great height, he will die" name="RealPhysic" sid="767528260121738" type="boolean" />
-                        <instance-variable comment="Linum\Sonic3\SSW" name="HUD" sid="350632080388041" type="string" />
-                        <instance-variable comment="Desktop/Mobile/Automatically(the game will try to determine the platform on which it is located)" name="Platform" sid="252663215722053" type="string" />
-                        <instance-variable comment="Disable/Original/2x/3x/4x/FullScreen" name="ScreenSize" sid="667462344946972" type="string" />
-                        <instance-variable name="FpsCounter" sid="270356192948968" type="number" />
-                        <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
-                        <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
-                        <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
-                        <instance-variable comment="this function is used to temporarily disable the pause, for example in the menu (so as not to use the global setting) This parameter will be ignored if the pause in the game is disabled by the setting above" name="AllowPause" sid="389575281345055" type="boolean" />
-                        <instance-variable comment="it is better not to touch this value. This is necessary for the save system, initially it costs -1, this means that the game will not save progress, starting from 0 these are the save slots that are selected in data select" name="UsedSaveSlot" sid="586003597813597" type="number" />
-                    </instance-variables>
-                </object-type>
                 <object-type global="1" name="Values_CMD" sid="641292112205211">
                     <plugin id="Sprite" />
                     <instance-variables>
@@ -182,6 +153,8 @@
                     <instance-variables>
                         <instance-variable name="SpriteBaseOffset" sid="865701477129132" type="number" />
                         <instance-variable name="SpriteOffset" sid="910378828722675" type="number" />
+                        <instance-variable name="SpriteOffsetXFix" sid="973798812109018" type="number" />
+                        <instance-variable name="SpriteOffsetYFix" sid="486308261652284" type="number" />
                         <instance-variable name="CanChangeDirection" sid="674393735913863" type="boolean" />
                         <instance-variable name="CanControl" sid="870758677640517" type="boolean" />
                         <instance-variable name="CanJump" sid="608488151842079" type="boolean" />
@@ -461,6 +434,36 @@
             </object-type>
             <object-type name="DiscordRPCedit" sid="973723311657315">
                 <plugin id="eren_DiscordRPC_edit" />
+            </object-type>
+            <object-type global="1" name="Global_Settings" sid="605093691658359">
+                <plugin id="Globals" />
+                <instance-variables>
+                    <instance-variable comment="The lives that the player has left" name="Lives" sid="684804664556508" type="number" />
+                    <instance-variable comment="All scores that the player has received" name="Score" sid="278343489314950" type="number" />
+                    <instance-variable comment="0 - The player will not roll through the tunnel if he is next to it, the player needs to use a spindash to get there  1 - The player will roll through the tunnel if he is near the tunnel" name="TunnelMode" sid="132382478874901" type="number" />
+                    <instance-variable comment="If enabled, it uses improved ring animation, but it will be disabled if the device does not support effects." name="RingHighEffect" sid="911570543725178" type="boolean" />
+                    <instance-variable comment="If true, it enables acceleration of level music, if false, it plays standard music" name="NewSpeedShoesAudio" sid="613472315708983" type="boolean" />
+                    <instance-variable comment="allow the player to be allowed to pause" name="EnablePause" sid="459384249461671" type="boolean" />
+                    <instance-variable comment="if the game detects that the device has a small fps or there is no support for effects, then the game will try to remove the effects and optimize the entire game" name="EnableOptimization" sid="479754521522838" type="boolean" />
+                    <instance-variable comment="Disables or enables events depending on the needs of the game (a useful thing for portable devices like android)" name="EnableEventOptimization" sid="377479759631122" type="boolean" />
+                    <instance-variable comment="These messages are shown in the middle in the left corner" name="EnableDebuggingMessages" sid="715809938242144" type="boolean" />
+                    <instance-variable comment="Allows the player to open the console, this function will be ignored if the debag mod is disabled" name="EnableConsole" sid="162506579789277" type="boolean" />
+                    <instance-variable comment="a function that allows you to enable or disable debug" name="EnableDebug" sid="828358601987480" type="boolean" />
+                    <instance-variable comment="sometimes it can help, when a player collects a lot of rings, the sounds can cause discomfort, and this is why the restriction was created" name="LimitTheSoundOfRings" sid="592124349806055" type="boolean" />
+                    <instance-variable comment="this adds support for smartwatch, if the screen is the same size and width (for example 240x240), then the interface for smart watches will be changed" name="SmartWatchSupport" sid="381159046024383" type="boolean" />
+                    <instance-variable comment="Creates a bluish effect during Transition" name="SonicTransition" sid="309773902682918" type="boolean" />
+                    <instance-variable comment="Now, if a player falls from a great height, he will die" name="RealPhysic" sid="767528260121738" type="boolean" />
+                    <instance-variable name="IgnoreAngleInLoops" sid="211836780142090" type="boolean" />
+                    <instance-variable comment="Linum\Sonic3\SSW" name="HUD" sid="350632080388041" type="string" />
+                    <instance-variable comment="Desktop/Mobile/Automatically(the game will try to determine the platform on which it is located)" name="Platform" sid="252663215722053" type="string" />
+                    <instance-variable comment="Disable/Original/2x/3x/4x/FullScreen" name="ScreenSize" sid="667462344946972" type="string" />
+                    <instance-variable name="FpsCounter" sid="270356192948968" type="number" />
+                    <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
+                    <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
+                    <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
+                    <instance-variable comment="this function is used to temporarily disable the pause, for example in the menu (so as not to use the global setting) This parameter will be ignored if the pause in the game is disabled by the setting above" name="AllowPause" sid="389575281345055" type="boolean" />
+                    <instance-variable comment="it is better not to touch this value. This is necessary for the save system, initially it costs -1, this means that the game will not save progress, starting from 0 these are the save slots that are selected in data select" name="UsedSaveSlot" sid="586003597813597" type="number" />
+                </instance-variables>
             </object-type>
         </object-folder>
         <object-folder name="Player Objects">
@@ -7529,6 +7532,289 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="269549421236875">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892598519980566" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground3" sid="402309800850747">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Level_Backdrop_01" sid="163591902378958">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Tazik05\Desktop\1.png" />
+        </object-type>
+        <object-type name="TiledBackground5" sid="126596262473574">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite9" sid="532128898776190">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547477388550277" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground6" sid="358581473446308">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Tazik05\Desktop\1.png" />
+        </object-type>
+        <object-type name="Sprite11" sid="500041723281848">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652822147143165" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="143757845322005">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="865005375361709" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="378053207155242">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="935343594055118" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite14" sid="998054148666901">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="421945795822801" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png">
+                        <collision-poly>
+                            <point x="0" y="0.00595238" />
+                            <point x="0.238095" y="0.0297619" />
+                            <point x="0.47619" y="0.119048" />
+                            <point x="0.678571" y="0.255953" />
+                            <point x="0.803571" y="0.392857" />
+                            <point x="0.892857" y="0.547619" />
+                            <point x="0.946429" y="0.708333" />
+                            <point x="0.994048" y="1" />
+                            <point x="0.767857" y="1" />
+                            <point x="0.755952" y="0.839286" />
+                            <point x="0.702381" y="0.666667" />
+                            <point x="0.630952" y="0.541667" />
+                            <point x="0.535714" y="0.428571" />
+                            <point x="0.369048" y="0.315476" />
+                            <point x="0.184524" y="0.25" />
+                            <point x="0" y="0.232143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15" sid="518792021122011">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959961464589966" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png">
+                        <collision-poly>
+                            <point x="0.00595238" y="0" />
+                            <point x="0.232143" y="0" />
+                            <point x="0.255952" y="0.214286" />
+                            <point x="0.339286" y="0.422619" />
+                            <point x="0.47619" y="0.583333" />
+                            <point x="0.625" y="0.678571" />
+                            <point x="0.827381" y="0.755952" />
+                            <point x="1" y="0.767857" />
+                            <point x="0.998512" y="0.988095" />
+                            <point x="0.678571" y="0.946429" />
+                            <point x="0.488095" y="0.863095" />
+                            <point x="0.315476" y="0.75" />
+                            <point x="0.142857" y="0.541667" />
+                            <point x="0.0416667" y="0.309524" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite16" sid="173656255282486">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="289323177255562" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png">
+                        <collision-poly>
+                            <point x="0" y="0.767857" />
+                            <point x="0.154762" y="0.755952" />
+                            <point x="0.333333" y="0.702381" />
+                            <point x="0.529762" y="0.583333" />
+                            <point x="0.666667" y="0.410714" />
+                            <point x="0.744048" y="0.214286" />
+                            <point x="0.773809" y="0" />
+                            <point x="0.994048" y="0" />
+                            <point x="0.964286" y="0.220238" />
+                            <point x="0.910714" y="0.404762" />
+                            <point x="0.809524" y="0.595238" />
+                            <point x="0.636905" y="0.779762" />
+                            <point x="0.458334" y="0.886905" />
+                            <point x="0.327381" y="0.940476" />
+                            <point x="0.166667" y="0.976191" />
+                            <point x="0" y="0.988095" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Level_Layer0_05" sid="144614010253289">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921944122156584" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png">
+                        <collision-poly>
+                            <point x="0.766369" y="0" />
+                            <point x="0.994048" y="0" />
+                            <point x="0.97619" y="0.226191" />
+                            <point x="0.886905" y="0.476191" />
+                            <point x="0.791667" y="0.625" />
+                            <point x="0.690476" y="0.732143" />
+                            <point x="0.505952" y="0.869048" />
+                            <point x="0.291667" y="0.952381" />
+                            <point x="0" y="0.988095" />
+                            <point x="0" y="0.767857" />
+                            <point x="0.14881" y="0.755952" />
+                            <point x="0.327381" y="0.702381" />
+                            <point x="0.47619" y="0.613095" />
+                            <point x="0.571429" y="0.529762" />
+                            <point x="0.690476" y="0.363095" />
+                            <point x="0.744048" y="0.208333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Level_Layer1_08" sid="275308743211767">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934709500681056" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1.png">
+                        <collision-poly>
+                            <point x="0.0119048" y="0" />
+                            <point x="0.232143" y="0" />
+                            <point x="0.238095" y="0.130952" />
+                            <point x="0.285714" y="0.309524" />
+                            <point x="0.369048" y="0.458333" />
+                            <point x="0.458333" y="0.565476" />
+                            <point x="0.577381" y="0.654762" />
+                            <point x="0.776414" y="0.74628" />
+                            <point x="0.994048" y="0.77381" />
+                            <point x="1" y="1" />
+                            <point x="0.785714" y="0.970238" />
+                            <point x="0.488095" y="0.863095" />
+                            <point x="0.303571" y="0.732143" />
+                            <point x="0.190476" y="0.60119" />
+                            <point x="0.10119" y="0.447917" />
+                            <point x="0.0297619" y="0.244048" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PoliceBot" sid="346814433747987">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="FollowPlayer" sid="957320156157336" type="boolean" />
+                <instance-variable name="Moving" sid="735592911641203" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="555267803537500">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="732667646224721" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.09375" y="0" />
+                            <point x="0.929688" y="0" />
+                            <point x="0.9375" y="0.939394" />
+                            <point x="0.0859375" y="0.939394" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.09375" y="0" />
+                            <point x="0.929688" y="0" />
+                            <point x="0.9375" y="0.939394" />
+                            <point x="0.0859375" y="0.939394" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.09375" y="0" />
+                            <point x="0.929688" y="0" />
+                            <point x="0.9375" y="0.939394" />
+                            <point x="0.0859375" y="0.939394" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.09375" y="0" />
+                            <point x="0.929688" y="0" />
+                            <point x="0.9375" y="0.939394" />
+                            <point x="0.0859375" y="0.939394" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.09375" y="0" />
+                            <point x="0.929688" y="0" />
+                            <point x="0.9375" y="0.939394" />
+                            <point x="0.0859375" y="0.939394" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.09375" y="0" />
+                            <point x="0.929688" y="0" />
+                            <point x="0.9375" y="0.939394" />
+                            <point x="0.0859375" y="0.939394" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PoliceFragment" sid="631826947827481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="627850872755000" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PoliceFlame" sid="350773572076771">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="840178504423079">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967000103339649" speed="25">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -7551,6 +7837,11 @@
                 <member>BreakableWall</member>
                 <member>Concave</member>
                 <member>Convex</member>
+                <member>DisposableSpring_Red</member>
+                <member>DisposableSpring_Yellow</member>
+                <member>Gimmick_CNZBarrel</member>
+                <member>Gimmick_CollapsingPlatform</member>
+                <member>Gimmick_CollapsingPlatform_Left_Brick01</member>
                 <member>Gimmick_CollapsingPlatform_Right_Brick1</member>
                 <member>Gimmick_CollapsingPlatform_Right_Brick2</member>
                 <member>Gimmick_CollapsingPlatform_Right_Brick3</member>
@@ -7573,6 +7864,9 @@
                 <member>SpringRed_Right</member>
                 <member>SpringYellow_Left</member>
                 <member>SpringYellow_Right</member>
+                <member>Sprite14</member>
+                <member>Sprite15</member>
+                <member>Sprite16</member>
                 <member>Tornado</member>
                 <member>Tunnel1</member>
                 <member>Tunnel2</member>
@@ -7598,6 +7892,7 @@
             <members>
                 <member>Concave_Layer0</member>
                 <member>Convex_Layer0</member>
+                <member>Level_Layer1_08</member>
                 <member>Solid_Layer0</member>
             </members>
             <behaviors>
@@ -7610,6 +7905,7 @@
             <members>
                 <member>Concave_Layer1</member>
                 <member>Convex_Layer1</member>
+                <member>Level_Layer0_05</member>
                 <member>Solid_Layer1</member>
             </members>
             <behaviors>
@@ -7625,6 +7921,9 @@
                 <member>SmoothStepDown</member>
                 <member>SmoothStepUp</member>
                 <member>Solid</member>
+                <member>Sprite14</member>
+                <member>Sprite15</member>
+                <member>Sprite16</member>
                 <member>Tunnel1</member>
                 <member>Tunnel2</member>
             </members>
@@ -7756,6 +8055,7 @@
             <layout>Linum_logo.xml</layout>
             <layout>Linum_mainMenu.xml</layout>
             <layout>Linum_Level.xml</layout>
+            <layout>Linum_SimpleWorldsLevel.xml</layout>
             <layout>Linum_MenuNew.xml</layout>
             <layout>Linum_Continue.xml</layout>
         </layout-folder>
@@ -7778,6 +8078,7 @@
             <event-sheet>E_Level.xml</event-sheet>
             <event-sheet>E_GameOver.xml</event-sheet>
             <event-sheet>E_SaveSystem.xml</event-sheet>
+            <event-sheet>E_LevelSSW.xml</event-sheet>
         </event-folder>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
@@ -7871,7 +8172,6 @@
         <file name="SFX_Beep.ogg" />
         <file name="SFX_RingMonitor.m4a" />
         <file name="SFX_RingMonitor.ogg" />
-        <file name="SFX_Knuckles_Oh_No.ogg" />
         <file name="SFX_Jetpackfall.ogg" />
         <file name="SFX_Jetpack.ogg" />
         <file name="SFX_MenuBleep.m4a" />
@@ -7917,10 +8217,10 @@
         <file name="MUS_menu.ogg" />
         <file name="MUS_speedshoes.ogg" />
         <file name="MUS_invincibility.ogg" />
-        <file name="MUS_test_zone_2.ogg" />
         <file name="MUS_continue.ogg" />
         <file name="MUS_SpecialStage_S1.ogg" />
-        <file name="00079.ogg" />
+        <file name="MUS_Bonus.ogg" />
+        <file name="MUS_LevelSSW.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
