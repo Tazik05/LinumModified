@@ -33,6 +33,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Eren Ertuğrul" id="eren_DiscordRPC" version="1">DiscordRPC</plugin>
         <plugin author="Eren Ertuğrul" id="eren_DiscordRPC_edit" version="1">DiscordRPC (edit)</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
         <plugin author="JohnnySheffield" id="nwk" version="1.100000024">Node-Webkit Gui</plugin>
@@ -464,9 +465,11 @@
                     <instance-variable name="FpsFix" sid="504559434268701" type="boolean" />
                     <instance-variable comment="Original/SSW" name="PauseStyle" sid="405268811496535" type="string" />
                     <instance-variable comment="saves the layout before getting to the game over screen to return to the level if necessary" name="LayoutSaver" sid="773712460550451" type="string" />
+                    <instance-variable name="Act" sid="181900758448583" type="number" />
                     <instance-variable comment="this function is used to temporarily disable the pause, for example in the menu (so as not to use the global setting) This parameter will be ignored if the pause in the game is disabled by the setting above" name="AllowPause" sid="389575281345055" type="boolean" />
                     <instance-variable comment="it is better not to touch this value. This is necessary for the save system, initially it costs -1, this means that the game will not save progress, starting from 0 these are the save slots that are selected in data select" name="UsedSaveSlot" sid="586003597813597" type="number" />
                     <instance-variable name="CheckPoint" sid="945672042208905" type="number" />
+                    <instance-variable name="AccessibilityMode" sid="262991464321454" type="number" />
                 </instance-variables>
             </object-type>
         </object-folder>
@@ -4112,16 +4115,7 @@
                         <plugin id="Sprite" />
                         <animation-folder>
                             <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315251974969944" speed="5">
-                                <frame duration="1" hotspotX="0.504951" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\42.png">
-                                    <collision-poly>
-                                        <point x="0.039604" y="0.0625" />
-                                        <point x="0.49505" y="0.09375" />
-                                        <point x="0.960396" y="0.0625" />
-                                        <point x="0.940594" y="0.90625" />
-                                        <point x="0.49505" y="0.84375" />
-                                        <point x="0.0594059" y="0.90625" />
-                                    </collision-poly>
-                                </frame>
+                                <frame duration="1" hotspotX="0.504951" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\42.png" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -6911,9 +6905,10 @@
         <object-type name="Results_Zone" sid="574905740854107">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115757044220367" speed="5">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="115757044220367" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.469388" hotspotY="0.410256" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -8071,6 +8066,320 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SmallTextTiledCard" sid="547399321375870">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Fade" sid="254467378816036">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Fade2" sid="275811686061268">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="BigStaticText2" sid="792686629585624">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Fade" sid="167712174899364">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="SmallTextTiledCard_GameMode" sid="533984875418506">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground4" sid="852468846777184">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Appear" sid="281514769270277">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="BounceBack" sid="293198605699920">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Disappear" sid="554363765595566">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground9" sid="171052701255066">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="FadeOut" sid="636948523779267">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite21" sid="577372212337709">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="749465314552952">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142677639179147" speed="0">
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0" />
+                            <point x="0.75" y="0" />
+                            <point x="0.75" y="1" />
+                            <point x="0.25" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground10" sid="619716302386421">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Appear" sid="584824785741052">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Disappear" sid="462717885714254">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="BigStaticText_TitleCard" sid="669230157664484">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Fade" sid="162886087674370">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite_Linum_Unnamed" sid="986483493942659">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="755866437750131">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Grow" sid="864776800233281">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324314550674734" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.507937" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Linum_Act_Number" sid="398835639180444">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="630387920623588">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270972144699050" speed="0">
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0" />
+                            <point x="0.75" y="0" />
+                            <point x="0.75" y="1" />
+                            <point x="0.25" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11_" sid="794799522559362">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Scroll" sid="695451428651370">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="265743982343856" speed="5">
+                    <frame duration="1" hotspotX="0.498413" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4_" sid="575670177447663">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Scroll" sid="351283012071188">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="554251192816028" speed="5">
+                    <frame duration="1" hotspotX="0.501587" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5_" sid="937402991420214">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="679484179561607">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Grow" sid="951438472551885">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811417251799378" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.507937" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7_" sid="900364750900458">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Appear" sid="640090760917841">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194124488142195" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground10_" sid="808532168653807">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Appear" sid="307252189524848">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Disappear" sid="293137336402968">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground3_" sid="953833404528486">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Appear" sid="971930584094486">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="BounceBack" sid="638696028070281">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Disappear" sid="456213535043308">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground9_" sid="672897614683848">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="FadeOut" sid="240591143072262">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite21_" sid="253307043526858">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="965906613242904">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799598590992721" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.625" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0" />
+                            <point x="0.75" y="0" />
+                            <point x="0.75" y="1" />
+                            <point x="0.25" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground18_" sid="498690194326823">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="661139951799648">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite3_" sid="719851575120148">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="774114443571214" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground15_" sid="976568276626577">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground6_" sid="972093014291134">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground4_" sid="849011850635034">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Appear" sid="804545348340047">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="BounceBack" sid="394220523616431">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Disappear" sid="500631883472326">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground7_" sid="647900746114226">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Appear" sid="373881390689574">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Disappear" sid="753815624511746">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground14_" sid="494428262187745">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground8_" sid="667370226577823">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="DiscordRPC" sid="195300709643908">
+            <plugin id="eren_DiscordRPC" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -8305,7 +8614,12 @@
     </families>
     <layout-folder>
         <layout-folder name="[ System ]">
-            <layout>ConsoleUI.xml</layout>
+            <layout-folder name="[ UI ]">
+                <layout>ConsoleUI.xml</layout>
+                <layout>TiledCards.xml</layout>
+                <layout>AndroidControls.xml</layout>
+                <layout>PauseManu.xml</layout>
+            </layout-folder>
         </layout-folder>
         <layout-folder name="[ Engine ]">
             <layout>Linum_preloader.xml</layout>
@@ -8343,6 +8657,9 @@
         <event-sheet>Event sheet 5.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 6.xml</event-sheet>
+        <event-sheet>Event sheet 7.xml</event-sheet>
+        <event-sheet>Event sheet 8.xml</event-sheet>
+        <event-sheet>Event sheet 9.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">
@@ -8389,6 +8706,12 @@
         </global-instance>
         <global-instance type="WebStorage" uid="848" />
         <global-instance type="DiscordRPCedit" uid="1230">
+            <properties>
+                <client-id>0</client-id>
+                <preview_mode>True</preview_mode>
+            </properties>
+        </global-instance>
+        <global-instance type="DiscordRPC" uid="156">
             <properties>
                 <client-id>0</client-id>
                 <preview_mode>True</preview_mode>
@@ -8473,14 +8796,15 @@
         <file name="SFX_BossHit.m4a" />
     </sounds-folder>
     <music-folder>
-        <file name="MUS_level.ogg" />
-        <file name="MUS_menu.ogg" />
-        <file name="MUS_speedshoes.ogg" />
-        <file name="MUS_invincibility.ogg" />
-        <file name="MUS_continue.ogg" />
+        <file name="MUS_Level.ogg" />
+        <file name="MUS_Menu.ogg" />
+        <file name="MUS_Speedshoes.ogg" />
+        <file name="MUS_Invincibility.ogg" />
+        <file name="MUS_Continue.ogg" />
         <file name="MUS_SpecialStage_S1.ogg" />
         <file name="MUS_Bonus.ogg" />
         <file name="MUS_LevelSSW.ogg" />
+        <file name="MUS_Boss.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
@@ -8491,14 +8815,7 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
-        <file-folder name="Font">
-            <file-folder name="MotelKing">
-                <file name="MotelKing.css" />
-                <file name="MotelKing.ttf" />
-                <file name="MotelKing.woff" />
-                <file name="MotelKing.woff2" />
-            </file-folder>
-        </file-folder>
+        <file-folder name="Font" />
         <file-folder name="TempFiles">
             <file name="1677877363313 (1).png" />
             <file name="danik.png" />

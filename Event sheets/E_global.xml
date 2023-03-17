@@ -83,7 +83,7 @@
                 <comment>Toggle between keyboard and gamepad mode</comment>
                 <event-block sid="718362349947669">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="473063524453421" type="Values_PauseMenu">
+                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="473063524453421" type="Values_PauseMenu">
                             <param id="0" name="Instance variable">Paused</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="325034563099389" type="Values_Input">
@@ -794,7 +794,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group description="" sid="705580916148713" title="FPS_Optimization">
+                        <event-group description="" inactive="1" sid="705580916148713" title="FPS_Optimization">
                             <sub-events>
                                 <event-block sid="775710304148979">
                                     <conditions>
@@ -2745,6 +2745,10 @@
                         <action id="-13" name="Set time scale" sid="552279367515143" type="System">
                             <param id="0" name="Time scale">timescale=0/1</param>
                         </action>
+                        <action disabled="1" id="-13" name="Set boolean" sid="321947849351581" type="Values_PauseMenu">
+                            <param id="0" name="Instance variable">Paused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="655058022884114">
@@ -2882,39 +2886,117 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="689027714726401">
+                <event-block sid="237029550244387">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="175191706928049" type="System">
-                            <param id="0" name="First value">LayoutName</param>
+                        <condition id="-7" name="Compare instance variable" sid="828141774509311" type="Global_Settings">
+                            <param id="0" name="Instance variable">PauseStyle</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">&quot;Linum_mainMenu&quot;</param>
+                            <param id="2" name="Value">&quot;Flicky&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="320201710123440">
+                        <event-block sid="965577390082732">
                             <conditions>
-                                <condition id="-9" inverted="1" name="Is visible" sid="873515557081681" type="CmdText2" />
-                                <condition id="-4" name="Trigger once while true" sid="349647636948067" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="791924716122992" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyUpHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="967110100836342" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="163904778242592" type="Values_PauseMenu">
-                                    <param id="0" name="Instance variable">CanPause</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="0" name="Play" sid="994238065474242" type="Audio">
+                                    <param id="0" name="Audio file">SFX_MenuBleep</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_MenuBleep&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="710562476491881" type="spr_pause_menu">
+                                    <param id="0" name="Frame number">Self.AnimationFrame-1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="405683754771582">
+                        <event-block sid="758909558652269">
                             <conditions>
-                                <condition id="-9" name="Is visible" sid="747151373853704" type="CmdText2" />
-                                <condition id="-4" name="Trigger once while true" sid="433655925642032" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="554879584278935" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyDownHold</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="940401604722438" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="605100508576410" type="Values_PauseMenu">
-                                    <param id="0" name="Instance variable">CanPause</param>
-                                    <param id="1" name="Value">0</param>
+                                <action id="0" name="Play" sid="628932750787755" type="Audio">
+                                    <param id="0" name="Audio file">SFX_MenuBleep</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX_MenuBleep&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="854286592258813" type="spr_pause_menu">
+                                    <param id="0" name="Frame number">Self.AnimationFrame+1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="545270136805236">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="615151558321177" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">Paused</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="428651196595031" type="spr_pause_menu">
+                                    <param id="0" name="X">lerp(Self.X,214, 0.1)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 122, 0.1)</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" sid="181929301344787" type="spr_pause_menu">
+                                    <param id="0" name="Frame number">Values_PauseMenu.Selected</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="222527582713711">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="937160537825568" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="22" name="Set paused" sid="464633852146705" type="Audio">
+                                            <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="298656761312366">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="353457252355554" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">Paused</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="919791046271654">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="408909202154952" type="spr_pause_menu" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="568566038592166" type="spr_pause_menu">
+                                            <param id="0" name="X">lerp(Self.X, 490, 0.1)</param>
+                                            <param id="1" name="Y">lerp(Self.Y, 122, 0.1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>for optimization, so that the formula stops calculating if the object is behind the screen</comment>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="487889372564589">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="719133398441692" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="22" name="Set paused" sid="827123520570871" type="Audio">
+                                            <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

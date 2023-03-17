@@ -18,7 +18,7 @@
                     <param id="2" name="Cross-origin">0</param>
                 </action>
                 <action id="0" name="Play" sid="214090899290803" type="Audio">
-                    <param id="0" name="Audio file">MUS_menu</param>
+                    <param id="0" name="Audio file">MUS_Menu</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_menu&quot;</param>

@@ -398,7 +398,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="ConsoleUI" sid="389145067824517">
+        <layer name="ConsoleUI(GLOBAL)" sid="389145067824517">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -416,7 +416,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Cursor" sid="363891646090554">
+        <layer name="Cursor(GLOBAL)" sid="363891646090554">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

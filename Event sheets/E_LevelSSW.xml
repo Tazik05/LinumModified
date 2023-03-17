@@ -16,6 +16,14 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
                 </action>
+                <action id="0" name="Call function" sid="545864117748779" type="Function">
+                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Linum&quot;{###}&quot;TEST LEVEL&quot;{###}1{###}&quot;STRING&quot;{###}&quot;FREE PLAY&quot;{###}&quot;LAKEFEPERD&quot;{###}&quot;NOT S0 SIMPLE SONIC WORLDS 1.0&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="305241066711003" type="Function">
+                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Linum&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="906497006655251" title="Boss">

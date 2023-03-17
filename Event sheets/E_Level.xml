@@ -45,7 +45,7 @@
                     <param id="1" name="Parameter {n}">Sensor_Main.X{###}Sensor_Main.Y</param>
                 </action>
                 <action id="0" name="Play" sid="201775280423510" type="Audio">
-                    <param id="0" name="Audio file">MUS_level</param>
+                    <param id="0" name="Audio file">MUS_Level</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>

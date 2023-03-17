@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="ConsoleUI" sid="850054488449998">
+        <layer name="ConsoleUI(GLOBAL)" sid="850054488449998">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -221,7 +221,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Cursor" sid="552353667169988">
+        <layer name="Cursor(GLOBAL)" sid="552353667169988">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

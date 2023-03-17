@@ -14,7 +14,7 @@
                     <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                 </action>
                 <action id="0" name="Play" sid="167769570402998" type="Audio">
-                    <param id="0" name="Audio file">MUS_continue</param>
+                    <param id="0" name="Audio file">MUS_Continue</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_Continue&quot;</param>

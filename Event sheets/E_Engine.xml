@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_Engine</name>
     <events>
-        <comment>&#x0D;&#x0A;&#x09;╔=============================================╗&#x0D;&#x0A;&#x09;║Crutches in the code are our temporary rescuers,&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║but the ability to replace them with more effective solutions&#x09;&#x09;║&#x0D;&#x0A;&#x09;║is a sign of true professionalism.&#x09;&#x09;&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║  - ChatGPT                                                              &#x09;             ║&#x0D;&#x0A;&#x09;╚=============================================╝&#x0D;&#x0A;</comment>
+        <comment>&#x0D;&#x0A;&#x09;╔=========================================╗&#x0D;&#x0A;&#x09;║Crutches in the code are our temporary rescuers,&#x09;&#x09;║&#x0D;&#x0A;&#x09;║but the ability to replace them with more effective solutions&#x09;║&#x0D;&#x0A;&#x09;║is a sign of true professionalism.&#x09;&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;║  - ChatGPT &#x09;&#x09;&#x09;&#x09;&#x09;&#x09;║&#x0D;&#x0A;&#x09;╚=========================================╝&#x0D;&#x0A;</comment>
         <event-block sid="967682403201665">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="599573048864463" type="System" />
@@ -13,7 +13,7 @@
                     <param id="0" name="Mode">0</param>
                     <param id="1" name="Effect">&quot;WarpMask&quot;</param>
                 </action>
-                <action id="0" name="Call function" sid="949182323294388" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="949182323294388" type="Function">
                     <param id="0" name="Name">&quot;Transition&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                 </action>
@@ -6116,7 +6116,7 @@
                                             <param id="0" name="Tag">&quot;MUS_SpeedShoes&quot;</param>
                                         </action>
                                         <action id="0" name="Play" sid="253830004114602" type="Audio">
-                                            <param id="0" name="Audio file">MUS_invincibility</param>
+                                            <param id="0" name="Audio file">MUS_Invincibility</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;MUS_Invincibility&quot;</param>
@@ -6247,7 +6247,7 @@
                                                     <param id="0" name="Tag">&quot;MUS_Invincibility&quot;</param>
                                                 </action>
                                                 <action id="0" name="Play" sid="723305095976920" type="Audio">
-                                                    <param id="0" name="Audio file">MUS_speedshoes</param>
+                                                    <param id="0" name="Audio file">MUS_Speedshoes</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;MUS_SpeedShoes&quot;</param>
@@ -13446,6 +13446,389 @@
         </event-group>
         <event-group description="" sid="331206807603223" title="UI stuff">
             <sub-events>
+                <comment></comment>
+                <event-group description="" sid="106387688324863" title="Titlecard">
+                    <sub-events>
+                        <event-block sid="693038834685425">
+                            <conditions>
+                                <condition id="0" name="On function" sid="870302387691841" type="Function">
+                                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="999118803111834" type="BigStaticText2">
+                                    <param id="0" name="Text">Function.Param(1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="823031693018708" type="Global_Settings">
+                                    <param id="0" name="Instance variable">Act</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="402978504291177" type="Linum_Act_Number">
+                                    <param id="0" name="Frame number">Function.Param(2)-1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="292282887051365" type="SmallTextTiledCard">
+                                    <param id="0" name="Text">&quot;○ &quot;&amp;Function.Param(5)&amp;&quot; ♂ &quot;&amp;Function.Param(6)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="211677555968420" type="SmallTextTiledCard_GameMode">
+                                    <param id="0" name="Text">Function.Param(4)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="642159977540290">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="788878134156377" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Linum&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="895904737593673" type="System">
+                                            <param id="0" name="Group name">&quot;LinumTitleCard&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-group description="" inactive="1" sid="332944823850152" title="LinumTitleCard">
+                            <sub-events>
+                                <event-block sid="163578340400399">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="315380458888014" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Add comment (bold and italic)" sid="448625760695673" type="Comment">
+                                            <param id="0" name="Comment">&quot;Prepare title card&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="436492094103641" type="Values_Level">
+                                            <param id="0" name="Instance variable">IsLevelTimerActive</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="988912866243366" type="Sprite5_">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="142610084169325" type="TiledBackground9_">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="801954463326069" type="TiledBackground9_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="479304398308606" type="SmallTextTiledCard">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="942941543785143" type="SmallTextTiledCard">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                        <action id="3" name="Add comment (bold and italic)" sid="704859710400714" type="Comment">
+                                            <param id="0" name="Comment">&quot;Start animations&quot;</param>
+                                        </action>
+                                        <action behavior="Appear" id="10" name="Start" sid="483373141593275" type="TiledBackground3_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="Appear" id="10" name="Start" sid="733273555355838" type="TiledBackground4_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Accessibility mode</comment>
+                                <event-block sid="616326433711386">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="591798195145891" type="Global_Settings">
+                                            <param id="0" name="Instance variable">AccessibilityMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="544741679601778" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Rotate" id="0" name="Set speed" sid="140646234252474" type="Sprite5_">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="308052007657515">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="910021056251095" type="Global_Settings">
+                                            <param id="0" name="Instance variable">AccessibilityMode</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="988403504844500">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="730239095498432" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Rotate" id="0" name="Set speed" sid="140776932549836" type="Sprite5_">
+                                                    <param id="0" name="Speed">180</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="150232820175520" type="System">
+                                                    <param id="0" name="Seconds">0.2</param>
+                                                </action>
+                                                <action behavior="Scroll" id="10" name="Start" sid="629443044990992" type="Sprite4_">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="273573521827726" type="System">
+                                                    <param id="0" name="Seconds">0.5</param>
+                                                </action>
+                                                <action behavior="Scroll" id="10" name="Start" sid="425441470010044" type="Sprite11_">
+                                                    <param id="0" name="Start Mode">0</param>
+                                                    <param id="1" name="Force use current">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="226989618691423">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="610682636944233" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-17" name="Move forward" sid="299496010403328" type="TiledBackground3_">
+                                                    <param id="0" name="Distance">1</param>
+                                                </action>
+                                                <action id="-17" name="Move forward" sid="999467287602796" type="TiledBackground4_">
+                                                    <param id="0" name="Distance">1</param>
+                                                </action>
+                                                <action id="-17" name="Move forward" sid="309297176890648" type="TiledBackground7_">
+                                                    <param id="0" name="Distance">-1</param>
+                                                </action>
+                                                <action id="-17" name="Move forward" sid="796230377595963" type="TiledBackground10_">
+                                                    <param id="0" name="Distance">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="968616596004222">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="708146428910431" type="TiledBackground3_">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="484735237382683" type="TiledBackground3_">
+                                                    <param id="0" name="X">-32</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="232814656422662" type="TiledBackground4_">
+                                                    <param id="0" name="X">-48</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="304848170728279">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="381389185558921" type="TiledBackground7_">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="X co-ordinate">-64</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="395710429808752" type="TiledBackground7_">
+                                                    <param id="0" name="X">0</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="680717557524510" type="TiledBackground10_">
+                                                    <param id="0" name="X">-32</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Set stuff to fixed positions</comment>
+                                <event-block sid="939561581343346">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="802394199211502" type="TiledBackground14_">
+                                            <param id="0" name="X">TiledBackground3_.X</param>
+                                            <param id="1" name="Y">TiledBackground3_.Y</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="219925781170400" type="TiledBackground15_">
+                                            <param id="0" name="X">TiledBackground4_.X</param>
+                                            <param id="1" name="Y">TiledBackground4_.Y+88</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="184960680067969" type="TiledBackground8_">
+                                            <param id="0" name="X">TiledBackground3_.X</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="193702285602644" type="SmallTextTiledCard_GameMode">
+                                            <param id="0" name="X">Sprite7_.X</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Second set of animations</comment>
+                                <event-block sid="893397719701436">
+                                    <conditions>
+                                        <condition behavior="Appear" id="4" name="On tween end" sid="240561901145467" type="TiledBackground3_" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Add comment (bold and italic)" sid="849307568384576" type="Comment">
+                                            <param id="0" name="Comment">&quot;Prepare&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="776926306183442" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="996783044394603" type="TiledBackground9_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="281480245098424" type="TiledBackground14_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="514308379393719" type="TiledBackground15_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="768266663914107" type="TiledBackground8_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="752338140442001" type="BigStaticText2">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="207179101577250" type="TiledBackground6_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="236521989022657" type="TiledBackground7_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="517773575558940" type="TiledBackground10_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="3" name="Add comment (bold and italic)" sid="826459580693015" type="Comment">
+                                            <param id="0" name="Comment">&quot;Start&quot;</param>
+                                        </action>
+                                        <action behavior="BounceBack" id="10" name="Start" sid="134812521044414" type="TiledBackground3_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action behavior="BounceBack" id="10" name="Start" sid="224962343335032" type="TiledBackground4_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action behavior="Grow" id="10" name="Start" sid="158234291954177" type="Sprite5_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="762718691086937" type="Linum_Act_Number">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="Appear" id="10" name="Start" sid="547348738681847" type="TiledBackground7_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="Appear" id="10" name="Start" sid="548442881279036" type="TiledBackground10_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="570729901243961" type="TiledBackground18_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="609404138385963" type="SmallTextTiledCard">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="896996096876999" type="SmallTextTiledCard" />
+                                    </actions>
+                                </event-block>
+                                <comment>Last set of animations</comment>
+                                <event-block sid="126730707102426">
+                                    <conditions>
+                                        <condition behavior="BounceBack" id="4" name="On tween end" sid="626159817173772" type="TiledBackground3_" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Appear" id="10" name="Start" sid="284643206695475" type="Sprite7_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="162983451905675" type="System">
+                                            <param id="0" name="Seconds">2.75</param>
+                                        </action>
+                                        <action id="3" name="Add comment (bold and italic)" sid="549381111024508" type="Comment">
+                                            <param id="0" name="Comment">&quot;Start transition out of title card&quot;</param>
+                                        </action>
+                                        <action behavior="Disappear" id="10" name="Start" sid="294517420773051" type="TiledBackground10_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action behavior="Disappear" id="10" name="Start" sid="268999378249666" type="TiledBackground7_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="905715033972510" type="System">
+                                            <param id="0" name="Seconds">0.12</param>
+                                        </action>
+                                        <action behavior="Disappear" id="10" name="Start" sid="111272822827642" type="TiledBackground3_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action behavior="Disappear" id="10" name="Start" sid="552684918479109" type="TiledBackground4_">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="752725057622191" type="TiledBackground14_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="586213589740823" type="TiledBackground15_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="156306597630412" type="TiledBackground8_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="573583445157152" type="TiledBackground6_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="874289006282078" type="TiledBackground7_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="634257535153902" type="TiledBackground10_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="173251718669619" type="System">
+                                            <param id="0" name="Seconds">0.18</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="448373698528938" type="TiledBackground9_" />
+                                        <action id="-16" name="Wait" sid="592484692916268" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action behavior="Appear" id="11" name="Reverse" sid="511087860178065" type="Sprite7_">
+                                            <param id="0" name="Reverse mode">1</param>
+                                        </action>
+                                        <action behavior="Grow" id="11" name="Reverse" sid="168915484449512" type="Sprite5_">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="399748651655675" type="Linum_Act_Number">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="368295184202058" type="BigStaticText2" />
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="819803991753440" type="TiledBackground18_">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action behavior="Fade2" id="1" name="Start fade" sid="681760723752051" type="SmallTextTiledCard" />
+                                        <action id="3" name="Add comment (bold and italic)" sid="463619550323347" type="Comment">
+                                            <param id="0" name="Comment">&quot;Disable this group&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="784145910995501" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action behavior="Rotate" id="0" name="Set speed" sid="452901263858207" type="Sprite5_">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="681288578374034" type="Values_Level">
+                                            <param id="0" name="Instance variable">IsLevelTimerActive</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="779250122911956" type="System">
+                                            <param id="0" name="Group name">&quot;Titlecard&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="868516338001849" title="GameOver">
                     <sub-events>
                         <event-block sid="234624847920943">
@@ -13606,6 +13989,9 @@
                                 </action>
                                 <action id="-2" name="Set Y" sid="187582097242557" type="results_total_counter">
                                     <param id="0" name="Y">172</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="617963034390159" type="Results_Zone">
+                                    <param id="0" name="Frame number">Global_Settings.Act-1</param>
                                 </action>
                             </actions>
                         </event-block>

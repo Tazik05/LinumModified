@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>7099.06</position-x>
-        <position-y>857.598</position-y>
-        <position-z>222.349</position-z>
-        <lookat-x>7099.06</lookat-x>
-        <lookat-y>857.598</lookat-y>
+        <position-x>55.0541</position-x>
+        <position-y>179.129</position-y>
+        <position-z>95.8759</position-z>
+        <lookat-x>55.0541</lookat-x>
+        <lookat-y>179.129</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -23,24 +23,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="HUD_Linum" />
+    <active-layer name="Cursor(GLOBAL)" />
     <layers>
         <layer locked="0" name="BG" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Collisions_General" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Collisions_LayerBlue" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Objects_Level" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Objects_Player" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Collisions_LayerRed" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Objects_Helpers" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Objects_Level" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Objects_Player" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Collisions_LayerRed" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Objects_Helpers" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="HUD_Linum" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="HUD_Custom" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="HUD_Custom" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Pause_Menu" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Android_Controls" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Android_Areas" parallax-in-editor="0" visible="0" />
+        <layer locked="1" name="Android_Controls(GLOBAL)" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Transition" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="LevelCard" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Debug" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="ConsoleUI" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Cursor" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="LevelCard" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Debug" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="ConsoleUI(GLOBAL)" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Cursor(GLOBAL)" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>

@@ -4,12 +4,14 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <show-addaction-links>1</show-addaction-links>
-    <scroll-pos>1650</scroll-pos>
-    <conditions-column>210</conditions-column>
-    <actions-namecolumn>21</actions-namecolumn>
+    <scroll-pos>953</scroll-pos>
+    <conditions-column>198</conditions-column>
+    <actions-namecolumn>19</actions-namecolumn>
     <condition-namecolumns>
         <nest>20</nest>
         <nest>18</nest>
+        <nest>17</nest>
+        <nest>16</nest>
     </condition-namecolumns>
     <events>
         <event collapsed="1" sid="158973237713220" />
@@ -105,6 +107,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="751578934225592" />
         <event collapsed="1" sid="665600267356722" />
         <event collapsed="1" sid="804946171681154" />
+        <event collapsed="1" sid="558186621176637" />
+        <event collapsed="1" sid="624116582955229" />
         <event collapsed="1" sid="909989700271954" />
         <event collapsed="1" sid="994771570927211" />
         <event collapsed="1" sid="154007207566537" />
@@ -140,6 +144,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="945182870642000" />
         <event collapsed="1" sid="892751820576081" />
         <event collapsed="1" sid="801694634013786" />
+        <event collapsed="1" sid="840330709221770" />
         <event collapsed="1" sid="164425958096997" />
         <event collapsed="1" sid="515968714812672" />
         <event collapsed="1" sid="627700543249761" />
@@ -153,9 +158,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="827778206762680" />
         <event collapsed="1" sid="589784361872534" />
         <event collapsed="1" sid="839834565800655" />
+        <event collapsed="1" sid="332944823850152" />
         <event collapsed="1" sid="868516338001849" />
         <event collapsed="1" sid="134759272676371" />
-        <event collapsed="1" sid="329595441616874" />
         <event collapsed="1" sid="300484767407371" />
         <event collapsed="1" sid="512653599401297" />
         <event collapsed="1" sid="928178433914233" />

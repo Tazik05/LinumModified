@@ -45,16 +45,16 @@
             </conditions>
             <actions>
                 <action id="4" name="Preload" sid="167855552888233" type="Audio">
-                    <param id="0" name="Audio file">MUS_menu</param>
+                    <param id="0" name="Audio file">MUS_Menu</param>
                 </action>
                 <action id="4" name="Preload" sid="945258382465278" type="Audio">
-                    <param id="0" name="Audio file">MUS_level</param>
+                    <param id="0" name="Audio file">MUS_Level</param>
                 </action>
                 <action id="4" name="Preload" sid="794484311192578" type="Audio">
-                    <param id="0" name="Audio file">MUS_invincibility</param>
+                    <param id="0" name="Audio file">MUS_Invincibility</param>
                 </action>
                 <action id="4" name="Preload" sid="475072000719190" type="Audio">
-                    <param id="0" name="Audio file">MUS_speedshoes</param>
+                    <param id="0" name="Audio file">MUS_Speedshoes</param>
                 </action>
             </actions>
         </event-block>
