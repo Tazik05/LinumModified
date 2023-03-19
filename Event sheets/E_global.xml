@@ -947,6 +947,55 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="824292567019502">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="705779815384439" type="System">
+                                            <param id="0" name="First value">findcase(Global_Settings.HUD, &quot;ssw&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="152060127260347" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="986068766186996" type="Global_Settings">
+                                            <param id="0" name="Instance variable">HUD</param>
+                                            <param id="1" name="Value">&quot;SSW&quot;</param>
+                                        </action>
+                                        <action id="1" name="Close" sid="731079972079835" type="Browser" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="400534678368447">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="527742715220104" type="System">
+                                            <param id="0" name="First value">findcase(Global_Settings.HUD, &quot;Sonic3&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="316959443195496" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="501684231017626" type="Global_Settings">
+                                            <param id="0" name="Instance variable">HUD</param>
+                                            <param id="1" name="Value">&quot;Sonic3&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="745841800766908">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Compare two values" sid="338507422117621" type="System">
+                                            <param id="0" name="First value">findcase(Global_Settings.HUD, &quot;Linum&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="650576164627355" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="252993962582854" type="Global_Settings">
+                                            <param id="0" name="Instance variable">HUD</param>
+                                            <param id="1" name="Value">&quot;Linum&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="364611069362558">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Compare two values" sid="348293316400101" type="System">
@@ -1081,6 +1130,28 @@
                                                     <param id="0" name="Frame number">float(tokenat(TextBoxMask.Text, 2, &quot; &quot;))</param>
                                                 </action>
                                                 <action id="0" name="Set text" sid="758761895886372" type="TextBoxMask">
+                                                    <param id="0" name="Text">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="790509179663498">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="869410912329146" type="System">
+                                                    <param id="0" name="First value">find(TextBoxMask.Text, &quot;Help&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="396606257685865" type="Values_CMD">
+                                                    <param id="0" name="Instance variable">CanExecute</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="504086065867566" type="Function">
+                                                    <param id="0" name="Name">&quot;WriteInCMDBox&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Alert,Exit (Game or Console),MovePlayerX (Value),MovePlayerY (Value),Suicide ,Call function (Function),Restart (Level or game),,GameInfo,Play (Audio name),Timescale (Value),Set PauseStyle (Original/SSW),Set ScreenSize (Disable/Original/2x/3x/4x/FullScreen),Set Character (1/2/3),Set Lives (Value),Set Rings (Value),Set HUDStyle(Linum/Sonic3/SSW) ,LayoutName,GoToLayout (Name),Set Cursor(1-4)&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="233737404046460" type="TextBoxMask">
                                                     <param id="0" name="Text">&quot;&quot;</param>
                                                 </action>
                                             </actions>
@@ -1280,6 +1351,28 @@
                                                     <param id="1" name="Value">trim(replace(TextBoxMask.Text,&quot;Set HUDStyle&quot;,&quot;&quot;))</param>
                                                 </action>
                                                 <action id="0" name="Set text" sid="470174742701886" type="TextBoxMask">
+                                                    <param id="0" name="Text">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="695498848110592">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="982505880371553" type="System">
+                                                    <param id="0" name="First value">find(TextBoxMask.Text, &quot;Call function&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="454842596097952" type="Values_CMD">
+                                                    <param id="0" name="Instance variable">CanExecute</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="206550999838756" type="Function">
+                                                    <param id="0" name="Name">trim(replace(TextBoxMask.Text,&quot;Set HUDStyle&quot;,&quot;&quot;))</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="883734517287473" type="TextBoxMask">
                                                     <param id="0" name="Text">&quot;&quot;</param>
                                                 </action>
                                             </actions>
@@ -1855,15 +1948,26 @@
                                 <condition id="-2" name="On start of layout" sid="652926276509990" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="DatalistForTextbox" id="0" name="Set datalist words" sid="516890381436010" type="TextBoxMask">
-                                    <param id="0" name="Datalist words">&quot;Alert,Exit (Game or Console),Fly,Ghost,MovePlayerX (Value),MovePlayerY (Value),Suicide ,Call function (Function),Restart (Level or game),,GameInfo,Play (Audio name),Timescale (Value),Set PauseStyle (Original/SSW),Set ScreenSize (Disable/Original/2x/3x/4x/FullScreen),Set Character (1/2/3),Set Lives (Value),Set Rings (Value),Set HUDStyle(Linum/Sonic3/SSW) ,LayoutName,GoToLayout (Name),Set Cursor(1-4)&quot;</param>
-                                </action>
                                 <action id="0" name="Call function" sid="387552052474774" type="Function">
                                     <param id="0" name="Name">&quot;CMDSymbol&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                             <sub-events>
+                                <event-block sid="382153544778472">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="950560395717832" type="Global_Settings">
+                                            <param id="0" name="Instance variable">Platform</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Mobile&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="DatalistForTextbox" id="0" name="Set datalist words" sid="849587803749651" type="TextBoxMask">
+                                            <param id="0" name="Datalist words">&quot;Alert,Exit (Game or Console),MovePlayerX (Value),MovePlayerY (Value),Suicide ,Call function (Function),Restart (Level or game),,GameInfo,Play (Audio name),Timescale (Value),Set PauseStyle (Original/SSW),Set ScreenSize (Disable/Original/2x/3x/4x/FullScreen),Set Character (1/2/3),Set Lives (Value),Set Rings (Value),Set HUDStyle(Linum/Sonic3/SSW) ,LayoutName,GoToLayout (Name),Set Cursor(1-4)&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="233814503676889">
                                     <conditions>
                                         <condition id="-7" inverted="1" name="Compare instance variable" sid="516818148106834" type="Values_CMD">
@@ -2745,10 +2849,6 @@
                         <action id="-13" name="Set time scale" sid="552279367515143" type="System">
                             <param id="0" name="Time scale">timescale=0/1</param>
                         </action>
-                        <action disabled="1" id="-13" name="Set boolean" sid="321947849351581" type="Values_PauseMenu">
-                            <param id="0" name="Instance variable">Paused</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="655058022884114">
@@ -2896,44 +2996,6 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="965577390082732">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="791924716122992" type="Values_Input">
-                                    <param id="0" name="Instance variable">KeyUpHold</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="967110100836342" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="994238065474242" type="Audio">
-                                    <param id="0" name="Audio file">SFX_MenuBleep</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SFX_MenuBleep&quot;</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="710562476491881" type="spr_pause_menu">
-                                    <param id="0" name="Frame number">Self.AnimationFrame-1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="758909558652269">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="554879584278935" type="Values_Input">
-                                    <param id="0" name="Instance variable">KeyDownHold</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="940401604722438" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="628932750787755" type="Audio">
-                                    <param id="0" name="Audio file">SFX_MenuBleep</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SFX_MenuBleep&quot;</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="854286592258813" type="spr_pause_menu">
-                                    <param id="0" name="Frame number">Self.AnimationFrame+1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="545270136805236">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="615151558321177" type="Values_PauseMenu">
@@ -2945,11 +3007,138 @@
                                     <param id="0" name="X">lerp(Self.X,214, 0.1)</param>
                                     <param id="1" name="Y">lerp(Self.Y, 122, 0.1)</param>
                                 </action>
-                                <action disabled="1" id="5" name="Set frame" sid="181929301344787" type="spr_pause_menu">
-                                    <param id="0" name="Frame number">Values_PauseMenu.Selected</param>
-                                </action>
                             </actions>
                             <sub-events>
+                                <event-block sid="243716310569182">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="591635231171968" type="spr_pause_menu">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="915804816560945" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="134788549041113" type="spr_pause_menu">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="925738260337883">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="155324594283828" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="778153147008360">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="856941133154986" type="spr_pause_menu">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set time scale" sid="976333463330513" type="System">
+                                                    <param id="0" name="Time scale">timescale=0/1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="583470744837732">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="405288338565399" type="spr_pause_menu">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="856083310579745" type="Function">
+                                                    <param id="0" name="Name">&quot;SoftRestart&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="372902726559468">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="255415149348622" type="spr_pause_menu">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Close" sid="503157277884801" type="Browser" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="965577390082732">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="791924716122992" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyUpHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="967110100836342" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="994238065474242" type="Audio">
+                                            <param id="0" name="Audio file">SFX_MenuBleep</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_MenuBleep&quot;</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="710562476491881" type="spr_pause_menu">
+                                            <param id="0" name="Frame number">Self.AnimationFrame-1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="300820901205927">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="824493686476478" type="spr_pause_menu">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="677832452328314" type="spr_pause_menu">
+                                                    <param id="0" name="Frame number">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="758909558652269">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="554879584278935" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyDownHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="940401604722438" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="628932750787755" type="Audio">
+                                            <param id="0" name="Audio file">SFX_MenuBleep</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_MenuBleep&quot;</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="854286592258813" type="spr_pause_menu">
+                                            <param id="0" name="Frame number">Self.AnimationFrame+1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="588745537831174">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="337510014020939" type="spr_pause_menu">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="342433435083681" type="spr_pause_menu">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="222527582713711">
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="937160537825568" type="System" />

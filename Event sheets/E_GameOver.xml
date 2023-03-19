@@ -129,6 +129,10 @@
                     <param id="0" name="Seconds">1.0</param>
                 </action>
                 <action id="33" name="Stop all" sid="762842932709609" type="Audio" />
+                <action id="-10" name="Set value" sid="340284753321048" type="Global_Settings">
+                    <param id="0" name="Instance variable">Lives</param>
+                    <param id="1" name="Value">5</param>
+                </action>
                 <action id="-25" name="Go to layout (by name)" sid="329959628613084" type="System">
                     <param id="0" name="Layout">Global_Settings.LayoutSaver</param>
                 </action>

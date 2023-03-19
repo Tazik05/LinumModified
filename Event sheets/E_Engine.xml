@@ -444,6 +444,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Roll&quot;</param>
                                         </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="568370779019351" type="Values_Player">
+                                            <param id="0" name="Instance variable">Character</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -744,6 +749,9 @@
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="516238135421164" type="Values_Player">
                                     <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="748897827900485" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">Paused</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -1160,6 +1168,17 @@
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
+                                                                <event-block sid="646679414671762">
+                                                                    <conditions>
+                                                                        <condition id="-4" name="Trigger once while true" sid="886806278949151" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="638527576359028" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">State</param>
+                                                                            <param id="1" name="Value">&quot;Balancing&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
                                                                 <event-block sid="439491036505433">
                                                                     <conditions>
                                                                         <condition id="-7" name="Compare instance variable" sid="753272949107944" type="Values_Player">
@@ -1204,6 +1223,17 @@
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
+                                                                <event-block sid="649158205433969">
+                                                                    <conditions>
+                                                                        <condition id="-4" name="Trigger once while true" sid="800476140971084" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="339698920950471" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">State</param>
+                                                                            <param id="1" name="Value">&quot;Balancing&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
                                                                 <event-block sid="555822240491400">
                                                                     <conditions>
                                                                         <condition id="-7" name="Compare instance variable" sid="716323180233332" type="Values_Player">
@@ -5411,6 +5441,88 @@
                 </event-group>
                 <event-group description="" sid="276249046647025" title="Stat changes">
                     <sub-events>
+                        <event-group description="" sid="139963145793510" title="Hit state">
+                            <sub-events>
+                                <event-block any="1" sid="927989030719663">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="451483341097235" type="Values_Player">
+                                            <param id="0" name="Instance variable">Flying</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="112227179960201" type="Values_Player">
+                                            <param id="0" name="Instance variable">Invincibility</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="923155123518170" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="633111005874388" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="226244929271690" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SpinDashCharging&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="511229798338773">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="410308826110788" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="730061889180190" type="Values_Player">
+                                                    <param id="0" name="Instance variable">HitState</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="375839272336976">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="363379015780684" type="Values_Player">
+                                            <param id="0" name="Instance variable">Flying</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="503661170609366" type="Values_Player">
+                                            <param id="0" name="Instance variable">Invincibility</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="955516200408365" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="549311548862334" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="867093651737115" type="Values_Player">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;SpinDashCharging&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="173354371661209">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="206054972120393" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="172713173114126" type="Values_Player">
+                                                    <param id="0" name="Instance variable">HitState</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-block sid="397785746679377">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="784343848947025" type="Values_Player">
@@ -5537,6 +5649,11 @@
                                             </conditions>
                                             <actions>
                                                 <action behavior="Flash" id="0" name="Flash" sid="133823750934899" type="PlayerSprite">
+                                                    <param id="0" name="&apos;On&apos; time">0.2</param>
+                                                    <param id="1" name="&apos;Off&apos; time">0.2</param>
+                                                    <param id="2" name="Duration">2.0</param>
+                                                </action>
+                                                <action behavior="Flash" id="0" name="Flash" sid="355123553607702" type="TailsBack">
                                                     <param id="0" name="&apos;On&apos; time">0.2</param>
                                                     <param id="1" name="&apos;Off&apos; time">0.2</param>
                                                     <param id="2" name="Duration">2.0</param>
@@ -8089,15 +8206,8 @@
                                         </event-block>
                                         <event-block any="1" sid="796165464757221">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="882416700716760" type="Values_Player">
-                                                    <param id="0" name="Instance variable">State</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Roll&quot;</param>
-                                                </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="758187543896663" type="Values_Player">
-                                                    <param id="0" name="Instance variable">State</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="779870352121816" type="Values_Player">
+                                                    <param id="0" name="Instance variable">HitState</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -8256,15 +8366,8 @@
                                         <condition id="1" name="Is overlapping another object" sid="838643264518218" type="Badnik_MotoBug">
                                             <param id="0" name="Object">Sensor_Main</param>
                                         </condition>
-                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="389269783741730" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="656424730182300" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="561658739680237" type="Values_Player">
+                                            <param id="0" name="Instance variable">HitState</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="344439788660170" type="System" />
                                     </conditions>
@@ -8446,10 +8549,8 @@
                                         <condition id="1" name="Is overlapping another object" sid="921790520923276" type="Sensor_Main">
                                             <param id="0" name="Object">Badnik_MotoBug</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="885079414064457" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="885079414064457" type="Values_Player">
+                                            <param id="0" name="Instance variable">HitState</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="733879669380032" type="System" />
                                     </conditions>
@@ -8651,15 +8752,8 @@
                                         <condition id="1" name="Is overlapping another object" sid="201342948519941" type="Badnik_Mechapig">
                                             <param id="0" name="Object">Sensor_Main</param>
                                         </condition>
-                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="891203767312650" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                        </condition>
-                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="844780470157091" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="274505477642815" type="Values_Player">
+                                            <param id="0" name="Instance variable">HitState</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="147293530672818" type="System" />
                                     </conditions>
@@ -8670,48 +8764,12 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="306431892058400">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="719065183748176" type="Sensor_Main">
-                                            <param id="0" name="Object">Badnik_Mechapig</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="290760963387496" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Roll&quot;</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="403694266220675" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="634927067626119" type="System">
-                                            <param id="0" name="Object to create">Explosion1</param>
-                                            <param id="1" name="Layer">&quot;Objects_Level&quot;</param>
-                                            <param id="2" name="X">Badnik_Mechapig.X</param>
-                                            <param id="3" name="Y">Badnik_Mechapig.Y</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="235066050495582" type="Function">
-                                            <param id="0" name="Name">&quot;pts&quot;</param>
-                                            <param id="1" name="Parameter {n}">0{###}Badnik_Mechapig.X{###}Badnik_Mechapig.Y</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="561153496888042" type="Function">
-                                            <param id="0" name="Name">&quot;CreateAnimal&quot;</param>
-                                            <param id="1" name="Parameter {n}">Badnik_Mechapig.X{###}Badnik_Mechapig.Y{###}&quot;Parameter0 - X, Parameter1 - Y&quot;</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="821357269121758" type="Badnik_Mechapig" />
-                                        <action id="0" name="Play" sid="186310694102070" type="Audio">
-                                            <param id="0" name="Audio file">SFX_Explosion</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;SFX_Explosion&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block sid="768148592653906">
                                     <conditions>
                                         <condition id="1" name="Is overlapping another object" sid="478878813856276" type="Sensor_ObjectDown">
                                             <param id="0" name="Object">Badnik_Mechapig</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="119962714989368" type="Values_Player">
+                                        <condition id="-7" name="Compare instance variable" sid="779181157246983" type="Values_Player">
                                             <param id="0" name="Instance variable">State</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Jump&quot;</param>
@@ -8738,6 +8796,40 @@
                                             <param id="0" name="Vector Y">-270</param>
                                         </action>
                                         <action id="0" name="Play" sid="307586406791611" type="Audio">
+                                            <param id="0" name="Audio file">SFX_Explosion</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX_Explosion&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="306431892058400">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="719065183748176" type="Sensor_Main">
+                                            <param id="0" name="Object">Badnik_Mechapig</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="418629437551370" type="Values_Player">
+                                            <param id="0" name="Instance variable">HitState</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="403694266220675" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="634927067626119" type="System">
+                                            <param id="0" name="Object to create">Explosion1</param>
+                                            <param id="1" name="Layer">&quot;Objects_Level&quot;</param>
+                                            <param id="2" name="X">Badnik_Mechapig.X</param>
+                                            <param id="3" name="Y">Badnik_Mechapig.Y</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="235066050495582" type="Function">
+                                            <param id="0" name="Name">&quot;pts&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}Badnik_Mechapig.X{###}Badnik_Mechapig.Y</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="561153496888042" type="Function">
+                                            <param id="0" name="Name">&quot;CreateAnimal&quot;</param>
+                                            <param id="1" name="Parameter {n}">Badnik_Mechapig.X{###}Badnik_Mechapig.Y{###}&quot;Parameter0 - X, Parameter1 - Y&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="821357269121758" type="Badnik_Mechapig" />
+                                        <action id="0" name="Play" sid="186310694102070" type="Audio">
                                             <param id="0" name="Audio file">SFX_Explosion</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
@@ -8869,6 +8961,34 @@
                                                     <actions>
                                                         <action id="5" name="Set frame" sid="765008779224990" type="obj_sign_post">
                                                             <param id="0" name="Frame number">8</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="172901491153954">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="816030633082205" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Character</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Set frame" sid="405942638830713" type="obj_sign_post">
+                                                            <param id="0" name="Frame number">12</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="805898318520960">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="529857568145159" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Character</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Set frame" sid="736657807267010" type="obj_sign_post">
+                                                            <param id="0" name="Frame number">16</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -9956,6 +10076,218 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
+                                                <event-block any="1" sid="334690045311695">
+                                                    <conditions>
+                                                        <condition id="2" name="Is playing" sid="313115172843642" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Balancing1_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="410857221528844" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Balancing2_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="777118674596831">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="645090131556793" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="772585952927234" type="TailsBack">
+                                                                    <param id="0" name="Animation">&quot;pushing&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="937108054769112" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="718138631557038">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="191927072659703" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Set position" sid="643861323979344" type="TailsBack">
+                                                                            <param id="0" name="X">Sensor_Hitbox.X-4</param>
+                                                                            <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="327076107609886">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="618421118859864" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Set position" sid="987878626615352" type="TailsBack">
+                                                                            <param id="0" name="X">Sensor_Hitbox.X+3</param>
+                                                                            <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block any="1" sid="598874572401480">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="166873752726851" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Idle&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="630510189233731" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;LookingUp&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="708362303896362" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Waiting&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="698207797748454" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Crouching&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="653746001738557">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="920961260488072" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="338467945796439" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="182569778522888">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Is playing" sid="372884462703253" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Balancing1_&quot;&amp;Values_Player.Character</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Is playing" sid="631915233214287" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Balancing2_&quot;&amp;Values_Player.Character</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="454721901677945">
+                                                                    <conditions>
+                                                                        <condition id="-1" name="Every tick" sid="316481475462058" type="System" />
+                                                                        <condition id="-7" name="Compare instance variable" sid="481547152570545" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Set position" sid="782624064923044" type="TailsBack">
+                                                                            <param id="0" name="X">Sensor_Hitbox.X</param>
+                                                                            <param id="1" name="Y">Sensor_Hitbox.Y+15</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="455193956520320">
+                                                                    <conditions>
+                                                                        <condition id="-1" name="Every tick" sid="983692953423295" type="System" />
+                                                                        <condition id="-7" name="Compare instance variable" sid="221544879624106" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Set position" sid="829601439920843" type="TailsBack">
+                                                                            <param id="0" name="X">Sensor_Hitbox.X</param>
+                                                                            <param id="1" name="Y">Sensor_Hitbox.Y+15</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="857470329994228">
+                                                                    <conditions>
+                                                                        <condition id="-4" name="Trigger once while true" sid="113867964488766" type="System" />
+                                                                        <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="555550471962757" type="Sensor_Main" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-8" name="Set angle" sid="116965786425622" type="TailsBack">
+                                                                            <param id="0" name="Angle">0</param>
+                                                                        </action>
+                                                                        <action id="4" name="Set animation" sid="939210990528920" type="TailsBack">
+                                                                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="430713807010918">
+                                                                    <conditions>
+                                                                        <condition id="-4" name="Trigger once while true" sid="235634065437820" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="413304712868822" type="TailsBack">
+                                                                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block any="1" sid="207234506961537">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="527752077687818" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Flying&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="352682364756160" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Tired&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="809933064496195">
+                                                            <conditions>
+                                                                <condition id="-1" name="Every tick" sid="721762847630054" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="368041292149038" type="TailsBack">
+                                                                    <param id="0" name="X">PlayerSprite.ImagePointX(1)</param>
+                                                                    <param id="1" name="Y">PlayerSprite.ImagePointY(1)</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="519681251492956" type="TailsBack">
+                                                                    <param id="0" name="Animation">&quot;flying&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-8" name="Set angle" sid="194446744807568" type="TailsBack">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="504236531032540">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="556845848688656" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="361139979562791" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
                                                 <event-block sid="755505701193771">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="714439298072324" type="Values_Player">
@@ -9992,69 +10324,36 @@
                                                         <comment>turns tails to the right</comment>
                                                     </sub-events>
                                                 </event-block>
-                                                <event-block sid="510778253862230">
+                                                <event-block sid="541501947248974">
                                                     <conditions>
-                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="391636645967092" type="Values_Player">
+                                                        <condition id="-7" name="Compare instance variable" sid="878857098062534" type="Values_Player">
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                            <param id="2" name="Value">&quot;SpinDashCharging&quot;</param>
                                                         </condition>
-                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="569115747930503" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Roll&quot;</param>
-                                                        </condition>
+                                                        <condition id="-1" name="Every tick" sid="682282994039099" type="System" />
                                                     </conditions>
-                                                    <actions />
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="890831446052293" type="TailsBack">
+                                                            <param id="0" name="X">Sensor_Hitbox.X</param>
+                                                            <param id="1" name="Y">Sensor_Hitbox.Y+12</param>
+                                                        </action>
+                                                    </actions>
                                                     <sub-events>
-                                                        <event-block sid="544727734970983">
+                                                        <event-block sid="522411173038078">
                                                             <conditions>
-                                                                <condition id="-1" name="Every tick" sid="726090209793283" type="System" />
-                                                                <condition id="-7" name="Compare instance variable" sid="547716977270109" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;right&quot;</param>
-                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="224576589043883" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-3" name="Set position" sid="935349708338530" type="TailsBack">
-                                                                    <param id="0" name="X">Sensor_Hitbox.X-2</param>
-                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+15</param>
+                                                                <action id="-15" name="Set visible" sid="420150556678052" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
                                                                 </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="497388663915090">
-                                                            <conditions>
-                                                                <condition id="-1" name="Every tick" sid="600850380392805" type="System" />
-                                                                <condition id="-7" name="Compare instance variable" sid="396698595811793" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;left&quot;</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-3" name="Set position" sid="162375877363561" type="TailsBack">
-                                                                    <param id="0" name="X">Sensor_Hitbox.X</param>
-                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+15</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="673625369010999">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="722214058451879" type="System" />
-                                                                <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="353909735787168" type="Sensor_Main" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-8" name="Set angle" sid="716456136940084" type="TailsBack">
-                                                                    <param id="0" name="Angle">0</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="242943121096829" type="TailsBack">
-                                                                    <param id="0" name="Animation">&quot;idle&quot;</param>
+                                                                <action id="4" name="Set animation" sid="341007096375762" type="TailsBack">
+                                                                    <param id="0" name="Animation">&quot;spindash&quot;</param>
                                                                     <param id="1" name="From">1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <comment>each frame attaches tails to the player</comment>
                                                     </sub-events>
                                                 </event-block>
                                                 <event-block sid="439398466987514">
@@ -10073,6 +10372,20 @@
                                                         </action>
                                                     </actions>
                                                     <sub-events>
+                                                        <event-block sid="165809213766332">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="809619160423369" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="578557832560520" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="690780300766003" type="TailsBack">
+                                                                    <param id="0" name="Animation">&quot;jumping&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block sid="293524478298048">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="141410562105863" type="Values_Player">
@@ -10119,6 +10432,20 @@
                                                         </action>
                                                     </actions>
                                                     <sub-events>
+                                                        <event-block sid="815299802181263">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="190824732827403" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="773021508233008" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="565250582398036" type="TailsBack">
+                                                                    <param id="0" name="Animation">&quot;jumping&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block sid="577026258794981">
                                                             <conditions>
                                                                 <condition behavior="SonicPhysics" id="2" name="Is on floor" sid="617550912972368" type="Sensor_Main" />
@@ -10167,51 +10494,6 @@
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
-                                                <event-block any="1" sid="808429121758072">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="612302803361239" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Flying&quot;</param>
-                                                        </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="700063523856096" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Tired&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="693370229876997">
-                                                            <conditions>
-                                                                <condition id="-1" name="Every tick" sid="386214040650574" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-3" name="Set position" sid="707975200578743" type="TailsBack">
-                                                                    <param id="0" name="X">PlayerSprite.ImagePointX(1)</param>
-                                                                    <param id="1" name="Y">PlayerSprite.ImagePointY(1)</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="305706480526165" type="TailsBack">
-                                                                    <param id="0" name="Animation">&quot;flying&quot;</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                                <action id="-8" name="Set angle" sid="825904666081600" type="TailsBack">
-                                                                    <param id="0" name="Angle">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="560787744359925">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="965207552375695" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-15" name="Set visible" sid="788497637774732" type="TailsBack">
-                                                                    <param id="0" name="Visibility">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
                                                 <event-block sid="840500148729840">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="500491888295396" type="Values_Player">
@@ -10226,130 +10508,31 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="849419215984445">
+                                                <event-block sid="583686561123385">
                                                     <conditions>
-                                                        <condition id="-22" name="Else" sid="102676177751642" type="System" />
-                                                        <condition id="-4" name="Trigger once while true" sid="828128750062297" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="370299635275009" type="TailsBack">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="438950013502731">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="424768654152010" type="Values_Player">
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="792878816071765" type="Values_Player">
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Idle&quot;</param>
+                                                            <param id="2" name="Value">&quot;Flying&quot;</param>
                                                         </condition>
-                                                        <condition id="-4" name="Trigger once while true" sid="719509430320360" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="327935086823018" type="TailsBack">
-                                                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="632571567547725">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="236811218257865" type="Values_Player">
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="987762807773654" type="Values_Player">
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Crouching&quot;</param>
+                                                            <param id="2" name="Value">&quot;Tired&quot;</param>
                                                         </condition>
-                                                        <condition id="-4" name="Trigger once while true" sid="494910738981711" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="753980596115295" type="TailsBack">
-                                                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="658094289840900" type="TailsBack">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="181400000407778">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="323353368481566" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;CorkscrewRunning&quot;</param>
-                                                        </condition>
-                                                        <condition id="-4" name="Trigger once while true" sid="548890029113362" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="189730245987493" type="TailsBack">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block any="1" sid="550605840034985">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="468019833557097" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Hurt&quot;</param>
-                                                        </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="459194893806502" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;OnSpring&quot;</param>
-                                                        </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="324578719148316" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;StandSpin&quot;</param>
-                                                        </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="391475701538920" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Skidding&quot;</param>
+                                                        <condition id="2" name="Is playing" sid="262692578724721" type="TailsBack">
+                                                            <param id="0" name="Animation">&quot;flying&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="417314410403396">
+                                                        <event-block sid="368154584731048">
                                                             <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="279648223470693" type="System" />
+                                                                <condition id="-4" name="Trigger once while true" sid="377572985280007" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-15" name="Set visible" sid="259176131195427" type="TailsBack">
+                                                                <action id="-15" name="Set visible" sid="504677889048664" type="TailsBack">
                                                                     <param id="0" name="Visibility">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                                <event-block any="1" sid="746921282572849">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="948107611816981" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Jump&quot;</param>
-                                                        </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="145758058649971" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Roll&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="318801690611304">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="297074426799950" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-15" name="Set visible" sid="614994782336337" type="TailsBack">
-                                                                    <param id="0" name="Visibility">1</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="655746958727133" type="TailsBack">
-                                                                    <param id="0" name="Animation">&quot;jumping&quot;</param>
-                                                                    <param id="1" name="From">1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -13456,21 +13639,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="999118803111834" type="BigStaticText2">
-                                    <param id="0" name="Text">Function.Param(1)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="823031693018708" type="Global_Settings">
-                                    <param id="0" name="Instance variable">Act</param>
-                                    <param id="1" name="Value">Function.Param(2)</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="402978504291177" type="Linum_Act_Number">
-                                    <param id="0" name="Frame number">Function.Param(2)-1</param>
-                                </action>
-                                <action id="0" name="Set text" sid="292282887051365" type="SmallTextTiledCard">
-                                    <param id="0" name="Text">&quot;○ &quot;&amp;Function.Param(5)&amp;&quot; ♂ &quot;&amp;Function.Param(6)</param>
-                                </action>
-                                <action id="0" name="Set text" sid="211677555968420" type="SmallTextTiledCard_GameMode">
-                                    <param id="0" name="Text">Function.Param(4)</param>
+                                <action id="-13" name="Set boolean" sid="385123244179127" type="Values_Player">
+                                    <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -13483,14 +13654,164 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Set text" sid="999118803111834" type="BigStaticText2">
+                                            <param id="0" name="Text">Function.Param(1)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="823031693018708" type="Global_Settings">
+                                            <param id="0" name="Instance variable">Act</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="402978504291177" type="Linum_Act_Number">
+                                            <param id="0" name="Frame number">Function.Param(2)-1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="292282887051365" type="SmallTextTiledCard">
+                                            <param id="0" name="Text">&quot;○ &quot;&amp;Function.Param(5)&amp;&quot; ♂ &quot;&amp;Function.Param(6)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="211677555968420" type="SmallTextTiledCard_GameMode">
+                                            <param id="0" name="Text">Function.Param(4)</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="278292471887127" type="TiledBackground9_">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
                                         <action id="-12" name="Set group active" sid="895904737593673" type="System">
                                             <param id="0" name="Group name">&quot;LinumTitleCard&quot;</param>
                                             <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="456874881041626" type="TitleCard_Sprite">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="612598954824888" type="TitleCard_Spritefont">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="224437172572738" type="TitleCard_Acts">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="471249582279218" type="TitleCard_Zone">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="858070774882234">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="730922203428959" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Sonic3&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="436725149023164" type="Global_Settings">
+                                            <param id="0" name="Instance variable">Act</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="971226352722677" type="TitleCard_Sprite">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="953792081369285" type="TitleCard_Spritefont">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="160188182809283" type="TitleCard_Spritefont">
+                                            <param id="0" name="Text">Function.Param(1)</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="639592012809746" type="TitleCard_Acts">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="108490265040102" type="TitleCard_Acts">
+                                            <param id="0" name="Frame number">Function.Param(2)-1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="194082536631043" type="TiledBackground9_">
+                                            <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-group description="" sid="658246908184068" title="Sonic 3">
+                            <sub-events>
+                                <comment>TitleCard_Sprite - 80, 0</comment>
+                                <comment>TitleCard_Spritefont - 384, 88</comment>
+                                <comment>TitleCard_Zone - 384, 120</comment>
+                                <event-block sid="936874048577138">
+                                    <conditions>
+                                        <condition id="-2" name="On start of layout" sid="915520024406822" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="758659043599436" type="TitleCard_Spritefont">
+                                            <param id="0" name="X">664</param>
+                                            <param id="1" name="Y">88</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="967740060130899" type="TitleCard_Sprite">
+                                            <param id="0" name="X">80</param>
+                                            <param id="1" name="Y">-176</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="865303943287196" type="TitleCard_Zone">
+                                            <param id="0" name="X">512</param>
+                                            <param id="1" name="Y">120</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="872454273910646" type="TitleCard_Acts">
+                                            <param id="0" name="X">312</param>
+                                            <param id="1" name="Y">152</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="362896419737279">
+                                    <conditions>
+                                        <condition behavior="LiteTween" id="4" name="On tween end" sid="140051331616063" type="TitleCard_Sprite" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="519825768861344" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="118735495958601" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="331385361161484" type="Values_Player">
+                                            <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="381657220779517" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="468473107648796" type="TitleCard_Sprite">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="729283955599910" type="TitleCard_Spritefont">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="892235920330343" type="TitleCard_Acts">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="599221782148925">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="920908919672663" type="TitleCard_Spritefont" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="546560977482303" type="TitleCard_Zone">
+                                            <param id="0" name="X">TitleCard_Spritefont.X</param>
+                                            <param id="1" name="Y">TitleCard_Spritefont.Y+32</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="250462622198506">
+                                    <conditions>
+                                        <condition id="-3" inverted="1" name="Is on-screen" sid="216442155225458" type="TitleCard_Spritefont" />
+                                        <condition id="-4" name="Trigger once while true" sid="623038764051491" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="186554661712262" type="TitleCard_Zone">
+                                            <param id="0" name="X">504</param>
+                                            <param id="1" name="Y">120</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-group description="" inactive="1" sid="332944823850152" title="LinumTitleCard">
                             <sub-events>
                                 <event-block sid="163578340400399">
@@ -13670,6 +13991,10 @@
                                         <action id="0" name="Call function" sid="776926306183442" type="Function">
                                             <param id="0" name="Name">&quot;Transition&quot;</param>
                                             <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="192129040622838" type="Values_Player">
+                                            <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="996783044394603" type="TiledBackground9_">
                                             <param id="0" name="Visibility">1</param>
@@ -13990,8 +14315,17 @@
                                 <action id="-2" name="Set Y" sid="187582097242557" type="results_total_counter">
                                     <param id="0" name="Y">172</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="505287665218907" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
                                 <action id="5" name="Set frame" sid="617963034390159" type="Results_Zone">
                                     <param id="0" name="Frame number">Global_Settings.Act-1</param>
+                                </action>
+                                <action disabled="1" id="0" name="Alert" sid="344456222519609" type="Browser">
+                                    <param id="0" name="Message">Global_Settings.Act-1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="307483580243069" type="spr_results_name">
+                                    <param id="0" name="Frame number">Values_Player.Character-1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -14040,6 +14374,10 @@
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="147129198373584" type="System">
+                                            <param id="0" name="Seconds">2.0</param>
+                                        </action>
+                                        <action id="9" name="Reload" sid="700340327090241" type="Browser" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="799879736769175">
@@ -15573,7 +15911,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="257373700463545">
+        <event-block disabled="1" sid="257373700463545">
             <conditions>
                 <condition id="-1" name="Every tick" sid="214880467207490" type="System" />
             </conditions>

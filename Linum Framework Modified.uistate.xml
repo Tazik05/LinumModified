@@ -10,11 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">PauseManu</layout>
-        <layout order="2">Linum_SimpleWorldsLevel</layout>
-        <layout order="3">ConsoleUI</layout>
-        <event-sheet active="1" order="0">E_global</event-sheet>
-        <event-sheet order="1">Event sheet 9</event-sheet>
+        <layout order="0">Linum_SimpleWorldsLevel</layout>
+        <layout order="1">Linum_Level</layout>
+        <event-sheet order="1">E_Level</event-sheet>
+        <event-sheet active="1" order="0">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,14 +21,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
-        <family expanded="0" name="SolidObjects" />
+        <family expanded="1" name="SolidObjects" />
         <family expanded="0" name="Collisions_Layer0" />
         <family expanded="0" name="Collisions_Layer1" />
         <family expanded="0" name="Behavior_Solid" />
-        <family expanded="1" name="Behavior_Jumpthru" />
+        <family expanded="0" name="Behavior_Jumpthru" />
         <family expanded="0" name="Animals" />
         <family expanded="0" name="obj" />
         <family expanded="0" name="AndroidButtons" />
@@ -37,7 +36,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="SaveSlots" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="object-folder/.System Objects/" />
         <folder expanded="0" path="object-folder/.System Objects/Values/" />
         <folder expanded="0" path="object-folder/.System Objects/Save Objects/" />
@@ -67,8 +66,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="0" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
-        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="file-folder/Font/" />
         <folder expanded="1" path="file-folder/TempFiles/" />
@@ -177,6 +176,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/GamepadButton/" />
         <folder expanded="1" path="animation-folder/Menu_SmallGrayButton3BG2/" />
         <folder expanded="1" path="animation-folder/Menu_SmallGrayButton1BG2/" />
+        <folder expanded="1" path="animation-folder/Menu_SmallGrayButton3BG4/" />
         <folder expanded="1" path="animation-folder/Loading/" />
         <folder expanded="1" path="animation-folder/Logo/" />
         <folder expanded="1" path="animation-folder/Logo2/" />
@@ -337,5 +337,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite7_/" />
         <folder expanded="1" path="animation-folder/Sprite21_/" />
         <folder expanded="1" path="animation-folder/Sprite3_/" />
+        <folder expanded="1" path="animation-folder/TitleCard_Sprite/" />
+        <folder expanded="1" path="animation-folder/TitleCard_Acts/" />
+        <folder expanded="1" path="animation-folder/TitleCard_Zone/" />
+        <folder expanded="1" path="animation-folder/Sprite27/" />
+        <folder expanded="1" path="animation-folder/CustomBG/" />
+        <folder expanded="1" path="animation-folder/Sprite19/" />
     </folders-expanded>
 </c2uistate>

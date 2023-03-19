@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 11</name>
+    <events>
+        <include>E_global</include>
+        <event-block sid="536654779987821">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="321816137418479" type="Values_Menus">
+                    <param id="0" name="Instance variable">CurrentMenu</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;mainmenu&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="425375060455119">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="167608466397790" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="414777447209103" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="531271405847164" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="873428713178207">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="247179131668461" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="872201759812457" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="479247962621859" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="215552657889441">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="141181646509221" type="Values_Input">
+                            <param id="0" name="Instance variable">KeyUpHold</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="285282334201020" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="812715198063154" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="128826650094603" type="Audio">
+                            <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="423957685651062" type="Audio">
+                            <param id="0" name="Audio file">SFX_Beep</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="222409600460367">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="663904806191344" type="Values_Input">
+                            <param id="0" name="Instance variable">KeyDownHold</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="801360885565492" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="111746738500068" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="734053425772357" type="Audio">
+                            <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="581540765737648" type="Audio">
+                            <param id="0" name="Audio file">SFX_Beep</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245379826717249">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="980781785748137" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="333017899050406" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="748946406982052" type="Menu_SmallGrayButton1BG">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="430168321979868">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="544361349276795" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="460579303735159" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="282213639902521" type="Menu_SmallGrayButton1BG">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="238159349563644">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="187095178655723" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="593354699730272" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="409053728315624" type="Menu_SmallGrayButton1BG2">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="719181874789303">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="374528500021809" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="606299576164326" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="505995832170224" type="Menu_SmallGrayButton1BG2">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500511540919157">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="701306538993728" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="190479064774213" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="780017629664327" type="Menu_SmallGrayButton3BG">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519182449357563">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="650468393506637" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="308026209670422" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="969162594665900" type="Menu_SmallGrayButton3BG">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="367098191287571">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="266864028516760" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="747294622628473" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="874064567014998" type="Menu_SmallGrayButton3BG4">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="604257216843494">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="173271438462671" type="Values_Menus">
+                            <param id="0" name="Instance variable">Selected_Main</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="437231670879463" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="11" name="Reverse" sid="546055797756381" type="Menu_SmallGrayButton3BG4">
+                            <param id="0" name="Reverse mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="472548399508094">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="577926147665604" type="Values_Input">
+                            <param id="0" name="Instance variable">KeyAHold</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="880873496132543" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Test level</comment>
+                        <event-block sid="902976784171438">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="926378499205250" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-15" name="Set visible" sid="269880546456011" type="TransitionIn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="798577761527186" type="TransitionIn" />
+                                <action disabled="1" id="-16" name="Wait" sid="350962560880909" type="System">
+                                    <param id="0" name="Seconds">0.25</param>
+                                </action>
+                                <action disabled="1" id="33" name="Stop all" sid="610498468891418" type="Audio" />
+                                <action disabled="1" id="-2" name="Go to layout" sid="886059753913039" type="System">
+                                    <param id="0" name="Layout">Linum_Level</param>
+                                </action>
+                                <action disabled="1" id="-10" name="Set value" sid="376979285870547" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CurrentMenu</param>
+                                    <param id="1" name="Value">&quot;dataselect&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="228166151583010" type="Function">
+                                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="859876881543243" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="558085067311350" type="System">
+                                    <param id="0" name="Layout">Linum_Level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Go to website</comment>
+                        <event-block sid="268702198882737">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="797246761265168" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-10" name="Set value" sid="527331668726897" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CurrentMenu</param>
+                                    <param id="1" name="Value">&quot;settings&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="473136306804154" type="Function">
+                                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="854635908837032" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="525592413459962" type="System">
+                                    <param id="0" name="Layout">Linum_SimpleWorldsLevel</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="281115463515516">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="184979044574742" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-10" name="Set value" sid="404864690235040" type="Values_Menus">
+                                    <param id="0" name="Instance variable">CurrentMenu</param>
+                                    <param id="1" name="Value">&quot;credits&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="920331093525760" type="Function">
+                                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="596594213820573" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="280716291911132" type="System">
+                                    <param id="0" name="Layout">Linum_mainMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Quit game</comment>
+                        <event-block disabled="1" sid="819396775788491">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="828988342101003" type="Values_Menus">
+                                    <param id="0" name="Instance variable">Selected_Main</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="936014516546232" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="1" name="Close" sid="530250446380894" type="Browser" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="302180886033618">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="969022262431526" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="229697677453553" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

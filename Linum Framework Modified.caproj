@@ -209,6 +209,7 @@
                         <instance-variable name="ClimbingOffset" sid="606048357806615" type="number" />
                         <instance-variable name="Slide" sid="422022696127119" type="boolean" />
                         <instance-variable name="CanUseSkills" sid="715297227222819" type="boolean" />
+                        <instance-variable name="HitState" sid="116811907399352" type="boolean" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Timer" sid="760925343406501">
@@ -1930,9 +1931,19 @@
                             </frame>
                         </animation>
                         <animation framecount="1" loop="1" name="Dead_2" pingpong="0" repeatcount="1" repeatto="0" sid="576496051748632" speed="60">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="Imagepoint 1" x="0.5" y="-0.125" />
-                                <image-point name="Imagepoint 2" x="0.625" y="0.975" />
+                            <frame duration="1" hotspotX="0.517241" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\2.png">
+                                <image-point name="Imagepoint 1" x="0.517241" y="-0.125" />
+                                <image-point name="Imagepoint 2" x="0.62069" y="0.96875" />
+                                <collision-poly>
+                                    <point x="0.0344828" y="0.03125" />
+                                    <point x="0.482759" y="0.09375" />
+                                    <point x="0.793103" y="0.1875" />
+                                    <point x="0.931035" y="0.5" />
+                                    <point x="0.931035" y="0.9375" />
+                                    <point x="0.482759" y="1" />
+                                    <point x="0.137931" y="0.875" />
+                                    <point x="0.0689655" y="0.5" />
+                                </collision-poly>
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Flying_2" pingpong="0" repeatcount="1" repeatto="0" sid="679911207086955" speed="5">
@@ -3500,6 +3511,11 @@
             </object-type>
             <object-type name="TailsBack" sid="470127598844066">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="198928332901734">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation-folder name="unused" />
                     <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="536875720987040" speed="7">
@@ -3521,11 +3537,11 @@
                         <frame duration="1" hotspotX="0.628571" hotspotY="0.529412" />
                         <frame duration="1" hotspotX="0.628571" hotspotY="0.529412" />
                     </animation>
-                    <animation framecount="4" loop="1" name="spindash" pingpong="0" repeatcount="1" repeatto="0" sid="547169390116791" speed="7">
-                        <frame duration="1" hotspotX="0.628571" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.628571" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.628571" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.628571" hotspotY="0.5" />
+                    <animation framecount="4" loop="1" name="spindash" pingpong="0" repeatcount="1" repeatto="0" sid="547169390116791" speed="20">
+                        <frame duration="1" hotspotX="0.771429" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.771429" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.771429" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.771429" hotspotY="0.5" />
                     </animation>
                     <animation framecount="2" loop="1" name="flying" pingpong="0" repeatcount="1" repeatto="0" sid="551970140815585" speed="12">
                         <frame duration="1" hotspotX="0.428571" hotspotY="0.333333" />
@@ -4190,7 +4206,9 @@
                     <object-type name="spr_pause_menu" sid="785868418758571">
                         <plugin id="Sprite" />
                         <animation-folder>
-                            <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="527867719674753" speed="0">
+                            <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="527867719674753" speed="0">
+                                <frame duration="1" hotspotX="0.504505" hotspotY="0.5" />
+                                <frame duration="1" hotspotX="0.504505" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.504505" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.504505" hotspotY="0.5" />
                                 <frame duration="1" hotspotX="0.504505" hotspotY="0.5" />
@@ -4500,6 +4518,19 @@
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346289159076132" speed="5">
+                            <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Menu_SmallGrayButton3BG4" sid="660628076440955">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="767468351667264">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="487055930149259" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0.5" />
                         </animation>
                     </animation-folder>
@@ -4815,6 +4846,18 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
                         </animation>
                         <animation framecount="10" loop="0" name="AquaticShield" pingpong="0" repeatcount="1" repeatto="0" sid="767376550584994" speed="60">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="64" hotspotX="0.5" hotspotY="0.75" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
+                        </animation>
+                        <animation framecount="10" loop="0" name="Eggman" pingpong="0" repeatcount="1" repeatto="0" sid="163497708806494" speed="60">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
                             <frame duration="1" hotspotX="0.5" hotspotY="0.75" />
@@ -8380,6 +8423,97 @@
         <object-type name="DiscordRPC" sid="195300709643908">
             <plugin id="eren_DiscordRPC" />
         </object-type>
+        <object-type name="9patch2" sid="922828689322668">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="TitleCard_Sprite" sid="691873302146968">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="645003586358018">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468746241456188" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Pc\Downloads\Project - Cosmic Framework REBOOT\55.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TitleCard_Acts" sid="535274160215086">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="451064973163298">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472754507307841" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Pc\Downloads\Sprites_-_Stages_02.png">
+                        <collision-poly>
+                            <point x="0.408163" y="0.625" />
+                            <point x="0.489796" y="0.09375" />
+                            <point x="0.918367" y="0.125" />
+                            <point x="0.979592" y="0.5" />
+                            <point x="0.489796" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.469388" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TitleCard_Zone" sid="235585401585645">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546074783265119" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.541667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TitleCard_Spritefont" sid="210667805498140">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="876137065118068">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Pc\Downloads\aaadfr (1).png" />
+        </object-type>
+        <object-type name="Sprite27" sid="436516562198284">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="514011560718693" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CustomBG" sid="532752214951438">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="778670315780286" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite19" sid="377915805247241">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="212573695344021">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="190813913360887" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LogoText4" sid="254749212680104">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -8529,23 +8663,47 @@
                 <member>animal_monkey</member>
                 <member>animal_mouse</member>
                 <member>Badnik_MotoBug</member>
+                <member>Block_SpecialStage_S1</member>
+                <member>BossMechaPod</member>
+                <member>BossPos_1</member>
+                <member>BossPos_2</member>
+                <member>BossTrigger</member>
                 <member>BreakableBlock</member>
                 <member>BreakableWall</member>
                 <member>Bumper</member>
+                <member>Checkpoint</member>
                 <member>Concave</member>
                 <member>Concave_Layer0</member>
                 <member>Concave_Layer1</member>
                 <member>Convex</member>
                 <member>Convex_Layer0</member>
                 <member>Convex_Layer1</member>
+                <member>DataSelect_Arrows</member>
+                <member>DataSelect_Eggman</member>
+                <member>DataSelect_Player</member>
                 <member>DisposableSpring_Red</member>
                 <member>DisposableSpring_Yellow</member>
+                <member>DisposableSpringPart</member>
+                <member>Explosion1</member>
                 <member>Gimmick_Accelerator_Right</member>
+                <member>Gimmick_CNZBarrel</member>
+                <member>Gimmick_CollapsingPlatform</member>
+                <member>Gimmick_CollapsingPlatform_Left_Brick01</member>
+                <member>Gimmick_CollapsingPlatform_Right_Brick1</member>
+                <member>Gimmick_CollapsingPlatform_Right_Brick2</member>
+                <member>Gimmick_CollapsingPlatform_Right_Brick3</member>
+                <member>Gimmick_CollapsingPlatform_Right_Brick4</member>
                 <member>Gimmick_ConveyorBelt</member>
                 <member>Gimmick_HangingIdle_Bar</member>
                 <member>HUD_Ring</member>
                 <member>Jumpthru</member>
+                <member>Level_Layer0_05</member>
+                <member>Level_Layer1_08</member>
                 <member>Monitor</member>
+                <member>obj_sign_post</member>
+                <member>PoliceBot</member>
+                <member>PoliceFlame</member>
+                <member>PoliceFragment</member>
                 <member>Ring</member>
                 <member>Ring2</member>
                 <member>RingLost</member>
@@ -8565,10 +8723,17 @@
                 <member>SpringYellow_Left</member>
                 <member>SpringYellow_Right</member>
                 <member>SpringYellow_Up</member>
+                <member>Sprite14</member>
+                <member>Sprite15</member>
+                <member>Sprite16</member>
+                <member>Sprite18</member>
+                <member>Sprite9</member>
                 <member>Tablet</member>
                 <member>ThunderSpark</member>
                 <member>Tunnel1</member>
                 <member>Tunnel2</member>
+                <member>Weapon</member>
+                <member>WeaponStand</member>
             </members>
             <behaviors>
                 <behavior-type name="DragDrop2" sid="829254353364350">
@@ -8618,7 +8783,8 @@
                 <layout>ConsoleUI.xml</layout>
                 <layout>TiledCards.xml</layout>
                 <layout>AndroidControls.xml</layout>
-                <layout>PauseManu.xml</layout>
+                <layout>PauseMenu.xml</layout>
+                <layout>SoftWindow.xml</layout>
             </layout-folder>
         </layout-folder>
         <layout-folder name="[ Engine ]">
@@ -8627,8 +8793,8 @@
             <layout>Linum_mainMenu.xml</layout>
             <layout>Linum_Level.xml</layout>
             <layout>Linum_SimpleWorldsLevel.xml</layout>
-            <layout>Linum_MenuNew.xml</layout>
             <layout>Linum_Continue.xml</layout>
+            <layout>Linum_PREVIEW(Temp).xml</layout>
         </layout-folder>
         <layout-folder name="[ Tests ]">
             <layout>TestLayout.xml</layout>
@@ -8660,6 +8826,8 @@
         <event-sheet>Event sheet 7.xml</event-sheet>
         <event-sheet>Event sheet 8.xml</event-sheet>
         <event-sheet>Event sheet 9.xml</event-sheet>
+        <event-sheet>Event sheet 10.xml</event-sheet>
+        <event-sheet>Event sheet 11.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">

@@ -50,6 +50,18 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
                 </action>
+                <action id="0" name="Call function" sid="601246432825925" type="Function">
+                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Linum&quot;{###}&quot;TEST LEVEL&quot;{###}1{###}&quot;STRING&quot;{###}&quot;FREE PLAY&quot;{###}&quot;HALATNIKOV&quot;{###}&quot;LINUM FRAMEWORK&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="507595138168023" type="Function">
+                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Sonic3&quot;{###}&quot;TEST LEVEL&quot;{###}1{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="839589680674990" type="Global_Settings">
+                    <param id="0" name="Instance variable">HUD</param>
+                    <param id="1" name="Value">&quot;Linum&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block disabled="1" sid="260725480388344">

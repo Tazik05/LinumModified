@@ -42,6 +42,19 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="786430443573104">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="403436557435931" type="StaticText">
+                    <param id="0" name="Unique ID">887</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="416478229392292" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="271271334758141" type="StaticText">
+                    <param id="0" name="Text">&quot;PREVIEW VERSION 1&quot;&amp;newline&amp;&quot;build data: &quot;&amp;&quot;20.03.23 1:12&quot;&amp;newline&amp;&quot;Mod by stas&apos;s ports&quot;&amp;newline&amp;&quot;Engine by Halatnikov&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <include>E_SaveSystem</include>
         <include>E_global</include>
         <event-group description="" sid="423914286752749" title="Menu Background">
@@ -405,9 +418,20 @@
                                         <action disabled="1" id="-2" name="Go to layout" sid="441421628915749" type="System">
                                             <param id="0" name="Layout">Linum_Level</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="355842915850115" type="Values_Menus">
+                                        <action disabled="1" id="-10" name="Set value" sid="355842915850115" type="Values_Menus">
                                             <param id="0" name="Instance variable">CurrentMenu</param>
                                             <param id="1" name="Value">&quot;dataselect&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="564421973863915" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="164878799580938" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="33" name="Stop all" sid="180926591336828" type="Audio" />
+                                        <action id="-2" name="Go to layout" sid="911221109319949" type="System">
+                                            <param id="0" name="Layout">Linum_PREVIEW(Temp)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -421,9 +445,15 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="610299190779332" type="Values_Menus">
+                                        <action disabled="1" id="-10" name="Set value" sid="610299190779332" type="Values_Menus">
                                             <param id="0" name="Instance variable">CurrentMenu</param>
                                             <param id="1" name="Value">&quot;settings&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="900229512471184" type="Audio">
+                                            <param id="0" name="Audio file">S3K_B2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -436,9 +466,15 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="788558145434893" type="Values_Menus">
+                                        <action disabled="1" id="-10" name="Set value" sid="788558145434893" type="Values_Menus">
                                             <param id="0" name="Instance variable">CurrentMenu</param>
                                             <param id="1" name="Value">&quot;credits&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="845824733057720" type="Audio">
+                                            <param id="0" name="Audio file">S3K_B2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

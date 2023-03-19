@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 10</name>
+    <events>
+        <event-group description="" sid="168368023215065" title="SoftWindowEngine">
+            <sub-events>
+                <variable constant="0" name="Task" sid="865129167159515" static="0" type="number">0</variable>
+                <variable constant="0" name="WindowAnimation" sid="365721109165154" static="0" type="number">0</variable>
+                <event-block sid="828022798280479">
+                    <conditions>
+                        <condition id="0" name="On function" sid="303209240696641" type="Function">
+                            <param id="0" name="Name">&quot;OpenSoftWindow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

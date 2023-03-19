@@ -16,13 +16,21 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
                 </action>
-                <action id="0" name="Call function" sid="545864117748779" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="545864117748779" type="Function">
                     <param id="0" name="Name">&quot;TitleCard&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Linum&quot;{###}&quot;TEST LEVEL&quot;{###}1{###}&quot;STRING&quot;{###}&quot;FREE PLAY&quot;{###}&quot;LAKEFEPERD&quot;{###}&quot;NOT S0 SIMPLE SONIC WORLDS 1.0&quot;</param>
                 </action>
                 <action disabled="1" id="0" name="Call function" sid="305241066711003" type="Function">
                     <param id="0" name="Name">&quot;TitleCard&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Linum&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="450808713673401" type="Function">
+                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Sonic3&quot;{###}&quot;SIMPLE SOSOC WORLDS&quot;{###}2{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="885156040169514" type="Global_Settings">
+                    <param id="0" name="Instance variable">HUD</param>
+                    <param id="1" name="Value">&quot;SSW&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -63,6 +71,24 @@
                         <action behavior="Solid" id="0" name="Set enabled" sid="484948189924060" type="BossTrigger">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action id="3" name="Set volume" sid="268731670903132" type="AudioHelper">
+                            <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                            <param id="1" name="Volume">0</param>
+                            <param id="2" name="Fade">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="344866301649103" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="730964762540279" type="Audio" />
+                        <action id="-16" name="Wait" sid="951758706579026" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="978414865128062" type="Audio">
+                            <param id="0" name="Audio file">MUS_Boss</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="100390893472105">
@@ -93,17 +119,10 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block any="1" sid="485244680800177">
+                                <event-block sid="485244680800177">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="332968214482318" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Roll&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="486872048047871" type="Values_Player">
-                                            <param id="0" name="Instance variable">State</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="965470624950671" type="Values_Player">
+                                            <param id="0" name="Instance variable">HitState</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -396,20 +415,6 @@
                                 <action id="-9" name="Destroy" sid="741789071810453" type="BossArea" />
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="747191958226337">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="128566135106876" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="785489408409827" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="241668827920452" type="Function">
-                                    <param id="0" name="Name">&quot;StartBoss&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="207830792972493">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="283287092514639" type="BossMechaPod">
@@ -440,7 +445,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-16" name="Wait" sid="817206029797425" type="System">
-                                            <param id="0" name="Seconds">3.0</param>
+                                            <param id="0" name="Seconds">5.0</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="979208371367674" type="BossMechaPod">
                                             <param id="0" name="Instance variable">HP</param>
@@ -504,6 +509,11 @@
                                     <param id="0" name="Instance variable">GoAway</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="3" name="Set volume" sid="370662891494796" type="AudioHelper">
+                                    <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                    <param id="1" name="Volume">0</param>
+                                    <param id="2" name="Fade">2</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -531,6 +541,13 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="706095781386165" type="BossMechaPod" />
+                                <action id="33" name="Stop all" sid="439001338774202" type="Audio" />
+                                <action id="0" name="Play" sid="587783677014287" type="Audio">
+                                    <param id="0" name="Audio file">MUS_LevelSSW</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="712074904740174" type="System">
                                     <param id="0" name="Seconds">2.0</param>
                                 </action>
