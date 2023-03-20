@@ -9682,6 +9682,7 @@
                         <Slide>false</Slide>
                         <CanUseSkills>false</CanUseSkills>
                         <HitState>false</HitState>
+                        <VectorYSpeedSaver>0</VectorYSpeedSaver>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -12088,7 +12089,7 @@
             <effects />
         </layer>
         <layer name="Debug" sid="833190307067390">
-            <initially-visible>0</initially-visible>
+            <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -12254,8 +12255,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
-                        <y>-160</y>
+                        <x>288</x>
+                        <y>0</y>
                         <z>0</z>
                         <width>144</width>
                         <height>88</height>

@@ -27172,6 +27172,7 @@
                         <Slide>false</Slide>
                         <CanUseSkills>false</CanUseSkills>
                         <HitState>false</HitState>
+                        <VectorYSpeedSaver>0</VectorYSpeedSaver>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
