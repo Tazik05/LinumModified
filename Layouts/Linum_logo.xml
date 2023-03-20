@@ -189,7 +189,7 @@
                                 <active-on-start>No</active-on-start>
                                 <tweened-property>Position</tweened-property>
                                 <function>Linear</function>
-                                <target>268, 143</target>
+                                <target>268, 146</target>
                                 <target-mode>Absolute</target-mode>
                                 <duration>0.5</duration>
                                 <enforce-mode>Enforce</enforce-mode>
@@ -199,8 +199,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>277</x>
-                        <y>131</y>
+                        <x>268</x>
+                        <y>134</y>
                         <z>0</z>
                         <width>68</width>
                         <height>10</height>
@@ -481,37 +481,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TransitionIn" uid="390">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0.15</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>426</width>
-                        <height>240</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Android_FPS" uid="510">
                     <properties>
                         <character-width>8</character-width>
@@ -538,6 +507,79 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SonicTransition" uid="390">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="TintMask">
+                            <parameters>
+                                <blue>2.55</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>224</x>
+                        <y>136</y>
+                        <z>0</z>
+                        <width>452</width>
+                        <height>272</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Transition" uid="1586">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.3</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-20</x>
+                        <y>-4</y>
+                        <z>0</z>
+                        <width>452</width>
+                        <height>244</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

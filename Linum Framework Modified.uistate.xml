@@ -10,17 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">TiledCards</layout>
-        <layout order="3">Linum_Continue</layout>
-        <layout order="4">Linum_SimpleWorldsLevel</layout>
-        <layout order="6">Linum_Level</layout>
-        <layout order="9">AndroidControls</layout>
-        <event-sheet order="0">E_Engine</event-sheet>
-        <event-sheet order="2">Event sheet 7</event-sheet>
-        <event-sheet order="5">E_LevelSSW</event-sheet>
-        <event-sheet order="7">E_Level</event-sheet>
-        <event-sheet active="1" order="8">E_global</event-sheet>
-        <event-sheet order="10">E_mainMenu</event-sheet>
+        <layout order="0">Linum_logo</layout>
+        <layout order="2">Linum_Level</layout>
+        <layout order="3">Linum_mainMenu</layout>
+        <layout active="1" order="4">Linum_preloader</layout>
+        <event-sheet order="1">E_logo</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,7 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
         <family expanded="1" name="SolidObjects" />
@@ -43,7 +37,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="SaveSlots" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/.System Objects/" />
         <folder expanded="0" path="object-folder/.System Objects/Values/" />
         <folder expanded="0" path="object-folder/.System Objects/Save Objects/" />

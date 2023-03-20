@@ -13,10 +13,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </condition-namecolumns>
     <events>
         <event collapsed="1" sid="423914286752749" />
+        <event collapsed="1" sid="905476150486281" />
+        <event collapsed="1" sid="448395589322673" />
         <event collapsed="1" sid="501605101901222" />
         <event collapsed="1" sid="720605521348699" />
         <event collapsed="1" sid="490041349270562" />
         <event collapsed="1" sid="804637110164041" />
+        <event collapsed="1" sid="342229328011789" />
         <event collapsed="1" sid="204819915778997" />
         <event collapsed="1" sid="641417044996054" />
         <event collapsed="1" sid="825966644222488" />

@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 12</name>
+    <events>
+        <include>E_global</include>
+        <event-block sid="641609870633065">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="356678181574406" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="935669268467446" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+                <action id="55" name="Clear" sid="428268390600492" type="UpdateInfo">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="810477339299952" type="UpdateText">
+                    <param id="0" name="Text">&quot;Checking for updates, please wait&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="429013896270725" type="System">
+                    <param id="0" name="Layer">&quot;Android_Buttons&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="942927114111830" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action disabled="1" id="0" name="Request URL" sid="868351173918191" type="AJAX">
+                    <param id="0" name="Tag">&quot;UpdateCheck&quot;</param>
+                    <param id="1" name="URL">&quot;C:\двиг\LinumFrameworkLegacy_v0.2.1\UpdateConfig.ini&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="610787380196574" type="AJAX">
+                    <param id="0" name="Tag">&quot;UpdateCheck&quot;</param>
+                    <param id="1" name="URL">Global_Settings.URL_UpdateCheck</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="240717332361948">
+            <conditions>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="945344528080943" type="UpdateText">
+                    <param id="0" name="Instance variable">Select</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="202557291552807">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="896432375540510" type="UpdateText">
+                            <param id="0" name="Instance variable">Confirm</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>the delay is added so that the user can see the information</comment>
+                        <event-block sid="177789801517077">
+                            <conditions>
+                                <condition id="2" name="On progress" sid="313680722878238" type="AJAX">
+                                    <param id="0" name="Tag">&quot;UpdateCheck&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="194161830083782" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="678061005850235" type="UpdateText">
+                                    <param id="0" name="Text">&quot;The update server is being accessed...&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="690835138997965">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="444775349295383" type="AJAX">
+                                    <param id="0" name="Tag">&quot;UpdateCheck&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="412247617281315" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="809056662185704" type="UpdateText">
+                                    <param id="0" name="Text">&quot;Converting information...&quot;</param>
+                                </action>
+                                <action id="60" name="LoadJSON" sid="684140893972978" type="UpdateInfo">
+                                    <param id="0" name="JSON">INI.INI2JSON(AJAX.LastData)</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="656820539205790">
+                            <conditions>
+                                <condition id="70" inverted="1" name="Is Empty" sid="238162799089262" type="UpdateInfo">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Alert" sid="244661731962580" type="Browser">
+                                    <param id="0" name="Message">UpdateInfo.AsJson(0)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="753769293132932">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="492810299756768" type="System">
+                                            <param id="0" name="First value">UpdateInfo.Value(0,&quot;Updater&quot;,&quot;CurrentVersion&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">projectversion</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="193102808267333" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="721480037701592" type="UpdateText">
+                                            <param id="0" name="Text">&quot;There are no updates, you are using the latest version&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="207301431471613" type="Audio">
+                                            <param id="0" name="Audio file">S3K_B2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="440903955224440" type="System">
+                                            <param id="0" name="Seconds">3.0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="305513986163242" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="998746970710530" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="154542248723589" type="System">
+                                            <param id="0" name="Layout">Linum_logo</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="670138219695961">
+                    <conditions>
+                        <condition id="70" inverted="1" name="Is Empty" sid="642251695114635" type="UpdateInfo">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="598704150640732" type="System">
+                            <param id="0" name="First value">UpdateInfo.Value(0,&quot;Updater&quot;,&quot;CurrentVersion&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">projectversion</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="360562622946445">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="564327301161939" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="533090236577648" type="Audio">
+                                    <param id="0" name="Audio file">KC_48</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="834313292245506" type="UpdateText">
+                                    <param id="0" name="Instance variable">Confirm</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="940611773440672">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="672570438091580" type="Global_Settings">
+                                    <param id="0" name="Instance variable">Platform</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Mobile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="230061190553986" type="System">
+                                    <param id="0" name="Layer">&quot;Android_Buttons&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="864786259123772">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="777969244415236" type="UpdateText">
+                                    <param id="0" name="Instance variable">Select</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="388355294261238" type="UpdateText">
+                                    <param id="0" name="Text">&quot;An update has been found! Do you want to go to the download page?&quot;&amp;newline&amp;&quot;&quot;&amp;newline&amp;&quot;Last version: &quot;&amp;UpdateInfo.Value(0,&quot;Updater&quot;,&quot;CurrentVersion&quot;)&amp;newline&amp;&quot;Release Date: &quot;&amp;UpdateInfo.Value(0,&quot;Updater&quot;,&quot;ReleaseDate&quot;)&amp;newline&amp;&quot;&quot;&amp;newline&amp;&quot;*Yes&quot;&amp;&quot;     &quot;&amp;&quot; No&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="422893685257011">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="903395334552426" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="866086562719993" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="516621114176954">
+                                            <conditions>
+                                                <condition id="-32" name="Is on platform" sid="522533494582927" type="System">
+                                                    <param id="0" name="Platform">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="29" name="Open browser" sid="913929182583316" type="NWjs">
+                                                    <param id="0" name="URL">UpdateInfo.Value(0,&quot;Updater&quot;,&quot;LinkRedirect&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="912487466803683">
+                                            <conditions>
+                                                <condition id="-32" inverted="1" name="Is on platform" sid="451006189780911" type="System">
+                                                    <param id="0" name="Platform">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="8" name="Open URL in new window" sid="809582607245862" type="Browser">
+                                                    <param id="0" name="URL">UpdateInfo.Value(0,&quot;Updater&quot;,&quot;LinkRedirect&quot;)</param>
+                                                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="139670545816488">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="690324383542687" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyRightHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="951886623491292" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="463604857254049" type="UpdateText">
+                                            <param id="0" name="Instance variable">Select</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="784999533544656" type="Audio">
+                                            <param id="0" name="Audio file">SFX_Beep</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="424722741549160">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="580551332910423" type="UpdateText">
+                                    <param id="0" name="Instance variable">Select</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="409220251504533" type="UpdateText">
+                                    <param id="0" name="Text">&quot;An update has been found! Do you want to go to the download page?&quot;&amp;newline&amp;&quot;&quot;&amp;newline&amp;&quot;Last version: &quot;&amp;UpdateInfo.Value(0,&quot;Updater&quot;,&quot;CurrentVersion&quot;)&amp;newline&amp;&quot;Release Date: &quot;&amp;UpdateInfo.Value(0,&quot;Updater&quot;,&quot;ReleaseDate&quot;)&amp;newline&amp;&quot;&quot;&amp;newline&amp;&quot; Yes&quot;&amp;&quot;     &quot;&amp;&quot;*No&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="942735202194288">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="255605565470764" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="418153522480919" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="582838001973675" type="UpdateText">
+                                            <param id="0" name="Instance variable">Select</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="859374442418569" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="336281937215251" type="System">
+                                            <param id="0" name="Layer">&quot;Android_Buttons&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="317602258706565" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="588059835160308" type="System">
+                                            <param id="0" name="Layout">Linum_logo</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="477782071311241">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="624671922845426" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyLeftHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="983904262216863" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="425672193244566" type="UpdateText">
+                                            <param id="0" name="Instance variable">Select</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="901817701534903" type="Audio">
+                                            <param id="0" name="Audio file">SFX_Beep</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="469703768001131">
+            <conditions>
+                <condition id="14" name="On tap" sid="362381527166043" type="Touch" />
+                <condition id="8" name="On any button pressed" sid="574582491615321" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                </condition>
+                <condition id="7" name="On any key released" sid="766152801895644" type="Keyboard" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="165423027112604">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="951566929788043" type="UpdateText">
+                            <param id="0" name="Instance variable">Confirm</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="195763179268386" type="UpdateText">
+                            <param id="0" name="Instance variable">Select</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="755829539355664" type="SonicTransition">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="839683781737118" type="Function">
+                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="170766620460375" type="System">
+                            <param id="0" name="Layer">&quot;Android_Buttons&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="720106831852695" type="UpdateText">
+                            <param id="0" name="Instance variable">Select</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="685601329685552" type="UpdateText">
+                            <param id="0" name="Instance variable">Confirm</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="294201723849666" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="655377326675693" type="System">
+                            <param id="0" name="Layout">Linum_logo</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

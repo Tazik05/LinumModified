@@ -14,6 +14,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="466522718763859">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="197279613623827" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="914416389301830" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="disable this group to hide the warning" sid="895023961054836" title="Warning">
             <sub-events>
                 <event-block any="1" sid="898877858678307">
@@ -107,9 +118,12 @@
                         <action id="-15" name="Set visible" sid="186204212197933" type="TransitionIn">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="334730027520335" type="TransitionIn" />
+                        <action id="0" name="Call function" sid="425878327036156" type="Function">
+                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="565934610460312" type="System">
-                            <param id="0" name="Seconds">0.25</param>
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="686136537382057" type="System">
                             <param id="0" name="Layout">Linum_mainMenu</param>
@@ -130,9 +144,12 @@
                         <action id="-15" name="Set visible" sid="542404403662648" type="TransitionIn">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="961559431704406" type="TransitionIn" />
+                        <action id="0" name="Call function" sid="376145120435590" type="Function">
+                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="324700352540209" type="System">
-                            <param id="0" name="Seconds">0.15</param>
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="410822686100152" type="System">
                             <param id="0" name="Layout">Linum_mainMenu</param>

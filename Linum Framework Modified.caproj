@@ -23,6 +23,7 @@
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_INI" version="0.100000001">INI</plugin>
         <plugin author="Rex.Rainbow" id="Rex_PromptWrap" version="0.100000001">Prompt wrap</plugin>
         <plugin author="Rex.Rainbow" id="Rex_TimeLine" version="1">TimeLine</plugin>
         <plugin author="Rex.Rainbow" id="Rex_audio_helper" version="0.100000001">Audio helper</plugin>
@@ -472,6 +473,8 @@
                     <instance-variable comment="it is better not to touch this value. This is necessary for the save system, initially it costs -1, this means that the game will not save progress, starting from 0 these are the save slots that are selected in data select" name="UsedSaveSlot" sid="586003597813597" type="number" />
                     <instance-variable name="CheckPoint" sid="945672042208905" type="number" />
                     <instance-variable name="AccessibilityMode" sid="262991464321454" type="number" />
+                    <instance-variable comment="path to ini update file" name="URL_UpdateCheck" sid="777787030515232" type="string" />
+                    <instance-variable name="ShowUpdateScreen" sid="498724572166485" type="boolean" />
                 </instance-variables>
             </object-type>
         </object-folder>
@@ -4743,6 +4746,14 @@
                 </behaviors>
                 <texture />
             </object-type>
+            <object-type name="UpdateText" sid="488469513551985">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="Confirm" sid="954001648022124" type="boolean" />
+                    <instance-variable name="Select" sid="187313580461410" type="number" />
+                </instance-variables>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Level Objects">
             <object-folder name="Effects and Misc">
@@ -8515,6 +8526,12 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
+        <object-type global="1" name="INI" sid="425943282440699">
+            <plugin id="Rex_INI" />
+        </object-type>
+        <object-type global="1" name="UpdateInfo" sid="530103661382463">
+            <plugin id="JSON" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -8783,13 +8800,14 @@
             <layout-folder name="[ UI ]">
                 <layout>ConsoleUI.xml</layout>
                 <layout>TiledCards.xml</layout>
-                <layout>AndroidControls.xml</layout>
+                <layout>AndroidControls_deleted.xml</layout>
                 <layout>PauseMenu.xml</layout>
                 <layout>SoftWindow.xml</layout>
             </layout-folder>
         </layout-folder>
         <layout-folder name="[ Engine ]">
             <layout>Linum_preloader.xml</layout>
+            <layout>Linum_CheckUpdate.xml</layout>
             <layout>Linum_logo.xml</layout>
             <layout>Linum_mainMenu.xml</layout>
             <layout>Linum_Level.xml</layout>
@@ -8829,6 +8847,7 @@
         <event-sheet>Event sheet 9.xml</event-sheet>
         <event-sheet>Event sheet 10.xml</event-sheet>
         <event-sheet>Event sheet 11.xml</event-sheet>
+        <event-sheet>Event sheet 12.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">

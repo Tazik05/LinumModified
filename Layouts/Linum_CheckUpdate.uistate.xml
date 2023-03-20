@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>93.2885</position-x>
-        <position-y>187.147</position-y>
-        <position-z>99.9999</position-z>
-        <lookat-x>93.2885</lookat-x>
-        <lookat-y>187.147</lookat-y>
+        <position-x>215.537</position-x>
+        <position-y>71.0461</position-y>
+        <position-z>82.6446</position-z>
+        <lookat-x>215.537</lookat-x>
+        <lookat-y>71.0461</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -19,17 +19,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
         <property expanded="1" name="Layout properties" />
-        <property expanded="1" name="Layout Size" />
+        <property expanded="0" name="Layout Size" />
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Android_Buttons" />
+    <active-layer name="Transition" />
     <layers>
-        <layer locked="0" name="Layer 0" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Layer 1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="UpdateScreen" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Android_Buttons" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Tr" parallax-in-editor="0" visible="0" />
-        <layer locked="1" name="ConsoleUI(GLOBAL)" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Transition" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Cursor(GLOBAL)" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

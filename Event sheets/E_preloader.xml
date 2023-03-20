@@ -68,18 +68,47 @@
                 <condition id="1" name="Preloads complete" sid="449246588333569" type="Audio" />
                 <condition id="-4" name="Trigger once while true" sid="494828258672101" type="System" />
             </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="808180246338857" type="System">
-                    <param id="0" name="Seconds">1.5</param>
-                </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="978834277487697" type="TransitionIn" />
-                <action id="-16" name="Wait" sid="850818590255147" type="System">
-                    <param id="0" name="Seconds">0.20</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="748046550370489" type="System">
-                    <param id="0" name="Layout">Linum_logo</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="178586840875044">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="881346787740487" type="Global_Settings">
+                            <param id="0" name="Instance variable">ShowUpdateScreen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="808180246338857" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="978834277487697" type="TransitionIn" />
+                        <action id="-16" name="Wait" sid="850818590255147" type="System">
+                            <param id="0" name="Seconds">0.20</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="748046550370489" type="System">
+                            <param id="0" name="Layout">Linum_logo</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="203235726774729">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="222632650060909" type="Global_Settings">
+                            <param id="0" name="Instance variable">ShowUpdateScreen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="788694811282378" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="494290149503776" type="TransitionIn" />
+                        <action id="-16" name="Wait" sid="255578643857575" type="System">
+                            <param id="0" name="Seconds">0.20</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="623451672269264" type="System">
+                            <param id="0" name="Layout">Linum_CheckUpdate</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="485358712148855">
             <conditions>

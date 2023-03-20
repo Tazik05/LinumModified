@@ -6,15 +6,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
         <position-x>159.66</position-x>
         <position-y>152.741</position-y>
-        <position-z>73.894</position-z>
+        <position-z>98.3529</position-z>
         <lookat-x>159.66</lookat-x>
         <lookat-y>152.741</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
     <show-grid>0</show-grid>
-    <snap-width>4</snap-width>
-    <snap-height>4</snap-height>
+    <snap-width>1</snap-width>
+    <snap-height>1</snap-height>
     <show-collision-polys>0</show-collision-polys>
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
@@ -23,17 +23,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Android_Controls(GLOBAL)" />
+    <active-layer name="Android_Buttons" />
     <layers>
-        <layer locked="0" name="BG" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="MainMenu" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="BG" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="MainMenu" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="DataSelect" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="Credits" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Settings" parallax-in-editor="0" visible="0" />
+        <layer locked="1" name="Settings" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="UI" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Android_Controls(GLOBAL)" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Android_Buttons" parallax-in-editor="0" visible="0" />
         <layer locked="0" name="Transition" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="ConsoleUI(GLOBAL)" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Cursor(GLOBAL)" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="ConsoleUI(GLOBAL)" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Cursor(GLOBAL)" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

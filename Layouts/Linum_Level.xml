@@ -30873,6 +30873,8 @@
                 <UsedSaveSlot>-1</UsedSaveSlot>
                 <CheckPoint>0</CheckPoint>
                 <AccessibilityMode>0</AccessibilityMode>
+                <URL_UpdateCheck>https://gitlab.com/TheStazik/linum-framework-modified/-/raw/dev/UpdateConfig.ini</URL_UpdateCheck>
+                <ShowUpdateScreen>false</ShowUpdateScreen>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">
