@@ -816,8 +816,8 @@
                     <properties>
                         <character-width>18</character-width>
                         <character-height>24</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ</character-set>
-                        <text>JOAP</text>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ!</character-set>
+                        <text>JOAP!</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Right</horizontal-alignment>

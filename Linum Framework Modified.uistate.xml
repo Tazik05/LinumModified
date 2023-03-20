@@ -10,10 +10,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Linum_SimpleWorldsLevel</layout>
-        <layout order="1">Linum_Level</layout>
-        <event-sheet order="1">E_Level</event-sheet>
-        <event-sheet active="1" order="0">E_Engine</event-sheet>
+        <layout order="1">TiledCards</layout>
+        <layout order="3">Linum_Continue</layout>
+        <layout order="4">Linum_SimpleWorldsLevel</layout>
+        <layout order="6">Linum_Level</layout>
+        <layout order="9">AndroidControls</layout>
+        <event-sheet order="0">E_Engine</event-sheet>
+        <event-sheet order="2">Event sheet 7</event-sheet>
+        <event-sheet order="5">E_LevelSSW</event-sheet>
+        <event-sheet order="7">E_Level</event-sheet>
+        <event-sheet active="1" order="8">E_global</event-sheet>
+        <event-sheet order="10">E_mainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

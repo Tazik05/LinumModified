@@ -3293,6 +3293,66 @@
         </event-group>
         <event-group description="" sid="557862283883966" title="Platform specific">
             <sub-events>
+                <event-block sid="997162486481478">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="424604840521201" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="796492620298898" type="Android_RightZone">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="408182776799999" type="Android_UpZone">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="716192467487472" type="Android_LeftZone">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="243508971465819" type="Android_DownZone">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="537120333134012" type="Android_Azone">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="644156150273679">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="954617642162128" type="Global_Settings">
+                            <param id="0" name="Instance variable">Platform</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Mobile&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="406039391921232" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="437145753589462" type="Android_Pause">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="607406338712670" type="Function">
+                            <param id="0" name="Name">&quot;AndroidKeysHide&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="655042812729616">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="889797817780675" type="Global_Settings">
+                            <param id="0" name="Instance variable">Platform</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Mobile&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="580254266483963" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="617076705449018" type="Android_Pause">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="598334465927877" type="Function">
+                            <param id="0" name="Name">&quot;AndroidKeysShow&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group description="" sid="498930201598548" title="Android">
                     <sub-events>
                         <event-block sid="191646722521382">

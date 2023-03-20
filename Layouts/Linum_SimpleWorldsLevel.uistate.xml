@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>23.6833</position-x>
-        <position-y>658.786</position-y>
-        <position-z>260.627</position-z>
-        <lookat-x>23.6833</lookat-x>
-        <lookat-y>658.786</lookat-y>
+        <position-x>37.3561</position-x>
+        <position-y>175.072</position-y>
+        <position-z>110.531</position-z>
+        <lookat-x>37.3561</lookat-x>
+        <lookat-y>175.072</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -39,7 +39,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layer locked="0" name="HUD_TitleCard(GLOBAL)" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="LevelCard" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Pause_Menu(GLOBAL)" parallax-in-editor="0" visible="0" />
-        <layer locked="1" name="Android_Controls(GLOBAL)" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="Android_Controls(GLOBAL)" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Debug" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="ConsoleUI(GLOBAL)" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Cursor(GLOBAL)" parallax-in-editor="0" visible="1" />

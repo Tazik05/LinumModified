@@ -11,7 +11,7 @@
             <actions>
                 <action id="0" name="Call function" sid="364114900939955" type="Function">
                     <param id="0" name="Name">&quot;TitleCard&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Sonic3&quot;{###}&quot;TEST LEVEL&quot;{###}1{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Sonic3&quot;{###}&quot;TEST LEVEL!&quot;{###}1{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;</param>
                 </action>
             </actions>
         </event-block>
