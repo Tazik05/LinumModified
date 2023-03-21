@@ -5831,11 +5831,6 @@
                                                     <param id="1" name="&apos;Off&apos; time">0.2</param>
                                                     <param id="2" name="Duration">2.0</param>
                                                 </action>
-                                                <action behavior="Flash" id="0" name="Flash" sid="355123553607702" type="TailsBack">
-                                                    <param id="0" name="&apos;On&apos; time">0.2</param>
-                                                    <param id="1" name="&apos;Off&apos; time">0.2</param>
-                                                    <param id="2" name="Duration">2.0</param>
-                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="782419403080883">
@@ -10261,30 +10256,75 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
+                                                <comment>synchronization of player visibility and tails</comment>
+                                                <event-block sid="667337661786323">
+                                                    <conditions>
+                                                        <condition id="-9" name="Is visible" sid="442092391363981" type="PlayerSprite" />
+                                                        <condition id="-4" name="Trigger once while true" sid="208788946745577" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="899380466563080" type="TailsBack">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="376056166935294">
+                                                    <conditions>
+                                                        <condition id="-9" inverted="1" name="Is visible" sid="921032672187683" type="PlayerSprite" />
+                                                        <condition id="-4" name="Trigger once while true" sid="106328065287162" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="818329554900622" type="TailsBack">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="341223051611221">
+                                                    <conditions>
+                                                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="484742351752222" type="PlayerSprite" />
+                                                        <condition id="-4" name="Trigger once while true" sid="741582004212039" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Set opacity" sid="770963071096985" type="TailsBack">
+                                                            <param id="0" name="Opacity">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <event-block any="1" sid="840500148729840">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="500491888295396" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;MovingOnFloor&quot;</param>
+                                                        <condition id="2" name="Is playing" sid="291823094326347" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Hurt_&quot;&amp;Values_Player.Character</param>
                                                         </condition>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="861791864606977" type="Values_Player">
-                                                            <param id="0" name="Instance variable">Hurt</param>
+                                                        <condition id="2" name="Is playing" sid="416945978778849" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Walk_&quot;&amp;Values_Player.Character</param>
                                                         </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="469015836488167" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;OnSpring&quot;</param>
+                                                        <condition id="2" name="Is playing" sid="168550728230548" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Spring_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="337185407954481" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;StandSpin_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="342328810664320" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Run_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="981916321908572" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;CorkscrewRunning_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="525907173749943" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Dead_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="100541131542241" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;PeelingOut_&quot;&amp;Values_Player.Character</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="941968930633758">
+                                                        <event-block sid="722809297239922">
                                                             <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="581102633628442" type="System" />
+                                                                <condition id="-4" name="Trigger once while true" sid="114894461614104" type="System" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-15" name="Set visible" sid="756168449151601" type="TailsBack">
+                                                                <action id="-15" name="Set visible" sid="601427280298341" type="TailsBack">
                                                                     <param id="0" name="Visibility">0</param>
                                                                 </action>
                                                             </actions>
@@ -10667,22 +10707,16 @@
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
-                                                <event-block sid="439398466987514">
+                                                <event-block any="1" sid="439398466987514">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="480468270119879" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                        <condition id="2" name="Is playing" sid="102994377907334" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Jump_&quot;&amp;Values_Player.Character</param>
                                                         </condition>
-                                                        <condition id="-1" name="Every tick" sid="667057356718674" type="System" />
                                                     </conditions>
                                                     <actions>
                                                         <action id="-3" name="Set position" sid="615956421183098" type="TailsBack">
                                                             <param id="0" name="X">Sensor_Hitbox.X</param>
                                                             <param id="1" name="Y">Sensor_Hitbox.Y</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="578557832560520" type="TailsBack">
-                                                            <param id="0" name="Visibility">1</param>
                                                         </action>
                                                         <action id="4" name="Set animation" sid="690780300766003" type="TailsBack">
                                                             <param id="0" name="Animation">&quot;jumping&quot;</param>
@@ -10690,6 +10724,16 @@
                                                         </action>
                                                     </actions>
                                                     <sub-events>
+                                                        <event-block sid="598181430926106">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="229801445216094" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="578557832560520" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block sid="293524478298048">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="141410562105863" type="Values_Player">
@@ -10722,20 +10766,14 @@
                                                 </event-block>
                                                 <event-block sid="277707171585778">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="423745876214862" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                        <condition id="2" name="Is playing" sid="997449166445927" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
                                                         </condition>
-                                                        <condition id="-1" name="Every tick" sid="116802459197445" type="System" />
                                                     </conditions>
                                                     <actions>
                                                         <action id="-3" name="Set position" sid="946791303758403" type="TailsBack">
                                                             <param id="0" name="X">Sensor_Hitbox.X</param>
                                                             <param id="1" name="Y">Sensor_Hitbox.Y+5</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="680382198316902" type="TailsBack">
-                                                            <param id="0" name="Visibility">1</param>
                                                         </action>
                                                         <action id="4" name="Set animation" sid="166220030200040" type="TailsBack">
                                                             <param id="0" name="Animation">&quot;jumping&quot;</param>
@@ -10750,6 +10788,16 @@
                                                             <actions>
                                                                 <action id="-8" name="Set angle" sid="564090704250040" type="TailsBack">
                                                                     <param id="0" name="Angle">anglelerp(self.Angle,Sensor_Main.SonicPhysics.SurfaceAngle,0.3)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="379873309123788">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="278358195174195" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="663837740175531" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -10788,62 +10836,6 @@
                                                                     </actions>
                                                                 </event-block>
                                                             </sub-events>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                                <event-block sid="907149660075168">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="926824030823583" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;MovingOnFloor&quot;</param>
-                                                        </condition>
-                                                        <condition id="2" name="Is playing" sid="889388663018902" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;Jump_&quot;&amp;Values_Player.Character</param>
-                                                        </condition>
-                                                        <condition id="-1" name="Every tick" sid="347701377116366" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-3" name="Set position" sid="653459336650106" type="TailsBack">
-                                                            <param id="0" name="X">Sensor_Hitbox.X</param>
-                                                            <param id="1" name="Y">Sensor_Hitbox.Y</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="232066891265055" type="TailsBack">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="345517351721089" type="TailsBack">
-                                                            <param id="0" name="Animation">&quot;jumping&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                    <sub-events>
-                                                        <event-block sid="437016938484905">
-                                                            <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="430033430759595" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;left&quot;</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-8" name="Set angle" sid="995657922917914" type="TailsBack">
-                                                                    <param id="0" name="Angle">anglelerp(Self.Angle,-clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="984776916880532">
-                                                            <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="692147979454950" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
-                                                                    <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;right&quot;</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-8" name="Set angle" sid="506087357696744" type="TailsBack">
-                                                                    <param id="0" name="Angle">anglelerp(Self.Angle,clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
-                                                                </action>
-                                                            </actions>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>

@@ -34,7 +34,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Eren Ertuğrul" id="eren_DiscordRPC" version="1">DiscordRPC</plugin>
         <plugin author="Eren Ertuğrul" id="eren_DiscordRPC_edit" version="1">DiscordRPC (edit)</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
         <plugin author="JohnnySheffield" id="nwk" version="1.100000024">Node-Webkit Gui</plugin>
@@ -76,7 +75,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Linum_SimpleWorldsLevel</first-layout>
+    <first-layout>Linum_preloader</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -1790,28 +1789,7 @@
                                 <image-point name="Imagepoint 2" x="0.625" y="0.975" />
                             </frame>
                         </animation>
-                        <animation framecount="4" loop="1" name="PeelingOut_2" pingpong="0" repeatcount="1" repeatto="0" sid="393532249573290" speed="12">
-                            <frame duration="1" hotspotX="0.513514" hotspotY="0.375">
-                                <image-point name="Imagepoint 1" x="0.540541" y="-0.15625" />
-                                <image-point name="Imagepoint 2" x="0.621622" y="0.96875" />
-                            </frame>
-                            <frame duration="1" hotspotX="0.513514" hotspotY="0.375">
-                                <image-point name="Imagepoint 1" x="0.513514" y="-0.125" />
-                                <image-point name="Tails" x="0.459459" y="0.8125" />
-                                <image-point name="Imagepoint 2" x="0.621622" y="0.96875" />
-                            </frame>
-                            <frame duration="1" hotspotX="0.513514" hotspotY="0.375">
-                                <image-point name="Imagepoint 1" x="0.513514" y="-0.125" />
-                                <image-point name="Tails" x="0.459459" y="0.8125" />
-                                <image-point name="Imagepoint 2" x="0.621622" y="0.96875" />
-                            </frame>
-                            <frame duration="1" hotspotX="0.513514" hotspotY="0.375">
-                                <image-point name="Imagepoint 1" x="0.513514" y="-0.125" />
-                                <image-point name="Tails" x="0.459459" y="0.8125" />
-                                <image-point name="Imagepoint 2" x="0.621622" y="0.96875" />
-                            </frame>
-                        </animation>
-                        <animation framecount="4" loop="1" name="Run_2" pingpong="0" repeatcount="1" repeatto="0" sid="291303090065301" speed="12">
+                        <animation framecount="4" loop="1" name="Run_2" pingpong="0" repeatcount="1" repeatto="0" sid="291303090065301" speed="15">
                             <frame duration="1" hotspotX="0.513514" hotspotY="0.375">
                                 <image-point name="Imagepoint 1" x="0.540541" y="-0.15625" />
                                 <image-point name="Imagepoint 2" x="0.621622" y="0.96875" />
@@ -1898,6 +1876,18 @@
                                 <image-point name="Imagepoint 1" x="0.5" y="-0.138889" />
                                 <image-point name="Tails" x="0.454545" y="0.833333" />
                                 <image-point name="Imagepoint 2" x="0.636364" y="0.972222" />
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="PeelingOut_2" pingpong="0" repeatcount="1" repeatto="0" sid="753604516086321" speed="15">
+                            <frame duration="1" hotspotX="0.485714" hotspotY="0.375">
+                                <image-point name="Imagepoint 1" x="0.514286" y="-0.125" />
+                                <image-point name="Tails" x="0.457143" y="0.8125" />
+                                <image-point name="Imagepoint 2" x="0.628571" y="0.96875" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.485714" hotspotY="0.375">
+                                <image-point name="Imagepoint 1" x="0.514286" y="-0.125" />
+                                <image-point name="Tails" x="0.457143" y="0.8125" />
+                                <image-point name="Imagepoint 2" x="0.628571" y="0.96875" />
                             </frame>
                         </animation>
                         <animation framecount="2" loop="1" name="Balancing1_2" pingpong="0" repeatcount="1" repeatto="0" sid="986901639464175" speed="1.5">
@@ -3515,11 +3505,6 @@
             </object-type>
             <object-type name="TailsBack" sid="470127598844066">
                 <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Flash" sid="198928332901734">
-                        <behavior id="Flash" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation-folder name="unused" />
                     <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="536875720987040" speed="7">
@@ -8432,9 +8417,6 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="DiscordRPC" sid="195300709643908">
-            <plugin id="eren_DiscordRPC" />
-        </object-type>
         <object-type name="9patch2" sid="922828689322668">
             <plugin id="NinePatch" />
             <texture />
@@ -8895,14 +8877,8 @@
         <global-instance type="WebStorage" uid="848" />
         <global-instance type="DiscordRPCedit" uid="1230">
             <properties>
-                <client-id>0</client-id>
-                <preview_mode>True</preview_mode>
-            </properties>
-        </global-instance>
-        <global-instance type="DiscordRPC" uid="156">
-            <properties>
-                <client-id>0</client-id>
-                <preview_mode>True</preview_mode>
+                <client-id>906926881151016981</client-id>
+                <preview_mode>False</preview_mode>
             </properties>
         </global-instance>
     </global-instances>

@@ -3,6 +3,51 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_global</name>
     <events>
+        <event-group description="" sid="702531425945331" title="Discord RPC">
+            <sub-events>
+                <event-block sid="241377853931569">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="351118899644367" type="PlayerSprite" />
+                        <condition id="-6" name="Every X seconds" sid="980694694228618" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set RichPresence" sid="299497411314108" type="DiscordRPCedit">
+                            <param id="0" name="state">&quot;Layout: &quot;&amp;LayoutName</param>
+                            <param id="1" name="details">&quot;Score: &quot;&amp;Global_Settings.Score&amp;newline&amp;&quot;Time: &quot;&amp;zeropad(floor(Values_Level.LevelTimer_Global/60),1)&amp;&quot;:&quot;&amp;zeropad(floor(Values_Level.LevelTimer_Global)%60,2)&amp;newline&amp;&quot;Rings: &quot;&amp;Values_Player.Rings</param>
+                            <param id="2" name="largeimagekey">&quot;512&quot;</param>
+                            <param id="3" name="largeimagetext">&quot;Linum Framework Modified&quot;</param>
+                            <param id="4" name="smallimagekey">&quot;char_&quot;&amp;Values_Player.Character</param>
+                            <param id="5" name="smallimagetext">&quot;Character&quot;</param>
+                            <param id="6" name="starttimestamp">0</param>
+                            <param id="7" name="partyid">&quot;&quot;</param>
+                            <param id="8" name="partysize">0</param>
+                            <param id="9" name="partymax">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="528503791930170">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="861676867822678" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set RichPresence" sid="997448174463746" type="DiscordRPCedit">
+                            <param id="0" name="state">&quot;Playing...&quot;</param>
+                            <param id="1" name="details">&quot;Layout: &quot;&amp;LayoutName</param>
+                            <param id="2" name="largeimagekey">&quot;512&quot;</param>
+                            <param id="3" name="largeimagetext">&quot;Linum Framework Modified&quot;</param>
+                            <param id="4" name="smallimagekey">&quot;&quot;</param>
+                            <param id="5" name="smallimagetext">&quot;&quot;</param>
+                            <param id="6" name="starttimestamp">0</param>
+                            <param id="7" name="partyid">&quot;&quot;</param>
+                            <param id="8" name="partysize">0</param>
+                            <param id="9" name="partymax">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="691792991499073">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="590711576846123" type="System" />

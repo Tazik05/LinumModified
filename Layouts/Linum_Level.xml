@@ -21800,9 +21800,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -27397,8 +27394,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-100</x>
-                        <y>42</y>
+                        <x>-140</x>
+                        <y>46</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -30909,7 +30906,7 @@
                 <CheckPoint>0</CheckPoint>
                 <AccessibilityMode>0</AccessibilityMode>
                 <URL_UpdateCheck>https://gitlab.com/TheStazik/linum-framework-modified/-/raw/dev/UpdateConfig.ini</URL_UpdateCheck>
-                <ShowUpdateScreen>false</ShowUpdateScreen>
+                <ShowUpdateScreen>true</ShowUpdateScreen>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">
