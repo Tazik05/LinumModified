@@ -4489,10 +4489,6 @@
                                                                             <param id="0" name="Instance variable">CanFly</param>
                                                                             <param id="1" name="Value">0</param>
                                                                         </action>
-                                                                        <action id="-13" name="Set boolean" sid="850761312387874" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Climbing</param>
-                                                                            <param id="1" name="Value">0</param>
-                                                                        </action>
                                                                         <action id="-13" name="Set boolean" sid="251770135975378" type="Values_Player">
                                                                             <param id="0" name="Instance variable">CanControl</param>
                                                                             <param id="1" name="Value">1</param>
@@ -4571,12 +4567,18 @@
                                                                 </action>
                                                             </actions>
                                                             <sub-events>
+                                                                <comment></comment>
                                                                 <event-block sid="482443659750354">
                                                                     <conditions>
                                                                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="338382030756489" type="Sensor_ObjectUp">
                                                                             <param id="0" name="Object">Behavior_Solid</param>
                                                                             <param id="1" name="Offset X">-Values_Player.ClimbingOffset</param>
-                                                                            <param id="2" name="Offset Y">20</param>
+                                                                            <param id="2" name="Offset Y">0</param>
+                                                                        </condition>
+                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="752608810983190" type="Sensor_ObjectDown">
+                                                                            <param id="0" name="Object">Behavior_Solid</param>
+                                                                            <param id="1" name="Offset X">-Values_Player.ClimbingOffset</param>
+                                                                            <param id="2" name="Offset Y">-23</param>
                                                                         </condition>
                                                                         <condition id="1" name="Is overlapping another object" sid="208585034030403" type="Sensor_ObjectLeft">
                                                                             <param id="0" name="Object">Behavior_Solid</param>
@@ -4604,7 +4606,12 @@
                                                                         <condition id="9" inverted="1" name="Is overlapping at offset" sid="464997805506341" type="Sensor_ObjectUp">
                                                                             <param id="0" name="Object">Behavior_Solid</param>
                                                                             <param id="1" name="Offset X">Values_Player.ClimbingOffset</param>
-                                                                            <param id="2" name="Offset Y">20</param>
+                                                                            <param id="2" name="Offset Y">0</param>
+                                                                        </condition>
+                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="526150026057901" type="Sensor_ObjectDown">
+                                                                            <param id="0" name="Object">Behavior_Solid</param>
+                                                                            <param id="1" name="Offset X">Values_Player.ClimbingOffset</param>
+                                                                            <param id="2" name="Offset Y">-23</param>
                                                                         </condition>
                                                                         <condition id="1" name="Is overlapping another object" sid="379432438912253" type="Sensor_ObjectRight">
                                                                             <param id="0" name="Object">Behavior_Solid</param>
@@ -4627,6 +4634,84 @@
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
+                                                                <comment></comment>
+                                                                <event-block sid="543541927150524">
+                                                                    <conditions>
+                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="900476765709787" type="Sensor_ObjectDown">
+                                                                            <param id="0" name="Object">Behavior_Solid</param>
+                                                                            <param id="1" name="Offset X">Values_Player.ClimbingOffset</param>
+                                                                            <param id="2" name="Offset Y">-20</param>
+                                                                        </condition>
+                                                                        <condition id="-7" name="Compare instance variable" sid="189574555031031" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                        </condition>
+                                                                        <condition id="-4" name="Trigger once while true" sid="927378124314010" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="289129711847065" type="Sensor_Main">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="224007097239093" type="Sensor_Main">
+                                                                            <param id="0" name="Vector X">0</param>
+                                                                        </action>
+                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="484150119347338" type="Sensor_Main">
+                                                                            <param id="0" name="Vector Y">0</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="658253723879572" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanControl</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="768537394541445" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Climbing</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="601707433533884" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Falling</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="641839258550304">
+                                                                    <conditions>
+                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="282581599585798" type="Sensor_ObjectDown">
+                                                                            <param id="0" name="Object">Behavior_Solid</param>
+                                                                            <param id="1" name="Offset X">-Values_Player.ClimbingOffset</param>
+                                                                            <param id="2" name="Offset Y">-20</param>
+                                                                        </condition>
+                                                                        <condition id="-7" name="Compare instance variable" sid="495554722810116" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                        <condition id="-4" name="Trigger once while true" sid="733338213636685" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="198110055925193" type="Sensor_Main">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="685950888328321" type="Sensor_Main">
+                                                                            <param id="0" name="Vector X">0</param>
+                                                                        </action>
+                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="958374926410809" type="Sensor_Main">
+                                                                            <param id="0" name="Vector Y">0</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="135786934660751" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanControl</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="307112674893839" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Climbing</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="900947929026306" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Falling</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <comment></comment>
                                                                 <event-block sid="295292211236825">
                                                                     <conditions>
                                                                         <condition id="-4" name="Trigger once while true" sid="201514412755008" type="System" />
@@ -9043,7 +9128,12 @@
                                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="619878011351653" type="Function">
+                                                    <param id="0" name="Name">&quot;AndroidKeysHide&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
                                             <sub-events>
                                                 <event-block sid="193733511504125">
                                                     <conditions>

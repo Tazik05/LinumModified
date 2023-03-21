@@ -11606,6 +11606,41 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Solid" uid="1587">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DragDrop2">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3046</x>
+                        <y>184</y>
+                        <z>0</z>
+                        <width>144</width>
+                        <height>90</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -27428,8 +27463,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-136</x>
-                        <y>24</y>
+                        <x>-138</x>
+                        <y>28</y>
                         <z>0</z>
                         <width>20</width>
                         <height>3</height>
@@ -27450,7 +27485,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-136</x>
+                        <x>-138</x>
                         <y>60</y>
                         <z>0</z>
                         <width>20</width>
@@ -27472,8 +27507,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-136</x>
-                        <y>38</y>
+                        <x>-166</x>
+                        <y>36</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
