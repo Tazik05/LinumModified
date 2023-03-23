@@ -91,6 +91,65 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="928691182384726">
+                            <conditions>
+                                <condition id="4" name="On any error" sid="413571255197186" type="AJAX" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="127834221413484" type="UpdateText">
+                                    <param id="0" name="Text">&quot;An error occurred while receiving the information!&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="721851904028156" type="Audio">
+                                    <param id="0" name="Audio file">S3K_B2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="493786294902136" type="System">
+                                    <param id="0" name="Seconds">3.0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="608285508320106" type="Function">
+                                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="295234449314668" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="753196819969755" type="System">
+                                    <param id="0" name="Layout">Linum_logo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="838014717111487">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is online" sid="422539669500182" type="Browser" />
+                                <condition id="-4" name="Trigger once while true" sid="408207453084012" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="613605093030691" type="UpdateText">
+                                    <param id="0" name="Text">&quot;You are not connected to the Internet, it is impossible to check the update!&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="575127583402576" type="Audio">
+                                    <param id="0" name="Audio file">S3K_B2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="997490217871249" type="System">
+                                    <param id="0" name="Seconds">3.0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="108842809463593" type="Function">
+                                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="710414886683730" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="151335349352447" type="System">
+                                    <param id="0" name="Layout">Linum_logo</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="656820539205790">
                             <conditions>
                                 <condition id="70" inverted="1" name="Is Empty" sid="238162799089262" type="UpdateInfo">
@@ -98,11 +157,7 @@
                                     <param id="1" name="Key {n}"></param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action disabled="1" id="0" name="Alert" sid="244661731962580" type="Browser">
-                                    <param id="0" name="Message">UpdateInfo.AsJson(0)</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="753769293132932">
                                     <conditions>

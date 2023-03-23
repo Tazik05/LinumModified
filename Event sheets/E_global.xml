@@ -128,9 +128,6 @@
                 <comment>Toggle between keyboard and gamepad mode</comment>
                 <event-block sid="718362349947669">
                     <conditions>
-                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="473063524453421" type="Values_PauseMenu">
-                            <param id="0" name="Instance variable">Paused</param>
-                        </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="325034563099389" type="Values_Input">
                             <param id="0" name="Instance variable">IgnoreInput</param>
                         </condition>
@@ -1158,27 +1155,6 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block disabled="1" sid="629048303482290">
-                                            <conditions>
-                                                <condition id="-8" inverted="1" name="Compare two values" sid="119308144785681" type="System">
-                                                    <param id="0" name="First value">find(TextBoxMask.Text, &quot;Set Platform&quot;)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">-1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="235552847205307" type="Values_CMD">
-                                                    <param id="0" name="Instance variable">CanExecute</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="5" name="Set frame" sid="746679901899085" type="cursor">
-                                                    <param id="0" name="Frame number">float(tokenat(TextBoxMask.Text, 2, &quot; &quot;))</param>
-                                                </action>
-                                                <action id="0" name="Set text" sid="758761895886372" type="TextBoxMask">
-                                                    <param id="0" name="Text">&quot;&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block sid="790509179663498">
                                             <conditions>
                                                 <condition id="-8" inverted="1" name="Compare two values" sid="869410912329146" type="System">
@@ -1762,6 +1738,9 @@
                         <event-block sid="471053428097950">
                             <conditions>
                                 <condition id="-9" name="Is visible" sid="750646388862904" type="CmdText2" />
+                                <condition id="-32" inverted="1" name="Is on platform" sid="859359941328485" type="System">
+                                    <param id="0" name="Platform">2</param>
+                                </condition>
                                 <condition id="-4" name="Trigger once while true" sid="621183003756749" type="System" />
                             </conditions>
                             <actions>

@@ -2,7 +2,7 @@
 <c2project>
     <name>Linum Framework Modified</name>
     <description>Sonic Framework using SonicPhysics add-on</description>
-    <version>0.1.3</version>
+    <version>0.1.5</version>
     <author>Halatnikov &amp; stas&apos;s ports</author>
     <author-email></author-email>
     <author-website>https://gitlab.com/TheStazik/linum-framework-modified</author-website>
@@ -261,6 +261,7 @@
                         <instance-variable name="KeyCMDHold" sid="599905634123669" type="boolean" />
                         <instance-variable name="Gamepad" sid="412280474540619" type="boolean" />
                         <instance-variable name="IgnoreInput" sid="503764158089819" type="boolean" />
+                        <instance-variable name="KeyALock" sid="785803331370530" type="boolean" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="771943124886850" speed="5">
@@ -3415,10 +3416,10 @@
                     </animation>
                     <animation framecount="1" loop="0" name="Flying_3" pingpong="0" repeatcount="1" repeatto="0" sid="303619266441969" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="LedgeLeft" x="0.08" y="1" />
-                            <image-point name="LedgeRight" x="0.94" y="1" />
-                            <image-point name="Up" x="0.5" y="0" />
-                            <image-point name="Down" x="0.5" y="1.025" />
+                            <image-point name="LedgeLeft" x="0.28" y="0.725" />
+                            <image-point name="LedgeRight" x="0.7" y="0.725" />
+                            <image-point name="Up" x="0.5" y="0.275" />
+                            <image-point name="Down" x="0.5" y="0.725" />
                             <image-point name="Left" x="0.28" y="0.525" />
                             <image-point name="Right" x="0.7" y="0.525" />
                             <collision-poly>
@@ -8878,7 +8879,7 @@
         <global-instance type="DiscordRPCedit" uid="1230">
             <properties>
                 <client-id>906926881151016981</client-id>
-                <preview_mode>False</preview_mode>
+                <preview_mode>True</preview_mode>
             </properties>
         </global-instance>
     </global-instances>

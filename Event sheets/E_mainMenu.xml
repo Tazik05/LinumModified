@@ -51,7 +51,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="271271334758141" type="StaticText">
-                    <param id="0" name="Text">&quot;PREVIEW VERSION 1&quot;&amp;newline&amp;&quot;build data: &quot;&amp;&quot;20.03.23 1:12&quot;&amp;newline&amp;&quot;Mod by stas&apos;s ports&quot;&amp;newline&amp;&quot;Engine by Halatnikov&quot;</param>
+                    <param id="0" name="Text">&quot;PREVIEW VERSION 2&quot;&amp;newline&amp;&quot;build data: &quot;&amp;&quot;23.03.23 22:55&quot;&amp;newline&amp;&quot;Mod by stas&apos;s ports&quot;&amp;newline&amp;&quot;Engine by Halatnikov&quot;</param>
                 </action>
             </actions>
         </event-block>

@@ -27394,8 +27394,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-140</x>
-                        <y>46</y>
+                        <x>-130</x>
+                        <y>66</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -27599,6 +27599,7 @@
                         <KeyCMDHold>false</KeyCMDHold>
                         <Gamepad>false</Gamepad>
                         <IgnoreInput>false</IgnoreInput>
+                        <KeyALock>false</KeyALock>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

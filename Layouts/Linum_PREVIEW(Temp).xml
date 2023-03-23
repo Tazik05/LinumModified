@@ -405,6 +405,7 @@
                         <KeyCMDHold>false</KeyCMDHold>
                         <Gamepad>false</Gamepad>
                         <IgnoreInput>false</IgnoreInput>
+                        <KeyALock>false</KeyALock>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
