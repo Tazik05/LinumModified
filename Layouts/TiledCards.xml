@@ -2,7 +2,7 @@
 <c2layout>
     <name>TiledCards</name>
     <sid>175697345859686</sid>
-    <event-sheet>Event sheet 7</event-sheet>
+    <event-sheet></event-sheet>
     <size>
         <width>426</width>
         <height>240</height>
@@ -943,7 +943,30 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="TC_BGBLACK" uid="1594">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-96</x>
+                        <y>-416</y>
+                        <z>0</z>
+                        <width>720</width>
+                        <height>408</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
     </layers>

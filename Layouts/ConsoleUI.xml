@@ -2,7 +2,7 @@
 <c2layout>
     <name>ConsoleUI</name>
     <sid>202438511801651</sid>
-    <event-sheet>Event sheet 4</event-sheet>
+    <event-sheet></event-sheet>
     <size>
         <width>426</width>
         <height>240</height>
@@ -271,7 +271,6 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="SaveMaster" uid="1185" />
         <instance type="Values_Emeralds" uid="1190">
             <instance-variables>
                 <Green>false</Green>
@@ -300,7 +299,6 @@
                 <LoadSave>false</LoadSave>
             </instance-variables>
         </instance>
-        <instance type="SaveSlot0" uid="1240" />
     </nonworld-instances>
     <effects />
 </c2layout>

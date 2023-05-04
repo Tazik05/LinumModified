@@ -10,17 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">Linum_Level</layout>
-        <layout order="3">SoftWindow</layout>
-        <layout order="4">Linum_preloader</layout>
-        <layout order="5">Linum_CheckUpdate</layout>
-        <layout order="7">Linum_logo</layout>
-        <layout order="8">Linum_mainMenu</layout>
-        <event-sheet order="0">E_Level</event-sheet>
-        <event-sheet order="1">E_Engine</event-sheet>
-        <event-sheet order="6">Event sheet 12</event-sheet>
-        <event-sheet order="9">E_mainMenu</event-sheet>
-        <event-sheet active="1" order="10">E_global</event-sheet>
+        <layout order="0">TiledCards</layout>
+        <layout order="1">Linum_SimpleWorldsLevel</layout>
+        <event-sheet order="2">E_LevelSSW</event-sheet>
+        <event-sheet active="1" order="3">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -40,17 +33,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="obj" />
         <family expanded="0" name="AndroidButtons" />
         <family expanded="0" name="DataSelect" />
-        <family expanded="0" name="SaveSlots" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/.System Objects/" />
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="0" path="object-folder/.System Objects/" />
         <folder expanded="0" path="object-folder/.System Objects/Values/" />
-        <folder expanded="0" path="object-folder/.System Objects/Save Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
         <folder expanded="0" path="object-folder/Level Collisions/" />
-        <folder expanded="0" path="object-folder/GUI/" />
+        <folder expanded="1" path="object-folder/GUI/" />
         <folder expanded="0" path="object-folder/GUI/Editor Separator/" />
         <folder expanded="0" path="object-folder/GUI/HUD/" />
         <folder expanded="0" path="object-folder/GUI/HUD/Linum/" />
@@ -59,7 +50,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/GUI/Menu/" />
         <folder expanded="0" path="object-folder/GUI/Logo/" />
         <folder expanded="0" path="object-folder/GUI/MenuBG/" />
-        <folder expanded="0" path="object-folder/GUI/Debug/" />
+        <folder expanded="1" path="object-folder/GUI/Debug/" />
         <folder expanded="0" path="object-folder/Level Objects/" />
         <folder expanded="0" path="object-folder/Level Objects/Effects and Misc/" />
         <folder expanded="0" path="object-folder/Level Objects/Engine objects/" />
@@ -69,12 +60,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/[ System ]/" />
         <folder expanded="1" path="layout-folder/[ System ]/[ UI ]/" />
         <folder expanded="1" path="layout-folder/[ Engine ]/" />
-        <folder expanded="0" path="layout-folder/[ Tests ]/" />
+        <folder expanded="1" path="layout-folder/[ Tests ]/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="0" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
-        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="file-folder/Font/" />
         <folder expanded="1" path="file-folder/TempFiles/" />
@@ -188,7 +179,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Logo/" />
         <folder expanded="1" path="animation-folder/Logo2/" />
         <folder expanded="1" path="animation-folder/Android_Console/" />
-        <folder expanded="1" path="animation-folder/DebugSpriteText/" />
         <folder expanded="1" path="animation-folder/CMDBG/" />
         <folder expanded="1" path="animation-folder/Explosion1/" />
         <folder expanded="1" path="animation-folder/MonitorIcon/" />
@@ -350,5 +340,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite27/" />
         <folder expanded="1" path="animation-folder/CustomBG/" />
         <folder expanded="1" path="animation-folder/Sprite19/" />
+        <folder expanded="1" path="animation-folder/DebugPanel_CloseButton/" />
+        <folder expanded="1" path="animation-folder/DebugPanel_UI1/" />
+        <folder expanded="1" path="animation-folder/DebugPanel_UI2/" />
+        <folder expanded="1" path="animation-folder/DebugPanel_UIFPS/" />
+        <folder expanded="1" path="animation-folder/DebugPanel_UIFPSVISUAL/" />
+        <folder expanded="1" path="animation-folder/WaterMain/" />
+        <folder expanded="1" path="animation-folder/WaterEffect/" />
+        <folder expanded="1" path="animation-folder/Effects_WaterSplash/" />
+        <folder expanded="1" path="animation-folder/Active/" />
+        <folder expanded="1" path="animation-folder/LittleBubble/" />
+        <folder expanded="1" path="animation-folder/BubblePatch/" />
+        <folder expanded="1" path="animation-folder/BigBubble/" />
+        <folder expanded="1" path="animation-folder/BubbleNumbers/" />
+        <folder expanded="1" path="animation-folder/TC_BGBLACK/" />
     </folders-expanded>
 </c2uistate>

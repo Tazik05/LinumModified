@@ -51,11 +51,10 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="271271334758141" type="StaticText">
-                    <param id="0" name="Text">&quot;PREVIEW VERSION 2&quot;&amp;newline&amp;&quot;build data: &quot;&amp;&quot;23.03.23 22:55&quot;&amp;newline&amp;&quot;Mod by stas&apos;s ports&quot;&amp;newline&amp;&quot;Engine by Halatnikov&quot;</param>
+                    <param id="0" name="Text">&quot;PREVIEW VERSION 3&quot;&amp;newline&amp;&quot;build data: &quot;&amp;&quot;01.05.23 14:01&quot;&amp;newline&amp;&quot;Mod by stas&apos;s ports(Tazik05)&quot;&amp;newline&amp;&quot;Engine by Halatnikov&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <include>E_SaveSystem</include>
         <include>E_global</include>
         <event-group description="" sid="423914286752749" title="Menu Background">
             <sub-events>
@@ -1022,10 +1021,6 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="55" name="Clear" sid="436924943010668" type="SaveSlots">
-                                                                    <param id="0" name="Reference point">0</param>
-                                                                    <param id="1" name="Key {n}"></param>
-                                                                </action>
                                                                 <action id="2" name="Remove local value" sid="302018213627369" type="WebStorage">
                                                                     <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
                                                                 </action>
@@ -1261,7 +1256,7 @@
                                                                     <param id="0" name="Tag">&quot;SFX_Delete&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Play" sid="352001463767053" type="Audio">
-                                                                    <param id="0" name="Audio file">без названия</param>
+                                                                    <param id="0" name="Audio file">SFX_1</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFX_Delete&quot;</param>
@@ -1313,7 +1308,7 @@
                                                                     <param id="0" name="Tag">&quot;SFX_Delete&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Play" sid="878738000068010" type="Audio">
-                                                                    <param id="0" name="Audio file">без названия</param>
+                                                                    <param id="0" name="Audio file">SFX_1</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>
                                                                     <param id="1" name="Tag (optional)">&quot;SFX_Delete&quot;</param>
@@ -1417,9 +1412,6 @@
                                                         <action id="-16" name="Wait" sid="630058225866453" type="System">
                                                             <param id="0" name="Seconds">1.0</param>
                                                         </action>
-                                                        <action id="-25" name="Go to layout (by name)" sid="261015059822584" type="System">
-                                                            <param id="0" name="Layout">SaveMaster.Value(0,&quot;Save&quot;,&quot;Layout&quot;)</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -1463,12 +1455,6 @@
                                                         </action>
                                                         <action id="-16" name="Wait" sid="119212653586946" type="System">
                                                             <param id="0" name="Seconds">1.0</param>
-                                                        </action>
-                                                        <action id="0" name="Alert" sid="559153895585189" type="Browser">
-                                                            <param id="0" name="Message">SaveMaster.AsJson(0)</param>
-                                                        </action>
-                                                        <action id="-25" name="Go to layout (by name)" sid="856315529056730" type="System">
-                                                            <param id="0" name="Layout">SaveMaster.Value(0,&quot;Save&quot;,&quot;Layout&quot;)</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -2765,7 +2751,7 @@
             </sub-events>
         </event-block>
         <comment>1 - 57, 105&#x0D;&#x0A;      75, 83</comment>
-        <event-block sid="165981136848990">
+        <event-block disabled="1" sid="165981136848990">
             <conditions>
                 <condition id="0" name="On key pressed" sid="706235491338645" type="Keyboard">
                     <param id="0" name="Key">75</param>
@@ -2773,17 +2759,13 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="597764691841138">
+                <event-block disabled="1" sid="597764691841138">
                     <conditions>
                         <condition id="3" name="Local key exists" sid="401192522919548" type="WebStorage">
                             <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="55" name="Clear" sid="349945698723184" type="SaveSlots">
-                            <param id="0" name="Reference point">0</param>
-                            <param id="1" name="Key {n}"></param>
-                        </action>
                         <action id="2" name="Remove local value" sid="968573820095707" type="WebStorage">
                             <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Values_Menus.Selected_DataSelect-1</param>
                         </action>
@@ -2805,7 +2787,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="983324382491556">
+                        <event-block disabled="1" sid="983324382491556">
                             <conditions>
                                 <condition id="-14" inverted="1" name="Pick by unique ID" sid="235879545023544" type="StaticText_Red">
                                     <param id="0" name="Unique ID">1229</param>
@@ -2828,7 +2810,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="875936345742807">
+        <event-block disabled="1" sid="875936345742807">
             <conditions>
                 <condition id="0" name="On key pressed" sid="697911045942141" type="Keyboard">
                     <param id="0" name="Key">74</param>
@@ -2841,7 +2823,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="945583470201608">
+        <event-block disabled="1" sid="945583470201608">
             <conditions>
                 <condition id="0" name="On completed" sid="882207089606347" type="AJAX">
                     <param id="0" name="Tag">&quot;test&quot;</param>
@@ -2862,7 +2844,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="739212656182243">
+        <event-block disabled="1" sid="739212656182243">
             <conditions>
                 <condition id="0" name="On key pressed" sid="742914166087724" type="Keyboard">
                     <param id="0" name="Key">189</param>

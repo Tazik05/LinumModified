@@ -2850,6 +2850,16 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="433210657611938">
+                    <conditions>
+                        <condition id="-41" name="Is between angles" sid="553830977551178" type="System">
+                            <param id="0" name="Angle">0</param>
+                            <param id="1" name="First angle">0</param>
+                            <param id="2" name="Second angle">45</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
                 <event-block sid="158872697381264">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="641743798340257" type="Values_Input">

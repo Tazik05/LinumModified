@@ -3,6 +3,135 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 4</name>
     <events>
-        <include>E_global</include>
+        <event-block sid="989157980684662">
+            <conditions />
+            <actions>
+                <action id="-3" name="Set position" sid="250257839923528" type="DebugPanel_CloseButton">
+                    <param id="0" name="X">DebugPanel_UI1.X</param>
+                    <param id="1" name="Y">DebugPanel_UI1.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="244417177547610" type="DebugPanel_Text">
+                    <param id="0" name="X">DebugPanel_UI1.X</param>
+                    <param id="1" name="Y">DebugPanel_UI1.Y</param>
+                </action>
+                <action id="-3" name="Set position" sid="333773050037006" type="DebugPanel_UI2">
+                    <param id="0" name="X">DebugPanel_CloseButton.ImagePointX(1)</param>
+                    <param id="1" name="Y">DebugPanel_CloseButton.ImagePointY(1)</param>
+                </action>
+                <action id="-3" name="Set position" sid="772436700633417" type="DebugPanel_Text2">
+                    <param id="0" name="X">DebugPanel_UI1.X+10</param>
+                    <param id="1" name="Y">DebugPanel_UI1.Y+30</param>
+                </action>
+                <action id="-3" name="Set position" sid="231978501126344" type="DebugPanel_UIFPS">
+                    <param id="0" name="X">DebugPanel_UI1.X+10</param>
+                    <param id="1" name="Y">DebugPanel_UI1.Y+20</param>
+                </action>
+                <action id="0" name="Set text" sid="574427597648224" type="DebugPanel_Text2">
+                    <param id="0" name="Text">&quot;FPS: &quot;&amp;fps</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="974009910640406">
+            <conditions>
+                <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="205319848496207" type="DebugPanel_UI1" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="887072774417937" type="System">
+                    <param id="0" name="Object to create">DebugPanel_UIFPSVISUAL</param>
+                    <param id="1" name="Layer">DebugPanel_UIFPS.LayerNumber</param>
+                    <param id="2" name="X">DebugPanel_UIFPS.ImagePointX(2)</param>
+                    <param id="3" name="Y">(DebugPanel_UIFPS.ImagePointY(2)-(clamp(fps,3,75)/2.3))+1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="877882830726698">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="628945428890065" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="689221426823426" type="DebugPanel_UI1">
+                            <param id="0" name="X">int(Self.X)</param>
+                            <param id="1" name="Y">int(self.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="723668197225871">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="121909804900812" type="System">
+                            <param id="0" name="First value">fps</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="992254343384235" type="DebugPanel_UIFPSVISUAL">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="502778778513663">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="938789306118605" type="System">
+                            <param id="0" name="First value">fps</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">30</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="335649860210942" type="System">
+                            <param id="0" name="First value">fps</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">55</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="105692220004918" type="DebugPanel_UIFPSVISUAL">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893874670299060">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="237665788086422" type="System">
+                            <param id="0" name="First value">fps</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">55</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="360387563872326" type="DebugPanel_UIFPSVISUAL">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="930918687429133">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="172745918493102" type="DebugPanel_UI1" />
+                <condition id="-4" name="Trigger once while true" sid="708954888413006" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="752970340577750" type="DebugPanel_UIFPSVISUAL" />
+            </actions>
+        </event-block>
+        <event-block sid="356438851122403">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="710286605098455" type="DebugPanel_UIFPSVISUAL" />
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="954572858952823" type="DebugPanel_UIFPSVISUAL">
+                    <param id="0" name="Distance">-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="833337884633730">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="925724027919618" type="DebugPanel_UIFPSVISUAL">
+                    <param id="0" name="Object">DebugPanel_UIFPS</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="971239807980279" type="DebugPanel_UIFPSVISUAL" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

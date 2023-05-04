@@ -8,7 +8,7 @@
     <author-website>https://gitlab.com/TheStazik/linum-framework-modified</author-website>
     <app-id>com.linum.sonic</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>28000</saved-with-version>
+    <saved-with-version>27900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -62,6 +62,7 @@
     <used-effects>
         <effect author="Scirra" id="inverse">Inverse</effect>
         <effect author="R0J0hound" id="mode7">mode7</effect>
+        <effect author="Scirra" id="subtract">Subtract</effect>
         <effect author="Scirra" id="tintmask">Tint Mask</effect>
         <effect author="Scirra" id="warp">Warp</effect>
         <effect author="Scirra" id="warpmask">Warp Mask</effect>
@@ -211,6 +212,9 @@
                         <instance-variable name="CanUseSkills" sid="715297227222819" type="boolean" />
                         <instance-variable name="HitState" sid="116811907399352" type="boolean" />
                         <instance-variable name="VectorYSpeedSaver" sid="560787332804656" type="number" />
+                        <instance-variable name="InWater" sid="390667918372458" type="boolean" />
+                        <instance-variable name="Air" sid="560082871331109" type="number" />
+                        <instance-variable name="Drowning" sid="932895665521471" type="boolean" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Timer" sid="760925343406501">
@@ -350,29 +354,6 @@
                     </instance-variables>
                 </object-type>
             </object-folder>
-            <object-folder name="Save Objects">
-                <object-type global="1" name="SaveMaster" sid="635233275873635">
-                    <plugin id="JSON" />
-                </object-type>
-                <object-type global="1" name="SaveSlot0" sid="176322700819918">
-                    <plugin id="JSON" />
-                </object-type>
-                <object-type global="1" name="SaveSlot2" sid="926006589205399">
-                    <plugin id="JSON" />
-                </object-type>
-                <object-type global="1" name="SaveSlot4" sid="266166618487127">
-                    <plugin id="JSON" />
-                </object-type>
-                <object-type global="1" name="SaveSlot3" sid="377376891340594">
-                    <plugin id="JSON" />
-                </object-type>
-                <object-type global="1" name="SaveSlot1" sid="442358595313764">
-                    <plugin id="JSON" />
-                </object-type>
-                <object-type global="1" name="SaveSlot5" sid="193441811300227">
-                    <plugin id="JSON" />
-                </object-type>
-            </object-folder>
             <object-type name="Audio" sid="2722091819329769">
                 <plugin id="Audio" />
             </object-type>
@@ -460,7 +441,8 @@
                     <instance-variable comment="this adds support for smartwatch, if the screen is the same size and width (for example 240x240), then the interface for smart watches will be changed" name="SmartWatchSupport" sid="381159046024383" type="boolean" />
                     <instance-variable comment="Creates a bluish effect during Transition" name="SonicTransition" sid="309773902682918" type="boolean" />
                     <instance-variable comment="Now, if a player falls from a great height, he will die" name="RealPhysic" sid="767528260121738" type="boolean" />
-                    <instance-variable name="IgnoreAngleInLoops" sid="211836780142090" type="boolean" />
+                    <instance-variable comment="WIP" name="IgnoreAngleInLoops" sid="211836780142090" type="boolean" />
+                    <instance-variable name="DropDash" sid="180104760505704" type="boolean" />
                     <instance-variable comment="Linum\Sonic3\SSW" name="HUD" sid="350632080388041" type="string" />
                     <instance-variable comment="Desktop/Mobile/Automatically(the game will try to determine the platform on which it is located)" name="Platform" sid="252663215722053" type="string" />
                     <instance-variable comment="Disable/Original/2x/3x/4x/FullScreen" name="ScreenSize" sid="667462344946972" type="string" />
@@ -1956,6 +1938,28 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="5" loop="0" name="FlyingB_2" pingpong="0" repeatcount="1" repeatto="0" sid="286025684101997" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                                <image-point name="Imagepoint 2" x="0.526316" y="0.78125" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 2" x="0.526316" y="0.78125" />
+                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 2" x="0.526316" y="0.78125" />
+                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 2" x="0.526316" y="0.78125" />
+                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 2" x="0.526316" y="0.78125" />
+                                <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                            </frame>
+                        </animation>
                         <animation framecount="2" loop="1" name="Tired_2" pingpong="0" repeatcount="1" repeatto="0" sid="745561935776322" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.361111" y="0.25" />
@@ -1964,6 +1968,20 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.361111" y="0.25" />
                                 <image-point name="Imagepoint 2" x="0.638889" y="0.96875" />
+                            </frame>
+                        </animation>
+                        <animation framecount="3" loop="1" name="TiredB_2" pingpong="0" repeatcount="1" repeatto="0" sid="628566395762430" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.368421" y="0.25" />
+                                <image-point name="Imagepoint 2" x="0.631579" y="0.96875" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.368421" y="0.25" />
+                                <image-point name="Imagepoint 2" x="0.631579" y="0.96875" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.368421" y="0.25" />
+                                <image-point name="Imagepoint 2" x="0.631579" y="0.96875" />
                             </frame>
                         </animation>
                         <animation framecount="2" loop="1" name="HangingA_2" pingpong="0" repeatcount="1" repeatto="0" sid="637812846238801" speed="2">
@@ -4382,6 +4400,14 @@
                     <plugin id="Spritefont2" />
                     <texture />
                 </object-type>
+                <object-type name="DebugPanel_Text" sid="514826609036509">
+                    <plugin id="Spritefont2" />
+                    <texture />
+                </object-type>
+                <object-type name="DebugPanel_Text2" sid="314957290342255">
+                    <plugin id="Spritefont2" />
+                    <texture />
+                </object-type>
             </object-folder>
             <object-folder name="Menu">
                 <object-type name="MenuHeader" sid="719187090112795">
@@ -4640,26 +4666,6 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="572015530155273" speed="5">
                             <frame duration="1" hotspotX="0" hotspotY="0" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="DebugSpriteText" sid="760932280608991">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151274554166495" speed="0">
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
-                            <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\двиг\11.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -8515,6 +8521,234 @@
         <object-type global="1" name="UpdateInfo" sid="530103661382463">
             <plugin id="JSON" />
         </object-type>
+        <object-type name="DebugPanel_CloseButton" sid="574737828976498">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822111365077433" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="1" y="1" />
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="1" y="1" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DebugPanel_UI1" sid="690627493251394">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="830461548339681">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="451583202368480">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="944464706424360" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DebugPanel_UI2" sid="447121357898181">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676481096464445" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DebugPanel_UIFPS" sid="228376969914585">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245712246785555" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="0" y="0.53125" />
+                        <image-point name="Imagepoint 2" x="1" y="1" />
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.0208333" y="1" />
+                            <point x="0.0208333" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DebugPanel_UIFPSVISUAL" sid="147167913688801">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759045175039194" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WaterMain" sid="744677599516904">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="848303256058548">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Subtract">
+                    <effect id="subtract" />
+                </effect-type>
+            </effects>
+            <container>
+                <type>WaterEffect</type>
+                <type>WaterMain</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="640122618132440" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501792" original-source="C:\Users\Tazik05\Desktop\15.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WaterEffect" sid="108791415530484">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="113105845279000">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="WarpMask">
+                    <effect id="warpmask" />
+                </effect-type>
+            </effects>
+            <container>
+                <type>WaterEffect</type>
+                <type>WaterMain</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="234219310545456" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501792" original-source="C:\Users\Tazik05\Desktop\15.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Effects_WaterSplash" sid="506259027431004">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974697405991496" speed="25">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Active" sid="190141096748567">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894585267009110" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\15.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LittleBubble" sid="947765693278217">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="373315984852382">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="620934241989319" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BubblePatch" sid="327594478240260">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238971620777777" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BigBubble" sid="840908484581126">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243408598901534" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="548960193744776" speed="5">
+                    <frame duration="1" hotspotX="0.516129" hotspotY="0.516129" original-source="C:\Users\Tazik05\Desktop\15.png">
+                        <collision-poly>
+                            <point x="0.741935" y="0.741935" />
+                            <point x="0.483871" y="0" />
+                            <point x="0.774194" y="0.225806" />
+                            <point x="1" y="0.483871" />
+                            <point x="0.774194" y="0.774194" />
+                            <point x="0.483871" y="1" />
+                            <point x="0.16129" y="0.83871" />
+                            <point x="0" y="0.483871" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BubbleNumbers" sid="821568368924660">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="350399051137163">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239077579235049" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TC_BGBLACK" sid="370266569808128">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="808242315664843" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -8768,15 +9002,6 @@
                 <member>NewText_DataSelect_5</member>
             </members>
         </family>
-        <family name="SaveSlots" plugin-id="JSON" sid="134999284560636">
-            <members>
-                <member>SaveSlot0</member>
-                <member>SaveSlot1</member>
-                <member>SaveSlot2</member>
-                <member>SaveSlot3</member>
-                <member>SaveSlot4</member>
-            </members>
-        </family>
     </families>
     <layout-folder>
         <layout-folder name="[ System ]">
@@ -8786,6 +9011,7 @@
                 <layout>AndroidControls_deleted.xml</layout>
                 <layout>PauseMenu.xml</layout>
                 <layout>SoftWindow.xml</layout>
+                <layout>DebugInfo.xml</layout>
             </layout-folder>
         </layout-folder>
         <layout-folder name="[ Engine ]">
@@ -8813,24 +9039,20 @@
             <event-sheet>E_logo.xml</event-sheet>
             <event-sheet>E_mainMenu.xml</event-sheet>
             <event-sheet>E_preloader.xml</event-sheet>
-            <event-sheet>CREDITS.xml</event-sheet>
             <event-sheet>E_Level.xml</event-sheet>
             <event-sheet>E_GameOver.xml</event-sheet>
-            <event-sheet>E_SaveSystem.xml</event-sheet>
             <event-sheet>E_LevelSSW.xml</event-sheet>
         </event-folder>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
-        <event-sheet>Event sheet 4.xml</event-sheet>
         <event-sheet>Event sheet 5.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 6.xml</event-sheet>
-        <event-sheet>Event sheet 7.xml</event-sheet>
-        <event-sheet>Event sheet 8.xml</event-sheet>
-        <event-sheet>Event sheet 9.xml</event-sheet>
         <event-sheet>Event sheet 10.xml</event-sheet>
         <event-sheet>Event sheet 11.xml</event-sheet>
         <event-sheet>Event sheet 12.xml</event-sheet>
+        <event-sheet>CREDITS.xml</event-sheet>
+        <event-sheet>Event sheet 4.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">
@@ -8953,12 +9175,18 @@
         <file name="S3K_B8.m4a" />
         <file name="S3K_B8.ogg" />
         <file name="00096.ogg" />
-        <file name="без названия.ogg" />
+        <file name="SFX_1.ogg" />
         <file name="S3K_B2.m4a" />
         <file name="S3K_B2.ogg" />
         <file name="SFX_DestroyMedium.m4a" />
         <file name="SFX_DestroyMedium.ogg" />
         <file name="SFX_BossHit.m4a" />
+        <file name="SFX_Drown.m4a" />
+        <file name="SFX_Drown.ogg" />
+        <file name="SFX_Splash.m4a" />
+        <file name="SFX_Splash.ogg" />
+        <file name="SFX_AirTimer.m4a" />
+        <file name="SFX_AirTimer.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="MUS_Level.ogg" />
@@ -8966,10 +9194,10 @@
         <file name="MUS_Speedshoes.ogg" />
         <file name="MUS_Invincibility.ogg" />
         <file name="MUS_Continue.ogg" />
-        <file name="MUS_SpecialStage_S1.ogg" />
         <file name="MUS_Bonus.ogg" />
         <file name="MUS_LevelSSW.ogg" />
         <file name="MUS_Boss.ogg" />
+        <file name="MUS_Drowning.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

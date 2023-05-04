@@ -7,14 +7,7 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="482531615413353" type="System" />
             </conditions>
-            <actions>
-                <action id="0" name="Play" sid="200516589402472" type="Audio">
-                    <param id="0" name="Audio file">MUS_SpecialStage_S1</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="824077277757492">
             <conditions>

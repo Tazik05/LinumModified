@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_Level</name>
     <events>
-        <include>E_SaveSystem</include>
         <include>E_Engine</include>
         <include>E_global</include>
         <event-block disabled="1" sid="899657733420228">

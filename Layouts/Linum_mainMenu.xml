@@ -2458,11 +2458,6 @@
     </layers>
     <nonworld-instances>
         <instance type="Date" uid="1169" />
-        <instance type="SaveSlot1" uid="1241" />
-        <instance type="SaveSlot2" uid="1242" />
-        <instance type="SaveSlot3" uid="1243" />
-        <instance type="SaveSlot4" uid="1244" />
-        <instance type="SaveSlot5" uid="1245" />
     </nonworld-instances>
     <effects />
 </c2layout>

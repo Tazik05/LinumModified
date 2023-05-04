@@ -27,11 +27,14 @@
                     <param id="0" name="Object">PlayerSpawn</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
+                <action id="-16" name="Wait" sid="823466362330988" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.4" sid="505369909762492" title="Linum Framework: Legacy">
             <sub-events>
-                <event-group description="a little variety in these boring engines... In any case, you can disable this group" sid="158973237713220" title="Fun mods">
+                <event-group description="a little variety in these boring engines... In any case, you can disable this group" inactive="1" sid="158973237713220" title="Fun mods">
                     <sub-events>
                         <event-group description="by...... danik, yea" sid="452973950278072" title="Weapon">
                             <sub-events>
@@ -3407,7 +3410,7 @@
                                                                     </conditions>
                                                                     <actions />
                                                                     <sub-events>
-                                                                        <event-block sid="529519009945619">
+                                                                        <event-block bookmark="1" sid="529519009945619">
                                                                             <conditions>
                                                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="342061197062327" type="Values_Player">
                                                                                     <param id="0" name="Instance variable">Tired</param>
@@ -3421,17 +3424,49 @@
                                                                                     <param id="2" name="Second value">-Values_Player.FlyingSpeedTails</param>
                                                                                 </condition>
                                                                             </conditions>
-                                                                            <actions>
-                                                                                <action behavior="SonicPhysics" disabled="1" id="12" name="Set vector Y" sid="599199277879445" type="Sensor_Main">
-                                                                                    <param id="0" name="Vector Y">0</param>
-                                                                                </action>
-                                                                                <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="194369195567122" type="Sensor_Main">
-                                                                                    <param id="0" name="Vector Y">(Self.SonicPhysics.VectorY)-Values_Player.FlyingSpeedTails/1.5</param>
-                                                                                </action>
-                                                                                <action behavior="SonicPhysics" disabled="1" id="12" name="Set vector Y" sid="679345706116687" type="Sensor_Main">
-                                                                                    <param id="0" name="Vector Y">-80</param>
-                                                                                </action>
-                                                                            </actions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="600840917807230">
+                                                                                    <conditions>
+                                                                                        <condition id="-8" name="Compare two values" sid="932822899226904" type="System">
+                                                                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
+                                                                                            <param id="1" name="Comparison">2</param>
+                                                                                            <param id="2" name="Second value">0</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="291333207273789" type="Sensor_Main">
+                                                                                            <param id="0" name="Vector Y">(Self.SonicPhysics.VectorY)-Values_Player.FlyingSpeedTails/1.5</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="705282265830158">
+                                                                                    <conditions>
+                                                                                        <condition id="-8" name="Compare two values" sid="629365228886092" type="System">
+                                                                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
+                                                                                            <param id="1" name="Comparison">4</param>
+                                                                                            <param id="2" name="Second value">0</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="194369195567122" type="Sensor_Main">
+                                                                                            <param id="0" name="Vector Y">-30</param>
+                                                                                        </action>
+                                                                                        <action id="-16" name="Wait" sid="593430637449510" type="System">
+                                                                                            <param id="0" name="Seconds">0.1</param>
+                                                                                        </action>
+                                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="623248200527384" type="Sensor_Main">
+                                                                                            <param id="0" name="Vector Y">-50</param>
+                                                                                        </action>
+                                                                                        <action id="-16" name="Wait" sid="510642759703588" type="System">
+                                                                                            <param id="0" name="Seconds">0.1</param>
+                                                                                        </action>
+                                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="193610561642936" type="Sensor_Main">
+                                                                                            <param id="0" name="Vector Y">-70</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
                                                                         </event-block>
                                                                     </sub-events>
                                                                 </event-block>
@@ -5798,83 +5833,75 @@
                         </event-group>
                         <event-block sid="397785746679377">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="784343848947025" type="Values_Player">
-                                    <param id="0" name="Instance variable">SpeedShoes</param>
+                                <condition id="0" name="On function" sid="784343848947025" type="Function">
+                                    <param id="0" name="Name">&quot;SetDefaultPhysic&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="255646700502810">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="832311795225205" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="SonicPhysics" id="2" name="Set hard max speed" sid="596239661450768" type="Sensor_Main">
-                                            <param id="0" name="Hard Max Speed">1920</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="6" name="Set max jump strength" sid="897734925841704" type="Sensor_Main">
-                                            <param id="0" name="Max Jump strength">390</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="7" name="Set min jump strength" sid="528264060538000" type="Sensor_Main">
-                                            <param id="0" name="Min Jump strength">240</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="8" name="Set gravity" sid="977140515719844" type="Sensor_Main">
-                                            <param id="0" name="Gravity">Values_Player.Gravity</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="9" name="Set max fall speed" sid="731919262473163" type="Sensor_Main">
-                                            <param id="0" name="Max fall speed">960</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="1" name="Set soft max speed" sid="827648588711982" type="Sensor_Main">
-                                            <param id="0" name="Soft Max Speed">360</param>
-                                            <param id="1" name="Variation">0</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="5" name="Set friction" sid="157456479641566" type="Sensor_Main">
-                                            <param id="0" name="Friction">168.75</param>
-                                            <param id="1" name="Variation">0</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="3" name="Set acceleration" sid="745634067663278" type="Sensor_Main">
-                                            <param id="0" name="Acceleration">168.75</param>
-                                            <param id="1" name="Variation">0</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="4" name="Set deceleration" sid="347624859424606" type="Sensor_Main">
-                                            <param id="0" name="Deceleration">1800</param>
-                                            <param id="1" name="Variation">0</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="1" name="Set soft max speed" sid="227801946891698" type="Sensor_Main">
-                                            <param id="0" name="Soft Max Speed">360</param>
-                                            <param id="1" name="Variation">1</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="5" name="Set friction" sid="916971494495460" type="Sensor_Main">
-                                            <param id="0" name="Friction">0</param>
-                                            <param id="1" name="Variation">1</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="3" name="Set acceleration" sid="206573509920143" type="Sensor_Main">
-                                            <param id="0" name="Acceleration">337.5</param>
-                                            <param id="1" name="Variation">1</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="4" name="Set deceleration" sid="549314375722818" type="Sensor_Main">
-                                            <param id="0" name="Deceleration">337.5</param>
-                                            <param id="1" name="Variation">1</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="1" name="Set soft max speed" sid="966897894458404" type="Sensor_Main">
-                                            <param id="0" name="Soft Max Speed">960</param>
-                                            <param id="1" name="Variation">2</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="5" name="Set friction" sid="401695949951154" type="Sensor_Main">
-                                            <param id="0" name="Friction">85.375</param>
-                                            <param id="1" name="Variation">2</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="3" name="Set acceleration" sid="206602772457339" type="Sensor_Main">
-                                            <param id="0" name="Acceleration">0</param>
-                                            <param id="1" name="Variation">2</param>
-                                        </action>
-                                        <action behavior="SonicPhysics" id="4" name="Set deceleration" sid="924802364330498" type="Sensor_Main">
-                                            <param id="0" name="Deceleration">534.375</param>
-                                            <param id="1" name="Variation">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action behavior="SonicPhysics" id="2" name="Set hard max speed" sid="596239661450768" type="Sensor_Main">
+                                    <param id="0" name="Hard Max Speed">1920</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="6" name="Set max jump strength" sid="897734925841704" type="Sensor_Main">
+                                    <param id="0" name="Max Jump strength">390</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="7" name="Set min jump strength" sid="528264060538000" type="Sensor_Main">
+                                    <param id="0" name="Min Jump strength">240</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="8" name="Set gravity" sid="977140515719844" type="Sensor_Main">
+                                    <param id="0" name="Gravity">Values_Player.Gravity</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="9" name="Set max fall speed" sid="731919262473163" type="Sensor_Main">
+                                    <param id="0" name="Max fall speed">960</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="1" name="Set soft max speed" sid="827648588711982" type="Sensor_Main">
+                                    <param id="0" name="Soft Max Speed">360</param>
+                                    <param id="1" name="Variation">0</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="5" name="Set friction" sid="157456479641566" type="Sensor_Main">
+                                    <param id="0" name="Friction">168.75</param>
+                                    <param id="1" name="Variation">0</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="3" name="Set acceleration" sid="745634067663278" type="Sensor_Main">
+                                    <param id="0" name="Acceleration">168.75</param>
+                                    <param id="1" name="Variation">0</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="4" name="Set deceleration" sid="347624859424606" type="Sensor_Main">
+                                    <param id="0" name="Deceleration">1800</param>
+                                    <param id="1" name="Variation">0</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="1" name="Set soft max speed" sid="227801946891698" type="Sensor_Main">
+                                    <param id="0" name="Soft Max Speed">360</param>
+                                    <param id="1" name="Variation">1</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="5" name="Set friction" sid="916971494495460" type="Sensor_Main">
+                                    <param id="0" name="Friction">0</param>
+                                    <param id="1" name="Variation">1</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="3" name="Set acceleration" sid="206573509920143" type="Sensor_Main">
+                                    <param id="0" name="Acceleration">337.5</param>
+                                    <param id="1" name="Variation">1</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="4" name="Set deceleration" sid="549314375722818" type="Sensor_Main">
+                                    <param id="0" name="Deceleration">337.5</param>
+                                    <param id="1" name="Variation">1</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="1" name="Set soft max speed" sid="966897894458404" type="Sensor_Main">
+                                    <param id="0" name="Soft Max Speed">960</param>
+                                    <param id="1" name="Variation">2</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="5" name="Set friction" sid="401695949951154" type="Sensor_Main">
+                                    <param id="0" name="Friction">85.375</param>
+                                    <param id="1" name="Variation">2</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="3" name="Set acceleration" sid="206602772457339" type="Sensor_Main">
+                                    <param id="0" name="Acceleration">0</param>
+                                    <param id="1" name="Variation">2</param>
+                                </action>
+                                <action behavior="SonicPhysics" id="4" name="Set deceleration" sid="924802364330498" type="Sensor_Main">
+                                    <param id="0" name="Deceleration">534.375</param>
+                                    <param id="1" name="Variation">2</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <comment>lazy fix for a music overlap bug</comment>
                         <event-block sid="773063984636084">
@@ -6593,6 +6620,83 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
+                        <event-group description="" sid="502031898452743" title="In water">
+                            <sub-events>
+                                <event-block sid="167467095173262">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="166389827125114" type="Values_Player">
+                                            <param id="0" name="Instance variable">InWater</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="SonicPhysics" id="8" name="Set gravity" sid="958120286090800" type="Sensor_Main">
+                                            <param id="0" name="Gravity">240</param>
+                                        </action>
+                                        <action behavior="SonicPhysics" disabled="1" id="9" name="Set max fall speed" sid="823667197086006" type="Sensor_Main">
+                                            <param id="0" name="Max fall speed">140</param>
+                                        </action>
+                                        <action behavior="SonicPhysics" id="1" name="Set soft max speed" sid="118132370335704" type="Sensor_Main">
+                                            <param id="0" name="Soft Max Speed">200</param>
+                                            <param id="1" name="Variation">0</param>
+                                        </action>
+                                        <action behavior="SonicPhysics" id="6" name="Set max jump strength" sid="821252098196982" type="Sensor_Main">
+                                            <param id="0" name="Max Jump strength">250</param>
+                                        </action>
+                                        <action behavior="SonicPhysics" id="9" name="Set max fall speed" sid="530567042409651" type="Sensor_Main">
+                                            <param id="0" name="Max fall speed">200</param>
+                                        </action>
+                                        <action behavior="SonicPhysics" id="9" name="Set max fall speed" sid="106727188893631" type="Sensor_Main">
+                                            <param id="0" name="Max fall speed">200</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block disabled="1" sid="562237836563568">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="754841970691473" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="SonicPhysics" id="2" name="Set hard max speed" sid="414738062686784" type="Sensor_Main">
+                                                    <param id="0" name="Hard Max Speed">120</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1" sid="451843148677960">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="870343539325601" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="651407920820625" type="Function">
+                                                    <param id="0" name="Name">&quot;SetDefaultPhysic&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="211453881433152">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="411868639391246" type="Values_Player">
+                                            <param id="0" name="Instance variable">InWater</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="701624279651097" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="833522484745462" type="Function">
+                                            <param id="0" name="Name">&quot;SetDefaultPhysic&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-group description="" sid="447835235581669" title="Speed Shoes">
                             <sub-events>
                                 <comment>this plugin isn&apos;t really &quot;needed&quot;, i just wanted to it fancy way</comment>
@@ -6767,6 +6871,10 @@
                                         <action id="-13" name="Set boolean" sid="896195617118178" type="Values_Level">
                                             <param id="0" name="Instance variable">AudioSpeedup</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="282142520708411" type="Function">
+                                            <param id="0" name="Name">&quot;SetDefaultPhysic&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -9121,6 +9229,321 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <event-group description="" sid="795483424378676" title="Water">
+                                    <sub-events>
+                                        <event-group description="" sid="645722157029363" title="AirTimer">
+                                            <sub-events>
+                                                <event-block sid="833368172529550">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="986370888348348" type="Values_Player">
+                                                            <param id="0" name="Instance variable">InWater</param>
+                                                        </condition>
+                                                        <condition id="-6" name="Every X seconds" sid="448437581449591" type="System">
+                                                            <param id="0" name="Interval (seconds)">1.0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Add to" sid="762037349810758" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="547485950851053">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="755794899170147" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">5</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="551299718656526" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">10</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="661339477414866" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">15</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="593146117729830">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="722912299947091" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Play" sid="316930112660506" type="Audio">
+                                                                    <param id="0" name="Audio file">SFX_AirTimer</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;SFX_AirTimer&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="738067117930056">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="296124484487297" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">18</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="533668266638987" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Set paused" sid="583945007034448" type="AudioHelper">
+                                                            <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                                            <param id="1" name="State">0</param>
+                                                            <param id="2" name="Fade">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="874651009027298">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="378718845246761" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">20</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="141650871422434" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="952725917606790" type="Audio">
+                                                            <param id="0" name="Audio file">MUS_Drowning</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="268739619576251" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Drowning</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="807834644831481">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="554010011786337" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">22</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="460366415831111" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">24</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="231218903239789" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">26</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="267013574735559" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">28</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="561825285869242" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">30</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="224005325856064">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="684824366024869" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="5" name="Set frame" sid="111380346013008" type="BubbleNumbers">
+                                                                    <param id="0" name="Frame number">Self.AnimationFrame+1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="217344318397538">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="651522821506835" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Air</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">32</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="794738349300644" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="686880375636862" type="Function">
+                                                            <param id="0" name="Name">&quot;InstantDeath&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="496875385358998">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="831826409404989" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Drowning</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Set position" sid="190763024063750" type="BubbleNumbers">
+                                                            <param id="0" name="X">Sensor_Main.X+20</param>
+                                                            <param id="1" name="Y">Sensor_Main.Y+20</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="309894671747469">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="831198157108709" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="358883373238838" type="BubbleNumbers">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                                <action behavior="Flash" id="0" name="Flash" sid="327297934929240" type="BubbleNumbers">
+                                                                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                                                                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                                                                    <param id="2" name="Duration">10.0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="433114134572229">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="795657962755059" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Drowning</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="897164918047618" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Flash" id="1" name="Stop flashing" sid="217600383542676" type="BubbleNumbers" />
+                                                        <action id="-16" name="Set opacity" sid="516238323376263" type="BubbleNumbers">
+                                                            <param id="0" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="398429085505745" type="BubbleNumbers">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                        <event-block sid="445858232353025">
+                                            <conditions>
+                                                <condition id="-2" name="On start of layout" sid="661931857180610" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pin" id="0" name="Pin to object" sid="697641869924052" type="WaterEffect">
+                                                    <param id="0" name="Pin to">WaterMain</param>
+                                                    <param id="1" name="Mode">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="367240471654285">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="125196001040549" type="Sensor_Hitbox">
+                                                    <param id="0" name="Object">WaterMain</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="531200067963908" type="Values_Player">
+                                                    <param id="0" name="Instance variable">InWater</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="779047819363331">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="974630174400026" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="729240891258452" type="System">
+                                                            <param id="0" name="Object to create">Effects_WaterSplash</param>
+                                                            <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
+                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                            <param id="3" name="Y">Sensor_Main.Y-1</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="408410357964458" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Splash</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Splash&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="756895669275685">
+                                            <conditions>
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="218183487961967" type="Sensor_Hitbox">
+                                                    <param id="0" name="Object">WaterMain</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="770562578508822" type="Values_Player">
+                                                    <param id="0" name="Instance variable">InWater</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="780651063275610">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="522555370929342" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="248882177735154" type="System">
+                                                            <param id="0" name="Object to create">Effects_WaterSplash</param>
+                                                            <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
+                                                            <param id="2" name="X">Sensor_Main.X</param>
+                                                            <param id="3" name="Y">Sensor_Main.Y+2</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="690373095314471" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Splash</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Splash&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="251293862269155">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="714840984703444" type="Values_Player">
+                                                    <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801652529350314" type="Values_PauseMenu">
+                                                    <param id="0" name="Instance variable">Paused</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="291688545952945" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Stop" sid="233825839354431" type="Audio">
+                                                    <param id="0" name="Tag">&quot;SFX_Splash&quot;</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="383164462670922" type="System">
+                                                    <param id="0" name="Seconds">0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="484347514330166" type="Effects_WaterSplash" />
+                                            </actions>
+                                            <sub-events>
+                                                <comment>lazy fix</comment>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="805558195101224">
+                                            <conditions>
+                                                <condition id="4" name="On finished" sid="526741347976801" type="Effects_WaterSplash">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="204260071155729" type="Effects_WaterSplash" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                                 <event-group description="" sid="909989700271954" title="Checkpoint">
                                     <sub-events>
                                         <event-block sid="214279317247346">
@@ -13866,6 +14289,49 @@
                         </event-group>
                         <event-group description="" sid="864124639392109" title="Effects">
                             <sub-events>
+                                <event-group description="" sid="160572688356998" title="Bubbles">
+                                    <sub-events>
+                                        <event-block sid="499728251888700">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="157247176271152" type="Values_Player">
+                                                    <param id="0" name="Instance variable">InWater</param>
+                                                </condition>
+                                                <condition id="-6" name="Every X seconds" sid="285469279022935" type="System">
+                                                    <param id="0" name="Interval (seconds)">random(0.5,2.5)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="196627787245229" type="System">
+                                                    <param id="0" name="Object to create">LittleBubble</param>
+                                                    <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
+                                                    <param id="2" name="X">PlayerSprite.X+2</param>
+                                                    <param id="3" name="Y">PlayerSprite.Y+10</param>
+                                                </action>
+                                                <action behavior="Sine" id="1" name="Set period" sid="447496773016656" type="LittleBubble">
+                                                    <param id="0" name="Period">choose(-2,2)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="980715917412571">
+                                            <conditions>
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="253366000196193" type="LittleBubble">
+                                                    <param id="0" name="Object">WaterMain</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="193176874807281" type="LittleBubble" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="800862596109502">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="187533536151165" type="LittleBubble">
+                                                    <param id="0" name="Y">Self.Y-0.5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
                                 <event-group description="" sid="827778206762680" title="Spindash dust">
                                     <sub-events>
                                         <event-block any="1" sid="243856710153395">
@@ -14687,9 +15153,12 @@
                                         <action id="-15" name="Set visible" sid="342245960711454" type="AndroidButtons">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="-13" name="Set boolean" sid="204195042661692" type="Values_Input">
+                                        <action disabled="1" id="-13" name="Set boolean" sid="204195042661692" type="Values_Input">
                                             <param id="0" name="Instance variable">IgnoreInput</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="580334335002706" type="Sensor_Main">
+                                            <param id="0" name="Input">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -14775,6 +15244,24 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="482975473036140">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="831091176114573" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;skip&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="354796568872665" type="Global_Settings">
+                                            <param id="0" name="Instance variable">Act</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="695420316926738" type="TiledBackground9_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-group description="" sid="658246908184068" title="Sonic 3">
@@ -14854,6 +15341,9 @@
                                                 <action id="-13" name="Set boolean" sid="117468668607311" type="Values_Input">
                                                     <param id="0" name="Instance variable">IgnoreInput</param>
                                                     <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="789268135504369" type="Sensor_Main">
+                                                    <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -15241,6 +15731,9 @@
                                                 <action id="-13" name="Set boolean" sid="331656874963513" type="Values_Input">
                                                     <param id="0" name="Instance variable">IgnoreInput</param>
                                                     <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="418410009223611" type="Sensor_Main">
+                                                    <param id="0" name="Input">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -16335,13 +16828,13 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="257373700463545">
+        <event-block sid="257373700463545">
             <conditions>
                 <condition id="-1" name="Every tick" sid="214880467207490" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="941072514271414" type="TestCounter">
-                    <param id="0" name="Text">abs(Sensor_Main.SonicPhysics.VectorX)/2</param>
+                    <param id="0" name="Text">int(Sensor_Main.SonicPhysics.VectorY)</param>
                 </action>
             </actions>
         </event-block>

@@ -27205,6 +27205,9 @@
                         <CanUseSkills>false</CanUseSkills>
                         <HitState>false</HitState>
                         <VectorYSpeedSaver>0</VectorYSpeedSaver>
+                        <InWater>false</InWater>
+                        <Air>0</Air>
+                        <Drowning>false</Drowning>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -30782,28 +30785,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DebugSpriteText" uid="797">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>1</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-264</x>
-                        <y>-272</y>
-                        <z>0</z>
-                        <width>57</width>
-                        <height>7</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="TestCounter" uid="1176">
                     <properties>
                         <character-width>9</character-width>
@@ -30894,8 +30875,9 @@
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
                 <IgnoreAngleInLoops>true</IgnoreAngleInLoops>
+                <DropDash>false</DropDash>
                 <HUD>SSW</HUD>
-                <Platform>Mobile</Platform>
+                <Platform>Desktop</Platform>
                 <ScreenSize>2x</ScreenSize>
                 <FpsCounter>0</FpsCounter>
                 <FpsFix>false</FpsFix>

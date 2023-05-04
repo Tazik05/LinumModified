@@ -2,7 +2,7 @@
 <c2layout>
     <name>PauseMenu</name>
     <sid>550581187216115</sid>
-    <event-sheet>Event sheet 9</event-sheet>
+    <event-sheet></event-sheet>
     <size>
         <width>426</width>
         <height>240</height>
