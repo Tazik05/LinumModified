@@ -2204,6 +2204,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="449860158859873">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="182004132843300" type="Keyboard">
+                            <param id="0" name="Key">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="933688097406419" type="Function">
+                            <param id="0" name="Name">&quot;InstantDeath&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Drowning&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="218667366897905">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="147040332872297" type="Keyboard">

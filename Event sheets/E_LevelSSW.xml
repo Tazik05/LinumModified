@@ -16,17 +16,17 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;MUS_Level&quot;</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="545864117748779" type="Function">
-                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Linum&quot;{###}&quot;TEST LEVEL&quot;{###}1{###}&quot;STRING&quot;{###}&quot;FREE PLAY&quot;{###}&quot;LAKEFEPERD&quot;{###}&quot;NOT S0 SIMPLE SONIC WORLDS 1.0&quot;</param>
-                </action>
-                <action disabled="1" id="0" name="Call function" sid="305241066711003" type="Function">
-                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Linum&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="450808713673401" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="450808713673401" type="Function">
                     <param id="0" name="Name">&quot;TitleCard&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Sonic3&quot;{###}&quot;SSW&quot;{###}2{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;{###}&quot;NONE&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="967335035324128" type="Function">
+                    <param id="0" name="Name">&quot;TitleCard&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;None&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="472661742831323" type="Function">
+                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                 </action>
                 <action id="-10" name="Set value" sid="885156040169514" type="Global_Settings">
                     <param id="0" name="Instance variable">HUD</param>

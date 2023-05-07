@@ -32,7 +32,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.4" sid="505369909762492" title="Linum Framework: Legacy">
+        <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.6" sid="505369909762492" title="Linum Framework: Legacy">
             <sub-events>
                 <event-group description="a little variety in these boring engines... In any case, you can disable this group" inactive="1" sid="158973237713220" title="Fun mods">
                     <sub-events>
@@ -3301,6 +3301,101 @@
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
+                                                                <comment></comment>
+                                                                <comment>lazy fix</comment>
+                                                                <event-block sid="756475260893089">
+                                                                    <conditions>
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="897762263391556" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">InWater</param>
+                                                                        </condition>
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="467621393058630" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Tired</param>
+                                                                        </condition>
+                                                                        <condition id="-4" name="Trigger once while true" sid="603071173782593" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="452736943221816" type="PlayerSprite">
+                                                                            <param id="0" name="Animation">&quot;Flying_&quot;&amp;Values_Player.Character</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="726884291745776" type="Audio">
+                                                                            <param id="0" name="Audio file">SFX_TailsFlying</param>
+                                                                            <param id="2" name="Loop">1</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;SFX_TailsFlying&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="935312091468080">
+                                                                    <conditions>
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="797858286138269" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">InWater</param>
+                                                                        </condition>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="140841823274901" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Tired</param>
+                                                                        </condition>
+                                                                        <condition id="-4" name="Trigger once while true" sid="427124028340632" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="619536519590934" type="PlayerSprite">
+                                                                            <param id="0" name="Animation">&quot;Tired_&quot;&amp;Values_Player.Character</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="640765874315652" type="Audio">
+                                                                            <param id="0" name="Audio file">SFX_TailsTired</param>
+                                                                            <param id="2" name="Loop">1</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;SFX_TailsTired&quot;</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="803040559044144" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="745390595042748">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="375119657259625" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">InWater</param>
+                                                                        </condition>
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="632834666812635" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Tired</param>
+                                                                        </condition>
+                                                                        <condition id="-4" name="Trigger once while true" sid="399469411804157" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="262699462812681" type="PlayerSprite">
+                                                                            <param id="0" name="Animation">&quot;FlyingB_&quot;&amp;Values_Player.Character</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="507052916139763" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="798805889965069">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="270101119420359" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">InWater</param>
+                                                                        </condition>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="681326704860971" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Tired</param>
+                                                                        </condition>
+                                                                        <condition id="-4" name="Trigger once while true" sid="287715130481754" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="614260686053686" type="PlayerSprite">
+                                                                            <param id="0" name="Animation">&quot;TiredB_&quot;&amp;Values_Player.Character</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="278140204396180" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="936508471700573" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;SFX_TailsTired&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <comment></comment>
                                                                 <event-block sid="549504549968836">
                                                                     <conditions>
                                                                         <condition id="-4" name="Trigger once while true" sid="722019303653021" type="System" />
@@ -3335,17 +3430,41 @@
                                                                             <param id="0" name="Instance variable">State</param>
                                                                             <param id="1" name="Value">&quot;Flying&quot;</param>
                                                                         </action>
-                                                                        <action id="4" name="Set animation" sid="418051747928072" type="PlayerSprite">
-                                                                            <param id="0" name="Animation">&quot;Flying_&quot;&amp;Values_Player.Character</param>
-                                                                            <param id="1" name="From">1</param>
-                                                                        </action>
-                                                                        <action id="0" name="Play" sid="336890213923526" type="Audio">
-                                                                            <param id="0" name="Audio file">SFX_TailsFlying</param>
-                                                                            <param id="2" name="Loop">1</param>
-                                                                            <param id="3" name="Volume">0</param>
-                                                                            <param id="1" name="Tag (optional)">&quot;SFX_TailsFlying&quot;</param>
-                                                                        </action>
                                                                     </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="771726221376762">
+                                                                            <conditions>
+                                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="385656758442054" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">InWater</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="418051747928072" type="PlayerSprite">
+                                                                                    <param id="0" name="Animation">&quot;Flying_&quot;&amp;Values_Player.Character</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="0" name="Play" sid="336890213923526" type="Audio">
+                                                                                    <param id="0" name="Audio file">SFX_TailsFlying</param>
+                                                                                    <param id="2" name="Loop">1</param>
+                                                                                    <param id="3" name="Volume">0</param>
+                                                                                    <param id="1" name="Tag (optional)">&quot;SFX_TailsFlying&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="649091109460488">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Is boolean instance variable set" sid="618965854800388" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">InWater</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="821798514048674" type="PlayerSprite">
+                                                                                    <param id="0" name="Animation">&quot;FlyingB_&quot;&amp;Values_Player.Character</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
                                                                 <event-block sid="768596142505805">
                                                                     <conditions>
@@ -3362,20 +3481,47 @@
                                                                             <param id="0" name="Instance variable">State</param>
                                                                             <param id="1" name="Value">&quot;Tired&quot;</param>
                                                                         </action>
-                                                                        <action id="4" name="Set animation" sid="124847289558658" type="PlayerSprite">
-                                                                            <param id="0" name="Animation">&quot;Tired_&quot;&amp;Values_Player.Character</param>
-                                                                            <param id="1" name="From">1</param>
-                                                                        </action>
-                                                                        <action id="0" name="Play" sid="139688659896775" type="Audio">
-                                                                            <param id="0" name="Audio file">SFX_TailsTired</param>
-                                                                            <param id="2" name="Loop">1</param>
-                                                                            <param id="3" name="Volume">0</param>
-                                                                            <param id="1" name="Tag (optional)">&quot;SFX_TailsTired&quot;</param>
-                                                                        </action>
-                                                                        <action id="6" name="Stop" sid="919617377194612" type="Audio">
-                                                                            <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
-                                                                        </action>
                                                                     </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="918773680328374">
+                                                                            <conditions>
+                                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="121576510926885" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">InWater</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="124847289558658" type="PlayerSprite">
+                                                                                    <param id="0" name="Animation">&quot;Tired_&quot;&amp;Values_Player.Character</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="0" name="Play" sid="139688659896775" type="Audio">
+                                                                                    <param id="0" name="Audio file">SFX_TailsTired</param>
+                                                                                    <param id="2" name="Loop">1</param>
+                                                                                    <param id="3" name="Volume">0</param>
+                                                                                    <param id="1" name="Tag (optional)">&quot;SFX_TailsTired&quot;</param>
+                                                                                </action>
+                                                                                <action id="6" name="Stop" sid="919617377194612" type="Audio">
+                                                                                    <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="324387035034187">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Is boolean instance variable set" sid="923103945079399" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">InWater</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="901049240375638" type="PlayerSprite">
+                                                                                    <param id="0" name="Animation">&quot;TiredB_&quot;&amp;Values_Player.Character</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="6" name="Stop" sid="392228141858883" type="Audio">
+                                                                                    <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
                                                                 <event-block sid="240931800452623">
                                                                     <conditions>
@@ -3410,7 +3556,7 @@
                                                                     </conditions>
                                                                     <actions />
                                                                     <sub-events>
-                                                                        <event-block bookmark="1" sid="529519009945619">
+                                                                        <event-block sid="529519009945619">
                                                                             <conditions>
                                                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="342061197062327" type="Values_Player">
                                                                                     <param id="0" name="Instance variable">Tired</param>
@@ -3470,9 +3616,12 @@
                                                                         </event-block>
                                                                     </sub-events>
                                                                 </event-block>
-                                                                <event-block sid="686100212932504">
+                                                                <event-block sid="111763936502011">
                                                                     <conditions>
-                                                                        <condition id="-8" name="Compare two values" sid="374185233786567" type="System">
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="268064310379542" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">InWater</param>
+                                                                        </condition>
+                                                                        <condition id="-8" name="Compare two values" sid="356478689234168" type="System">
                                                                             <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
                                                                             <param id="1" name="Comparison">4</param>
                                                                             <param id="2" name="Second value">250</param>
@@ -3481,6 +3630,23 @@
                                                                     <actions>
                                                                         <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="875096312898169" type="Sensor_Main">
                                                                             <param id="0" name="Vector Y">250</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="686100212932504">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="972075717463783" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">InWater</param>
+                                                                        </condition>
+                                                                        <condition id="-8" name="Compare two values" sid="374185233786567" type="System">
+                                                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
+                                                                            <param id="1" name="Comparison">4</param>
+                                                                            <param id="2" name="Second value">300</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="835566726611592" type="Sensor_Main">
+                                                                            <param id="0" name="Vector Y">300</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -4053,20 +4219,6 @@
                                                                 <comment></comment>
                                                                 <comment></comment>
                                                                 <comment>rotate</comment>
-                                                                <event-block disabled="1" sid="140375491098842">
-                                                                    <conditions>
-                                                                        <condition id="-8" name="Compare two values" sid="141399975447647" type="System">
-                                                                            <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
-                                                                            <param id="1" name="Comparison">4</param>
-                                                                            <param id="2" name="Second value">5</param>
-                                                                        </condition>
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="195135189202124" type="Sensor_Main">
-                                                                            <param id="0" name="Vector Y">5</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
                                                                 <event-block sid="232803695528484">
                                                                     <conditions />
                                                                     <actions>
@@ -6315,7 +6467,7 @@
                                                     <param id="0" name="Audio file">SFX_Hurt</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
-                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFX_Hurt&quot;</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="498988556723760" type="Function">
                                                     <param id="0" name="Name">&quot;UpdateLives&quot;</param>
@@ -6389,7 +6541,7 @@
                                                     <param id="0" name="Audio file">SFX_Hurt</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
-                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFX_Hurt&quot;</param>
                                                 </action>
                                                 <action id="0" name="Call function" sid="865387432484746" type="Function">
                                                     <param id="0" name="Name">&quot;UpdateLives&quot;</param>
@@ -6451,6 +6603,35 @@
                                                     <param id="0" name="Seconds">0.5</param>
                                                 </action>
                                                 <action id="-26" name="Restart layout" sid="925676350467198" type="System" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="268371959231362">
+                                            <conditions>
+                                                <condition id="1" name="Compare parameter" sid="160293395112169" type="Function">
+                                                    <param id="0" name="Index">0</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Drowning&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Stop" sid="776002825648440" type="Audio">
+                                                    <param id="0" name="Tag">&quot;SFX_Hurt&quot;</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="115666656506940" type="Audio">
+                                                    <param id="0" name="Audio file">SFX_Drown</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action behavior="Bullet" id="2" name="Set gravity" sid="881627033995819" type="Sensor_Main">
+                                                    <param id="0" name="Gravity">300</param>
+                                                </action>
+                                                <action behavior="Bullet" id="0" name="Set speed" sid="742434616402416" type="Sensor_Main">
+                                                    <param id="0" name="Speed">50</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="640504632403778" type="Sensor_Main">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -9235,19 +9416,89 @@
                                             <sub-events>
                                                 <event-block sid="833368172529550">
                                                     <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="986370888348348" type="Values_Player">
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="986370888348348" type="Values_Player">
                                                             <param id="0" name="Instance variable">InWater</param>
                                                         </condition>
-                                                        <condition id="-6" name="Every X seconds" sid="448437581449591" type="System">
-                                                            <param id="0" name="Interval (seconds)">1.0</param>
-                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="448437581449591" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-11" name="Add to" sid="762037349810758" type="Values_Player">
+                                                        <action id="-10" name="Set value" sid="762037349810758" type="Values_Player">
                                                             <param id="0" name="Instance variable">Air</param>
-                                                            <param id="1" name="Value">1</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="884384915986660" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Drowning</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="817923519062620" type="BubbleNumbers">
+                                                            <param id="0" name="Frame number">0</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="433735756496903">
+                                                            <conditions>
+                                                                <condition id="5" inverted="1" name="Is tag playing" sid="361246431554229" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="5" name="Set paused" sid="347942889921624" type="AudioHelper">
+                                                                    <param id="0" name="Tag">&quot;MUS_Level&quot;</param>
+                                                                    <param id="1" name="State">1</param>
+                                                                    <param id="2" name="Fade">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="775322126885869">
+                                                            <conditions>
+                                                                <condition id="5" name="Is tag playing" sid="614258729499170" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;MUS_Drowning&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="6" name="Stop" sid="803667883682062" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;MUS_Drowning&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <comment></comment>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block bookmark="1" sid="948759283319938">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="288506200564695" type="Values_Player">
+                                                            <param id="0" name="Instance variable">InWater</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="346135529448976">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="878171516565468" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="6" name="Stop" sid="342394692886229" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;SFX_TailsFlying&quot;</param>
+                                                                </action>
+                                                                <action id="6" name="Stop" sid="138431807086698" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;SFX_TailsTired&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="956497840088433">
+                                                            <conditions>
+                                                                <condition id="-6" name="Every X seconds" sid="721149809438410" type="System">
+                                                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-11" name="Add to" sid="590319938705736" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Air</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block any="1" sid="547485950851053">
                                                     <conditions>
@@ -9315,7 +9566,7 @@
                                                             <param id="0" name="Audio file">MUS_Drowning</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                            <param id="1" name="Tag (optional)">&quot;MUS_Drowning&quot;</param>
                                                         </action>
                                                         <action id="-13" name="Set boolean" sid="268739619576251" type="Values_Player">
                                                             <param id="0" name="Instance variable">Drowning</param>
@@ -9377,7 +9628,7 @@
                                                     <actions>
                                                         <action id="0" name="Call function" sid="686880375636862" type="Function">
                                                             <param id="0" name="Name">&quot;InstantDeath&quot;</param>
-                                                            <param id="1" name="Parameter {n}"></param>
+                                                            <param id="1" name="Parameter {n}">&quot;Drowning&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -9609,13 +9860,16 @@
                                                     <param id="0" name="Instance variable">CanPass</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
-                                                <action id="-13" name="Set boolean" sid="212900995685890" type="Values_Input">
+                                                <action disabled="1" id="-13" name="Set boolean" sid="212900995685890" type="Values_Input">
                                                     <param id="0" name="Instance variable">IgnoreInput</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                                 <action disabled="1" id="-10" name="Set value" sid="936364502939034" type="Values_Camera">
                                                     <param id="0" name="Instance variable">mode</param>
                                                     <param id="1" name="Value">-1</param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="425123577554260" type="Sensor_Main">
+                                                    <param id="0" name="Input">1</param>
                                                 </action>
                                                 <action id="-13" name="Set boolean" sid="292794088573280" type="Values_Level">
                                                     <param id="0" name="Instance variable">IsLevelTimerActive</param>
@@ -10069,7 +10323,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block bookmark="1" sid="310340975714402">
+                                        <event-block sid="310340975714402">
                                             <conditions>
                                                 <condition id="-18" name="On created" sid="656385826668228" type="Gimmick_CollapsingPlatform_Right_Brick1" />
                                             </conditions>
@@ -11133,6 +11387,9 @@
                                                         <event-block sid="809933064496195">
                                                             <conditions>
                                                                 <condition id="-1" name="Every tick" sid="721762847630054" type="System" />
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="740585665513289" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">InWater</param>
+                                                                </condition>
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-3" name="Set position" sid="368041292149038" type="TailsBack">
@@ -11150,11 +11407,27 @@
                                                         </event-block>
                                                         <event-block sid="504236531032540">
                                                             <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="780459733381014" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">InWater</param>
+                                                                </condition>
                                                                 <condition id="-4" name="Trigger once while true" sid="556845848688656" type="System" />
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-15" name="Set visible" sid="361139979562791" type="TailsBack">
                                                                     <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="754088713990891">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="844015057936853" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">InWater</param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="622392062237685" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="436666339509052" type="TailsBack">
+                                                                    <param id="0" name="Visibility">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -14296,6 +14569,11 @@
                                                 <condition id="-8" name="Is boolean instance variable set" sid="157247176271152" type="Values_Player">
                                                     <param id="0" name="Instance variable">InWater</param>
                                                 </condition>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="543977383090245" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Dead&quot;</param>
+                                                </condition>
                                                 <condition id="-6" name="Every X seconds" sid="285469279022935" type="System">
                                                     <param id="0" name="Interval (seconds)">random(0.5,2.5)</param>
                                                 </condition>
@@ -14322,13 +14600,78 @@
                                                 <action id="-9" name="Destroy" sid="193176874807281" type="LittleBubble" />
                                             </actions>
                                         </event-block>
+                                        <event-block sid="539771494335101">
+                                            <conditions>
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="211575063845791" type="MediumBubble">
+                                                    <param id="0" name="Object">WaterMain</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="386529154450196" type="MediumBubble" />
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="800862596109502">
                                             <conditions />
                                             <actions>
                                                 <action id="-2" name="Set Y" sid="187533536151165" type="LittleBubble">
                                                     <param id="0" name="Y">Self.Y-0.5</param>
                                                 </action>
+                                                <action id="-2" name="Set Y" sid="930433738632973" type="MediumBubble">
+                                                    <param id="0" name="Y">Self.Y-0.5</param>
+                                                </action>
                                             </actions>
+                                        </event-block>
+                                        <comment></comment>
+                                        <event-block sid="907240848583219">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="216287617583807" type="Values_Player">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Dead&quot;</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="710740035484025" type="Values_Player">
+                                                    <param id="0" name="Instance variable">InWater</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="527026608595680">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="461691994773767" type="System">
+                                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="893938903111783" type="System">
+                                                            <param id="0" name="Object to create">LittleBubble</param>
+                                                            <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
+                                                            <param id="2" name="X">choose(PlayerSprite.X+int(random(0,6)),PlayerSprite.X-int(random(0,6)))</param>
+                                                            <param id="3" name="Y">PlayerSprite.Y+10</param>
+                                                        </action>
+                                                        <action behavior="Sine" id="1" name="Set period" sid="828586263630906" type="LittleBubble">
+                                                            <param id="0" name="Period">choose(-2,2)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="788178064719410">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="836323377074530" type="System">
+                                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="993524808153495" type="System">
+                                                            <param id="0" name="Object to create">MediumBubble</param>
+                                                            <param id="1" name="Layer">PlayerSprite.LayerNumber</param>
+                                                            <param id="2" name="X">choose(PlayerSprite.X+int(random(0,6)),PlayerSprite.X-int(random(0,6)))</param>
+                                                            <param id="3" name="Y">PlayerSprite.Y+int(random(0,6))</param>
+                                                        </action>
+                                                        <action behavior="Sine" id="1" name="Set period" sid="505975381736703" type="MediumBubble">
+                                                            <param id="0" name="Period">choose(-2,2)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
@@ -15244,12 +15587,17 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="482975473036140">
+                                <event-block any="1" sid="482975473036140">
                                     <conditions>
                                         <condition id="1" name="Compare parameter" sid="831091176114573" type="Function">
                                             <param id="0" name="Index">0</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;skip&quot;</param>
+                                            <param id="2" name="Value">&quot;None&quot;</param>
+                                        </condition>
+                                        <condition id="1" name="Compare parameter" sid="349128666537470" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Skip&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -15260,7 +15608,50 @@
                                         <action id="-15" name="Set visible" sid="695420316926738" type="TiledBackground9_">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
+                                        <action id="-13" name="Set boolean" sid="251391937552928" type="Values_Player">
+                                            <param id="0" name="Instance variable">SonicPhysicsEnabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="927255768265687" type="TitleCard_Sprite">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="760644920966406" type="TitleCard_Spritefont">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="11" name="Reverse" sid="595714885407110" type="TitleCard_Acts">
+                                            <param id="0" name="Reverse mode">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="279834442130141" type="Sprite3_">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="649938659182023" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="825320222292745">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="303892204088409" type="Global_Settings">
+                                                    <param id="0" name="Instance variable">Platform</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Mobile&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="499536322398712" type="AndroidButtons">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="602343203829137" type="Values_Input">
+                                                    <param id="0" name="Instance variable">IgnoreInput</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="164171259236183" type="Sensor_Main">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

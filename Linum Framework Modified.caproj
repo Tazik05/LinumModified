@@ -2,7 +2,7 @@
 <c2project>
     <name>Linum Framework Modified</name>
     <description>Sonic Framework using SonicPhysics add-on</description>
-    <version>0.1.5</version>
+    <version>0.1.6</version>
     <author>Halatnikov &amp; stas&apos;s ports</author>
     <author-email></author-email>
     <author-website>https://gitlab.com/TheStazik/linum-framework-modified</author-website>
@@ -1938,7 +1938,7 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="5" loop="0" name="FlyingB_2" pingpong="0" repeatcount="1" repeatto="0" sid="286025684101997" speed="5">
+                        <animation framecount="5" loop="1" name="FlyingB_2" pingpong="0" repeatcount="1" repeatto="0" sid="286025684101997" speed="10">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                                 <image-point name="Imagepoint 2" x="0.526316" y="0.78125" />
@@ -8746,6 +8746,50 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="808242315664843" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MediumBubble" sid="971331818683838">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="505282095068564">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420818785997109" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
