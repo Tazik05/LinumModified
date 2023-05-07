@@ -4590,13 +4590,6 @@
                                                                                             <param id="0" name="Instance variable">VectorYSpeedSaver</param>
                                                                                             <param id="1" name="Value">Sensor_Main.SonicPhysics.VectorY</param>
                                                                                         </action>
-                                                                                        <action disabled="1" id="-16" name="Wait" sid="419451608096317" type="System">
-                                                                                            <param id="0" name="Seconds">1</param>
-                                                                                        </action>
-                                                                                        <action disabled="1" id="-13" name="Set boolean" sid="235660407098893" type="Values_Player">
-                                                                                            <param id="0" name="Instance variable">CanFall</param>
-                                                                                            <param id="1" name="Value">1</param>
-                                                                                        </action>
                                                                                     </actions>
                                                                                 </event-block>
                                                                             </sub-events>
@@ -7430,6 +7423,21 @@
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="508452889662429">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="693249530392931" type="Values_Player">
+                                            <param id="0" name="Instance variable">InWater</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="337939105079324" type="Values_Player">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Value">&quot;None&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="722854151192093">
                             <conditions>
@@ -7814,6 +7822,25 @@
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
+                                        </event-block>
+                                        <event-block sid="808220294741458">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="396139319312700" type="Values_Player">
+                                                    <param id="0" name="Instance variable">InWater</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="504856781038403" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Light&quot;</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="857824048551783" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="987549238338363" type="Values_Player">
+                                                    <param id="0" name="Instance variable">Shield</param>
+                                                    <param id="1" name="Value">&quot;None&quot;</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-group>

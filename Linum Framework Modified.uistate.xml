@@ -10,19 +10,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Linum_Level</layout>
-        <layout order="5">Linum_SimpleWorldsLevel</layout>
-        <layout order="6">Linum_Continue</layout>
-        <layout order="7">Linum_preloader</layout>
-        <layout order="8">Linum_PREVIEW(Temp)</layout>
-        <layout order="9">Linum_CheckUpdate</layout>
-        <layout order="10">Linum_logo</layout>
-        <layout active="1" order="11">Linum_mainMenu</layout>
-        <event-sheet order="1">E_LevelSSW</event-sheet>
-        <event-sheet order="2">E_global</event-sheet>
-        <event-sheet order="3">E_Engine</event-sheet>
-        <event-sheet order="4">E_Level</event-sheet>
-        <event-sheet order="12">E_mainMenu</event-sheet>
+        <layout active="1" order="11">Linum_Level</layout>
+        <layout order="2">Linum_SimpleWorldsLevel</layout>
+        <layout order="3">Linum_Continue</layout>
+        <layout order="4">Linum_preloader</layout>
+        <layout order="5">Linum_PREVIEW(Temp)</layout>
+        <layout order="6">Linum_CheckUpdate</layout>
+        <layout order="7">Linum_logo</layout>
+        <layout order="8">Linum_mainMenu</layout>
+        <layout order="10">ButtonSetup(android)</layout>
+        <event-sheet order="0">E_LevelSSW</event-sheet>
+        <event-sheet order="1">E_global</event-sheet>
+        <event-sheet order="1">E_Engine</event-sheet>
+        <event-sheet order="0">E_Level</event-sheet>
+        <event-sheet order="9">E_mainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -67,9 +68,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/manual/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="layout-folder/[ System ]/" />
-        <folder expanded="1" path="layout-folder/[ System ]/[ UI ]/" />
+        <folder expanded="0" path="layout-folder/[ System ]/[ UI ]/" />
         <folder expanded="1" path="layout-folder/[ Engine ]/" />
-        <folder expanded="1" path="layout-folder/[ Tests ]/" />
+        <folder expanded="0" path="layout-folder/[ Tests ]/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Engine/" />
         <folder expanded="0" path="file-folder/" />
