@@ -67,47 +67,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="260725480388344">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="767680457339424" type="Keyboard">
-                    <param id="0" name="Key">113</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-27" name="Snapshot canvas" sid="636891784287521" type="System">
-                    <param id="0" name="Format">0</param>
-                    <param id="1" name="JPEG quality">75</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="111812435157262">
-            <conditions>
-                <condition id="-26" name="On canvas snapshot" sid="869869844160032" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set local value" sid="655157830717504" type="WebStorage">
-                    <param id="0" name="Key">&quot;SaveSlot1&quot;</param>
-                    <param id="1" name="Value">CanvasSnapshot</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="718690887534827">
-            <conditions>
-                <condition id="3" name="On key released" sid="809374586559286" type="Keyboard">
-                    <param id="0" name="Key">114</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="10" name="Load image from URL" sid="904310365516918" type="PauseFade">
-                    <param id="0" name="URI">str(WebStorage.LocalValue(&quot;SaveSlot1&quot;))</param>
-                    <param id="1" name="Size">0</param>
-                    <param id="2" name="Cross-origin">0</param>
-                </action>
-                <action id="0" name="Alert" sid="280598124108864" type="Browser">
-                    <param id="0" name="Message">WebStorage.LocalValue(&quot;SaveSlot1&quot;)</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="519266600902172">
             <conditions>
                 <condition id="0" name="On key pressed" sid="991324746136691" type="Keyboard">

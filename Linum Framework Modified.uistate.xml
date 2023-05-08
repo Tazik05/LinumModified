@@ -10,20 +10,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="4">Linum_SimpleWorldsLevel</layout>
-        <layout order="5">Linum_Continue</layout>
-        <layout order="6">Linum_preloader</layout>
-        <layout order="7">Linum_PREVIEW(Temp)</layout>
-        <layout order="8">Linum_CheckUpdate</layout>
-        <layout order="9">Linum_logo</layout>
-        <layout order="10">Linum_mainMenu</layout>
-        <layout order="12">ButtonSetup(android)</layout>
-        <layout active="1" order="13">Linum_Level</layout>
+        <layout order="2">Linum_SimpleWorldsLevel</layout>
+        <layout order="3">Linum_Continue</layout>
+        <layout order="4">Linum_preloader</layout>
+        <layout order="5">Linum_PREVIEW(Temp)</layout>
+        <layout order="6">Linum_CheckUpdate</layout>
+        <layout order="7">Linum_logo</layout>
+        <layout order="8">Linum_mainMenu</layout>
+        <layout order="10">ButtonSetup(android)</layout>
+        <layout active="1" order="11">Linum_Level</layout>
         <event-sheet order="0">E_LevelSSW</event-sheet>
         <event-sheet order="1">E_Engine</event-sheet>
-        <event-sheet order="2">E_Level</event-sheet>
-        <event-sheet order="3">E_global</event-sheet>
-        <event-sheet order="11">E_mainMenu</event-sheet>
+        <event-sheet order="0">E_Level</event-sheet>
+        <event-sheet order="1">E_global</event-sheet>
+        <event-sheet order="9">E_mainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -99,6 +99,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/SpinDashDust/" />
         <folder expanded="1" path="animation-folder/PlayerAfterimage/" />
         <folder expanded="1" path="animation-folder/PlayerAfterimage/Sonic/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Tails/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Knux/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Amy/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Amy/GoldRing/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Amy/SonicWorldDelta/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Sally/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Cream/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Eggman/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Eggman/jackpack/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Eggman/nojackpack/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/Shadow/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/MetalSonic/" />
+        <folder expanded="1" path="animation-folder/PlayerAfterimage/MetalSonic/Sprites by Danik/" />
         <folder expanded="1" path="animation-folder/PlayerAfterimage/Unused/" />
         <folder expanded="1" path="animation-folder/LightShield/" />
         <folder expanded="1" path="animation-folder/ThunderSpark/" />
