@@ -3052,10 +3052,10 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="6" name="Set speed" sid="329819913131283" type="PlayerSprite">
-                                                                    <param id="0" name="Speed">8</param>
+                                                                    <param id="0" name="Speed">10</param>
                                                                 </action>
                                                                 <action id="-2" name="Set Y" sid="343690605233672" type="Sensor_Main">
-                                                                    <param id="0" name="Y">Self.Y-0.8</param>
+                                                                    <param id="0" name="Y">Self.Y-0.5</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -3070,10 +3070,10 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="6" name="Set speed" sid="599300686133816" type="PlayerSprite">
-                                                                    <param id="0" name="Speed">8</param>
+                                                                    <param id="0" name="Speed">10</param>
                                                                 </action>
                                                                 <action id="-2" name="Set Y" sid="929128725559448" type="Sensor_Main">
-                                                                    <param id="0" name="Y">Self.Y+0.8</param>
+                                                                    <param id="0" name="Y">Self.Y+0.5</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -4322,6 +4322,9 @@
                                                                     <param id="0" name="Instance variable">Slide</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
+                                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="833319497798876" type="Sensor_Main">
+                                                                    <param id="0" name="Input">1</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                         <event-block sid="217181283383496">
@@ -4378,6 +4381,43 @@
                                                                 <action id="-13" name="Set boolean" sid="955696703465366" type="Values_Player">
                                                                     <param id="0" name="Instance variable">CanControl</param>
                                                                     <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="811044004100531" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">CanJump</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="188645838251618">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="695803135824051" type="Values_Input">
+                                                                    <param id="0" name="Instance variable">KeyAHold</param>
+                                                                </condition>
+                                                                <condition id="2" name="Is playing" sid="951689035990976" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Slide_&quot;&amp;Values_Player.Character</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="813836578988321" type="Sensor_Main">
+                                                                    <param id="0" name="Vector X">0</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="673780436948404" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Slide1_&quot;&amp;Values_Player.Character</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="555392380205661" type="System">
+                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                </action>
+                                                                <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="126755570766299" type="Sensor_Main">
+                                                                    <param id="0" name="Input">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="519640276136235" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Slide</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="908271496539396" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Flying</param>
+                                                                    <param id="1" name="Value">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -4447,7 +4487,7 @@
                                                                         <action id="-16" name="Wait" sid="408293524063448" type="System">
                                                                             <param id="0" name="Seconds">0.2</param>
                                                                         </action>
-                                                                        <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="411527552026074" type="Sensor_Main">
+                                                                        <action behavior="SonicPhysics" disabled="1" id="0" name="Set ignoring input" sid="411527552026074" type="Sensor_Main">
                                                                             <param id="0" name="Input">0</param>
                                                                         </action>
                                                                         <action id="-13" name="Set boolean" sid="601972288968978" type="Values_Player">
