@@ -27263,80 +27263,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sensor_Main" uid="13">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>ChangeAngle</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="SonicPhysics">
-                            <properties>
-                                <soft-max-speed>360</soft-max-speed>
-                                <hard-max-speed>1920</hard-max-speed>
-                                <acceleration>168.75</acceleration>
-                                <friction>168.75</friction>
-                                <deceleration>1800</deceleration>
-                                <air-acceleration>337.5</air-acceleration>
-                                <air-friction>0</air-friction>
-                                <air-deceleration>337.5</air-deceleration>
-                                <air-soft-max-speed>360</air-soft-max-speed>
-                                <roll-acceleration>0</roll-acceleration>
-                                <roll-friction>85.375</roll-friction>
-                                <roll-deceleration>534.375</roll-deceleration>
-                                <roll-soft-max-speed>960</roll-soft-max-speed>
-                                <roll-threshold>61.875</roll-threshold>
-                                <unroll-threshold>30</unroll-threshold>
-                                <uphill-slope-factor>450</uphill-slope-factor>
-                                <downhill-slope-factor>450</downhill-slope-factor>
-                                <uphill-roll-slope-factor>281.25</uphill-roll-slope-factor>
-                                <downhill-roll-slope-factor>1125</downhill-roll-slope-factor>
-                                <wall-speed-threshold>150</wall-speed-threshold>
-                                <max-jump-strength>390</max-jump-strength>
-                                <min-jump-strength>240</min-jump-strength>
-                                <gravity>787.5</gravity>
-                                <max-fall-speed>960</max-fall-speed>
-                                <rolling-enabled>Yes</rolling-enabled>
-                                <rolling-jump-control-lock>Disabled</rolling-jump-control-lock>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                                <air-drag-rate>0.9875</air-drag-rate>
-                                <air-drag-y-threshold>-240</air-drag-y-threshold>
-                                <air-drag-x-threshold>7.5</air-drag-x-threshold>
-                                <downhill-slope-factor-threshold>0</downhill-slope-factor-threshold>
-                                <uphill-slope-factor-threshold>0</uphill-slope-factor-threshold>
-                                <falling-angle-threshold>46</falling-angle-threshold>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-136</x>
-                        <y>40</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Sensor_LedgeRight" uid="76">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -29101,6 +29027,80 @@
                         <z>0</z>
                         <width>24</width>
                         <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sensor_Main" uid="13">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>ChangeAngle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SonicPhysics">
+                            <properties>
+                                <soft-max-speed>360</soft-max-speed>
+                                <hard-max-speed>1920</hard-max-speed>
+                                <acceleration>168.75</acceleration>
+                                <friction>168.75</friction>
+                                <deceleration>1800</deceleration>
+                                <air-acceleration>337.5</air-acceleration>
+                                <air-friction>0</air-friction>
+                                <air-deceleration>337.5</air-deceleration>
+                                <air-soft-max-speed>360</air-soft-max-speed>
+                                <roll-acceleration>0</roll-acceleration>
+                                <roll-friction>85.375</roll-friction>
+                                <roll-deceleration>534.375</roll-deceleration>
+                                <roll-soft-max-speed>960</roll-soft-max-speed>
+                                <roll-threshold>61.875</roll-threshold>
+                                <unroll-threshold>30</unroll-threshold>
+                                <uphill-slope-factor>450</uphill-slope-factor>
+                                <downhill-slope-factor>450</downhill-slope-factor>
+                                <uphill-roll-slope-factor>281.25</uphill-roll-slope-factor>
+                                <downhill-roll-slope-factor>1125</downhill-roll-slope-factor>
+                                <wall-speed-threshold>150</wall-speed-threshold>
+                                <max-jump-strength>390</max-jump-strength>
+                                <min-jump-strength>240</min-jump-strength>
+                                <gravity>787.5</gravity>
+                                <max-fall-speed>960</max-fall-speed>
+                                <rolling-enabled>Yes</rolling-enabled>
+                                <rolling-jump-control-lock>Disabled</rolling-jump-control-lock>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                                <air-drag-rate>0.9875</air-drag-rate>
+                                <air-drag-y-threshold>-240</air-drag-y-threshold>
+                                <air-drag-x-threshold>7.5</air-drag-x-threshold>
+                                <downhill-slope-factor-threshold>0</downhill-slope-factor-threshold>
+                                <uphill-slope-factor-threshold>0</uphill-slope-factor-threshold>
+                                <falling-angle-threshold>46</falling-angle-threshold>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-136</x>
+                        <y>40</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

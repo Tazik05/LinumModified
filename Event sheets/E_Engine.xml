@@ -4539,9 +4539,7 @@
                                                                         <condition id="-8" name="Is boolean instance variable set" sid="920556715108061" type="Values_Player">
                                                                             <param id="0" name="Instance variable">CanFly</param>
                                                                         </condition>
-                                                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="771146344579030" type="Sensor_Main">
-                                                                            <param id="0" name="Object">Behavior_Solid</param>
-                                                                        </condition>
+                                                                        <condition behavior="SonicPhysics" id="2" inverted="1" name="Is on floor" sid="771146344579030" type="Sensor_Main" />
                                                                     </conditions>
                                                                     <actions />
                                                                     <sub-events>
@@ -4602,7 +4600,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-group>
-                                        <event-group description="" sid="775905195443337" title="Knux: Climbing">
+                                        <event-group description="" disabled="1" inactive="1" sid="775905195443337" title="Knux: Climbing">
                                             <sub-events>
                                                 <event-block sid="383449723732964">
                                                     <conditions>
@@ -4614,6 +4612,136 @@
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
+                                                        <event-block sid="663283196688116">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="942400109413045" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Flying</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="489000446449325">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="601984272264577" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block any="1" sid="366272008588779">
+                                                                            <conditions>
+                                                                                <condition id="1" name="Is overlapping another object" sid="514136975406144" type="Sensor_ObjectRight">
+                                                                                    <param id="0" name="Object">Behavior_Solid</param>
+                                                                                </condition>
+                                                                                <condition id="1" name="Is overlapping another object" sid="735948559911349" type="Sensor_ObjectRight">
+                                                                                    <param id="0" name="Object">Behavior_Jumpthru</param>
+                                                                                </condition>
+                                                                                <condition id="1" name="Is overlapping another object" sid="437708539895024" type="Sensor_ObjectRight">
+                                                                                    <param id="0" name="Object">SolidObjects</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="105312316098122">
+                                                                                    <conditions>
+                                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="690923061851019" type="Sensor_ObjectUp">
+                                                                                            <param id="0" name="Object">Behavior_Solid</param>
+                                                                                            <param id="1" name="Offset X">Values_Player.ClimbingOffset</param>
+                                                                                            <param id="2" name="Offset Y">0</param>
+                                                                                        </condition>
+                                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="636182832970582" type="Sensor_ObjectUp">
+                                                                                            <param id="0" name="Object">Behavior_Jumpthru</param>
+                                                                                            <param id="1" name="Offset X">Values_Player.ClimbingOffset</param>
+                                                                                            <param id="2" name="Offset Y">0</param>
+                                                                                        </condition>
+                                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="565918795403164" type="Sensor_ObjectUp">
+                                                                                            <param id="0" name="Object">SolidObjects</param>
+                                                                                            <param id="1" name="Offset X">Values_Player.ClimbingOffset</param>
+                                                                                            <param id="2" name="Offset Y">0</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-2" name="Set Y" sid="475833894194768" type="Sensor_Main">
+                                                                                            <param id="0" name="Y">Self.Y+10</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                    <sub-events>
+                                                                                        <event-block sid="697060270617639">
+                                                                                            <conditions>
+                                                                                                <condition id="-4" name="Trigger once while true" sid="221034219156039" type="System" />
+                                                                                            </conditions>
+                                                                                            <actions />
+                                                                                        </event-block>
+                                                                                    </sub-events>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="487144565774508">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="634276048474029" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block any="1" sid="559599168536075">
+                                                                            <conditions>
+                                                                                <condition id="1" name="Is overlapping another object" sid="234947871222605" type="Sensor_ObjectLeft">
+                                                                                    <param id="0" name="Object">Behavior_Solid</param>
+                                                                                </condition>
+                                                                                <condition id="1" name="Is overlapping another object" sid="295715431885207" type="Sensor_ObjectLeft">
+                                                                                    <param id="0" name="Object">Behavior_Jumpthru</param>
+                                                                                </condition>
+                                                                                <condition id="1" name="Is overlapping another object" sid="533630457840949" type="Sensor_ObjectLeft">
+                                                                                    <param id="0" name="Object">SolidObjects</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="499205263676693">
+                                                                                    <conditions>
+                                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="129584314354472" type="Sensor_ObjectUp">
+                                                                                            <param id="0" name="Object">Behavior_Solid</param>
+                                                                                            <param id="1" name="Offset X">-Values_Player.ClimbingOffset</param>
+                                                                                            <param id="2" name="Offset Y">0</param>
+                                                                                        </condition>
+                                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="979740267603433" type="Sensor_ObjectUp">
+                                                                                            <param id="0" name="Object">Behavior_Jumpthru</param>
+                                                                                            <param id="1" name="Offset X">-Values_Player.ClimbingOffset</param>
+                                                                                            <param id="2" name="Offset Y">0</param>
+                                                                                        </condition>
+                                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="251338976121128" type="Sensor_ObjectUp">
+                                                                                            <param id="0" name="Object">SolidObjects</param>
+                                                                                            <param id="1" name="Offset X">-Values_Player.ClimbingOffset</param>
+                                                                                            <param id="2" name="Offset Y">0</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions />
+                                                                                    <sub-events>
+                                                                                        <event-block sid="261794782751839">
+                                                                                            <conditions>
+                                                                                                <condition id="-4" name="Trigger once while true" sid="301682804664646" type="System" />
+                                                                                            </conditions>
+                                                                                            <actions>
+                                                                                                <action id="-2" name="Set Y" sid="712111101339956" type="Sensor_Main">
+                                                                                                    <param id="0" name="Y">Self.Y+30</param>
+                                                                                                </action>
+                                                                                            </actions>
+                                                                                        </event-block>
+                                                                                    </sub-events>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
                                                         <comment></comment>
                                                         <event-block sid="397797937330565">
                                                             <conditions>
@@ -5182,101 +5310,6 @@
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
                                                             </actions>
-                                                        </event-block>
-                                                        <event-block sid="514258581555494">
-                                                            <conditions>
-                                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="408689734876711" type="Sensor_LedgeLeft">
-                                                                    <param id="0" name="Object">Behavior_Solid</param>
-                                                                </condition>
-                                                            </conditions>
-                                                            <actions />
-                                                            <sub-events>
-                                                                <event-block sid="525278363496749">
-                                                                    <conditions>
-                                                                        <condition id="-8" name="Is boolean instance variable set" sid="809602898836048" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Flying</param>
-                                                                        </condition>
-                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="642688648134150" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Rotate</param>
-                                                                        </condition>
-                                                                        <condition id="-7" name="Compare instance variable" sid="996177311030784" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Direction</param>
-                                                                            <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Value">&quot;right&quot;</param>
-                                                                        </condition>
-                                                                        <condition id="1" name="Is overlapping another object" sid="248691542840304" type="Sensor_ObjectRight">
-                                                                            <param id="0" name="Object">Behavior_Solid</param>
-                                                                        </condition>
-                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="626433480850725" type="Sensor_ObjectUp">
-                                                                            <param id="0" name="Object">Behavior_Solid</param>
-                                                                            <param id="1" name="Offset X">Values_Player.ClimbingOffset</param>
-                                                                            <param id="2" name="Offset Y">0</param>
-                                                                        </condition>
-                                                                        <condition id="-4" name="Trigger once while true" sid="141148330720603" type="System" />
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-2" name="Set Y" sid="513866249070932" type="Sensor_Main">
-                                                                            <param id="0" name="Y">Self.Y+15</param>
-                                                                        </action>
-                                                                        <action id="-13" name="Set boolean" sid="551006573201250" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Climbing</param>
-                                                                            <param id="1" name="Value">1</param>
-                                                                        </action>
-                                                                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="152859584594834" type="Sensor_Main">
-                                                                            <param id="0" name="State">0</param>
-                                                                        </action>
-                                                                        <action id="-13" name="Set boolean" sid="347406695495119" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">CanFly</param>
-                                                                            <param id="1" name="Value">1</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                                <event-block sid="463873183275292">
-                                                                    <conditions>
-                                                                        <condition id="-8" name="Is boolean instance variable set" sid="875078037597845" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Flying</param>
-                                                                        </condition>
-                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="783761900009739" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Rotate</param>
-                                                                        </condition>
-                                                                        <condition id="-7" name="Compare instance variable" sid="483581045860183" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Direction</param>
-                                                                            <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Value">&quot;left&quot;</param>
-                                                                        </condition>
-                                                                        <condition id="1" name="Is overlapping another object" sid="698967312849248" type="Sensor_ObjectLeft">
-                                                                            <param id="0" name="Object">Behavior_Solid</param>
-                                                                        </condition>
-                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="585941177347661" type="Sensor_ObjectUp">
-                                                                            <param id="0" name="Object">Behavior_Solid</param>
-                                                                            <param id="1" name="Offset X">-Values_Player.ClimbingOffset</param>
-                                                                            <param id="2" name="Offset Y">0</param>
-                                                                        </condition>
-                                                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="488082486803064" type="Sensor_ObjectDown">
-                                                                            <param id="0" name="Object">Behavior_Solid</param>
-                                                                            <param id="1" name="Offset X">5</param>
-                                                                            <param id="2" name="Offset Y">0</param>
-                                                                        </condition>
-                                                                        <condition id="-4" name="Trigger once while true" sid="505071457748692" type="System" />
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-2" name="Set Y" sid="235032799110114" type="Sensor_Main">
-                                                                            <param id="0" name="Y">Self.Y+15</param>
-                                                                        </action>
-                                                                        <action id="-13" name="Set boolean" sid="960477663361109" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Climbing</param>
-                                                                            <param id="1" name="Value">1</param>
-                                                                        </action>
-                                                                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="765531009449270" type="Sensor_Main">
-                                                                            <param id="0" name="State">0</param>
-                                                                        </action>
-                                                                        <action id="-13" name="Set boolean" sid="400491915952894" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">CanFly</param>
-                                                                            <param id="1" name="Value">1</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                            </sub-events>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
