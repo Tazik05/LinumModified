@@ -18,9 +18,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="7">Linum_logo</layout>
         <layout order="8">Linum_mainMenu</layout>
         <layout order="10">ButtonSetup(android)</layout>
-        <layout active="1" order="11">Linum_Level</layout>
+        <layout order="11">Linum_Level</layout>
         <event-sheet order="0">E_LevelSSW</event-sheet>
-        <event-sheet order="1">E_Engine</event-sheet>
+        <event-sheet active="1" order="1">E_Engine</event-sheet>
         <event-sheet order="0">E_Level</event-sheet>
         <event-sheet order="1">E_global</event-sheet>
         <event-sheet order="9">E_mainMenu</event-sheet>

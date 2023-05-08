@@ -4516,10 +4516,14 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="1" loop="1" name="Falling_3" pingpong="0" repeatcount="1" repeatto="0" sid="793243140492397" speed="8">
-                            <frame duration="1" hotspotX="0.512821" hotspotY="0.510638" original-source="C:\Users\Tazik05\Desktop\1.png">
-                                <image-point name="Imagepoint 1" x="0.512821" y="-0.12766" />
-                                <image-point name="Imagepoint 2" x="0.615385" y="0.978723" />
+                        <animation framecount="2" loop="0" name="Falling_3" pingpong="0" repeatcount="1" repeatto="0" sid="793243140492397" speed="5">
+                            <frame duration="1" hotspotX="0.522727" hotspotY="0.510638">
+                                <image-point name="Imagepoint 1" x="0.522727" y="-0.12766" />
+                                <image-point name="Imagepoint 2" x="0.613636" y="0.978723" />
+                            </frame>
+                            <frame duration="1" hotspotX="0.522727" hotspotY="0.510638">
+                                <image-point name="Imagepoint 1" x="0.522727" y="-0.12766" />
+                                <image-point name="Imagepoint 2" x="0.613636" y="0.978723" />
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Slide_3" pingpong="0" repeatcount="1" repeatto="0" sid="916819777644549" speed="0">

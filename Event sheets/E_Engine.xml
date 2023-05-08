@@ -3235,12 +3235,19 @@
                                                                     <param id="0" name="Instance variable">Climbing</param>
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
-                                                                <action behavior="SonicPhysics" id="14" name="Set enabled" sid="960922960171374" type="Sensor_Main">
-                                                                    <param id="0" name="State">0</param>
-                                                                </action>
                                                                 <action id="-13" name="Set boolean" sid="426727176229585" type="Values_Player">
                                                                     <param id="0" name="Instance variable">CanFly</param>
                                                                     <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="794174304312214" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                                                </action>
+                                                                <action id="7" name="Set mirrored" sid="906177141857319" type="PlayerSprite">
+                                                                    <param id="0" name="State">1</param>
+                                                                </action>
+                                                                <action behavior="SonicPhysics" id="14" name="Set enabled" sid="960922960171374" type="Sensor_Main">
+                                                                    <param id="0" name="State">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -4172,10 +4179,7 @@
                                                                 </action>
                                                                 <action id="-13" name="Set boolean" sid="340629041606525" type="Values_Player">
                                                                     <param id="0" name="Instance variable">CanChangeDirection</param>
-                                                                    <param id="1" name="Value">0</param>
-                                                                </action>
-                                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="385854394139214" type="Sensor_Main">
-                                                                    <param id="0" name="Vector X">0</param>
+                                                                    <param id="1" name="Value">1</param>
                                                                 </action>
                                                             </actions>
                                                             <sub-events>
@@ -4184,7 +4188,10 @@
                                                                         <condition id="-4" name="Trigger once while true" sid="585978333716508" type="System" />
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action id="-13" name="Set boolean" sid="491444414470921" type="Values_Player">
+                                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="385854394139214" type="Sensor_Main">
+                                                                            <param id="0" name="Vector X">0</param>
+                                                                        </action>
+                                                                        <action disabled="1" id="-13" name="Set boolean" sid="491444414470921" type="Values_Player">
                                                                             <param id="0" name="Instance variable">CanControl</param>
                                                                             <param id="1" name="Value">0</param>
                                                                         </action>
@@ -4210,7 +4217,11 @@
                                                                             <param id="0" name="Object">Behavior_Solid</param>
                                                                         </condition>
                                                                     </conditions>
-                                                                    <actions />
+                                                                    <actions>
+                                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="749251191996713" type="Sensor_Main">
+                                                                            <param id="0" name="Vector X">0</param>
+                                                                        </action>
+                                                                    </actions>
                                                                     <sub-events>
                                                                         <event-block sid="414397029381295">
                                                                             <conditions>
@@ -4493,6 +4504,9 @@
                                                                 <condition id="-8" name="Is boolean instance variable set" sid="740974289404759" type="Values_Player">
                                                                     <param id="0" name="Instance variable">Flying</param>
                                                                 </condition>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="727987790112589" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Slide</param>
+                                                                </condition>
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-13" name="Set boolean" sid="338158225084312" type="Values_Player">
@@ -4568,6 +4582,9 @@
                                                                         <condition id="-8" name="Is boolean instance variable set" sid="784341482327274" type="Values_Input">
                                                                             <param id="0" name="Instance variable">KeyLeftHold</param>
                                                                         </condition>
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="470861615975279" type="Values_Input">
+                                                                            <param id="0" name="Instance variable">KeyRightHold</param>
+                                                                        </condition>
                                                                         <condition id="-4" name="Trigger once while true" sid="362346403005908" type="System" />
                                                                     </conditions>
                                                                     <actions>
@@ -4597,6 +4614,9 @@
                                                                             <param id="0" name="Instance variable">Direction</param>
                                                                             <param id="1" name="Comparison">0</param>
                                                                             <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="156523786710154" type="Values_Input">
+                                                                            <param id="0" name="Instance variable">KeyLeftHold</param>
                                                                         </condition>
                                                                         <condition id="-8" name="Is boolean instance variable set" sid="533914679800633" type="Values_Input">
                                                                             <param id="0" name="Instance variable">KeyRightHold</param>
