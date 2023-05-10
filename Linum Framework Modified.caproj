@@ -442,7 +442,9 @@
                     <instance-variable comment="Creates a bluish effect during Transition" name="SonicTransition" sid="309773902682918" type="boolean" />
                     <instance-variable comment="Now, if a player falls from a great height, he will die" name="RealPhysic" sid="767528260121738" type="boolean" />
                     <instance-variable comment="WIP" name="IgnoreAngleInLoops" sid="211836780142090" type="boolean" />
-                    <instance-variable name="DropDash" sid="180104760505704" type="boolean" />
+                    <instance-variable name="IgnoreAnimationSpeedFromVector" sid="739522153308487" type="boolean" />
+                    <instance-variable comment="if enabled, the game will try to smooth the level with the int formula. For example, if you put objects not on the grid, then they may stand unevenly, although it may be unnoticeable. This function will just try to align it" name="ForceAligh" sid="886637051670867" type="boolean" />
+                    <instance-variable comment="A feature from Sonic Mania, added at Danik&apos;s request. If activated, you will be able to use dropdash during the jump (and with the jump button pressed)" name="DropDash" sid="180104760505704" type="boolean" />
                     <instance-variable comment="Linum\Sonic3\SSW" name="HUD" sid="350632080388041" type="string" />
                     <instance-variable comment="Desktop/Mobile/Automatically(the game will try to determine the platform on which it is located)" name="Platform" sid="252663215722053" type="string" />
                     <instance-variable comment="Disable/Original/2x/3x/4x/FullScreen" name="ScreenSize" sid="667462344946972" type="string" />
@@ -5437,7 +5439,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Flying_3" pingpong="0" repeatcount="1" repeatto="0" sid="303619266441969" speed="5">
+                    <animation framecount="1" loop="0" name="Flying_3" pingpong="0" repeatcount="1" repeatto="0" sid="303619266441969" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="LedgeLeft" x="0" y="1" />
                             <image-point name="LedgeRight" x="1" y="1" />
@@ -5446,8 +5448,8 @@
                             <image-point name="Left" x="0" y="0.5" />
                             <image-point name="Right" x="1" y="0.5" />
                             <collision-poly>
-                                <point x="0" y="0.35" />
-                                <point x="1" y="0.35" />
+                                <point x="0" y="0.375" />
+                                <point x="1" y="0.375" />
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
@@ -5956,6 +5958,21 @@
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
                             </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="JumpthruUpdated" sid="631297180292990">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="138863018348809">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="546268397083286" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -8022,19 +8039,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Water" sid="698069154938225">
-            <plugin id="Sprite" />
-            <effects>
-                <effect-type name="WarpMask">
-                    <effect id="warpmask" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805651829062001" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Sprite6" sid="716645517059198">
             <plugin id="Sprite" />
             <animation-folder>
@@ -8042,14 +8046,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite7" sid="535906438499901">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966848551836356" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -10798,6 +10794,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sensor_WallDetector" sid="519034064340174">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="770752079654016" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -10831,6 +10835,7 @@
                 <member>Gimmick_CollapsingPlatform_Right_Brick4</member>
                 <member>Gimmick_ConveyorBelt</member>
                 <member>Jumpthru</member>
+                <member>JumpthruUpdated</member>
                 <member>Monitor</member>
                 <member>SmoothStepDown</member>
                 <member>SmoothStepDownThru</member>
@@ -10919,6 +10924,7 @@
         <family name="Behavior_Jumpthru" plugin-id="Sprite" sid="208995282107255">
             <members>
                 <member>Jumpthru</member>
+                <member>JumpthruUpdated</member>
                 <member>SmoothStepDownThru</member>
                 <member>SmoothStepUpThru</member>
                 <member>Sprite18</member>
@@ -10981,6 +10987,7 @@
                 <member>Gimmick_HangingIdle_Bar</member>
                 <member>HUD_Ring</member>
                 <member>Jumpthru</member>
+                <member>JumpthruUpdated</member>
                 <member>Level_Layer0_05</member>
                 <member>Level_Layer1_08</member>
                 <member>Monitor</member>

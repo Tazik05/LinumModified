@@ -10,20 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">Linum_SimpleWorldsLevel</layout>
-        <layout order="3">Linum_Continue</layout>
-        <layout order="4">Linum_preloader</layout>
-        <layout order="5">Linum_PREVIEW(Temp)</layout>
-        <layout order="6">Linum_CheckUpdate</layout>
-        <layout order="7">Linum_logo</layout>
-        <layout order="8">Linum_mainMenu</layout>
-        <layout order="10">ButtonSetup(android)</layout>
-        <layout order="11">Linum_Level</layout>
-        <event-sheet order="0">E_LevelSSW</event-sheet>
-        <event-sheet active="1" order="1">E_Engine</event-sheet>
-        <event-sheet order="0">E_Level</event-sheet>
-        <event-sheet order="1">E_global</event-sheet>
-        <event-sheet order="9">E_mainMenu</event-sheet>
+        <layout order="0">Linum_SimpleWorldsLevel</layout>
+        <layout order="2">Linum_mainMenu</layout>
+        <layout order="3">Linum_Level</layout>
+        <event-sheet order="1">E_Level</event-sheet>
+        <event-sheet active="1" order="0">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -47,7 +38,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/.System Objects/" />
-        <folder expanded="1" path="object-folder/.System Objects/Values/" />
+        <folder expanded="0" path="object-folder/.System Objects/Values/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
         <folder expanded="0" path="object-folder/Level Collisions/" />
@@ -159,6 +150,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Convex_Layer1/" />
         <folder expanded="1" path="animation-folder/Tunnel1/" />
         <folder expanded="1" path="animation-folder/Tunnel2/" />
+        <folder expanded="1" path="animation-folder/JumpthruUpdated/" />
         <folder expanded="1" path="animation-folder/HUD_Rings/" />
         <folder expanded="1" path="animation-folder/HUD_Ring/" />
         <folder expanded="1" path="animation-folder/HUD_Time/" />
@@ -248,9 +240,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/SonicLivesHud/Other/" />
         <folder expanded="1" path="animation-folder/PauseBG/" />
         <folder expanded="1" path="animation-folder/pts/" />
-        <folder expanded="1" path="animation-folder/Water/" />
         <folder expanded="1" path="animation-folder/Sprite6/" />
-        <folder expanded="1" path="animation-folder/Sprite7/" />
         <folder expanded="1" path="animation-folder/Gimmick_HangingIdle_Bar/" />
         <folder expanded="1" path="animation-folder/Gimmick_ConveyorBelt/" />
         <folder expanded="1" path="animation-folder/Badnik_MotoBug_Limit/" />
@@ -378,5 +368,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/BubbleNumbers/" />
         <folder expanded="1" path="animation-folder/TC_BGBLACK/" />
         <folder expanded="1" path="animation-folder/MediumBubble/" />
+        <folder expanded="1" path="animation-folder/Sensor_WallDetector/" />
     </folders-expanded>
 </c2uistate>

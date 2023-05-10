@@ -70,7 +70,7 @@
         <event-block sid="519266600902172">
             <conditions>
                 <condition id="0" name="On key pressed" sid="991324746136691" type="Keyboard">
-                    <param id="0" name="Key">71</param>
+                    <param id="0" name="Key">78</param>
                 </condition>
             </conditions>
             <actions />

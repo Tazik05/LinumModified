@@ -14,7 +14,7 @@
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="0" name="Set text" sid="391813112806490" type="Version">
-                    <param id="0" name="Text">&quot;Game version: &quot;&amp;projectversion&amp;newline&amp;&quot;Linum version: 0.2.1 (17)&quot;&amp;newline&amp;&quot;Modification version: 1.0&quot;</param>
+                    <param id="0" name="Text">&quot;Game version: &quot;&amp;projectversion&amp;newline&amp;&quot;Linum version: 0.2.1 (17)&quot;&amp;newline&amp;&quot;Modification version: 1.6&quot;</param>
                 </action>
             </actions>
         </event-block>

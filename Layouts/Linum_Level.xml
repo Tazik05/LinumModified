@@ -1249,7 +1249,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-268</x>
+                        <x>-272</x>
                         <y>-120</y>
                         <z>0</z>
                         <width>260</width>
@@ -1794,7 +1794,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3779.75</x>
+                        <x>4004</x>
                         <y>1746</y>
                         <z>0</z>
                         <width>128</width>
@@ -1834,41 +1834,6 @@
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Solid" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="DragDrop2">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3859.75</x>
-                        <y>1746</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>192</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -4594,10 +4559,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3741.75</x>
+                        <x>3801.75</x>
                         <y>1826</y>
                         <z>0</z>
-                        <width>204</width>
+                        <width>324</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -11634,6 +11599,46 @@
                         <z>0</z>
                         <width>144</width>
                         <height>90</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="JumpthruUpdated" uid="1095">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="DragDrop2">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-196</x>
+                        <y>66</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>12</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -25284,62 +25289,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1095">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3872</x>
-                        <y>1654</y>
-                        <z>0</z>
-                        <width>202</width>
-                        <height>162</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
-                <instance type="Water" uid="1094">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <effect-instances>
-                        <effect-instance type="WarpMask">
-                            <parameters>
-                                <x-amplitude>2</x-amplitude>
-                                <x-frequency>5000</x-frequency>
-                                <x-speed>2</x-speed>
-                                <y-amplitude>0</y-amplitude>
-                                <y-frequency>0</y-frequency>
-                                <y-speed>0</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3872</x>
-                        <y>1654</y>
-                        <z>0</z>
-                        <width>170</width>
-                        <height>160</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Sprite6" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -25350,8 +25299,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3982</x>
-                        <y>1658</y>
+                        <x>-358</x>
+                        <y>852</y>
                         <z>0</z>
                         <width>234</width>
                         <height>15</height>
@@ -26028,7 +25977,7 @@
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789☺☻♥♦♣♠•◘!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@[\]^_`|~АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ○♂</character-set>
                         <text>THESE THINGS WERE SUGGESTED BY DANIK, THEY WILL BE AVAILABLE LATER, BUT YOU PROBABLY WON&apos;T SEE THEM IF YOU DON&apos;T USE THIS ENGINE LATER</text>
                         <scale>1</scale>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -27323,8 +27272,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-130</x>
-                        <y>66</y>
+                        <x>-136</x>
+                        <y>42</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -27433,8 +27382,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-166</x>
-                        <y>36</y>
+                        <x>-134</x>
+                        <y>40</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
@@ -27852,8 +27801,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3022</x>
-                        <y>292</y>
+                        <x>2914</x>
+                        <y>246</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
@@ -29104,6 +29053,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sensor_WallDetector" uid="23">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-136</x>
+                        <y>40</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>1</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -30875,6 +30846,8 @@
                 <SonicTransition>true</SonicTransition>
                 <RealPhysic>false</RealPhysic>
                 <IgnoreAngleInLoops>true</IgnoreAngleInLoops>
+                <IgnoreAnimationSpeedFromVector>true</IgnoreAnimationSpeedFromVector>
+                <ForceAligh>false</ForceAligh>
                 <DropDash>false</DropDash>
                 <HUD>SSW</HUD>
                 <Platform>Desktop</Platform>
