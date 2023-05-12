@@ -6730,6 +6730,10 @@
                                             <param id="0" name="Instance variable">Lives</param>
                                             <param id="1" name="Value">-1</param>
                                         </action>
+                                        <action id="-13" name="Set boolean" sid="698720291937358" type="Values_Level">
+                                            <param id="0" name="Instance variable">IsLevelTimerActive</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="664129426391381">
@@ -10581,8 +10585,10 @@
                                         <event-block sid="691264297012319">
                                             <conditions>
                                                 <condition behavior="SonicPhysics" id="9" name="On landed" sid="680688680572258" type="Sensor_Main" />
-                                                <condition id="1" name="Is overlapping another object" sid="966413773061832" type="Sensor_ObjectDown">
+                                                <condition id="9" name="Is overlapping at offset" sid="966413773061832" type="Sensor_Main">
                                                     <param id="0" name="Object">Gimmick_CollapsingPlatform</param>
+                                                    <param id="1" name="Offset X">0</param>
+                                                    <param id="2" name="Offset Y">4</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -11245,11 +11251,22 @@
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Value">&quot;Roll&quot;</param>
                                                         </action>
-                                                        <action id="4" name="Set animation" sid="997312198857045" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;Jump_&quot;&amp;Values_Player.Character</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="298566396116190">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Is playing" sid="497738764775677" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="997312198857045" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Jump_&quot;&amp;Values_Player.Character</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="259789945798947">
                                                     <conditions>

@@ -30850,7 +30850,7 @@
                 <ForceAligh>false</ForceAligh>
                 <DropDash>false</DropDash>
                 <HUD>SSW</HUD>
-                <Platform>Desktop</Platform>
+                <Platform>Mobile</Platform>
                 <ScreenSize>2x</ScreenSize>
                 <FpsCounter>0</FpsCounter>
                 <FpsFix>false</FpsFix>

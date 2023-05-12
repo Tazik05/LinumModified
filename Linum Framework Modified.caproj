@@ -8,7 +8,7 @@
     <author-website>https://gitlab.com/TheStazik/linum-framework-modified</author-website>
     <app-id>com.linum.sonic</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>27900</saved-with-version>
+    <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -4292,17 +4292,6 @@
                                 <image-point name="Imagepoint 2" x="0.625" y="0.975" />
                             </frame>
                         </animation>
-                        <animation framecount="2" loop="0" name="Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="624371541056773" speed="60">
-                            <frame duration="4" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="Imagepoint 1" x="0.5" y="-0.125" />
-                                <image-point name="Imagepoint 2" x="0.625" y="0.975" />
-                            </frame>
-                            <frame duration="4" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="Imagepoint 1" x="0.5" y="-0.125" />
-                                <image-point name="Tails" x="0.45" y="0.825" />
-                                <image-point name="Imagepoint 2" x="0.625" y="0.975" />
-                            </frame>
-                        </animation>
                         <animation framecount="2" loop="0" name="LookUp_3" pingpong="0" repeatcount="1" repeatto="0" sid="429360360928513" speed="60">
                             <frame duration="1" hotspotX="0.344828" hotspotY="0.487179">
                                 <image-point name="Imagepoint 1" x="0.517241" y="-0.128205" />
@@ -4711,7 +4700,7 @@
                                 <image-point name="Imagepoint 2" x="0.631579" y="0.98" />
                             </frame>
                         </animation>
-                        <animation framecount="2" loop="0" name="Crouch_3" pingpong="0" repeatcount="1" repeatto="0" sid="374570480689774" speed="5">
+                        <animation framecount="2" loop="0" name="Crouch_3" pingpong="0" repeatcount="1" repeatto="0" sid="374570480689774" speed="7">
                             <frame duration="1" hotspotX="0.428571" hotspotY="0.5" original-source="D:\двиг\11.png" />
                             <frame duration="1" hotspotX="0.37037" hotspotY="0.5" original-source="D:\двиг\12.png" />
                         </animation>
