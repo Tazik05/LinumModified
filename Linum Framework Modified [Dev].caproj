@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Linum Framework Modified</name>
+    <name>Linum Framework Modified [Dev]</name>
     <description>Sonic Framework using SonicPhysics add-on</description>
-    <version>0.1.6</version>
+    <version>1.0</version>
     <author>Halatnikov &amp; stas&apos;s ports</author>
     <author-email></author-email>
     <author-website>https://gitlab.com/TheStazik/linum-framework-modified</author-website>
@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra (edited by XYZT)" id="BetterAudio" version="1">BetterAudio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Francesco Iafulli (aka fiaful)" id="Comment" version="1">Comment</plugin>
@@ -60,6 +61,7 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
         <effect author="Scirra" id="inverse">Inverse</effect>
         <effect author="R0J0hound" id="mode7">mode7</effect>
         <effect author="Scirra" id="subtract">Subtract</effect>
@@ -459,7 +461,12 @@
                     <instance-variable name="AccessibilityMode" sid="262991464321454" type="number" />
                     <instance-variable comment="path to ini update file" name="URL_UpdateCheck" sid="777787030515232" type="string" />
                     <instance-variable name="ShowUpdateScreen" sid="498724572166485" type="boolean" />
+                    <instance-variable name="ModVersion" sid="926615406887690" type="string" />
+                    <instance-variable comment="specify the date of your build. Example: 31.12.99 23:59" name="BuildData" sid="824155759396182" type="string" />
                 </instance-variables>
+            </object-type>
+            <object-type name="BetterAudio" sid="624882958142946">
+                <plugin id="BetterAudio" />
             </object-type>
         </object-folder>
         <object-folder name="Player Objects">
@@ -6632,6 +6639,15 @@
                     <plugin id="TiledBg" />
                     <texture />
                 </object-type>
+                <object-type name="CreditsText" sid="487707131770267">
+                    <plugin id="Spritefont2" />
+                    <behaviors>
+                        <behavior-type name="LiteTween" sid="566348692810254">
+                            <behavior id="lunarray_LiteTween" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture />
+                </object-type>
             </object-folder>
             <object-folder name="MenuBG">
                 <object-type name="MenuGrid1" sid="424051402150218">
@@ -10791,6 +10807,31 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Credits_Separator" sid="561691741701820">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187267191530700" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MusicPlayer_Visualiser" sid="870096068852055">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="FreqBin" sid="152608237406982" type="number" />
+                <instance-variable name="OldFreqBin" sid="197528369418246" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481823015624637" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -11068,6 +11109,7 @@
             <layout>Linum_SimpleWorldsLevel.xml</layout>
             <layout>Linum_Continue.xml</layout>
             <layout>Linum_PREVIEW(Temp).xml</layout>
+            <layout>Linum_Credits.xml</layout>
         </layout-folder>
         <layout-folder name="[ Tests ]">
             <layout>TestLayout.xml</layout>
@@ -11098,6 +11140,7 @@
         <event-sheet>Event sheet 12.xml</event-sheet>
         <event-sheet>CREDITS.xml</event-sheet>
         <event-sheet>Event sheet 4.xml</event-sheet>
+        <event-sheet>Event sheet 7.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">
@@ -11147,6 +11190,20 @@
             <properties>
                 <client-id>906926881151016981</client-id>
                 <preview_mode>True</preview_mode>
+            </properties>
+        </global-instance>
+        <global-instance type="BetterAudio" uid="1664">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
     </global-instances>
@@ -11243,6 +11300,7 @@
         <file name="MUS_LevelSSW.ogg" />
         <file name="MUS_Boss.ogg" />
         <file name="MUS_Drowning.ogg" />
+        <file name="MUS_Credits.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

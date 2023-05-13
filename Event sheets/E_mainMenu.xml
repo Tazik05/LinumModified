@@ -40,6 +40,10 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">Infinity</param>
                 </action>
+                <action id="-12" name="Set group active" sid="205965770388789" type="System">
+                    <param id="0" name="Group name">&quot;Main menu&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="786430443573104">
@@ -51,7 +55,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="271271334758141" type="StaticText">
-                    <param id="0" name="Text">&quot;PREVIEW VERSION 3&quot;&amp;newline&amp;&quot;build data: &quot;&amp;&quot;01.05.23 14:01&quot;&amp;newline&amp;&quot;Mod by stas&apos;s ports(Tazik05)&quot;&amp;newline&amp;&quot;Engine by Halatnikov&quot;</param>
+                    <param id="0" name="Text">&quot;PREVIEW VERSION 4&quot;&amp;newline&amp;&quot;build data: &quot;&amp;Global_Settings.BuildData&amp;newline&amp;&quot;Mod by stas&apos;s ports(Tazik05)&quot;&amp;newline&amp;&quot;Engine by Halatnikov&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -465,15 +469,20 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="-10" name="Set value" sid="788558145434893" type="Values_Menus">
-                                            <param id="0" name="Instance variable">CurrentMenu</param>
-                                            <param id="1" name="Value">&quot;credits&quot;</param>
+                                        <action id="0" name="Call function" sid="207647432549476" type="Function">
+                                            <param id="0" name="Name">&quot;Transition&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                                         </action>
-                                        <action id="0" name="Play" sid="845824733057720" type="Audio">
-                                            <param id="0" name="Audio file">S3K_B2</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        <action id="-12" name="Set group active" sid="659957818090619" type="System">
+                                            <param id="0" name="Group name">&quot;Main menu&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="244853355151381" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="33" name="Stop all" sid="916980094202255" type="Audio" />
+                                        <action id="-2" name="Go to layout" sid="239442076235645" type="System">
+                                            <param id="0" name="Layout">Linum_Credits</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2210,373 +2219,6 @@
                                     <param id="1" name="Value">&quot;mainmenu&quot;</param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="444603230946135" title="Credits">
-            <sub-events>
-                <event-block sid="492757914552426">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="396943066897647" type="Values_Menus">
-                            <param id="0" name="Instance variable">CurrentMenu</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;credits&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="455834217220903">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="893832533440758" type="Menu_ButtonsBG">
-                                    <param id="0" name="Unique ID">396</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="955218957201811" type="Menu_ButtonsBG">
-                                    <param id="0" name="X">lerp(Self.X, 0, Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Y">lerp(Self.Y, 34, Values_Menus.AnimSpeed)</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="575480831707295" type="Menu_ButtonsBG">
-                                    <param id="0" name="Width">lerp(Self.Width, 426, Values_Menus.AnimSpeed)</param>
-                                    <param id="1" name="Height">lerp(Self.Height, 206, Values_Menus.AnimSpeed)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="650932731102062">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="617859611556905" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="446769855575871" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Value">4</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="400086928413853">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="882488659866492" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="866787629665858" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="163398508548763">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="486892986696027" type="Values_Input">
-                                    <param id="0" name="Instance variable">KeyUpHold</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="139266589910123" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="561788830748502" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Value">-1</param>
-                                </action>
-                                <action id="6" name="Stop" sid="411191830166580" type="Audio">
-                                    <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="444748329004940" type="Audio">
-                                    <param id="0" name="Audio file">SFX_Beep</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="324810943556374">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="668645408209602" type="Values_Input">
-                                    <param id="0" name="Instance variable">KeyDownHold</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="799049036153332" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="475830029702157" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="6" name="Stop" sid="929318224759793" type="Audio">
-                                    <param id="0" name="Tag">&quot;SFX_Beep&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="867202739110422" type="Audio">
-                                    <param id="0" name="Audio file">SFX_Beep</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;SFX_Beep&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="893158911315499">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="727755666061040" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="557815869527252" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="572060847438890" type="Menu_BigBlueButtonBG">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">0</param>
-                                </action>
-                                <action behavior="LiteTween" id="14" name="Stop" sid="313703076852890" type="Menu_SmallGrayButton1BG">
-                                    <param id="0" name="Stop Mode">1</param>
-                                </action>
-                                <action behavior="LiteTween" id="14" name="Stop" sid="429605838268996" type="Menu_SmallGrayButton3BG">
-                                    <param id="0" name="Stop Mode">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="418895849522085">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="475775453165089" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="997049688995561" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="10" name="Start" sid="738073127350527" type="Menu_BigBlueButtonBG">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="685733226413267">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="962714918291202" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="397904159669043" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="636993212264714" type="Menu_BigBlueButtonBG">
-                                    <param id="0" name="Reverse mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="279959113056295">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="770844333503266" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="224651810607340" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="10" name="Start" sid="990077795089583" type="Menu_SmallGrayButton1BG">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="485047230707241">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="920163809474912" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="562095541390685" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="298234536346329" type="Menu_SmallGrayButton1BG">
-                                    <param id="0" name="Reverse mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="356487205456015">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="499792235844668" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="136378091548025" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="10" name="Start" sid="577092495391748" type="Menu_SmallGrayButton1BG2">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="892203830757913">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="324707009981157" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="890218002735894" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="383772655472981" type="Menu_SmallGrayButton1BG2">
-                                    <param id="0" name="Reverse mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="825307212668241">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="446424212397976" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="230159112605729" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="10" name="Start" sid="823298522431465" type="Menu_SmallGrayButton3BG">
-                                    <param id="0" name="Start Mode">0</param>
-                                    <param id="1" name="Force use current">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="670378820260810">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="743277448620322" type="Values_Menus">
-                                    <param id="0" name="Instance variable">Selected_Main</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="507488408448702" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="LiteTween" id="11" name="Reverse" sid="579987275176218" type="Menu_SmallGrayButton3BG">
-                                    <param id="0" name="Reverse mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="350273598014649">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="243048767414102" type="Values_Input">
-                                    <param id="0" name="Instance variable">KeyAHold</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="915450140410722" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <comment>Test level</comment>
-                                <event-block sid="151929179627156">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="177026547051350" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected_Main</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action disabled="1" id="-15" name="Set visible" sid="344609022827842" type="TransitionIn">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action behavior="Fade" disabled="1" id="1" name="Start fade" sid="694939903848522" type="TransitionIn" />
-                                        <action disabled="1" id="-16" name="Wait" sid="206648042217730" type="System">
-                                            <param id="0" name="Seconds">0.25</param>
-                                        </action>
-                                        <action disabled="1" id="33" name="Stop all" sid="831547295471076" type="Audio" />
-                                        <action disabled="1" id="-2" name="Go to layout" sid="738493238368309" type="System">
-                                            <param id="0" name="Layout">Linum_Level</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="624047953824697" type="Values_Menus">
-                                            <param id="0" name="Instance variable">CurrentMenu</param>
-                                            <param id="1" name="Value">&quot;dataselect&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Go to website</comment>
-                                <event-block disabled="1" sid="173584874693689">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="638692895497564" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected_Main</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <comment>Can&apos;t do an &quot;OR&quot; here because web version can be launched from mobile</comment>
-                                        <event-block disabled="1" sid="434466206314274">
-                                            <conditions>
-                                                <condition id="-32" name="Is on platform" sid="715653437468685" type="System">
-                                                    <param id="0" name="Platform">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Wait" sid="938693225115855" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="7" name="Go to URL" sid="745713453793550" type="Browser">
-                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
-                                                    <param id="1" name="Target">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="857589072246315">
-                                            <conditions>
-                                                <condition id="-20" name="Is on mobile device" sid="216072004704073" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Wait" sid="210800887319936" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="7" name="Go to URL" sid="765696396857592" type="Browser">
-                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
-                                                    <param id="1" name="Target">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="876549780387923">
-                                            <conditions>
-                                                <condition id="-32" name="Is on platform" sid="741810752090374" type="System">
-                                                    <param id="0" name="Platform">10</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-16" name="Wait" sid="216964858010184" type="System">
-                                                    <param id="0" name="Seconds">0.1</param>
-                                                </action>
-                                                <action id="29" name="Open browser" sid="742352037392611" type="NWjs">
-                                                    <param id="0" name="URL">&quot;https://halatnikov.github.io&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <comment>Quit game</comment>
-                                <event-block sid="554220478881956">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="637007536183636" type="Values_Menus">
-                                            <param id="0" name="Instance variable">Selected_Main</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-16" name="Wait" sid="122091273378983" type="System">
-                                            <param id="0" name="Seconds">0.1</param>
-                                        </action>
-                                        <action id="1" name="Close" sid="144618958377306" type="Browser" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

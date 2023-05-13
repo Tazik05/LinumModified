@@ -30863,6 +30863,8 @@
                 <AccessibilityMode>0</AccessibilityMode>
                 <URL_UpdateCheck>https://gitlab.com/TheStazik/linum-framework-modified/-/raw/dev/UpdateConfig.ini</URL_UpdateCheck>
                 <ShowUpdateScreen>true</ShowUpdateScreen>
+                <ModVersion>0.1.7</ModVersion>
+                <BuildData>13.05.23 3:10</BuildData>
             </instance-variables>
         </instance>
         <instance type="TimeLine" uid="891">

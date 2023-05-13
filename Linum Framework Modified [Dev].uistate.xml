@@ -10,11 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Linum_SimpleWorldsLevel</layout>
-        <layout order="1">Linum_mainMenu</layout>
+        <layout order="0">Linum_Credits</layout>
         <layout order="2">Linum_Level</layout>
-        <event-sheet active="1" order="1">E_Engine</event-sheet>
-        <event-sheet order="0">E_Level</event-sheet>
+        <layout order="6">Linum_mainMenu</layout>
+        <event-sheet order="1">Event sheet 7</event-sheet>
+        <event-sheet order="3">E_Engine</event-sheet>
+        <event-sheet order="4">E_Level</event-sheet>
+        <event-sheet order="5">CREDITS</event-sheet>
+        <event-sheet active="1" order="7">E_mainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
         <family expanded="0" name="SolidObjects" />
@@ -58,8 +61,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Test/" />
         <folder expanded="0" path="object-folder/manual/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="layout-folder/[ System ]/" />
-        <folder expanded="0" path="layout-folder/[ System ]/[ UI ]/" />
+        <folder expanded="0" path="layout-folder/[ System ]/" />
+        <folder expanded="1" path="layout-folder/[ System ]/[ UI ]/" />
         <folder expanded="1" path="layout-folder/[ Engine ]/" />
         <folder expanded="0" path="layout-folder/[ Tests ]/" />
         <folder expanded="0" path="event-folder/" />
@@ -369,5 +372,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TC_BGBLACK/" />
         <folder expanded="1" path="animation-folder/MediumBubble/" />
         <folder expanded="1" path="animation-folder/Sensor_WallDetector/" />
+        <folder expanded="1" path="animation-folder/Credits_Separator/" />
+        <folder expanded="1" path="animation-folder/MusicPlayer_Visualiser/" />
     </folders-expanded>
 </c2uistate>
