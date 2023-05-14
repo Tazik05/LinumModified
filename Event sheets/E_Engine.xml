@@ -2538,6 +2538,13 @@
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Value">&quot;SpinDashCharging&quot;</param>
                                                         </action>
+                                                        <action id="-13" name="Set boolean" sid="713867827949210" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDash</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action behavior="Timer" id="1" name="Stop timer" sid="105221297564193" type="Values_Player">
+                                                            <param id="0" name="Tag">&quot;DropDash&quot;</param>
+                                                        </action>
                                                         <action id="6" name="Stop" sid="209688712769464" type="Audio">
                                                             <param id="0" name="Tag">&quot;SFX_SpinDashCharge&quot;</param>
                                                         </action>
@@ -2980,6 +2987,319 @@
                                                     <param id="0" name="Tag">&quot;SFX_Rolling&quot;</param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-group description="" sid="864909780504030" title="DropDash">
+                                    <sub-events>
+                                        <event-block sid="866333561687575">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="617692652364353" type="Global_Settings">
+                                                    <param id="0" name="Instance variable">DropDash</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="821606948195618">
+                                                    <conditions>
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="697910557339703" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Roll&quot;</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="753472259121640" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="918936202159963" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="163307375999213" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Idle_&quot;&amp;Values_Player.Character</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="946784674294482">
+                                                    <conditions>
+                                                        <condition behavior="Timer" id="0" name="On timer" sid="529954711647101" type="Values_Player">
+                                                            <param id="0" name="Tag">&quot;DropDash&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="SonicPhysics" id="16" name="Trigger roll" sid="157005568421016" type="Sensor_Main">
+                                                            <param id="0" name="State">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="628773842131339" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;Roll&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="900005718745091" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDashState</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="395197607812214" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDash</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="658920793174525">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="688122516143100" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="269333833067665" type="Sensor_Main">
+                                                                    <param id="0" name="Vector X">Values_Player.ForcedSpeed3</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="199733542477576" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="784348737468401" type="System">
+                                                                    <param id="0" name="Seconds">0.1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="638499685924667" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">SpinDashProgress</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="979238824143716">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="711180076293687" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="476558502688138" type="Sensor_Main">
+                                                                    <param id="0" name="Vector X">-Values_Player.ForcedSpeed3</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="770537300492228" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="191853233293824" type="System">
+                                                                    <param id="0" name="Seconds">0.1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="120993881401158" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">SpinDashProgress</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="648895218714630">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="180081600477518" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDashState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="492090468653478" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="121684512241958">
+                                                            <conditions>
+                                                                <condition behavior="SonicPhysics" id="1" name="Compare speed" sid="618223785449928" type="Sensor_Main">
+                                                                    <param id="0" name="Comparison">2</param>
+                                                                    <param id="1" name="Speed">1</param>
+                                                                    <param id="2" name="Vector">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="927358671901482">
+                                                                    <conditions>
+                                                                        <condition id="-4" name="Trigger once while true" sid="129341312935057" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-13" name="Set boolean" sid="827294498338911" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanChangeDirection</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="135085322832528" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanControl</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="396572234705600" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">CanJump</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="183815615597414" type="Sensor_Main">
+                                                                            <param id="0" name="Input">0</param>
+                                                                        </action>
+                                                                        <action behavior="SonicPhysics" id="16" name="Trigger roll" sid="590426828553122" type="Sensor_Main">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="172883468360879" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">DropDashState</param>
+                                                                            <param id="1" name="Value">-1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="929948009660418">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="762102337609818" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">Behavior_Solid</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="111407360545252" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Jump&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="817394993874739" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;SpinDashCharging&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="245742590532756" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDash</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="273260875575031" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Shield</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;None&quot;</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="648176651966257" type="Values_Player">
+                                                            <param id="0" name="Instance variable">CanUseShield</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="826203524232275" type="Values_Input">
+                                                            <param id="0" name="Instance variable">KeyAHold</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="413161904019242" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDash</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="304736678146899" type="Values_Player">
+                                                            <param id="0" name="Instance variable">CanChangeDirection</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="444248295443940" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDashState</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="376975954555650" type="Sensor_Main">
+                                                            <param id="0" name="Input">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="443022359198901">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="457328836408096" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDash</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="788293479897583" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="560437262741115" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;DropDash&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="528939079231402">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="175243673832686" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="293564905026088" type="Values_Player">
+                                                                    <param id="0" name="Duration">1.0</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;DropDash&quot;</param>
+                                                                </action>
+                                                                <action behavior="SonicPhysics" id="11" name="Set vector X" sid="657858199165059" type="Sensor_Main">
+                                                                    <param id="0" name="Vector X">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="952501833967446">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="807020890386846" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDashState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="220741014376811" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="978877744164979" type="SpinDashDust">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                        <action id="-4" name="Set position to another object" sid="504830195349066" type="SpinDashDust">
+                                                            <param id="0" name="Object">PlayerSprite</param>
+                                                            <param id="1" name="Image point (optional)">2</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="626460581494279">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="832324659075839" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="174373962624756" type="SpinDashDust">
+                                                                    <param id="0" name="State">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="405852278856345">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="217977016731328" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="628571954597537" type="SpinDashDust">
+                                                                    <param id="0" name="State">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="927738818970599">
+                                                    <conditions>
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="975897708004658" type="Values_Player">
+                                                            <param id="0" name="Instance variable">DropDashState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="945762434196242" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="190206058183473" type="SpinDashDust">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
@@ -7648,6 +7968,37 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="167272876038296">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="235243397102856" type="Values_Player">
+                                    <param id="0" name="Instance variable">InWater</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="893219659531632" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="562503987155497">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="108919981514118" type="Values_Player">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Light&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="312268903805913" type="Values_Player">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Fire&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="948525093551647" type="Values_Player">
+                                            <param id="0" name="Instance variable">Shield</param>
+                                            <param id="1" name="Value">&quot;None&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="626578576614144">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="162636434326095" type="Values_Player">
@@ -7713,21 +8064,6 @@
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="508452889662429">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="693249530392931" type="Values_Player">
-                                            <param id="0" name="Instance variable">InWater</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="337939105079324" type="Values_Player">
-                                            <param id="0" name="Instance variable">Shield</param>
-                                            <param id="1" name="Value">&quot;None&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="722854151192093">
                             <conditions>
@@ -8112,25 +8448,6 @@
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
-                                        </event-block>
-                                        <event-block sid="808220294741458">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="396139319312700" type="Values_Player">
-                                                    <param id="0" name="Instance variable">InWater</param>
-                                                </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="504856781038403" type="Values_Player">
-                                                    <param id="0" name="Instance variable">Shield</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Light&quot;</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="857824048551783" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="987549238338363" type="Values_Player">
-                                                    <param id="0" name="Instance variable">Shield</param>
-                                                    <param id="1" name="Value">&quot;None&quot;</param>
-                                                </action>
-                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
@@ -15123,42 +15440,51 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="235411034005902" type="SpinDashDust">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
                                                 <action id="-4" name="Set position to another object" sid="845528230219723" type="SpinDashDust">
                                                     <param id="0" name="Object">PlayerSprite</param>
                                                     <param id="1" name="Image point (optional)">2</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="879412375779917">
+                                                <event-block sid="461907854511360">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="645692502696703" type="Values_Player">
-                                                            <param id="0" name="Instance variable">Direction</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;right&quot;</param>
-                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="652541774221786" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="7" name="Set mirrored" sid="938684460754988" type="SpinDashDust">
-                                                            <param id="0" name="State">1</param>
+                                                        <action id="-15" name="Set visible" sid="235411034005902" type="SpinDashDust">
+                                                            <param id="0" name="Visibility">1</param>
                                                         </action>
                                                     </actions>
-                                                </event-block>
-                                                <event-block sid="679239547483101">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="659493443203349" type="Values_Player">
-                                                            <param id="0" name="Instance variable">Direction</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;left&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="7" name="Set mirrored" sid="383499944855981" type="SpinDashDust">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
-                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="879412375779917">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="645692502696703" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="938684460754988" type="SpinDashDust">
+                                                                    <param id="0" name="State">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="679239547483101">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="659493443203349" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="383499944855981" type="SpinDashDust">
+                                                                    <param id="0" name="State">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -15174,6 +15500,7 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">&quot;PeelOutCharging&quot;</param>
                                                 </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="231198859445274" type="System" />
                                             </conditions>
                                             <actions>
                                                 <action id="-15" name="Set visible" sid="620761387141329" type="SpinDashDust">

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 8</name>
+    <events>
+        <include>E_global</include>
+        <event-block sid="257948130676822">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="287442833411763" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="512714039414581" type="Values_PauseMenu">
+                    <param id="0" name="Instance variable">CanPause</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="574724401573188" type="PausePreview">
+                    <param id="0" name="X">213</param>
+                    <param id="1" name="Y">120</param>
+                </action>
+                <action id="-7" name="Set size" sid="338074748806316" type="PausePreview">
+                    <param id="0" name="Width">426</param>
+                    <param id="1" name="Height">240</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="422758218948593">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="352129519671978" type="Values_PauseMenu">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="645190264617589" type="PausePreview">
+                    <param id="0" name="X">lerp(Self.X, 108,0.05)</param>
+                    <param id="1" name="Y">lerp(Self.Y, 132, 0.05)</param>
+                </action>
+                <action id="-7" name="Set size" sid="911743498362681" type="PausePreview">
+                    <param id="0" name="Width">lerp(Self.width, 164,0.05)</param>
+                    <param id="1" name="Height">lerp(Self.Height, 88, 0.05)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

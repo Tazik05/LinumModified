@@ -201,6 +201,7 @@
                         <Selected>0</Selected>
                         <FadeBG>0</FadeBG>
                         <CanPause>true</CanPause>
+                        <Animation>0</Animation>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

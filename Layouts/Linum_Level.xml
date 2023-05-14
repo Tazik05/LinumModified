@@ -27157,6 +27157,8 @@
                         <InWater>false</InWater>
                         <Air>0</Air>
                         <Drowning>false</Drowning>
+                        <DropDash>false</DropDash>
+                        <DropDashState>0</DropDashState>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -28967,6 +28969,7 @@
                         <Selected>0</Selected>
                         <FadeBG>0</FadeBG>
                         <CanPause>true</CanPause>
+                        <Animation>0</Animation>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -30850,7 +30853,7 @@
                 <ForceAligh>false</ForceAligh>
                 <DropDash>false</DropDash>
                 <HUD>SSW</HUD>
-                <Platform>Mobile</Platform>
+                <Platform>Desktop</Platform>
                 <ScreenSize>2x</ScreenSize>
                 <FpsCounter>0</FpsCounter>
                 <FpsFix>false</FpsFix>

@@ -146,6 +146,7 @@
                         <instance-variable name="Selected" sid="230527403524582" type="number" />
                         <instance-variable name="FadeBG" sid="758471611322732" type="number" />
                         <instance-variable name="CanPause" sid="300135044096084" type="boolean" />
+                        <instance-variable name="Animation" sid="823027295653554" type="number" />
                     </instance-variables>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="851404119065814" speed="5">
@@ -217,6 +218,8 @@
                         <instance-variable name="InWater" sid="390667918372458" type="boolean" />
                         <instance-variable name="Air" sid="560082871331109" type="number" />
                         <instance-variable name="Drowning" sid="932895665521471" type="boolean" />
+                        <instance-variable name="DropDash" sid="177223992720502" type="boolean" />
+                        <instance-variable name="DropDashState" sid="126609895095590" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Timer" sid="760925343406501">
@@ -10832,6 +10835,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PausePreview" sid="510903670829826">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974998036796846" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -11110,6 +11121,7 @@
             <layout>Linum_Continue.xml</layout>
             <layout>Linum_PREVIEW(Temp).xml</layout>
             <layout>Linum_Credits.xml</layout>
+            <layout>Linum_Pause.xml</layout>
         </layout-folder>
         <layout-folder name="[ Tests ]">
             <layout>TestLayout.xml</layout>
@@ -11141,6 +11153,7 @@
         <event-sheet>CREDITS.xml</event-sheet>
         <event-sheet>Event sheet 4.xml</event-sheet>
         <event-sheet>Event sheet 7.xml</event-sheet>
+        <event-sheet>Event sheet 8.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">

@@ -286,7 +286,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-6" name="Set height" sid="243912048520365" type="MusicPlayer_Visualiser">
-                                            <param id="0" name="Height">125+((BetterAudio.AnalyserFreqBinAt(&quot;MUS_Credits&quot;,0,Self.FreqBin)*1.5))</param>
+                                            <param id="0" name="Height">125+((BetterAudio.AnalyserFreqBinAt(&quot;MUS_Credits&quot;,0,Self.FreqBin)*2.2))</param>
                                         </action>
                                     </actions>
                                 </event-block>
