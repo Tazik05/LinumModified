@@ -128,6 +128,8 @@
                         <Logger></Logger>
                         <CanExecute>false</CanExecute>
                         <CMDIsActive>false</CMDIsActive>
+                        <Ghost>false</Ghost>
+                        <SpeedAdd>0</SpeedAdd>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -297,6 +299,9 @@
                 <JSONC2SAVE></JSONC2SAVE>
                 <Base64></Base64>
                 <LoadSave>false</LoadSave>
+                <UIDCHECKPOINT>0</UIDCHECKPOINT>
+                <Rings>0</Rings>
+                <LevelTimer>0</LevelTimer>
             </instance-variables>
         </instance>
     </nonworld-instances>

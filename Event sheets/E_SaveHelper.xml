@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_SaveHelper</name>
+    <events>
+        <event-block sid="512801261431984">
+            <conditions>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="869242434111742" type="Global_Settings">
+                    <param id="0" name="Instance variable">UsedSaveSlot</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-group description="" sid="991628009489155" title="Save animation">
+                    <sub-events>
+                        <comment>SaveText&#x0D;&#x0A;&#x0D;&#x0A;x - 310  y - 230&#x0D;&#x0A;width - 112 height - 12&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;SaveIco&#x0D;&#x0A;&#x0D;&#x0A;x - 300 y - 230&#x0D;&#x0A;width - 14 height 14</comment>
+                        <variable constant="0" name="Animation" sid="171752644405183" static="1" type="number">0</variable>
+                        <event-block sid="982253218959036">
+                            <conditions>
+                                <condition id="0" name="On function" sid="393171293767394" type="Function">
+                                    <param id="0" name="Name">&quot;SaveAnimation&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="368546558478668" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="939840420602470" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="145702378621697" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="897830441350538" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="339653370088031" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="700211022808087" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="790070986350386" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="177902702219618" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="120795409052366" type="System">
+                                    <param id="0" name="Seconds">1.5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="836490072798973" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="129046799606260">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="287452675628447" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="171227355967202" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="598813251997975" type="SaveIco">
+                                    <param id="0" name="X">416</param>
+                                    <param id="1" name="Y">248</param>
+                                </action>
+                                <action id="0" name="Set text" sid="612005739973956" type="SaveText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="672919608588281">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="900902888984048" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="496213674125580" type="SaveIco">
+                                    <param id="0" name="X">lerp(Self.X, 416, 0.1)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 230, 0.1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="219832903233281">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="370419645171108" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="559570820428956" type="SaveIco">
+                                    <param id="0" name="X">lerp(Self.X, 310, 0.1)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 230, 0.1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="250873187098758">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="666200048373377" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="375269125231571" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="639016925357624" type="SaveText">
+                                    <param id="0" name="X">320</param>
+                                    <param id="1" name="Y">230</param>
+                                </action>
+                                <action behavior="Typing" id="3" name="Type text" sid="451681254890303" type="SaveText">
+                                    <param id="0" name="Text">&quot;Saved!&quot;</param>
+                                    <param id="1" name="Speed">0.1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="552208600343629">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="872437988016784" type="System">
+                                    <param id="0" name="Variable">Animation</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="295633058376641" type="SaveIco">
+                                    <param id="0" name="X">lerp(Self.X, 440, 0.1)</param>
+                                    <param id="1" name="Y">lerp(Self.Y, 230, 0.1)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="357046605551007" type="SaveText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="817581754673407">
+                    <conditions>
+                        <condition id="0" name="On function" sid="132064582212485" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="904417205701492" type="Save_Helper">
+                            <param id="0" name="Instance variable">CanSave</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="757803188524400" type="Save_Helper">
+                            <param id="0" name="Instance variable">PlayerPosX</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="334332331721150" type="Save_Helper">
+                            <param id="0" name="Instance variable">PlayerPosY</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="142681085082393" type="Save_Helper">
+                            <param id="0" name="Instance variable">UIDCHECKPOINT</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="901311549514493">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="419851979683634" type="Save_Helper">
+                            <param id="0" name="Instance variable">CanSave</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="752334364065777" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Snapshot canvas" sid="582081578835940" type="System">
+                            <param id="0" name="Format">0</param>
+                            <param id="1" name="JPEG quality">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="249066932138161">
+                    <conditions>
+                        <condition id="-26" name="On canvas snapshot" sid="280744878724762" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="448005654992381" type="Save_Helper">
+                            <param id="0" name="Instance variable">Base64</param>
+                            <param id="1" name="Value">CanvasSnapshot</param>
+                        </action>
+                        <action id="0" name="Alert" sid="743486085371913" type="Browser">
+                            <param id="0" name="Message">CanvasSnapshot</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="496058378091848" type="Save_Helper">
+                            <param id="0" name="Instance variable">SaveIsReady</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="744578728044221" type="Function">
+                            <param id="0" name="Name">&quot;SaveAnimation&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="192883191284306">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="677625873370164" type="Save_Helper">
+                            <param id="0" name="Instance variable">SaveIsReady</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="680058745412972" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add comment (normal)" sid="169277193060527" type="Comment">
+                            <param id="0" name="Comment">&quot;System&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="814374781044744" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveSlot_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">&quot;Yes&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="301231428919981" type="WebStorage">
+                            <param id="0" name="Key">&quot;Ver_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">projectversion</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="379831791361632" type="WebStorage">
+                            <param id="0" name="Key">&quot;Saved_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Date.LocalExpression</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="264030804621891" type="WebStorage">
+                            <param id="0" name="Key">&quot;Level_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="415434846789437" type="WebStorage">
+                            <param id="0" name="Key">&quot;LevelName_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">&quot;None&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="370468259447817" type="WebStorage">
+                            <param id="0" name="Key">&quot;Preview_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Save_Helper.Base64</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="936044474873538" type="WebStorage">
+                            <param id="0" name="Key">&quot;UID_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Save_Helper.UIDCHECKPOINT</param>
+                        </action>
+                        <action id="0" name="Add comment (normal)" sid="665272252333902" type="Comment">
+                            <param id="0" name="Comment">&quot;Game&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="932258824195007" type="WebStorage">
+                            <param id="0" name="Key">&quot;Lives_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Global_Settings.Lives</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="912038281810340" type="WebStorage">
+                            <param id="0" name="Key">&quot;Rings_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Player.Rings</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="336444042601344" type="WebStorage">
+                            <param id="0" name="Key">&quot;Score_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Global_Settings.Score</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="146908101491888" type="WebStorage">
+                            <param id="0" name="Key">&quot;ScoreTemp_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Global_Settings.Scoretemp</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="245973497808743" type="WebStorage">
+                            <param id="0" name="Key">&quot;PlayerX_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Save_Helper.PlayerPosX</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="591438398429546" type="WebStorage">
+                            <param id="0" name="Key">&quot;PlayerY_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Save_Helper.PlayerPosY</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="442410144670061" type="WebStorage">
+                            <param id="0" name="Key">&quot;Zone_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Global_Settings.Act</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="491743760428344" type="WebStorage">
+                            <param id="0" name="Key">&quot;Character_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Player.Character</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="196183176465634" type="WebStorage">
+                            <param id="0" name="Key">&quot;LevelTimer_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Level.LevelTimer_Global</param>
+                        </action>
+                        <action id="0" name="Add comment (normal)" sid="967683092845540" type="Comment">
+                            <param id="0" name="Comment">&quot;Emeralds&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="728333037276659" type="WebStorage">
+                            <param id="0" name="Key">&quot;EmeraldGreen_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Emeralds.Green</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="376741107278812" type="WebStorage">
+                            <param id="0" name="Key">&quot;EmeraldCyan_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Emeralds.Cyan</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="822338334968563" type="WebStorage">
+                            <param id="0" name="Key">&quot;EmeraldBlue_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Emeralds.Blue</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="792604554533446" type="WebStorage">
+                            <param id="0" name="Key">&quot;EmeraldRed_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Emeralds.Red</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="689313197847534" type="WebStorage">
+                            <param id="0" name="Key">&quot;EmeraldPurple_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Emeralds.Purple</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="434274395093086" type="WebStorage">
+                            <param id="0" name="Key">&quot;EmeraldYellow_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Emeralds.Yellow</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="266751626227546" type="WebStorage">
+                            <param id="0" name="Key">&quot;EmeraldGray_&quot;&amp;Global_Settings.UsedSaveSlot</param>
+                            <param id="1" name="Value">Values_Emeralds.Gray</param>
+                        </action>
+                        <action id="0" name="Add comment (normal)" sid="937055914645839" type="Comment">
+                            <param id="0" name="Comment">&quot;Restart State&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="579616732941395" type="Save_Helper">
+                            <param id="0" name="Instance variable">CanSave</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="450470318168199" type="Save_Helper">
+                            <param id="0" name="Instance variable">Base64</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="765451888411407" type="Save_Helper">
+                            <param id="0" name="Instance variable">SaveIsReady</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

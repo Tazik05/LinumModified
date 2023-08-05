@@ -19,14 +19,159 @@
                 <action id="-15" name="Set visible" sid="952462863528380" type="Android_FPS">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-4" name="Set position to another object" sid="311964761269417" type="Sensor_Main">
-                    <param id="0" name="Object">PlayerSpawn</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="-16" name="Wait" sid="823466362330988" type="System">
-                    <param id="0" name="Seconds">0</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="382634736551979">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="959437756390733" type="Global_Settings">
+                            <param id="0" name="Instance variable">UsedSaveSlot</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="311964761269417" type="Sensor_Main">
+                            <param id="0" name="Object">PlayerSpawn</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="811264900924917">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="627378986194815" type="Save_Helper">
+                                    <param id="0" name="Instance variable">Character</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add comment (normal)" sid="541094316138028" type="Comment">
+                                    <param id="0" name="Comment">&quot;put a player from the last session&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="194526440939145" type="Values_Player">
+                                    <param id="0" name="Instance variable">Character</param>
+                                    <param id="1" name="Value">Save_Helper.Character</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="334272319912270">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="815856976351149" type="Global_Settings">
+                            <param id="0" name="Instance variable">UsedSaveSlot</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add comment (normal)" sid="340153718376549" type="Comment">
+                            <param id="0" name="Comment">&quot;put a player from the last session&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="361362371427160" type="Values_Player">
+                            <param id="0" name="Instance variable">Character</param>
+                            <param id="1" name="Value">Save_Helper.Character</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="763564864732313">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="943573520440711" type="Save_Helper">
+                                    <param id="0" name="Instance variable">LoadSave</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="742372070981387" type="Sensor_Main">
+                                    <param id="0" name="Object">PlayerSpawn</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="190828279880668">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="427598908944914" type="Save_Helper">
+                                    <param id="0" name="Instance variable">LoadSave</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add comment (normal)" sid="514340615861260" type="Comment">
+                                    <param id="0" name="Comment">&quot;restoring values from save&quot;</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="830905196191935" type="System">
+                                    <param id="0" name="Group name">&quot;Checkpoint&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="382373729501650" type="PlayerSpawn">
+                                    <param id="0" name="X">Save_Helper.PlayerPosX</param>
+                                    <param id="1" name="Y">Save_Helper.PlayerPosY</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="362005829732702" type="Sensor_Main">
+                                    <param id="0" name="X">Save_Helper.PlayerPosX</param>
+                                    <param id="1" name="Y">Save_Helper.PlayerPosY</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="375758393332077" type="Values_Player">
+                                    <param id="0" name="Instance variable">Rings</param>
+                                    <param id="1" name="Value">Save_Helper.Rings</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="741975590271576" type="Values_Level">
+                                    <param id="0" name="Instance variable">LevelTimer_Global</param>
+                                    <param id="1" name="Value">Save_Helper.LevelTimer</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="210323707958245">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="467441745823082" type="Checkpoint">
+                                            <param id="0" name="Unique ID">float(WebStorage.LocalValue(&quot;UID_&quot;&amp;Global_Settings.UsedSaveSlot))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add comment (normal)" sid="867156961949138" type="Comment">
+                                            <param id="0" name="Comment">&quot;deactivating the last checkpoint&quot;</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="734516433310336" type="Checkpoint">
+                                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="736801709385693" type="System">
+                                            <param id="0" name="Group name">&quot;Checkpoint&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="913201358591957">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Add comment (normal)" sid="154424223157723" type="Comment">
+                                            <param id="0" name="Comment">&quot;after loading the values, return everything back&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="956132346298714" type="Save_Helper">
+                                            <param id="0" name="Instance variable">PlayerPosX</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="642333743005026" type="Save_Helper">
+                                            <param id="0" name="Instance variable">PlayerPosY</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="234303557065520" type="Save_Helper">
+                                            <param id="0" name="Instance variable">Rings</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="985206434443213" type="Save_Helper">
+                                            <param id="0" name="Instance variable">LevelTimer</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="389903974321780" type="Save_Helper">
+                                            <param id="0" name="Instance variable">LoadSave</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="Linum Framework v0.2.1&#x0D;&#x0A;Mod version v1.6" sid="505369909762492" title="Linum Framework: Legacy">
             <sub-events>
@@ -10506,6 +10651,10 @@
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                 </action>
+                                                <action id="0" name="Call function" sid="240946073981869" type="Function">
+                                                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Checkpoint.ImagePointX(1){###}Checkpoint.ImagePointY(1){###}Checkpoint.UID</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="104818981610180">
@@ -11535,7 +11684,7 @@
                                 </event-group>
                                 <event-group description="" sid="147796962207352" title="Bumper">
                                     <sub-events>
-                                        <event-block sid="988428117841359">
+                                        <event-block disabled="1" sid="988428117841359">
                                             <conditions>
                                                 <condition id="1" name="Is overlapping another object" sid="119900613585702" type="Sensor_Main">
                                                     <param id="0" name="Object">Bumper</param>
@@ -11717,6 +11866,78 @@
                                                             <param id="0" name="Seconds">0.2</param>
                                                         </action>
                                                         <action id="5" name="Set frame" sid="904828548386096" type="Bumper">
+                                                            <param id="0" name="Frame number">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="377237608960149">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="370755240898819" type="Sensor_Main">
+                                                    <param id="0" name="Object">Bumper</param>
+                                                </condition>
+                                                <condition id="-11" name="For Each" sid="258671205749798" type="System">
+                                                    <param id="0" name="Object">Bumper</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>by taiky</comment>
+                                                <event-block sid="399341754185439">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="274985367397720" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="184821245573895" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="494200167442943" type="Function">
+                                                            <param id="0" name="Name">&quot;pts&quot;</param>
+                                                            <param id="1" name="Parameter {n}">10{###}Bumper.X{###}Bumper.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="298202866176117">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Is playing" sid="467897435838417" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Roll_&quot;&amp;Values_Player.Character</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="411302346490259" type="PlayerSprite">
+                                                                    <param id="0" name="Animation">&quot;Jump_&quot;&amp;Values_Player.Character</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="666720181582081">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="807914108188966" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="545344993505778" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">cos(angle(Bumper.X, Bumper.Y, self.X, self.Y))*256</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="794296012599449" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">sin(angle(Bumper.X, Bumper.Y, self.X, self.Y))*256</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="665939709282675" type="Bumper">
+                                                            <param id="0" name="Frame number">1</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="311894267827890" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Bumper</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Bumper&quot;</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="199738030776845" type="System">
+                                                            <param id="0" name="Seconds">0.2</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="939321561979234" type="Bumper">
                                                             <param id="0" name="Frame number">0</param>
                                                         </action>
                                                     </actions>
@@ -12237,33 +12458,86 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <event-block sid="293524478298048">
+                                                        <event-block sid="901271532915653">
                                                             <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="141410562105863" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                <condition id="-7" name="Compare instance variable" sid="831850770004607" type="Global_Settings">
+                                                                    <param id="0" name="Instance variable">TailsMode</param>
                                                                     <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                    <param id="2" name="Value">1</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action id="-8" name="Set angle" sid="115531605005994" type="TailsBack">
-                                                                    <param id="0" name="Angle">anglelerp(Self.Angle,-clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="293524478298048">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="141410562105863" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-8" name="Set angle" sid="115531605005994" type="TailsBack">
+                                                                            <param id="0" name="Angle">anglelerp(Self.Angle,-clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="976221351309940">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="885335702978558" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-8" name="Set angle" sid="158779114893047" type="TailsBack">
+                                                                            <param id="0" name="Angle">anglelerp(Self.Angle,clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
-                                                        <event-block sid="976221351309940">
+                                                        <event-block sid="795777011230052">
                                                             <conditions>
-                                                                <condition id="-7" name="Compare instance variable" sid="885335702978558" type="Values_Player">
-                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                <condition id="-7" name="Compare instance variable" sid="102975553309824" type="Global_Settings">
+                                                                    <param id="0" name="Instance variable">TailsMode</param>
                                                                     <param id="1" name="Comparison">0</param>
-                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                    <param id="2" name="Value">2</param>
                                                                 </condition>
                                                             </conditions>
-                                                            <actions>
-                                                                <action id="-8" name="Set angle" sid="158779114893047" type="TailsBack">
-                                                                    <param id="0" name="Angle">anglelerp(Self.Angle,clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
-                                                                </action>
-                                                            </actions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <comment>by TaiKy</comment>
+                                                                <event-block sid="137162656476552">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="141857127436954" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-8" name="Set angle" sid="895694656210815" type="TailsBack">
+                                                                            <param id="0" name="Angle">angle(0,0, -Sensor_Main.SonicPhysics.VectorX,-Sensor_Main.SonicPhysics.VectorY)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="607972792408768">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="981303127441437" type="Values_Player">
+                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-8" name="Set angle" sid="647299333297760" type="TailsBack">
+                                                                            <param id="0" name="Angle">angle(0,0, -Sensor_Main.SonicPhysics.VectorX,-Sensor_Main.SonicPhysics.VectorY)+180</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
@@ -12342,22 +12616,22 @@
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
+                                                <event-block sid="886945110905421">
+                                                    <conditions>
+                                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="139564540472215" type="Values_Player">
+                                                            <param id="0" name="Instance variable">Character</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="211360798726320" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="279759792607359" type="TailsBack">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                             </sub-events>
-                                        </event-block>
-                                        <event-block sid="886945110905421">
-                                            <conditions>
-                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="139564540472215" type="Values_Player">
-                                                    <param id="0" name="Instance variable">Character</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">2</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="211360798726320" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="279759792607359" type="TailsBack">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-group>
@@ -15597,189 +15871,6 @@
         <event-group description="" sid="331206807603223" title="UI stuff">
             <sub-events>
                 <comment></comment>
-                <event-block sid="621232333086520">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="552668382943205" type="Global_Settings">
-                            <param id="0" name="Instance variable">HUD</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Linum&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <comment>Linum hud</comment>
-                        <event-block sid="980534589423703">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="867184738029657" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-4" name="Set layer visible" sid="382333061184763" type="System">
-                                    <param id="0" name="Layer">&quot;HUD_Linum&quot;</param>
-                                    <param id="1" name="Visibility">1</param>
-                                </action>
-                                <action id="-4" name="Set layer visible" sid="491095355566123" type="System">
-                                    <param id="0" name="Layer">&quot;HUD_Custom&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="418832703853618" type="Android_Pause">
-                                    <param id="0" name="Layer">LinumLivesBack.LayerNumber</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="876644940170596" type="Android_Pause">
-                                    <param id="0" name="X">348</param>
-                                    <param id="1" name="Y">8</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="144166489194083" type="Android_Pause">
-                                    <param id="0" name="Width">16</param>
-                                    <param id="1" name="Height">16</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="437266754331423">
-                            <conditions>
-                                <condition id="-7" inverted="1" name="Compare instance variable" sid="784204485811852" type="Global_Settings">
-                                    <param id="0" name="Instance variable">Platform</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Mobile&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="653013431863373" type="HUD_ScoreFont">
-                                    <param id="0" name="X">52</param>
-                                    <param id="1" name="Y">42</param>
-                                </action>
-                                <action id="-7" name="Set size" sid="937687071835995" type="HUD_ScoreFont">
-                                    <param id="0" name="Width">92</param>
-                                    <param id="1" name="Height">8</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="631206402729362" type="HUD_Time">
-                                    <param id="0" name="X">76</param>
-                                    <param id="1" name="Y">16</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="385479680560214" type="HUD_Rings">
-                                    <param id="0" name="X">92</param>
-                                    <param id="1" name="Y">32</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="928893973330756" type="TimerIco">
-                                    <param id="0" name="X">7</param>
-                                    <param id="1" name="Y">9</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="236043771494432" type="TimerPart2">
-                                    <param id="0" name="X">16</param>
-                                    <param id="1" name="Y">15</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="323843043593131" type="TimerPart1">
-                                    <param id="0" name="X">16</param>
-                                    <param id="1" name="Y">15</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="977328052742005" type="HUD_TimeFont">
-                                    <param id="0" name="X">46</param>
-                                    <param id="1" name="Y">10</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="149177754575958" type="HUD_TimeFont2">
-                                    <param id="0" name="X">128</param>
-                                    <param id="1" name="Y">10</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="273378026369176" type="HUD_RingsFont">
-                                    <param id="0" name="X">84</param>
-                                    <param id="1" name="Y">26</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="804804662415262">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="585169981094348" type="Global_Settings">
-                                    <param id="0" name="Instance variable">Platform</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Mobile&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="586680280588530">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="865062823009189" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="104312322666599" type="HUD_ScoreFont">
-                                            <param id="0" name="X">52</param>
-                                            <param id="1" name="Y">42</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="450717872210876" type="HUD_ScoreFont">
-                                            <param id="0" name="Width">92</param>
-                                            <param id="1" name="Height">8</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="560943761439425" type="HUD_Time">
-                                            <param id="0" name="X">76</param>
-                                            <param id="1" name="Y">16</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="367826085799702" type="HUD_Rings">
-                                            <param id="0" name="X">92</param>
-                                            <param id="1" name="Y">32</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="390146177066519" type="TimerIco">
-                                            <param id="0" name="X">7</param>
-                                            <param id="1" name="Y">9</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="192331073162349" type="TimerPart2">
-                                            <param id="0" name="X">16</param>
-                                            <param id="1" name="Y">15</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="857517673997383" type="TimerPart1">
-                                            <param id="0" name="X">16</param>
-                                            <param id="1" name="Y">15</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="477848170323489" type="HUD_TimeFont">
-                                            <param id="0" name="X">46</param>
-                                            <param id="1" name="Y">10</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="955881097384063" type="HUD_TimeFont2">
-                                            <param id="0" name="X">128</param>
-                                            <param id="1" name="Y">10</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="625011160817739" type="HUD_RingsFont">
-                                            <param id="0" name="X">84</param>
-                                            <param id="1" name="Y">26</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="610210570633824" type="LinumLivesBack">
-                                            <param id="0" name="X">368</param>
-                                            <param id="1" name="Y">8</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="703905930708834" type="LinumLivesBack">
-                                            <param id="0" name="Width">52</param>
-                                            <param id="1" name="Height">16</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="606660393233803" type="LinumLivesHud">
-                                            <param id="0" name="X">368</param>
-                                            <param id="1" name="Y">8</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="904289566088666" type="LinumLivesHud">
-                                            <param id="0" name="Width">17</param>
-                                            <param id="1" name="Height">16</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="932944147288119" type="Player_Lives_Linum">
-                                            <param id="0" name="X">385</param>
-                                            <param id="1" name="Y">8</param>
-                                        </action>
-                                        <action id="-7" name="Set size" sid="943170049775484" type="Player_Lives_Linum">
-                                            <param id="0" name="Width">34</param>
-                                            <param id="1" name="Height">16</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="496520851362958">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="692636011300456" type="Global_Settings">
-                                    <param id="0" name="Instance variable">Platform</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Automatically&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="754998494198601">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="558307622949322" type="Global_Settings">
@@ -15807,13 +15898,16 @@
                                     <param id="0" name="Width">16</param>
                                     <param id="1" name="Height">16</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="607851189408614" type="System">
+                                <action disabled="1" id="-4" name="Set layer visible" sid="607851189408614" type="System">
                                     <param id="0" name="Layer">&quot;HUD_Linum&quot;</param>
                                     <param id="1" name="Visibility">0</param>
                                 </action>
                                 <action id="-4" name="Set layer visible" sid="666634212297038" type="System">
                                     <param id="0" name="Layer">&quot;HUD_Custom&quot;</param>
                                     <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="933083539588877" type="MultiHUD">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="312766598515233" type="MultiHUD">
                                     <param id="0" name="Animation">&quot;idle_SSW&quot;</param>
@@ -15822,6 +15916,9 @@
                                 <action id="4" name="Set animation" sid="828529361483508" type="SonicLivesHud">
                                     <param id="0" name="Animation">&quot;SSW&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="849061772196295" type="SonicLivesHud">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="501008031156313" type="PlayerLivesSonic3">
                                     <param id="0" name="Visibility">0</param>
@@ -16015,10 +16112,6 @@
                                     <param id="0" name="Width">16</param>
                                     <param id="1" name="Height">16</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="599075909001100" type="System">
-                                    <param id="0" name="Layer">&quot;HUD_Linum&quot;</param>
-                                    <param id="1" name="Visibility">0</param>
-                                </action>
                                 <action id="-4" name="Set layer visible" sid="902211448529923" type="System">
                                     <param id="0" name="Layer">&quot;HUD_Custom&quot;</param>
                                     <param id="1" name="Visibility">1</param>
@@ -16027,9 +16120,15 @@
                                     <param id="0" name="Animation">&quot;idle_Sonic3&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="333152627281434" type="MultiHUD">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="669218778417676" type="SonicLivesHud">
                                     <param id="0" name="Animation">&quot;S3&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="399220826167010" type="SonicLivesHud">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="787975906656892" type="PlayerLivesSonic3">
                                     <param id="0" name="Visibility">1</param>
@@ -16227,6 +16326,335 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="621232333086520">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="552668382943205" type="Global_Settings">
+                            <param id="0" name="Instance variable">HUD</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Linum&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Linum hud</comment>
+                        <event-block sid="980534589423703">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="867184738029657" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="491095355566123" type="System">
+                                    <param id="0" name="Layer">&quot;HUD_Custom&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="418832703853618" type="Android_Pause">
+                                    <param id="0" name="Layer">LinumLivesBack.LayerNumber</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="876644940170596" type="Android_Pause">
+                                    <param id="0" name="X">348</param>
+                                    <param id="1" name="Y">8</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="144166489194083" type="Android_Pause">
+                                    <param id="0" name="Width">16</param>
+                                    <param id="1" name="Height">16</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="420006184792233" type="HUD_ScoreFont">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="314815061547217" type="HUD_Time">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="411316362400422" type="HUD_Rings">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="803019591721233" type="TimerIco">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="422118213832462" type="TimerPart2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="953193957102881" type="TimerPart1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="691503013717106" type="HUD_TimeFont">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="441340154702176" type="HUD_TimeFont2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="380034317744112" type="HUD_RingsFont">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="610148616572679" type="LinumLivesBack">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="604509682278310" type="LinumLivesHud">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="488206248496728" type="Player_Lives_Linum">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="555803367262024" type="HUD_Ring">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="399894418095106">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="698690140033224" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="177836456166853" type="SSWScoreCounter">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="178303533861700" type="SSWTimer">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="456437098078154" type="SSWRingsCounter">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="658980925457025" type="MultiHUD">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="656150781625702" type="S3ScoreCounter">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="202269914961588" type="S3Timer">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="452960929968390" type="S3RingsCounter">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="771053201087696" type="SonicLivesHud">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="419567451460421" type="PlayerLivesSonic3">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="705458135698191" type="SSWLivesCounter">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="437266754331423">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="784204485811852" type="Global_Settings">
+                                    <param id="0" name="Instance variable">Platform</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Mobile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="653013431863373" type="HUD_ScoreFont">
+                                    <param id="0" name="X">52</param>
+                                    <param id="1" name="Y">42</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="937687071835995" type="HUD_ScoreFont">
+                                    <param id="0" name="Width">92</param>
+                                    <param id="1" name="Height">8</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="631206402729362" type="HUD_Time">
+                                    <param id="0" name="X">76</param>
+                                    <param id="1" name="Y">16</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="385479680560214" type="HUD_Rings">
+                                    <param id="0" name="X">92</param>
+                                    <param id="1" name="Y">32</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="928893973330756" type="TimerIco">
+                                    <param id="0" name="X">7</param>
+                                    <param id="1" name="Y">9</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="236043771494432" type="TimerPart2">
+                                    <param id="0" name="X">16</param>
+                                    <param id="1" name="Y">15</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="323843043593131" type="TimerPart1">
+                                    <param id="0" name="X">16</param>
+                                    <param id="1" name="Y">15</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="977328052742005" type="HUD_TimeFont">
+                                    <param id="0" name="X">46</param>
+                                    <param id="1" name="Y">10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="149177754575958" type="HUD_TimeFont2">
+                                    <param id="0" name="X">128</param>
+                                    <param id="1" name="Y">10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="273378026369176" type="HUD_RingsFont">
+                                    <param id="0" name="X">84</param>
+                                    <param id="1" name="Y">26</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="762666121329513" type="LinumLivesBack">
+                                    <param id="0" name="X">16</param>
+                                    <param id="1" name="Y">214</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="435180012119991" type="LinumLivesBack">
+                                    <param id="0" name="Width">52</param>
+                                    <param id="1" name="Height">16</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="931096006126101" type="LinumLivesHud">
+                                    <param id="0" name="X">15</param>
+                                    <param id="1" name="Y">213</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="116081614394885" type="LinumLivesHud">
+                                    <param id="0" name="Width">17</param>
+                                    <param id="1" name="Height">16</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="752871972578540" type="Player_Lives_Linum">
+                                    <param id="0" name="X">34</param>
+                                    <param id="1" name="Y">214</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="441433777210795" type="Player_Lives_Linum">
+                                    <param id="0" name="Width">34</param>
+                                    <param id="1" name="Height">16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="804804662415262">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="585169981094348" type="Global_Settings">
+                                    <param id="0" name="Instance variable">Platform</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Mobile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="586680280588530">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="865062823009189" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="104312322666599" type="HUD_ScoreFont">
+                                            <param id="0" name="X">52</param>
+                                            <param id="1" name="Y">42</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="450717872210876" type="HUD_ScoreFont">
+                                            <param id="0" name="Width">92</param>
+                                            <param id="1" name="Height">8</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="560943761439425" type="HUD_Time">
+                                            <param id="0" name="X">76</param>
+                                            <param id="1" name="Y">16</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="367826085799702" type="HUD_Rings">
+                                            <param id="0" name="X">92</param>
+                                            <param id="1" name="Y">32</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="390146177066519" type="TimerIco">
+                                            <param id="0" name="X">7</param>
+                                            <param id="1" name="Y">9</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="192331073162349" type="TimerPart2">
+                                            <param id="0" name="X">16</param>
+                                            <param id="1" name="Y">15</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="857517673997383" type="TimerPart1">
+                                            <param id="0" name="X">16</param>
+                                            <param id="1" name="Y">15</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="477848170323489" type="HUD_TimeFont">
+                                            <param id="0" name="X">46</param>
+                                            <param id="1" name="Y">10</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="955881097384063" type="HUD_TimeFont2">
+                                            <param id="0" name="X">128</param>
+                                            <param id="1" name="Y">10</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="625011160817739" type="HUD_RingsFont">
+                                            <param id="0" name="X">84</param>
+                                            <param id="1" name="Y">26</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="610210570633824" type="LinumLivesBack">
+                                            <param id="0" name="X">368</param>
+                                            <param id="1" name="Y">8</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="703905930708834" type="LinumLivesBack">
+                                            <param id="0" name="Width">52</param>
+                                            <param id="1" name="Height">16</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="606660393233803" type="LinumLivesHud">
+                                            <param id="0" name="X">368</param>
+                                            <param id="1" name="Y">8</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="904289566088666" type="LinumLivesHud">
+                                            <param id="0" name="Width">17</param>
+                                            <param id="1" name="Height">16</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="932944147288119" type="Player_Lives_Linum">
+                                            <param id="0" name="X">385</param>
+                                            <param id="1" name="Y">8</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="943170049775484" type="Player_Lives_Linum">
+                                            <param id="0" name="Width">34</param>
+                                            <param id="1" name="Height">16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="496520851362958">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="692636011300456" type="Global_Settings">
+                                    <param id="0" name="Instance variable">Platform</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Automatically&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="132770681856986">
+                    <conditions>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="354521304312877" type="Global_Settings">
+                            <param id="0" name="Instance variable">HUD</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Linum&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="641714166017099" type="HUD_ScoreFont">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="750799837517844" type="HUD_Time">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="179404334871779" type="HUD_Rings">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="310551273464391" type="TimerIco">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="377638523105390" type="TimerPart2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="468931696755800" type="TimerPart1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="898986555549681" type="HUD_TimeFont">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="382720719526039" type="HUD_TimeFont2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="373619413002969" type="HUD_RingsFont">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="967610622106216" type="LinumLivesBack">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="435294012111173" type="LinumLivesHud">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="408478159954535" type="Player_Lives_Linum">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="843871893802117" type="HUD_Ring">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment></comment>
                 <event-group description="" sid="106387688324863" title="Titlecard">
                     <sub-events>
@@ -16254,10 +16682,6 @@
                                     <actions>
                                         <action id="-15" name="Set visible" sid="342245960711454" type="AndroidButtons">
                                             <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action disabled="1" id="-13" name="Set boolean" sid="204195042661692" type="Values_Input">
-                                            <param id="0" name="Instance variable">IgnoreInput</param>
-                                            <param id="1" name="Value">1</param>
                                         </action>
                                         <action behavior="SonicPhysics" id="0" name="Set ignoring input" sid="580334335002706" type="Sensor_Main">
                                             <param id="0" name="Input">1</param>

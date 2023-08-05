@@ -11244,10 +11244,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3015</x>
+                        <x>2971</x>
                         <y>328</y>
                         <z>0</z>
-                        <width>394</width>
+                        <width>482</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -22569,7 +22569,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Contents>SpeedShoes</Contents>
+                        <Contents>AquaticShield</Contents>
                         <Bumpable>false</Bumpable>
                     </instance-variables>
                     <behavior-instances>
@@ -23778,7 +23778,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Contents>SpeedShoes</Contents>
+                        <Contents>Eggman</Contents>
                         <Bumpable>false</Bumpable>
                     </instance-variables>
                     <behavior-instances>
@@ -24140,8 +24140,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2842</x>
-                        <y>-110</y>
+                        <x>2764</x>
+                        <y>316</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -25005,6 +25005,66 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Checkpoint" uid="1702">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop2">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2866</x>
+                        <y>314</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Checkpoint" uid="1703">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop2">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3026</x>
+                        <y>140</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -25031,6 +25091,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <IsRotate>false</IsRotate>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
                     </behavior-instances>
@@ -27104,7 +27167,7 @@
                         <CanControl>false</CanControl>
                         <CanJump>false</CanJump>
                         <State>Idle</State>
-                        <Character>3</Character>
+                        <Character>2</Character>
                         <Rings>0</Rings>
                         <SpeedShoes>false</SpeedShoes>
                         <SpinDashProgress>0</SpinDashProgress>
@@ -27803,8 +27866,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2914</x>
-                        <y>246</y>
+                        <x>3180</x>
+                        <y>286</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
@@ -29085,381 +29148,6 @@
             </instances>
             <effects />
         </layer>
-        <layer name="HUD_Linum" sid="516226591721340">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>0</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="HUD_TimeFont" uid="94">
-                    <properties>
-                        <character-width>9</character-width>
-                        <character-height>12</character-height>
-                        <character-set>0123456789:-</character-set>
-                        <text>00:00</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>1</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>46</x>
-                        <y>10</y>
-                        <z>0</z>
-                        <width>81</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_Ring" uid="95">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>15</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="DragDrop2">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>32</x>
-                        <y>32</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_Rings" uid="96">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Rings</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>92</x>
-                        <y>32</y>
-                        <z>0</z>
-                        <width>136</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_RingsFont" uid="93">
-                    <properties>
-                        <character-width>9</character-width>
-                        <character-height>12</character-height>
-                        <character-set>0123456789</character-set>
-                        <text>999</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>1</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>84</x>
-                        <y>26</y>
-                        <z>0</z>
-                        <width>60</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_ScoreFont" uid="1035">
-                    <properties>
-                        <character-width>6</character-width>
-                        <character-height>7</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789☺☻♥♦!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?[\]^_&apos;|♣</character-set>
-                        <text>*00000000</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>52</x>
-                        <y>42</y>
-                        <z>0</z>
-                        <width>92</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_TimeFont2" uid="1037">
-                    <properties>
-                        <character-width>6</character-width>
-                        <character-height>7</character-height>
-                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789☺☻♥♦!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?[\]^_&apos;|♣</character-set>
-                        <text>00</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>128</x>
-                        <y>10</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="LinumLivesBack" uid="1038">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>16</x>
-                        <y>214</y>
-                        <z>0</z>
-                        <width>52</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="LinumLivesHud" uid="1039">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>16</x>
-                        <y>214</y>
-                        <z>0</z>
-                        <width>17</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Player_Lives_Linum" uid="1036">
-                    <properties>
-                        <character-width>9</character-width>
-                        <character-height>12</character-height>
-                        <character-set>0123456789:-</character-set>
-                        <text>4</text>
-                        <scale>1</scale>
-                        <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>34</x>
-                        <y>214</y>
-                        <z>0</z>
-                        <width>34</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TimerIco" uid="188">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>7</x>
-                        <y>9</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TimerPart2" uid="189">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>150</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>16</x>
-                        <y>15</y>
-                        <z>0</z>
-                        <width>1</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TimerPart1" uid="190">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>100</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>16</x>
-                        <y>15</y>
-                        <z>0</z>
-                        <width>4</width>
-                        <height>1</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="HUD_Time" uid="92">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>76</x>
-                        <y>16</y>
-                        <z>0</z>
-                        <width>136</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
         <layer name="HUD_Custom" sid="428739152789243">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -29491,10 +29179,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-268</x>
+                        <x>-328</x>
                         <y>-240</y>
                         <z>0</z>
-                        <width>180</width>
+                        <width>240</width>
                         <height>112</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -29510,10 +29198,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-268</x>
+                        <x>-328</x>
                         <y>-256</y>
                         <z>0</z>
-                        <width>180</width>
+                        <width>240</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -29537,7 +29225,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-268</x>
+                        <x>-324</x>
                         <y>-256</y>
                         <z>0</z>
                         <width>184</width>
@@ -29671,8 +29359,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-180</x>
-                        <y>-212</y>
+                        <x>-162</x>
+                        <y>-218</y>
                         <z>0</z>
                         <width>60</width>
                         <height>16</height>
@@ -29701,8 +29389,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-180</x>
-                        <y>-228</y>
+                        <x>-162</x>
+                        <y>-234</y>
                         <z>0</z>
                         <width>64</width>
                         <height>16</height>
@@ -29731,8 +29419,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-180</x>
-                        <y>-196</y>
+                        <x>-162</x>
+                        <y>-202</y>
                         <z>0</z>
                         <width>36</width>
                         <height>16</height>
@@ -29900,6 +29588,362 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_TimeFont" uid="94">
+                    <properties>
+                        <character-width>9</character-width>
+                        <character-height>12</character-height>
+                        <character-set>0123456789:-</character-set>
+                        <text>00:00</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>1</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-268</x>
+                        <y>-206</y>
+                        <z>0</z>
+                        <width>81</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_Ring" uid="95">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>15</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DragDrop2">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-298</x>
+                        <y>-182</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_Rings" uid="96">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Rings</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-238</x>
+                        <y>-182</y>
+                        <z>0</z>
+                        <width>136</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_RingsFont" uid="93">
+                    <properties>
+                        <character-width>9</character-width>
+                        <character-height>12</character-height>
+                        <character-set>0123456789</character-set>
+                        <text>999</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>1</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-232</x>
+                        <y>-188</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_ScoreFont" uid="1035">
+                    <properties>
+                        <character-width>6</character-width>
+                        <character-height>7</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789☺☻♥♦!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?[\]^_&apos;|♣</character-set>
+                        <text>*00000000</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-262</x>
+                        <y>-174</y>
+                        <z>0</z>
+                        <width>92</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_TimeFont2" uid="1037">
+                    <properties>
+                        <character-width>6</character-width>
+                        <character-height>7</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789☺☻♥♦!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?[\]^_&apos;|♣</character-set>
+                        <text>00</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-184</x>
+                        <y>-206</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LinumLivesBack" uid="1038">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-310</x>
+                        <y>-160</y>
+                        <z>0</z>
+                        <width>52</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LinumLivesHud" uid="1039">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-310</x>
+                        <y>-160</y>
+                        <z>0</z>
+                        <width>17</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_Lives_Linum" uid="1036">
+                    <properties>
+                        <character-width>9</character-width>
+                        <character-height>12</character-height>
+                        <character-set>0123456789:-</character-set>
+                        <text>4</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-292</x>
+                        <y>-160</y>
+                        <z>0</z>
+                        <width>34</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TimerIco" uid="188">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-324</x>
+                        <y>-204</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TimerPart2" uid="189">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>150</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-314</x>
+                        <y>-198</y>
+                        <z>0</z>
+                        <width>1</width>
+                        <height>6</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TimerPart1" uid="190">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>100</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-314</x>
+                        <y>-198</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>1</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HUD_Time" uid="92">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-254</x>
+                        <y>-198</y>
+                        <z>0</z>
+                        <width>136</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -30836,6 +30880,7 @@
                 <Score>0</Score>
                 <ScoreTemp>0</ScoreTemp>
                 <TunnelMode>0</TunnelMode>
+                <TailsMode>2</TailsMode>
                 <RingHighEffect>true</RingHighEffect>
                 <NewSpeedShoesAudio>true</NewSpeedShoesAudio>
                 <EnablePause>true</EnablePause>
@@ -30847,6 +30892,7 @@
                 <LimitTheSoundOfRings>true</LimitTheSoundOfRings>
                 <SmartWatchSupport>false</SmartWatchSupport>
                 <SonicTransition>true</SonicTransition>
+                <IntCamera>false</IntCamera>
                 <RealPhysic>false</RealPhysic>
                 <IgnoreAngleInLoops>true</IgnoreAngleInLoops>
                 <IgnoreAnimationSpeedFromVector>true</IgnoreAnimationSpeedFromVector>
@@ -30859,14 +30905,14 @@
                 <FpsFix>false</FpsFix>
                 <PauseStyle>Flicky</PauseStyle>
                 <LayoutSaver>Linum_Level</LayoutSaver>
-                <Act>0</Act>
+                <Act>1</Act>
                 <AllowPause>true</AllowPause>
                 <UsedSaveSlot>-1</UsedSaveSlot>
                 <CheckPoint>0</CheckPoint>
                 <AccessibilityMode>0</AccessibilityMode>
                 <URL_UpdateCheck>https://gitlab.com/TheStazik/linum-framework-modified/-/raw/dev/UpdateConfig.ini</URL_UpdateCheck>
                 <ShowUpdateScreen>true</ShowUpdateScreen>
-                <ModVersion>0.1.7</ModVersion>
+                <ModVersion>0.1.8</ModVersion>
                 <BuildData>13.05.23 3:10</BuildData>
             </instance-variables>
         </instance>

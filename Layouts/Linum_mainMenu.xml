@@ -1238,7 +1238,7 @@
                         <character-width>8</character-width>
                         <character-height>7</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
-                        <text>Save file</text>
+                        <text>export saves</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -1254,7 +1254,7 @@
                         <x>812</x>
                         <y>196</y>
                         <z>0</z>
-                        <width>80</width>
+                        <width>104</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1268,7 +1268,7 @@
                         <character-width>8</character-width>
                         <character-height>7</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя1234567890☺☻.,-?!:;=+()/&apos;%</character-set>
-                        <text>Load file</text>
+                        <text>import saves</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -1284,7 +1284,7 @@
                         <x>812</x>
                         <y>208</y>
                         <z>0</z>
-                        <width>80</width>
+                        <width>104</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1635,6 +1635,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <IsRotate>false</IsRotate>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
                     </behavior-instances>

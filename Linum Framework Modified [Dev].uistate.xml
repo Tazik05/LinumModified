@@ -10,24 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Linum_Continue</layout>
-        <layout order="1">Linum_PREVIEW(Temp)</layout>
-        <layout active="1" order="2">Linum_SimpleWorldsLevel</layout>
-        <layout order="3">Linum_Credits</layout>
-        <layout order="4">Linum_preloader</layout>
-        <layout order="7">Linum_Level</layout>
-        <layout order="8">ButtonSetup(android)</layout>
-        <layout order="9">Linum_SpecialStage_S16B</layout>
-        <layout order="10">TestLayout</layout>
-        <layout order="21">Linum_mainMenu</layout>
-        <layout order="24">Linum_logo</layout>
-        <layout order="25">Linum_CheckUpdate</layout>
-        <layout order="26">Linum_Pause</layout>
-        <event-sheet order="5">E_Level</event-sheet>
-        <event-sheet order="6">E_Engine</event-sheet>
-        <event-sheet order="11">Event sheet 3</event-sheet>
-        <event-sheet order="12">Event sheet 7</event-sheet>
-        <event-sheet order="22">E_mainMenu</event-sheet>
+        <layout order="0">Linum_mainMenu</layout>
+        <event-sheet order="1">E_SaveHelper</event-sheet>
+        <event-sheet active="1" order="2">E_Engine</event-sheet>
+        <event-sheet order="3">E_mainMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
         <family expanded="0" name="SolidObjects" />
@@ -50,8 +36,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/.System Objects/" />
-        <folder expanded="0" path="object-folder/.System Objects/Values/" />
+        <folder expanded="1" path="object-folder/.System Objects/" />
+        <folder expanded="1" path="object-folder/.System Objects/Values/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
         <folder expanded="0" path="object-folder/Player Objects/Shields and Misc/" />
         <folder expanded="0" path="object-folder/Level Collisions/" />
@@ -71,13 +57,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Test/" />
         <folder expanded="0" path="object-folder/manual/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="0" path="layout-folder/[ System ]/" />
-        <folder expanded="0" path="layout-folder/[ System ]/[ UI ]/" />
+        <folder expanded="1" path="layout-folder/[ System ]/" />
+        <folder expanded="1" path="layout-folder/[ System ]/[ UI ]/" />
         <folder expanded="1" path="layout-folder/[ Engine ]/" />
         <folder expanded="0" path="layout-folder/[ Tests ]/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Engine/" />
-        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
@@ -125,6 +111,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/PlayerSprite/Knux/" />
         <folder expanded="1" path="animation-folder/PlayerSprite/Amy/" />
         <folder expanded="1" path="animation-folder/PlayerSprite/Amy/GoldRing/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Amy/GoldRing/Normal/" />
+        <folder expanded="1" path="animation-folder/PlayerSprite/Amy/GoldRing/Scared/" />
         <folder expanded="1" path="animation-folder/PlayerSprite/Amy/SonicWorldDelta/" />
         <folder expanded="1" path="animation-folder/PlayerSprite/Sally/" />
         <folder expanded="1" path="animation-folder/PlayerSprite/Cream/" />

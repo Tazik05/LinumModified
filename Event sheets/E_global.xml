@@ -1180,23 +1180,129 @@
                                         <event-block sid="622669166892972">
                                             <conditions>
                                                 <condition id="-8" inverted="1" name="Compare two values" sid="863242649368261" type="System">
+                                                    <param id="0" name="First value">find(TextBoxMask.Text, &quot;Timescale&quot;) </param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="379363999349214">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="984899138978895" type="System">
+                                                            <param id="0" name="First value">float(tokenat(TextBoxMask.Text, 1, &quot; &quot;))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="289984597512744" type="Values_CMD">
+                                                            <param id="0" name="Instance variable">CanExecute</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set time scale" sid="513533332703999" type="System">
+                                                            <param id="0" name="Time scale">0.00000000000000000001</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="270677857936708" type="TextBoxMask">
+                                                            <param id="0" name="Text">&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="321898592120452">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Compare two values" sid="312717862378090" type="System">
+                                                            <param id="0" name="First value">float(tokenat(TextBoxMask.Text, 1, &quot; &quot;))</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="367669272285570" type="Values_CMD">
+                                                            <param id="0" name="Instance variable">CanExecute</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set time scale" sid="157292905960819" type="System">
+                                                            <param id="0" name="Time scale">float(tokenat(TextBoxMask.Text, 1, &quot; &quot;))</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="429518182505382" type="TextBoxMask">
+                                                            <param id="0" name="Text">&quot;&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="980141363516617">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="388528699560518" type="System">
                                                     <param id="0" name="First value">find(TextBoxMask.Text, &quot;Set Cursor&quot;)</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">-1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-13" name="Set boolean" sid="367669272285570" type="Values_CMD">
+                                                <action id="-13" name="Set boolean" sid="159823649655169" type="Values_CMD">
                                                     <param id="0" name="Instance variable">CanExecute</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action id="5" name="Set frame" sid="157292905960819" type="cursor">
+                                                <action id="5" name="Set frame" sid="176231514303600" type="cursor">
                                                     <param id="0" name="Frame number">float(tokenat(TextBoxMask.Text, 2, &quot; &quot;))</param>
                                                 </action>
-                                                <action id="0" name="Set text" sid="429518182505382" type="TextBoxMask">
+                                                <action id="0" name="Set text" sid="278294540968050" type="TextBoxMask">
                                                     <param id="0" name="Text">&quot;&quot;</param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                        <event-block sid="353330074451587">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="993684847764612" type="System">
+                                                    <param id="0" name="First value">find(TextBoxMask.Text, &quot;Ghost&quot;)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="204830973798115" type="Values_CMD">
+                                                    <param id="0" name="Instance variable">CanExecute</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="715748466901681" type="TextBoxMask">
+                                                    <param id="0" name="Text">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="141692599377796">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="956917667909168" type="Values_CMD">
+                                                            <param id="0" name="Instance variable">Ghost</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="804604724286999" type="System">
+                                                            <param id="0" name="Seconds">0</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="172814621896996" type="Values_CMD">
+                                                            <param id="0" name="Instance variable">Ghost</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="497012921360548">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="195358193705792" type="Values_CMD">
+                                                            <param id="0" name="Instance variable">Ghost</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="944684610156651" type="System">
+                                                            <param id="0" name="Seconds">0</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="269331233788107" type="Values_CMD">
+                                                            <param id="0" name="Instance variable">Ghost</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <event-block sid="959923814971265">
                                             <conditions>
@@ -2276,6 +2382,182 @@
                     <actions>
                         <action id="-1" name="Set X" sid="932319381351275" type="Sensor_Main">
                             <param id="0" name="X">Self.X-100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="668263869995573">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="665841043571489" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="637322166558475" type="Sensor_Main">
+                            <param id="0" name="X">Self.X-100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="555040186186029">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="353104676261491" type="Values_CMD">
+                            <param id="0" name="Instance variable">Ghost</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="207468786078975">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="401454605698988" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="SonicPhysics" id="14" name="Set enabled" sid="506477624262099" type="Sensor_Main">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="481757028449136" type="Sensor_Main">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="713704214528908" type="Sensor_Hitbox">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="580923284158048">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="836520240352452" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">Paused</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="965047360962694">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="219178733611577" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyUpHold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="265977439728978" type="Sensor_Main">
+                                            <param id="0" name="Y">Self.Y-(2+Values_CMD.SpeedAdd)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="736845585082515">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="925060254443070" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyDownHold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="604480238969007" type="Sensor_Main">
+                                            <param id="0" name="Y">Self.Y+(2+Values_CMD.SpeedAdd)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="699348619431386">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="547276934173857" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyRightHold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="696156946271155" type="Sensor_Main">
+                                            <param id="0" name="X">Self.X+(2+Values_CMD.SpeedAdd)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="985304299975469">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="670732750001917" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyLeftHold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="938519575257861" type="Sensor_Main">
+                                            <param id="0" name="X">Self.X-(2+Values_CMD.SpeedAdd)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="829075250049765">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="318193194055256" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyUpHold</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="574222925370065" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyDownHold</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="332809270969266" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyLeftHold</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="520713664278334" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyRightHold</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="730536157445578">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="538754876001769" type="Values_CMD">
+                                                    <param id="0" name="Instance variable">SpeedAdd</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                                <condition id="-6" name="Every X seconds" sid="408377945390192" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="550123148113823" type="Values_CMD">
+                                                    <param id="0" name="Instance variable">SpeedAdd</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="935379522923005">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="347641348860492" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyUpHold</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="822070801758703" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyDownHold</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="871835781272801" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyLeftHold</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="115934627932302" type="Values_Input">
+                                            <param id="0" name="Instance variable">KeyRightHold</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="110034479555713" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="157196672690073" type="Values_CMD">
+                                            <param id="0" name="Instance variable">SpeedAdd</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="214649880932861">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="689120359807594" type="Values_CMD">
+                            <param id="0" name="Instance variable">Ghost</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="489869724464339" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="SonicPhysics" id="14" name="Set enabled" sid="626029390934818" type="Sensor_Main">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="849478349533026" type="Sensor_Main">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="838345965195825" type="Sensor_Hitbox">
+                            <param id="0" name="Collisions">1</param>
                         </action>
                     </actions>
                 </event-block>
