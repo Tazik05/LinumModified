@@ -13834,6 +13834,142 @@
                                         </event-group>
                                         <event-group description="" sid="892751820576081" title="Yellow springs">
                                             <sub-events>
+                                                <comment>Down Right spring</comment>
+                                                <event-block sid="445542657880352">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="182109564501104" type="Sensor_ObjectUp">
+                                                            <param id="0" name="Object">SpringYellow_DownLeft</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="999348926864430" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="456282914275361" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="687693694795498" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="731849965776100" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">-Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="684212650092958" type="SpringYellow_DownRight">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="656290491704250" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Down Right spring</comment>
+                                                <event-block sid="248423160785802">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="987685005931999" type="Sensor_ObjectUp">
+                                                            <param id="0" name="Object">SpringYellow_DownRight</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="267924869781034" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="774961211422137" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="560517893231334" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="146415656585280" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="683507991903585" type="SpringYellow_DownRight">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="881801857381175" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Up Right spring</comment>
+                                                <event-block sid="910292226029921">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="328093785704572" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">SpringYellow_UpRight</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="795557286996680" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="569914424996010" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="560096530331101" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="960051364967437" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="934665306810282" type="SpringYellow_UpRight">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="295945210241623" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Up Left spring</comment>
+                                                <event-block sid="142902864099253">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="724013058067615" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">SpringYellow_UpLeft</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="221020267936287" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="388512367132681" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="364336156296336" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="724471454221855" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">-Values_Player.ForcedSpeed3</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="552606397623562" type="SpringYellow_UpLeft">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="825699982158864" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <comment>Up spring</comment>
                                                 <event-block sid="356940363464714">
                                                     <conditions>
@@ -14006,6 +14142,142 @@
                                         </event-group>
                                         <event-group description="" sid="801694634013786" title="Red springs">
                                             <sub-events>
+                                                <comment>Down right spring</comment>
+                                                <event-block sid="120982992258732">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="321781010113985" type="Sensor_ObjectUp">
+                                                            <param id="0" name="Object">SpringRed_DownLeft</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="689635317645207" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="250053814888805" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="139821345936788" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="110296569843895" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">-Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="421686567296530" type="SpringRed_DownLeft">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="138571791979317" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Down Right spring</comment>
+                                                <event-block sid="705115828224906">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="463760716159775" type="Sensor_ObjectUp">
+                                                            <param id="0" name="Object">SpringRed_DownRight</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="874952806335606" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="389631922208963" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="514781525947104" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="761443269735697" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="358688109331527" type="SpringRed_DownRight">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="616872431436904" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Up left spring</comment>
+                                                <event-block sid="327161266542535">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="338742317122452" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">SpringRed_UpLeft</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="288313205178638" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="522961255090215" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="987298648535227" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="749030403920987" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">-Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="731939192716834" type="SpringRed_UpLeft">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="153147089787401" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <comment>Up right spring</comment>
+                                                <event-block sid="129237430584351">
+                                                    <conditions>
+                                                        <condition id="0" name="On collision with another object" sid="238757971144318" type="Sensor_ObjectDown">
+                                                            <param id="0" name="Object">SpringRed_UpRight</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="277612824860096" type="Audio">
+                                                            <param id="0" name="Audio file">SFX_Spring</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;SFX_Spring&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="379141515336993" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Value">&quot;OnSpring&quot;</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="456086364910090" type="Sensor_Main">
+                                                            <param id="0" name="Vector Y">-Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action behavior="SonicPhysics" id="11" name="Set vector X" sid="785799076613280" type="Sensor_Main">
+                                                            <param id="0" name="Vector X">Values_Player.ForcedSpeed5</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="838281588945053" type="SpringRed_UpRight">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="221764802198713" type="Function">
+                                                            <param id="0" name="Name">&quot;ResetState&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <comment>Up spring</comment>
                                                 <event-block sid="104188604534452">
                                                     <conditions>

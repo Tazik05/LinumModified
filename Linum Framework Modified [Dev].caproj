@@ -9132,6 +9132,181 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="SpringRed_UpRight" sid="657659277380589">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="926943803896974">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="875010076501015" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Tazik05\Desktop\1312.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\131.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpringRed_UpLeft" sid="548161581314798">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="453477892234444">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535277923819039" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Tazik05\Desktop\1312.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\131.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpringRed_DownLeft" sid="122941684118564">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="783779899378164">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="168147016411979" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1312.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\131.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpringRed_DownRight" sid="779324774222890">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="575771668729960">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650517349616620" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Tazik05\Desktop\1312.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\131.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpringYellow_DownLeft" sid="286553969330297">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="439400319094241" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpLeft\Default\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpLeft\Default\001.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Spikes4" sid="498506402614208">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="116677111225121">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833760279364452" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\12421.png">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="obj_sign_post" sid="607062196168441">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="28" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532389719684395" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpringYellow_DownRight" sid="419955669521166">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410115977498844" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpRight\Default\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpRight\Default\001.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpringYellow_UpRight" sid="861090164392208">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="446937248893908" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpRight\Default\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpRight\Default\001.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpringYellow_UpLeft" sid="337482337680121">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="868511529158669" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpLeft\Default\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\дарк солс 228\точно последний\Animations\SpringYellow_UpLeft\Default\001.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Test">
             <object-type name="Button" sid="732215937502373">
@@ -9898,26 +10073,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Spikes4" sid="498506402614208">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="116677111225121">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833760279364452" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Tazik05\Desktop\12421.png">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="SSWLivesCounter" sid="814411030562860">
             <plugin id="Spritefont2" />
             <texture original-source="C:\Users\Tazik05\Desktop\41.png" />
@@ -10249,41 +10404,6 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Pc\Downloads\121194.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="obj_sign_post" sid="607062196168441">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="28" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="532389719684395" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -12306,13 +12426,21 @@
                 <member>Gimmick_CNZBarrel</member>
                 <member>Monitor</member>
                 <member>SpringRed_Down</member>
+                <member>SpringRed_DownLeft</member>
+                <member>SpringRed_DownRight</member>
                 <member>SpringRed_Left</member>
                 <member>SpringRed_Right</member>
                 <member>SpringRed_Up</member>
+                <member>SpringRed_UpLeft</member>
+                <member>SpringRed_UpRight</member>
                 <member>SpringYellow_Down</member>
+                <member>SpringYellow_DownLeft</member>
+                <member>SpringYellow_DownRight</member>
                 <member>SpringYellow_Left</member>
                 <member>SpringYellow_Right</member>
                 <member>SpringYellow_Up</member>
+                <member>SpringYellow_UpLeft</member>
+                <member>SpringYellow_UpRight</member>
             </members>
         </family>
         <family name="Collisions_Layer0" plugin-id="Sprite" sid="483558564121150">
@@ -12446,9 +12574,13 @@
                 <member>Solid_Layer1</member>
                 <member>SparklesEffect</member>
                 <member>SpringRed_Down</member>
+                <member>SpringRed_DownLeft</member>
+                <member>SpringRed_DownRight</member>
                 <member>SpringRed_Left</member>
                 <member>SpringRed_Right</member>
                 <member>SpringRed_Up</member>
+                <member>SpringRed_UpLeft</member>
+                <member>SpringRed_UpRight</member>
                 <member>SpringYellow_Down</member>
                 <member>SpringYellow_Left</member>
                 <member>SpringYellow_Right</member>

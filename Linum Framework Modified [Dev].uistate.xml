@@ -11,8 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">Linum_Level</layout>
+        <layout active="1" order="4">Linum_SimpleWorldsLevel</layout>
         <event-sheet order="0">E_Level</event-sheet>
-        <event-sheet active="1" order="0">E_Engine</event-sheet>
+        <event-sheet order="0">E_Engine</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,7 +24,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="Collisions_Slopes" />
         <family expanded="0" name="BalancingTriggers" />
-        <family expanded="0" name="SolidObjects" />
+        <family expanded="1" name="SolidObjects" />
         <family expanded="0" name="Collisions_Layer0" />
         <family expanded="0" name="Collisions_Layer1" />
         <family expanded="0" name="Behavior_Solid" />
@@ -34,7 +35,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="DataSelect" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="object-folder/.System Objects/" />
         <folder expanded="1" path="object-folder/.System Objects/Values/" />
         <folder expanded="0" path="object-folder/Player Objects/" />
@@ -50,7 +51,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/GUI/Logo/" />
         <folder expanded="0" path="object-folder/GUI/MenuBG/" />
         <folder expanded="0" path="object-folder/GUI/Debug/" />
-        <folder expanded="0" path="object-folder/Level Objects/" />
+        <folder expanded="1" path="object-folder/Level Objects/" />
         <folder expanded="0" path="object-folder/Level Objects/Effects and Misc/" />
         <folder expanded="0" path="object-folder/Level Objects/Engine objects/" />
         <folder expanded="0" path="object-folder/Test/" />
@@ -222,6 +223,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Gimmick_Accelerator_Right/" />
         <folder expanded="1" path="animation-folder/DisposableSpring_Yellow/" />
         <folder expanded="1" path="animation-folder/DisposableSpring_Red/" />
+        <folder expanded="1" path="animation-folder/SpringRed_UpRight/" />
+        <folder expanded="1" path="animation-folder/SpringRed_UpLeft/" />
+        <folder expanded="1" path="animation-folder/SpringRed_DownLeft/" />
+        <folder expanded="1" path="animation-folder/SpringRed_DownRight/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_DownLeft/" />
+        <folder expanded="1" path="animation-folder/Spikes4/" />
+        <folder expanded="1" path="animation-folder/obj_sign_post/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_DownRight/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_UpRight/" />
+        <folder expanded="1" path="animation-folder/SpringYellow_UpLeft/" />
         <folder expanded="1" path="animation-folder/Help1/" />
         <folder expanded="1" path="animation-folder/help11/" />
         <folder expanded="1" path="animation-folder/Help2/" />
@@ -262,7 +273,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Gimmick_CollapsingPlatform_Right_Brick4/" />
         <folder expanded="1" path="animation-folder/Spikes2/" />
         <folder expanded="1" path="animation-folder/Spikes3/" />
-        <folder expanded="1" path="animation-folder/Spikes4/" />
         <folder expanded="1" path="animation-folder/Tornado/" />
         <folder expanded="1" path="animation-folder/PauseFade/" />
         <folder expanded="1" path="animation-folder/SonicTransition/" />
@@ -274,7 +284,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/SpritesGameOver/" />
         <folder expanded="1" path="animation-folder/BG_Continue/" />
         <folder expanded="1" path="animation-folder/Text_CountGAMEOVER/" />
-        <folder expanded="1" path="animation-folder/obj_sign_post/" />
         <folder expanded="1" path="animation-folder/spr_results_name/" />
         <folder expanded="1" path="animation-folder/spr_results_through/" />
         <folder expanded="1" path="animation-folder/spr_results_time/" />
