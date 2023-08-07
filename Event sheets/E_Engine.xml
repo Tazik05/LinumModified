@@ -19,6 +19,9 @@
                 <action id="-15" name="Set visible" sid="952462863528380" type="Android_FPS">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="26" name="Set listener object" sid="320211112284868" type="Audio">
+                    <param id="0" name="Object">Sensor_Main</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="382634736551979">
@@ -7874,215 +7877,72 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" inactive="1" sid="842438861508891" title="Waterfall">
+                        <event-group description="" sid="842438861508891" title="Waterfall">
                             <sub-events>
-                                <event-block sid="944372823037551">
+                                <event-block sid="279478979159054">
                                     <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="699248544151466" type="Sensor_Main">
-                                            <param id="0" name="Object">SoundEmitterWaterfall</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="169899612462643" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Play" sid="906561855410699" type="AudioHelper">
-                                            <param id="0" name="Audio file">SFX_Waterfall</param>
-                                            <param id="1" name="Loop">1</param>
-                                            <param id="2" name="End volume">1</param>
-                                            <param id="3" name="Tag (optional)">&quot;SFX_Waterfall&quot;</param>
-                                            <param id="4" name="Fade-in time">1</param>
-                                            <param id="5" name="Start volume">&quot;-60dB&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="685275697361267">
-                                    <conditions>
-                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="301380113449290" type="Sensor_Main">
-                                            <param id="0" name="Object">SoundEmitterWaterfall</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="353045690473978" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="2" name="Stop" sid="268161543259555" type="AudioHelper">
-                                            <param id="0" name="Tag">&quot;SFX_Waterfall&quot;</param>
-                                            <param id="1" name="Fade-out">1</param>
-                                            <param id="2" name="Stop volume">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="543657326402971">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="149930330604192" type="System">
+                                        <condition id="-11" name="For Each" sid="599022514875491" type="System">
                                             <param id="0" name="Object">SoundEmitterWaterfall</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="492031104012206">
+                                        <event-block sid="289077225653135">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="686942230858333" type="System">
-                                                    <param id="0" name="First value">int(distance(SoundEmitterWaterfall.X, 0, Sensor_Main.X, 0)/4)</param>
-                                                    <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Second value">90</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="332130732575491" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="2" name="Stop" sid="565934826108509" type="AudioHelper">
-                                                    <param id="0" name="Tag">&quot;SFX_Waterfall&quot;</param>
-                                                    <param id="1" name="Fade-out">1</param>
-                                                    <param id="2" name="Stop volume">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="142852957137881">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="809562734884599" type="System">
-                                                    <param id="0" name="First value">int(distance(SoundEmitterWaterfall.X, 0, Sensor_Main.X, 0)/4)</param>
+                                                <condition id="-8" inverted="1" name="Compare two values" sid="445440550276432" type="System">
+                                                    <param id="0" name="First value">abs(distance(Sensor_Main.X, Sensor_Main.Y, SoundEmitterWaterfall.X, SoundEmitterWaterfall.Y))</param>
                                                     <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">90</param>
+                                                    <param id="2" name="Second value">400</param>
                                                 </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="295580018087815" type="System" />
+                                                <condition id="-4" name="Trigger once while true" sid="331897860665296" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="1" name="Play" sid="883903586266546" type="AudioHelper">
-                                                    <param id="0" name="Audio file">SFX_Waterfall</param>
-                                                    <param id="1" name="Loop">1</param>
-                                                    <param id="2" name="End volume">1</param>
-                                                    <param id="3" name="Tag (optional)">&quot;SFX_Waterfall&quot;</param>
-                                                    <param id="4" name="Fade-in time">1</param>
-                                                    <param id="5" name="Start volume">&quot;-60dB&quot;</param>
+                                                <action id="6" name="Stop" sid="916079526040473" type="Audio">
+                                                    <param id="0" name="Tag">&quot;SFX_SoundEmitter&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block disabled="1" sid="599958588119452">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="640083889175970" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="135679552206206" type="TestCounter">
-                                            <param id="0" name="Text">clamp((distance(Sensor_Main.X, 0, SoundEmitterWaterfall.X, 0)/48)-2,0,1)&amp;newline&amp;distance(Sensor_Main.X, 0, SoundEmitterWaterfall.X, 0)/100&amp;newline&amp;-(((Sensor_Main.X/SoundEmitterWaterfall.X)*40)-50)&amp;newline&amp;(((Sensor_Main.X/SoundEmitterWaterfall.X)*40)+50)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="378979976348296">
-                                    <conditions>
-                                        <condition id="-3" name="Is on-screen" sid="987392610706052" type="SoundEmitterWaterfall" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="25" name="Play at object" sid="881187316606992" type="Audio">
-                                            <param id="0" name="Audio file">SFX_Waterfall</param>
-                                            <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">0</param>
-                                            <param id="3" name="Object">SoundEmitterWaterfall</param>
-                                            <param id="4" name="Inner angle">360</param>
-                                            <param id="5" name="Outer angle">360</param>
-                                            <param id="6" name="Outer gain">0</param>
-                                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="320911976821505">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="596790342070728" type="System">
-                                            <param id="0" name="Object">SoundEmitterWaterfall</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="495256813264547">
+                                        <event-block sid="850336994490888">
                                             <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="221583806665784" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action disabled="1" id="25" name="Play at object" sid="142520737215821" type="Audio">
-                                                    <param id="0" name="Audio file">SFX_Waterfall</param>
-                                                    <param id="1" name="Loop">1</param>
-                                                    <param id="2" name="Volume">0</param>
-                                                    <param id="3" name="Object">SoundEmitterWaterfall</param>
-                                                    <param id="4" name="Inner angle">5</param>
-                                                    <param id="5" name="Outer angle">5</param>
-                                                    <param id="6" name="Outer gain">0</param>
-                                                    <param id="7" name="Tag (optional)">&quot;SFX_Waterfall&quot;</param>
-                                                </action>
-                                                <action id="0" name="Play" sid="140166053982100" type="Audio">
-                                                    <param id="0" name="Audio file">SFX_Waterfall</param>
-                                                    <param id="2" name="Loop">1</param>
-                                                    <param id="3" name="Volume">0</param>
-                                                    <param id="1" name="Tag (optional)">&quot;SFX_Waterfall&quot;</param>
-                                                </action>
-                                                <action disabled="1" id="26" name="Set listener object" sid="216426202703240" type="Audio">
-                                                    <param id="0" name="Object">Sensor_Main</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="160694030520094">
-                                            <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="148652143476636" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action disabled="1" id="25" name="Play at object" sid="526502450890021" type="Audio">
-                                                    <param id="0" name="Audio file">SFX_Waterfall</param>
-                                                    <param id="1" name="Loop">1</param>
-                                                    <param id="2" name="Volume">0</param>
-                                                    <param id="3" name="Object">SoundEmitterWaterfall</param>
-                                                    <param id="4" name="Inner angle">5</param>
-                                                    <param id="5" name="Outer angle">5</param>
-                                                    <param id="6" name="Outer gain">0</param>
-                                                    <param id="7" name="Tag (optional)">&quot;SFX_Waterfall&quot;</param>
-                                                </action>
-                                                <action id="0" name="Play" sid="643664925452748" type="Audio">
-                                                    <param id="0" name="Audio file">SFX_Waterfall</param>
-                                                    <param id="2" name="Loop">1</param>
-                                                    <param id="3" name="Volume">0</param>
-                                                    <param id="1" name="Tag (optional)">&quot;SFX_Waterfall&quot;</param>
-                                                </action>
-                                                <action disabled="1" id="26" name="Set listener object" sid="494262852037173" type="Audio">
-                                                    <param id="0" name="Object">Sensor_Main</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="607079996178231">
-                                            <conditions>
-                                                <condition id="-3" inverted="1" name="Is on-screen" sid="233219206009837" type="SoundEmitterWaterfall" />
-                                                <condition id="-4" name="Trigger once while true" sid="841805683618396" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="6" name="Stop" sid="649364823846697" type="Audio">
-                                                    <param id="0" name="Tag">&quot;SFX_Waterfall&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="618363516655046">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="670811473165893" type="System">
-                                                    <param id="0" name="First value">Sensor_Main.X</param>
+                                                <condition id="-8" name="Compare two values" sid="769672473789421" type="System">
+                                                    <param id="0" name="First value">abs(distance(Sensor_Main.X, Sensor_Main.Y, SoundEmitterWaterfall.X, SoundEmitterWaterfall.Y))</param>
                                                     <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">SoundEmitterWaterfall.X</param>
+                                                    <param id="2" name="Second value">400</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="3" name="Set volume" sid="359217388872966" type="Audio">
-                                                    <param id="0" name="Tag">&quot;SFX_Waterfall&quot;</param>
-                                                    <param id="1" name="dB">(((Sensor_Main.X/SoundEmitterWaterfall.X)*40)-50)</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="708331472652911">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="488453824312689" type="System">
-                                                    <param id="0" name="First value">Sensor_Main.X</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Second value">SoundEmitterWaterfall.X</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="3" name="Set volume" sid="484398105774106" type="Audio">
-                                                    <param id="0" name="Tag">&quot;SFX_Waterfall&quot;</param>
-                                                    <param id="1" name="dB">-(((Sensor_Main.X/SoundEmitterWaterfall.X)*40)-50)</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="683395789992550">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="402796395071014" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="6" name="Stop" sid="357518873590711" type="Audio">
+                                                            <param id="0" name="Tag">&quot;SFX_SoundEmitter&quot;</param>
+                                                        </action>
+                                                        <action id="28" name="Play at object (by name)" sid="468627972123829" type="Audio">
+                                                            <param id="0" name="Folder">0</param>
+                                                            <param id="1" name="Audio file name">SoundEmitterWaterfall.Play</param>
+                                                            <param id="2" name="Loop">1</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="4" name="Object">SoundEmitterWaterfall</param>
+                                                            <param id="5" name="Inner angle">360</param>
+                                                            <param id="6" name="Outer angle">360</param>
+                                                            <param id="7" name="Outer gain">0</param>
+                                                            <param id="8" name="Tag (optional)">&quot;SFX_SoundEmitter&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="263230199250757">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="3" name="Set volume" sid="975378034239375" type="Audio">
+                                                            <param id="0" name="Tag">&quot;SFX_SoundEmitter&quot;</param>
+                                                            <param id="1" name="dB">-(abs(distance(Sensor_Main.X, Sensor_Main.Y, SoundEmitterWaterfall.X, SoundEmitterWaterfall.Y))/22)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
