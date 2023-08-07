@@ -11887,14 +11887,6 @@
                                                             <param id="0" name="Visibility">0</param>
                                                         </action>
                                                     </actions>
-                                                    <sub-events>
-                                                        <event-block sid="722809297239922">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="114894461614104" type="System" />
-                                                            </conditions>
-                                                            <actions />
-                                                        </event-block>
-                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="583686561123385">
                                                     <conditions>
@@ -12090,6 +12082,65 @@
                                                                     </actions>
                                                                 </event-block>
                                                             </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block bookmark="1" sid="864608033968799">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="490694372641657" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Skidding&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="766097423842771">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="970542494379060" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="286333067803490" type="TailsBack">
+                                                                    <param id="0" name="X">Sensor_Hitbox.X+3</param>
+                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="844851017745127">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="893487686855858" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="800506099632448" type="TailsBack">
+                                                                    <param id="0" name="X">Sensor_Hitbox.X-3</param>
+                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="815863156620737">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="309805186814528" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="918985164649723" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="941623348852584" type="TailsBack">
+                                                                    <param id="0" name="Animation">&quot;jumping&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-8" name="Set angle" sid="794189258865700" type="TailsBack">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
