@@ -114,12 +114,6 @@
                         <action id="-16" name="Wait" sid="206295037527338" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
-                        <action id="0" name="Play" sid="608468639558119" type="BetterAudio">
-                            <param id="0" name="Audio file">MUS_Credits</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;MUS_Credits&quot;</param>
-                        </action>
                         <action id="-12" name="Set group active" sid="266553504215930" type="System">
                             <param id="0" name="Group name">&quot;ScrollUP&quot;</param>
                             <param id="1" name="State">1</param>
@@ -129,9 +123,6 @@
                 </event-block>
                 <event-block sid="934063008576817">
                     <conditions>
-                        <condition id="0" name="On ended" sid="895306691917400" type="BetterAudio">
-                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
-                        </condition>
                         <condition id="-14" name="Pick by unique ID" sid="652564418051122" type="CreditsText">
                             <param id="0" name="Unique ID">1661</param>
                         </condition>
@@ -220,18 +211,9 @@
             <sub-events>
                 <event-block sid="628771381839060">
                     <conditions>
-                        <condition id="5" name="Is tag playing" sid="313789825528470" type="BetterAudio">
-                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
-                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="709390967198372" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="20" name="Add analyser effect" sid="260677803959466" type="BetterAudio">
-                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
-                            <param id="1" name="FFT size">2^12</param>
-                            <param id="2" name="Smoothing">0.7</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="645052208515366">
                     <conditions>
@@ -261,11 +243,7 @@
                     </sub-events>
                 </event-block>
                 <event-block sid="493850008578858">
-                    <conditions>
-                        <condition id="5" name="Is tag playing" sid="877082610314742" type="BetterAudio">
-                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions />
                     <sub-events>
                         <event-block sid="488797063236314">
@@ -275,31 +253,6 @@
                                 </condition>
                             </conditions>
                             <actions />
-                            <sub-events>
-                                <event-block sid="604168775523606">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="866634127158453" type="System">
-                                            <param id="0" name="First value">MusicPlayer_Visualiser.OldFreqBin</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Second value">abs(floor(abs(BetterAudio.AnalyserFreqBinAt(&quot;Music&quot;,0,MusicPlayer_Visualiser.FreqBin))/10))</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-6" name="Set height" sid="243912048520365" type="MusicPlayer_Visualiser">
-                                            <param id="0" name="Height">125+((BetterAudio.AnalyserFreqBinAt(&quot;MUS_Credits&quot;,0,Self.FreqBin)*2.2))</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="765035770294471">
-                                    <conditions />
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="729961939347599" type="MusicPlayer_Visualiser">
-                                            <param id="0" name="Instance variable">OldFreqBin</param>
-                                            <param id="1" name="Value">abs(floor(abs(BetterAudio.AnalyserFreqBinAt(&quot;MUS_Credits&quot;,0,Self.FreqBin))/8))</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

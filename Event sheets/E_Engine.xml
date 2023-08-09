@@ -12495,33 +12495,86 @@
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
-                                                                <event-block sid="142388368202524">
+                                                                <event-block sid="678749133515146">
                                                                     <conditions>
-                                                                        <condition id="-7" name="Compare instance variable" sid="441861664245952" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                        <condition id="-7" name="Compare instance variable" sid="604578877653220" type="Global_Settings">
+                                                                            <param id="0" name="Instance variable">TailsMode</param>
                                                                             <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Value">&quot;left&quot;</param>
+                                                                            <param id="2" name="Value">1</param>
                                                                         </condition>
                                                                     </conditions>
-                                                                    <actions>
-                                                                        <action id="-8" name="Set angle" sid="605925456067788" type="TailsBack">
-                                                                            <param id="0" name="Angle">anglelerp(Self.Angle,-clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
-                                                                        </action>
-                                                                    </actions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="817482797548365">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="848527029937318" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-8" name="Set angle" sid="854998465967859" type="TailsBack">
+                                                                                    <param id="0" name="Angle">anglelerp(Self.Angle,-clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="263015511412744">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="516655440957238" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-8" name="Set angle" sid="836473047412479" type="TailsBack">
+                                                                                    <param id="0" name="Angle">anglelerp(Self.Angle,clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
-                                                                <event-block sid="748333487482624">
+                                                                <event-block sid="446447199879602">
                                                                     <conditions>
-                                                                        <condition id="-7" name="Compare instance variable" sid="575278106869219" type="Values_Player">
-                                                                            <param id="0" name="Instance variable">Direction</param>
+                                                                        <condition id="-7" name="Compare instance variable" sid="214075762436263" type="Global_Settings">
+                                                                            <param id="0" name="Instance variable">TailsMode</param>
                                                                             <param id="1" name="Comparison">0</param>
-                                                                            <param id="2" name="Value">&quot;right&quot;</param>
+                                                                            <param id="2" name="Value">2</param>
                                                                         </condition>
                                                                     </conditions>
-                                                                    <actions>
-                                                                        <action id="-8" name="Set angle" sid="384001489892179" type="TailsBack">
-                                                                            <param id="0" name="Angle">anglelerp(Self.Angle,clamp(round((Sensor_Main.SonicPhysics.VectorY/2.1)-50),-50,90),0.1)</param>
-                                                                        </action>
-                                                                    </actions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <comment>by TaiKy</comment>
+                                                                        <event-block sid="743974047415585">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="741267311616446" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-8" name="Set angle" sid="545094116612979" type="TailsBack">
+                                                                                    <param id="0" name="Angle">angle(0,0, -Sensor_Main.SonicPhysics.VectorX,-Sensor_Main.SonicPhysics.VectorY)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="545406256710416">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="870552727700439" type="Values_Player">
+                                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-8" name="Set angle" sid="829591795102683" type="TailsBack">
+                                                                                    <param id="0" name="Angle">angle(0,0, -Sensor_Main.SonicPhysics.VectorX,-Sensor_Main.SonicPhysics.VectorY)+180</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
