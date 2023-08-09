@@ -31048,7 +31048,7 @@
                 <UsedSaveSlot>-1</UsedSaveSlot>
                 <CheckPoint>0</CheckPoint>
                 <AccessibilityMode>0</AccessibilityMode>
-                <URL_UpdateCheck>https://gitlab.com/TheStazik/linum-framework-modified/-/raw/dev/UpdateConfig.ini</URL_UpdateCheck>
+                <URL_UpdateCheck>https://raw.githubusercontent.com/Tazik05/LinumModified/dev/UpdateConfig.ini</URL_UpdateCheck>
                 <ShowUpdateScreen>true</ShowUpdateScreen>
                 <ModVersion>0.1.8</ModVersion>
                 <BuildData>13.05.23 3:10</BuildData>
