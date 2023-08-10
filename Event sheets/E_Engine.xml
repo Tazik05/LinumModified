@@ -12114,12 +12114,69 @@
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
+                                                <event-block bookmark="1" sid="717627122292482">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="591235282477301" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Skidding&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="289857926182633">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="152323919010077" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="177529241149158" type="TailsBack">
+                                                                    <param id="0" name="X">Sensor_Hitbox.X+3</param>
+                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="754999068293490">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="362334009206451" type="Values_Player">
+                                                                    <param id="0" name="Instance variable">Direction</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="903761604117214" type="TailsBack">
+                                                                    <param id="0" name="X">Sensor_Hitbox.X-3</param>
+                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="377106073283253">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="415236361475795" type="TailsBack">
+                                                                    <param id="0" name="Visibility">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="924273498807302" type="TailsBack">
+                                                                    <param id="0" name="Animation">&quot;jumping&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-8" name="Set angle" sid="665127515412900" type="TailsBack">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
                                                 <event-block bookmark="1" sid="864608033968799">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="490694372641657" type="Values_Player">
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Skidding&quot;</param>
+                                                            <param id="2" name="Value">&quot;HangingIdle&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
@@ -12134,8 +12191,8 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-3" name="Set position" sid="286333067803490" type="TailsBack">
-                                                                    <param id="0" name="X">Sensor_Hitbox.X+3</param>
-                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                    <param id="0" name="X">Sensor_Hitbox.X+10</param>
+                                                                    <param id="1" name="Y">Sensor_Hitbox.Y-2</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -12149,8 +12206,8 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-3" name="Set position" sid="800506099632448" type="TailsBack">
-                                                                    <param id="0" name="X">Sensor_Hitbox.X-3</param>
-                                                                    <param id="1" name="Y">Sensor_Hitbox.Y+8</param>
+                                                                    <param id="0" name="X">Sensor_Hitbox.X-10</param>
+                                                                    <param id="1" name="Y">Sensor_Hitbox.Y-2</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
