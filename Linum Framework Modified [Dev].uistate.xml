@@ -10,15 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Linum_Continue</layout>
-        <layout order="1">Linum_SimpleWorldsLevel</layout>
-        <layout order="5">Linum_Level</layout>
-        <layout order="6">Linum_SpecialStage_S16B</layout>
-        <layout order="7">Linum_Pause</layout>
-        <layout active="1" order="8">Linum_preloader</layout>
-        <event-sheet order="2">E_Level</event-sheet>
-        <event-sheet order="3">E_global</event-sheet>
-        <event-sheet order="4">E_Engine</event-sheet>
+        <layout order="1">Linum_Continue</layout>
+        <layout order="2">Linum_SimpleWorldsLevel</layout>
+        <layout order="0">Linum_Level</layout>
+        <event-sheet active="1" order="0">E_Engine</event-sheet>
+        <event-sheet order="3">E_Level</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

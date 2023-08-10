@@ -720,11 +720,40 @@
                                     <param id="0" name="Instance variable">SpriteOffset</param>
                                     <param id="1" name="Value">((sin(Sensor_Main.SonicPhysics.SurfaceAngle*4-90)+1)/2)*Values_Player.SpriteBaseOffset</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="551820986180018" type="PlayerSprite">
-                                    <param id="0" name="X">(Sensor_Main.X-sin(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset)-Values_Player.SpriteOffsetXFix</param>
-                                    <param id="1" name="Y">(Sensor_Main.Y+cos(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset)-Values_Player.SpriteOffsetYFix</param>
+                                <action disabled="1" id="-3" name="Set position" sid="268625724558156" type="Active">
+                                    <param id="0" name="X">Sensor_Main.X</param>
+                                    <param id="1" name="Y">Sensor_Main.Y</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <comment>Lazy fix, yeah</comment>
+                                <event-block sid="298717537862099">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="521231997309142" type="Values_Player">
+                                            <param id="0" name="Instance variable">UseSinCos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="551820986180018" type="PlayerSprite">
+                                            <param id="0" name="X">(Sensor_Main.X-sin(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset)-Values_Player.SpriteOffsetXFix</param>
+                                            <param id="1" name="Y">(Sensor_Main.Y+cos(Sensor_Main.SonicPhysics.SurfaceAngle)*Values_Player.SpriteOffset)-Values_Player.SpriteOffsetYFix</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="767713392786189">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="283821281744610" type="Values_Player">
+                                            <param id="0" name="Instance variable">UseSinCos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="560350734150030" type="PlayerSprite">
+                                            <param id="0" name="X">Sensor_Main.X</param>
+                                            <param id="1" name="Y">Sensor_Main.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Triggering of ledge sensors</comment>
                         <event-block sid="686974246408816">
@@ -4167,7 +4196,7 @@
                                                                             </conditions>
                                                                             <actions />
                                                                             <sub-events>
-                                                                                <event-block sid="600840917807230">
+                                                                                <event-block bookmark="1" sid="600840917807230">
                                                                                     <conditions>
                                                                                         <condition id="-8" name="Compare two values" sid="932822899226904" type="System">
                                                                                             <param id="0" name="First value">Sensor_Main.SonicPhysics.VectorY</param>
@@ -12126,9 +12155,7 @@
                                                             </actions>
                                                         </event-block>
                                                         <event-block sid="815863156620737">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="309805186814528" type="System" />
-                                                            </conditions>
+                                                            <conditions />
                                                             <actions>
                                                                 <action id="-15" name="Set visible" sid="918985164649723" type="TailsBack">
                                                                     <param id="0" name="Visibility">1</param>
@@ -15086,6 +15113,17 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="139763704773154">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="684144124013699" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="559002934720872" type="Values_Player">
+                                                    <param id="0" name="Instance variable">UseSinCos</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="800890342324120">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="538078620261821" type="Values_Player">
@@ -15130,7 +15168,12 @@
                                             <param id="0" name="Instance variable">InTunnel</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="879452800646758" type="Values_Player">
+                                            <param id="0" name="Instance variable">UseSinCos</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="475343802293433">
                                             <conditions>

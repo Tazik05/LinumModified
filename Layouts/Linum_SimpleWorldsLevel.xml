@@ -10408,6 +10408,7 @@
                         <Drowning>false</Drowning>
                         <DropDash>false</DropDash>
                         <DropDashState>0</DropDashState>
+                        <UseSinCos>true</UseSinCos>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

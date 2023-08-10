@@ -26201,6 +26201,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Active" uid="1664">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48</x>
+                        <y>-1648</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -27360,6 +27382,7 @@
                         <Drowning>false</Drowning>
                         <DropDash>false</DropDash>
                         <DropDashState>0</DropDashState>
+                        <UseSinCos>true</UseSinCos>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -28004,8 +28027,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5274</x>
-                        <y>2014</y>
+                        <x>3952</x>
+                        <y>336</y>
                         <z>0</z>
                         <width>20</width>
                         <height>40</height>
