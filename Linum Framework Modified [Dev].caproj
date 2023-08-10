@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra (edited by XYZT)" id="BetterAudio" version="1">BetterAudio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Francesco Iafulli (aka fiaful)" id="Comment" version="1">Comment</plugin>
@@ -7303,15 +7304,15 @@
                             <collision-poly>
                                 <point x="0" y="0.166667" />
                                 <point x="0.21875" y="0.166667" />
-                                <point x="0.300781" y="0.184896" />
-                                <point x="0.363282" y="0.216146" />
-                                <point x="0.402344" y="0.251953" />
-                                <point x="0.425782" y="0.286459" />
-                                <point x="0.425782" y="0.333333" />
-                                <point x="0.398438" y="0.380208" />
-                                <point x="0.339844" y="0.425781" />
-                                <point x="0.285156" y="0.476562" />
-                                <point x="0.258072" y="0.533651" />
+                                <point x="0.304687" y="0.184896" />
+                                <point x="0.367188" y="0.216146" />
+                                <point x="0.40625" y="0.251953" />
+                                <point x="0.429688" y="0.286459" />
+                                <point x="0.429688" y="0.335937" />
+                                <point x="0.406251" y="0.377604" />
+                                <point x="0.339844" y="0.428385" />
+                                <point x="0.289062" y="0.476562" />
+                                <point x="0.258072" y="0.536255" />
                                 <point x="0.257813" y="0.630208" />
                                 <point x="0.285156" y="0.6875" />
                                 <point x="0.328125" y="0.736979" />
@@ -12359,6 +12360,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BetterAudio" sid="599577659603893">
+            <plugin id="BetterAudio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -12732,6 +12736,20 @@
             <properties>
                 <client-id>906926881151016981</client-id>
                 <preview_mode>True</preview_mode>
+            </properties>
+        </global-instance>
+        <global-instance type="BetterAudio" uid="1719">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
     </global-instances>

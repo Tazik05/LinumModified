@@ -64,6 +64,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="951594121256183">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="346825669350729" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="795580713524883" type="TestCounter">
+                    <param id="0" name="Text">Sensor_Hitbox.angle</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="519266600902172">
             <conditions>
                 <condition id="0" name="On key pressed" sid="991324746136691" type="Keyboard">

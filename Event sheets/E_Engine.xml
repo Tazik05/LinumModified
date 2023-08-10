@@ -4889,7 +4889,7 @@
                                                                         <action behavior="SonicPhysics" id="12" name="Set vector Y" sid="813463375466844" type="Sensor_Main">
                                                                             <param id="0" name="Vector Y">clamp(int(Values_Player.VectorYSpeedSaver), 5, 500)</param>
                                                                         </action>
-                                                                        <action id="0" name="Set text" sid="926198890189555" type="TestCounter">
+                                                                        <action disabled="1" id="0" name="Set text" sid="926198890189555" type="TestCounter">
                                                                             <param id="0" name="Text">clamp(int(Values_Player.VectorYSpeedSaver), 5, 500)</param>
                                                                         </action>
                                                                     </actions>
@@ -12018,15 +12018,15 @@
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">&quot;LookingUp&quot;</param>
                                                         </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="708362303896362" type="Values_Player">
-                                                            <param id="0" name="Instance variable">State</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Waiting&quot;</param>
-                                                        </condition>
                                                         <condition id="-7" name="Compare instance variable" sid="698207797748454" type="Values_Player">
                                                             <param id="0" name="Instance variable">State</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">&quot;Crouching&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="708362303896362" type="Values_Player">
+                                                            <param id="0" name="Instance variable">State</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Waiting&quot;</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions />
@@ -18768,7 +18768,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="257373700463545">
+        <event-block disabled="1" sid="257373700463545">
             <conditions>
                 <condition id="-1" name="Every tick" sid="214880467207490" type="System" />
             </conditions>

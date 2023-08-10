@@ -4,81 +4,81 @@
     <name>Event sheet 7</name>
     <events>
         <include>E_global</include>
-        <event-block sid="397528673637431">
+        <event-block sid="296363879380043">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="597632020404575" type="System" />
+                <condition id="-2" name="On start of layout" sid="329813619150438" type="System" />
             </conditions>
             <actions>
-                <action id="-12" name="Set group active" sid="790141282577630" type="System">
+                <action id="-12" name="Set group active" sid="348878305112531" type="System">
                     <param id="0" name="Group name">&quot;ScrollUP&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="943733077268564" type="CreditsText">
+                <action id="-15" name="Set visible" sid="801096211754246" type="CreditsText">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action behavior="Rotate" id="0" name="Set speed" sid="726650866052154" type="Logo">
+                <action behavior="Rotate" id="0" name="Set speed" sid="190174787517564" type="Logo">
                     <param id="0" name="Speed">240</param>
                 </action>
-                <action behavior="Rotate" id="1" name="Set acceleration" sid="205047594270525" type="Logo">
+                <action behavior="Rotate" id="1" name="Set acceleration" sid="282984865342955" type="Logo">
                     <param id="0" name="Acceleration">-85</param>
                 </action>
-                <action id="-15" name="Set visible" sid="532468995108102" type="Logo">
+                <action id="-15" name="Set visible" sid="155853024963377" type="Logo">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action behavior="LiteTween" id="10" name="Start" sid="260692930761771" type="Logo">
+                <action behavior="LiteTween" id="10" name="Start" sid="982509259633510" type="Logo">
                     <param id="0" name="Start Mode">0</param>
                     <param id="1" name="Force use current">0</param>
                 </action>
-                <action id="0" name="Call function" sid="891640312349621" type="Function">
+                <action id="0" name="Call function" sid="560240819271033" type="Function">
                     <param id="0" name="Name">&quot;Transition&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Out&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="267972771247710" title="LogoCredits">
+        <event-group description="" sid="449662066347223" title="LogoCredits">
             <sub-events>
-                <event-block sid="186464163192413">
+                <event-block sid="423348508481524">
                     <conditions>
-                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="814691946519189" type="Logo" />
-                        <condition id="-8" name="Compare two values" sid="445005575817023" type="System">
+                        <condition behavior="LiteTween" id="0" inverted="1" name="Is active" sid="566013465390426" type="Logo" />
+                        <condition id="-8" name="Compare two values" sid="245006735392466" type="System">
                             <param id="0" name="First value">Logo.Rotate.Speed</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">60</param>
                         </condition>
-                        <condition id="-13" name="Is between angles" sid="709916151961236" type="Logo">
+                        <condition id="-13" name="Is between angles" sid="335038616050185" type="Logo">
                             <param id="0" name="First angle">1</param>
                             <param id="1" name="Second angle">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Rotate" id="0" name="Set speed" sid="621606397885156" type="Logo">
+                        <action behavior="Rotate" id="0" name="Set speed" sid="472497660522792" type="Logo">
                             <param id="0" name="Speed">0</param>
                         </action>
-                        <action behavior="Rotate" id="1" name="Set acceleration" sid="754600478405425" type="Logo">
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="184770409059066" type="Logo">
                             <param id="0" name="Acceleration">0</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="571484085768268" type="Logo">
+                        <action id="-8" name="Set angle" sid="438832612723394" type="Logo">
                             <param id="0" name="Angle">0</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="275692251019742">
+                        <event-block sid="843073332950014">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="387073195787349" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="796687304815463" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="500064610490861" type="ArtByAyleenSeraph">
+                                <action id="-15" name="Set visible" sid="144562141014404" type="ArtByAyleenSeraph">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="955254457005518" type="ArtByAyleenSeraph" />
-                                <action id="-16" name="Wait" sid="781195741784724" type="System">
+                                <action behavior="Fade" id="1" name="Start fade" sid="204698528578199" type="ArtByAyleenSeraph" />
+                                <action id="-16" name="Wait" sid="304792950818298" type="System">
                                     <param id="0" name="Seconds">0.35</param>
                                 </action>
-                                <action behavior="LiteTween3" id="10" name="Start" sid="201736250707120" type="Logo">
+                                <action behavior="LiteTween3" id="10" name="Start" sid="648609916407664" type="Logo">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
-                                <action behavior="LiteTween" id="10" name="Start" sid="270721910642623" type="Logo2">
+                                <action behavior="LiteTween" id="10" name="Start" sid="948982549714060" type="Logo2">
                                     <param id="0" name="Start Mode">0</param>
                                     <param id="1" name="Force use current">0</param>
                                 </action>
@@ -86,119 +86,128 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="250023230748335">
+                <event-block sid="520252395657988">
                     <conditions>
-                        <condition behavior="LiteTween" id="4" name="On tween end" sid="697489389104801" type="Logo2" />
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="454082759118371" type="Logo2" />
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="559737421060399" type="LogoText">
+                        <action id="-15" name="Set visible" sid="812799458327045" type="LogoText">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="108824062767955" type="LogoText">
+                        <action behavior="LiteTween" id="10" name="Start" sid="859477041835746" type="LogoText">
                             <param id="0" name="Start Mode">0</param>
                             <param id="1" name="Force use current">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="611654875266431">
+                <event-block sid="879978102315996">
                     <conditions>
-                        <condition behavior="LiteTween" id="4" name="On tween end" sid="306386768387806" type="LogoText" />
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="747851783166144" type="LogoText" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="417262178663029" type="System">
+                        <action id="-16" name="Wait" sid="316304742721878" type="System">
                             <param id="0" name="Seconds">2.25</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="301328096353529" type="TransitionIn">
+                        <action id="-15" name="Set visible" sid="607724283671645" type="TransitionIn">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="206295037527338" type="System">
+                        <action id="-16" name="Wait" sid="716764415555231" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
-                        <action id="-12" name="Set group active" sid="266553504215930" type="System">
+                        <action id="0" name="Play" sid="655042112962164" type="BetterAudio">
+                            <param id="0" name="Audio file">MUS_Credits</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;MUS_Credits&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="131131037852553" type="System">
                             <param id="0" name="Group name">&quot;ScrollUP&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="941537174668273" type="HideLogo2" />
+                        <action id="-9" name="Destroy" sid="278009674091504" type="HideLogo2" />
                     </actions>
                 </event-block>
-                <event-block sid="934063008576817">
+                <event-block sid="963483416927689">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="652564418051122" type="CreditsText">
+                        <condition id="0" name="On ended" sid="309672065115700" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="320229458840144" type="CreditsText">
                             <param id="0" name="Unique ID">1661</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="969972715989459" type="CreditsText">
+                        <condition id="-2" name="Compare Y" sid="836122479121352" type="CreditsText">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="Y co-ordinate">120</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="932474688540637" type="Function">
+                        <action id="0" name="Call function" sid="433870374591627" type="Function">
                             <param id="0" name="Name">&quot;Transition&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
                         </action>
-                        <action id="-16" name="Wait" sid="579918089962418" type="System">
+                        <action id="-16" name="Wait" sid="168353688822241" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="512992109215174" type="System">
+                        <action id="-2" name="Go to layout" sid="765406180795618" type="System">
                             <param id="0" name="Layout">Linum_mainMenu</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="582231131818443" title="ScrollUP">
+        <event-group description="" inactive="1" sid="825463039086255" title="ScrollUP">
             <sub-events>
-                <event-block sid="274224967960547">
+                <event-block sid="348267495172459">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="380233759994231" type="System">
+                        <condition id="-6" name="Every X seconds" sid="272939765371030" type="System">
                             <param id="0" name="Interval (seconds)">0.09</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="458236279454284">
+                        <event-block sid="292149411466265">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="936976830340295" type="CreditsText">
+                                <condition id="-14" name="Pick by unique ID" sid="635349752607754" type="CreditsText">
                                     <param id="0" name="Unique ID">1661</param>
                                 </condition>
-                                <condition id="-2" inverted="1" name="Compare Y" sid="260999131439176" type="CreditsText">
+                                <condition id="-2" inverted="1" name="Compare Y" sid="748397211482914" type="CreditsText">
                                     <param id="0" name="Comparison">2</param>
                                     <param id="1" name="Y co-ordinate">120</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="458543353957272" type="CreditsText">
+                                <action id="-2" name="Set Y" sid="144435335732278" type="CreditsText">
                                     <param id="0" name="Y">Self.Y-1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="730479159056713">
+                        <event-block sid="210863975967647">
                             <conditions>
-                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="682628437272581" type="CreditsText">
+                                <condition id="-14" inverted="1" name="Pick by unique ID" sid="540784022531437" type="CreditsText">
                                     <param id="0" name="Unique ID">1661</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="956409286515730" type="CreditsText">
+                                <action id="-2" name="Set Y" sid="590813789274623" type="CreditsText">
                                     <param id="0" name="Y">Self.Y-1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="119096279119205">
+                        <event-block sid="355140896967476">
                             <conditions>
-                                <condition id="-2" inverted="1" name="Compare Y" sid="685796560925547" type="Logo">
+                                <condition id="-2" inverted="1" name="Compare Y" sid="233373174378247" type="Logo">
                                     <param id="0" name="Comparison">2</param>
                                     <param id="1" name="Y co-ordinate">34</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Set Y" sid="985474479158263" type="Logo">
+                                <action id="-2" name="Set Y" sid="485338708328780" type="Logo">
                                     <param id="0" name="Y">Self.Y-1</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="996184052301625" type="Logo2">
+                                <action id="-2" name="Set Y" sid="817820549933428" type="Logo2">
                                     <param id="0" name="Y">Self.Y-1</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="110014039475115" type="LogoText">
+                                <action id="-2" name="Set Y" sid="576666284786487" type="LogoText">
                                     <param id="0" name="Y">Self.Y-1</param>
                                 </action>
                             </actions>
@@ -207,34 +216,43 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="code by GeorgeZaharia" sid="951081567538945" title="Audio visualiser">
+        <event-group description="code by GeorgeZaharia" sid="202809123734444" title="Audio visualiser">
             <sub-events>
-                <event-block sid="628771381839060">
+                <event-block sid="775630276019423">
                     <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="709390967198372" type="System" />
+                        <condition id="5" name="Is tag playing" sid="651312843816976" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="645679259617332" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="20" name="Add analyser effect" sid="518457186545598" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
+                            <param id="1" name="FFT size">2^12</param>
+                            <param id="2" name="Smoothing">0.7</param>
+                        </action>
+                    </actions>
                 </event-block>
-                <event-block sid="645052208515366">
+                <event-block sid="456701821734765">
                     <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="724965538631994" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="118255869674131" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="162169533416122">
+                        <event-block sid="799408652543499">
                             <conditions>
-                                <condition id="-12" name="Repeat" sid="548164206990344" type="System">
+                                <condition id="-12" name="Repeat" sid="573047840931040" type="System">
                                     <param id="0" name="Count">48</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="860926386298132" type="System">
+                                <action id="-3" name="Create object" sid="543934184570844" type="System">
                                     <param id="0" name="Object to create">MusicPlayer_Visualiser</param>
                                     <param id="1" name="Layer">&quot;Credits_MusicVisualiser&quot;</param>
                                     <param id="2" name="X">loopindex*9</param>
                                     <param id="3" name="Y">244</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="646010269376561" type="MusicPlayer_Visualiser">
+                                <action id="-10" name="Set value" sid="698420593150206" type="MusicPlayer_Visualiser">
                                     <param id="0" name="Instance variable">FreqBin</param>
                                     <param id="1" name="Value">loopindex</param>
                                 </action>
@@ -242,51 +260,158 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="493850008578858">
-                    <conditions />
+                <event-block sid="138051571735855">
+                    <conditions>
+                        <condition id="5" name="Is tag playing" sid="960757807921883" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="488797063236314">
+                        <event-block sid="466592143872628">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="656407849566692" type="System">
+                                <condition id="-11" name="For Each" sid="827291570427641" type="System">
                                     <param id="0" name="Object">MusicPlayer_Visualiser</param>
                                 </condition>
                             </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="852057481251382">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="903387739305053" type="System">
+                                            <param id="0" name="First value">MusicPlayer_Visualiser.OldFreqBin</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">abs(floor(abs(BetterAudio.AnalyserFreqBinAt(&quot;Music&quot;,0,MusicPlayer_Visualiser.FreqBin))/10))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-6" name="Set height" sid="658963205429580" type="MusicPlayer_Visualiser">
+                                            <param id="0" name="Height">125+((BetterAudio.AnalyserFreqBinAt(&quot;MUS_Credits&quot;,0,Self.FreqBin)*2.2))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="684870559310354">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="147067053636273" type="MusicPlayer_Visualiser">
+                                            <param id="0" name="Instance variable">OldFreqBin</param>
+                                            <param id="1" name="Value">abs(floor(abs(BetterAudio.AnalyserFreqBinAt(&quot;MUS_Credits&quot;,0,Self.FreqBin))/8))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="847628618348501">
+                <event-block sid="623144297406846">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="232698294752963" type="System">
+                        <condition id="-11" name="For Each" sid="290551420827725" type="System">
                             <param id="0" name="Object">MusicPlayer_Visualiser</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="334500837771466">
+                        <event-block sid="816569402350456">
                             <conditions>
-                                <condition id="-6" name="Compare height" sid="470118805307683" type="MusicPlayer_Visualiser">
+                                <condition id="-6" name="Compare height" sid="447058793101007" type="MusicPlayer_Visualiser">
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="Height">200</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-6" name="Set height" sid="740431452876273" type="MusicPlayer_Visualiser">
+                                <action id="-6" name="Set height" sid="596358219968114" type="MusicPlayer_Visualiser">
                                     <param id="0" name="Height">200</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="982936683951778">
+                        <event-block sid="950754417591641">
                             <conditions>
-                                <condition id="-6" name="Compare height" sid="156880951521864" type="MusicPlayer_Visualiser">
+                                <condition id="-6" name="Compare height" sid="918908274902284" type="MusicPlayer_Visualiser">
                                     <param id="0" name="Comparison">2</param>
                                     <param id="1" name="Height">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-6" name="Set height" sid="382758999501191" type="MusicPlayer_Visualiser">
+                                <action id="-6" name="Set height" sid="185341952864899" type="MusicPlayer_Visualiser">
                                     <param id="0" name="Height">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="539021268789987" title="Buttons">
+            <sub-events>
+                <event-block any="1" sid="773454970600207">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="194252777535662" type="Touch" />
+                        <condition id="2" name="Key is down" sid="455342426472741" type="Keyboard">
+                            <param id="0" name="Key">88</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="431841443396768" type="System">
+                            <param id="0" name="Time scale">2.0</param>
+                        </action>
+                        <action id="5" name="Set playback rate" sid="743003253795671" type="BetterAudio">
+                            <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
+                            <param id="1" name="Playback rate">2.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="180182907810721">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is in touch" sid="261241659375068" type="Touch" />
+                        <condition id="2" inverted="1" name="Key is down" sid="134059457116870" type="Keyboard">
+                            <param id="0" name="Key">88</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="482097271575957">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="723136566303986" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="164182957819643" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="5" name="Set playback rate" sid="380367270822431" type="BetterAudio">
+                                    <param id="0" name="Tag">&quot;MUS_Credits&quot;</param>
+                                    <param id="1" name="Playback rate">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="764935262285838">
+                    <conditions>
+                        <condition id="15" name="On double-tap" sid="726693925614687" type="Touch" />
+                        <condition id="3" name="On key released" sid="547214223701559" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="879995301883850">
+                            <conditions>
+                                <condition id="-10" name="Compare opacity" sid="548515565975109" type="Transition">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="372317756742131" type="Function">
+                                    <param id="0" name="Name">&quot;Transition&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;In&quot;{###}0.5{###}0{###}&quot;In/Out, 1 - Time, 2 - Delay before transition (Wait time)&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="525491676175974" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="969615414243077" type="BetterAudio" />
+                                <action id="-2" name="Go to layout" sid="350947970335759" type="System">
+                                    <param id="0" name="Layout">Linum_mainMenu</param>
                                 </action>
                             </actions>
                         </event-block>

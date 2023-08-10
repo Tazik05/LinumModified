@@ -2324,46 +2324,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Values_Menus" uid="1668">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <CurrentMenu>mainmenu</CurrentMenu>
-                        <Selected_Main>1</Selected_Main>
-                        <Selected_DataSelect>0</Selected_DataSelect>
-                        <CanScrollUp>false</CanScrollUp>
-                        <CanScrollDown>false</CanScrollDown>
-                        <IsSettings>false</IsSettings>
-                        <IsDelete>false</IsDelete>
-                        <ConfirmDelete>false</ConfirmDelete>
-                        <AnimSpeed>0.1</AnimSpeed>
-                        <Selected_SettingsMain>0</Selected_SettingsMain>
-                        <Selected_Settings_Gameplay>0</Selected_Settings_Gameplay>
-                        <Selected_Settings_Video>0</Selected_Settings_Video>
-                        <Selected_Settings_Controls>0</Selected_Settings_Controls>
-                        <Selected_Settings_Other>0</Selected_Settings_Other>
-                        <CanUse>true</CanUse>
-                        <PlayerSelect>1</PlayerSelect>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>508</x>
-                        <y>-184</y>
-                        <z>0</z>
-                        <width>24</width>
-                        <height>24</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Values_Input" uid="1669">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2409,7 +2369,7 @@
                         <Paused>false</Paused>
                         <Selected>0</Selected>
                         <FadeBG>0</FadeBG>
-                        <CanPause>true</CanPause>
+                        <CanPause>false</CanPause>
                         <Animation>0</Animation>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
