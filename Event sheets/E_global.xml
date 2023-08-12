@@ -3145,72 +3145,138 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="433210657611938">
+                <event-block sid="747103194345282">
                     <conditions>
-                        <condition id="-41" name="Is between angles" sid="553830977551178" type="System">
-                            <param id="0" name="Angle">0</param>
-                            <param id="1" name="First angle">0</param>
-                            <param id="2" name="Second angle">45</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="222434958621896" type="Global_Settings">
+                            <param id="0" name="Instance variable">MultiplayerMod</param>
                         </condition>
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="158872697381264">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="641743798340257" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyESCHold</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="313972596278902" type="Values_CMD">
+                                    <param id="0" name="Instance variable">CMDIsActive</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="321598080824544" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">CanPause</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="452856711046331" type="Global_Settings">
+                                    <param id="0" name="Instance variable">AllowPause</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="718376743966757" type="Global_Settings">
+                                    <param id="0" name="Instance variable">EnablePause</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="185011503682585" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="552279367515143" type="System">
+                                    <param id="0" name="Time scale">timescale=0/1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="655058022884114">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="499627040951703" type="System">
+                                    <param id="0" name="First value">timescale</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="416491805037767" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="547768074662101" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">Paused</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="678288660125176">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="935027956486765" type="System">
+                                    <param id="0" name="First value">timescale</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="748994955885210" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="357210288808847" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">Paused</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="158872697381264">
+                <event-block sid="943197540034909">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="641743798340257" type="Values_Input">
-                            <param id="0" name="Instance variable">KeyESCHold</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="141958885592500" type="Global_Settings">
+                            <param id="0" name="Instance variable">MultiplayerMod</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="313972596278902" type="Values_CMD">
-                            <param id="0" name="Instance variable">CMDIsActive</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="321598080824544" type="Values_PauseMenu">
-                            <param id="0" name="Instance variable">CanPause</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="452856711046331" type="Global_Settings">
-                            <param id="0" name="Instance variable">AllowPause</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="718376743966757" type="Global_Settings">
-                            <param id="0" name="Instance variable">EnablePause</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="185011503682585" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set time scale" sid="552279367515143" type="System">
-                            <param id="0" name="Time scale">timescale=0/1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="655058022884114">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="499627040951703" type="System">
-                            <param id="0" name="First value">timescale</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="416491805037767" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="547768074662101" type="Values_PauseMenu">
-                            <param id="0" name="Instance variable">Paused</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="678288660125176">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Compare two values" sid="935027956486765" type="System">
-                            <param id="0" name="First value">timescale</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="748994955885210" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="357210288808847" type="Values_PauseMenu">
-                            <param id="0" name="Instance variable">Paused</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="783215605854960">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="954387655204891" type="Values_Input">
+                                    <param id="0" name="Instance variable">KeyESCHold</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="409796837476338" type="Values_CMD">
+                                    <param id="0" name="Instance variable">CMDIsActive</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="519075960888071" type="Values_PauseMenu">
+                                    <param id="0" name="Instance variable">CanPause</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="462405847262170" type="Global_Settings">
+                                    <param id="0" name="Instance variable">AllowPause</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="872144868968900" type="Global_Settings">
+                                    <param id="0" name="Instance variable">EnablePause</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="161790940178564">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="868240608182557" type="System" />
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="986405006794098" type="Values_PauseMenu">
+                                            <param id="0" name="Instance variable">Paused</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="950343138929629" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="482178781736407" type="Values_PauseMenu">
+                                            <param id="0" name="Instance variable">Paused</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="879593708648067">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="258591355774499" type="System" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="132161850053152" type="Values_PauseMenu">
+                                            <param id="0" name="Instance variable">Paused</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="808376700539018" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="628543686008407" type="Values_PauseMenu">
+                                            <param id="0" name="Instance variable">Paused</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="170760888143011">
                     <conditions>

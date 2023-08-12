@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>E_LevelSSW</name>
     <events>
+        <include>E_Multiplayer</include>
         <include>E_global</include>
         <include>E_Engine</include>
         <event-block sid="448470589600640">

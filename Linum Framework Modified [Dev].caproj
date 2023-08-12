@@ -20,7 +20,9 @@
         <plugin author="Toby R" id="Globals" version="1">Globals</plugin>
         <plugin author="Yann Granjon" id="JSON" version="1">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Date" version="1">Date</plugin>
@@ -78,7 +80,6 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Linum_preloader</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -91,7 +92,7 @@
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Landscape</prop>
         <prop name="Physics engine">Box2D web</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
         <prop name="Use iOS retina display">All devices</prop>
@@ -223,6 +224,8 @@
                         <instance-variable name="DropDash" sid="177223992720502" type="boolean" />
                         <instance-variable name="DropDashState" sid="126609895095590" type="number" />
                         <instance-variable name="UseSinCos" sid="935745468575672" type="boolean" />
+                        <instance-variable name="UID_Player" sid="684785181012792" type="number" />
+                        <instance-variable name="UID_Tails" sid="436253009964617" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Timer" sid="760925343406501">
@@ -364,6 +367,12 @@
                         <instance-variable name="LevelTimer" sid="445619189444432" type="number" />
                     </instance-variables>
                 </object-type>
+                <object-type global="1" name="Values_Multiplayer" sid="690246538635789">
+                    <plugin id="Globals" />
+                    <instance-variables>
+                        <instance-variable name="Char" sid="993504296200867" type="number" />
+                    </instance-variables>
+                </object-type>
             </object-folder>
             <object-type name="Audio" sid="2722091819329769">
                 <plugin id="Audio" />
@@ -474,6 +483,7 @@
                     <instance-variable name="ShowUpdateScreen" sid="498724572166485" type="boolean" />
                     <instance-variable name="ModVersion" sid="926615406887690" type="string" />
                     <instance-variable comment="specify the date of your build. Example: 31.12.99 23:59" name="BuildData" sid="824155759396182" type="string" />
+                    <instance-variable name="MultiplayerMod" sid="839227146119684" type="boolean" />
                 </instance-variables>
             </object-type>
         </object-folder>
@@ -3065,6 +3075,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="IsRotate" sid="288911858626576" type="boolean" />
+                    <instance-variable name="ID" sid="282305527551675" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Flash" sid="147992420596717">
@@ -6897,6 +6908,9 @@
             </object-type>
             <object-type name="TailsBack" sid="470127598844066">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ID" sid="353178018260495" type="string" />
+                </instance-variables>
                 <animation-folder>
                     <animation-folder name="unused" />
                     <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="536875720987040" speed="7">
@@ -12363,6 +12377,39 @@
         <object-type name="BetterAudio" sid="599577659603893">
             <plugin id="BetterAudio" />
         </object-type>
+        <object-type name="MultiplayerStandartText" sid="173460629542029">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="MultiplayerStandartText2" sid="636294990841851">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="TextBox3" sid="511833796208806">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Button6" sid="734550565117709">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="MultiplayerStandartText3" sid="443946987392109">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="ID" sid="675085327643344" type="string" />
+            </instance-variables>
+            <texture />
+        </object-type>
+        <object-type name="Button7" sid="377519905778836">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="List" sid="445082834597823">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="TextBox4" sid="772924684904910">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Multiplayer" sid="120597193168997">
+            <plugin id="Multiplayer" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Collisions_Slopes" plugin-id="Sprite" sid="766932094089823">
@@ -12654,6 +12701,7 @@
             <layout>Linum_PREVIEW(Temp).xml</layout>
             <layout>Linum_Credits.xml</layout>
             <layout>Linum_Pause.xml</layout>
+            <layout>Linum_Multiplayer.xml</layout>
         </layout-folder>
         <layout-folder name="[ Tests ]">
             <layout>TestLayout.xml</layout>
@@ -12674,6 +12722,7 @@
             <event-sheet>E_GameOver.xml</event-sheet>
             <event-sheet>E_LevelSSW.xml</event-sheet>
             <event-sheet>E_SaveHelper.xml</event-sheet>
+            <event-sheet>E_Multiplayer.xml</event-sheet>
         </event-folder>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>Event sheet 3.xml</event-sheet>
@@ -12687,6 +12736,7 @@
         <event-sheet>Event sheet 4.xml</event-sheet>
         <event-sheet>Event sheet 7.xml</event-sheet>
         <event-sheet>Event sheet 8.xml</event-sheet>
+        <event-sheet>Event sheet 9.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">
@@ -12752,6 +12802,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Multiplayer" uid="1728" />
     </global-instances>
     <sounds-folder>
         <file name="SFX_Explosion.ogg" />

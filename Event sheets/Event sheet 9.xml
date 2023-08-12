@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 9</name>
+    <events>
+        <include>E_global</include>
+        <event-block sid="945179767488640">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="470726602165531" type="LevelBG">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">-64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="579256543636696" type="LevelBG">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="498213910539489">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="578609479495143" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="988951251833941" type="Global_Settings">
+                    <param id="0" name="Instance variable">MultiplayerMod</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="712866300775522">
+            <conditions />
+            <actions>
+                <action id="-3" name="Set position" sid="484455079685840" type="LevelBG">
+                    <param id="0" name="X">Self.X-1</param>
+                    <param id="1" name="Y">Self.Y-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="711978439190679" title="Старт">
+            <sub-events>
+                <comment>При старте лайоута (игры) подключаемся к стандартному сигнальному серверу скирры и выводим текст что идет подключение. Скрывается слой Лобби и показывается слой Логин. Синхронизируем объект Player и PeerInfo, регистрируем тэги X и Y, по которым в дальнейшем от пира хосту будут передоваться данные позиции объекта Player</comment>
+                <event-block sid="963150041595236">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="942621043759538" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Connect" sid="437408887565356" type="Multiplayer">
+                            <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="809729618735467" type="MultiplayerStandartText2">
+                            <param id="0" name="Text">&quot;Статус: подключаюся...&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="160098134959586" type="System">
+                            <param id="0" name="Layer">&quot;Rooms&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="978915833082742" type="System">
+                            <param id="0" name="Layer">&quot;Login&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="543865262438377" type="Button6">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="695916773027830" type="TextBox3">
+                            <param id="0" name="Text">str(&quot;player_&quot;&amp;int(random(0,99999999999999999999)))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Когда игра подключилась к серверу выводится текст &quot;Подключено!&quot; и активируются кнопка и текстовое поле.</comment>
+                <event-block sid="147833332212658">
+                    <conditions>
+                        <condition id="2" name="On connected" sid="321756655859688" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="768211259606542" type="MultiplayerStandartText2">
+                            <param id="0" name="Text">&quot;Статус: всё норм&quot;</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="468485789829119" type="Button6">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Если, игра не может подключиться к серверу, тогда выводится текст ошибки.</comment>
+                <event-block sid="451394736624348">
+                    <conditions>
+                        <condition id="1" name="On error" sid="327048236436327" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="227069440803097" type="MultiplayerStandartText2">
+                            <param id="0" name="Text">&quot;Статус: пезд&quot;</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="392638900048163" type="Button6">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Нажатие на кнопку войти и проверка не пустое ли текстовое поле с именем, если не пустое то игра отправляет ваше имя (ник) на сервер.</comment>
+                <event-block sid="861045871362721">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="350923826856406" type="Button6" />
+                        <condition id="0" inverted="1" name="Compare text" sid="955895965396299" type="TextBox3">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Log in" sid="679524919420644" type="Multiplayer">
+                            <param id="0" name="Alias">TextBox3.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Если игрок  вошел на сервер со своим именем тогда активируем слой 1 (лобби), а также запрашиваем список всех созданных комнат игры. </comment>
+                <event-block sid="503647330964792">
+                    <conditions>
+                        <condition id="4" name="On logged in" sid="395627762616247" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="176448630703958" type="System">
+                            <param id="0" name="Layer">&quot;Rooms&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="742216817371749" type="System">
+                            <param id="0" name="Layer">&quot;Login&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="20" name="Request room list" sid="142488658407305" type="Multiplayer">
+                            <param id="0" name="Game">&quot;LINUM&quot;</param>
+                            <param id="1" name="Instance">&quot;default&quot;</param>
+                            <param id="2" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="543887145612224">
+                    <conditions>
+                        <condition id="21" name="On room list" sid="305788646923464" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Clear" sid="672957290375011" type="List" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="905905823766663">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="385333931459337" type="System">
+                                    <param id="0" name="Count">Multiplayer.ListRoomCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="714145730236028" type="List">
+                                    <param id="0" name="Text">Multiplayer.ListRoomName(loopindex)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="765851707801046">
+            <conditions>
+                <condition id="0" name="On clicked" sid="893304851841042" type="Button7" />
+                <condition id="0" inverted="1" name="Compare text" sid="126263343416772" type="TextBox4">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Join room" sid="341919460362382" type="Multiplayer">
+                    <param id="0" name="Game">&quot;LINUM&quot;</param>
+                    <param id="1" name="Instance">&quot;default&quot;</param>
+                    <param id="2" name="Room">TextBox4.Text</param>
+                    <param id="3" name="Max peers">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="502039725501460">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="939663821508876" type="List" />
+            </conditions>
+            <actions>
+                <action id="5" name="Join room" sid="664933138802841" type="Multiplayer">
+                    <param id="0" name="Game">&quot;LINUM&quot;</param>
+                    <param id="1" name="Instance">&quot;default&quot;</param>
+                    <param id="2" name="Room">List.SelectedText</param>
+                    <param id="3" name="Max peers">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="167441643544606">
+            <conditions>
+                <condition id="5" name="On joined room" sid="779894047156209" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="718641887383077" type="System">
+                    <param id="0" name="Layout">Linum_Level</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

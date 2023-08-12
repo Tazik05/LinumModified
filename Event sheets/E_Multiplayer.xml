@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>E_Multiplayer</name>
+    <events>
+        <event-group description="" inactive="1" sid="203374953369180" title="Host">
+            <sub-events>
+                <event-block sid="690540776464550">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="843836120418230" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;DestroyedObj&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="109909986372267">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="372492829150122" type="obj">
+                                    <param id="0" name="Unique ID">float(Multiplayer.Message)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="641661497457711" type="obj" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="608164775573554">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="515921028470445" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;PlayerInfo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Broadcast message" sid="618563615402471" type="Multiplayer">
+                            <param id="0" name="From ID">Multiplayer.FromID</param>
+                            <param id="1" name="Tag">&quot;PlayerInfo&quot;</param>
+                            <param id="2" name="Message">Multiplayer.Message</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="743298339663861">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="383734252686372" type="PlayerSprite">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.FromID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="873915418054188" type="PlayerSprite">
+                                    <param id="0" name="X">float(tokenat(Multiplayer.Message,0,&quot;|&quot;))</param>
+                                    <param id="1" name="Y">float(tokenat(Multiplayer.Message,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="457917894998892" type="PlayerSprite">
+                                    <param id="0" name="Animation">tokenat(Multiplayer.Message,2,&quot;|&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="794158447931979" type="PlayerSprite">
+                                    <param id="0" name="Speed">int(tokenat(Multiplayer.Message,3,&quot;|&quot;))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="132484180586333">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="743735605434770" type="System">
+                                            <param id="0" name="First value">tokenat(Multiplayer.Message,4,&quot;|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;left&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="909314096167318" type="PlayerSprite">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="435498548112263">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="540819852282159" type="System">
+                                            <param id="0" name="First value">tokenat(Multiplayer.Message,4,&quot;|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;right&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="452576820453477" type="PlayerSprite">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="496497460251131">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="531241782310732" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Tail&apos;s&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="221825578722817">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="902144834143242" type="TailsBack">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.FromID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="583313919012291" type="TailsBack">
+                                    <param id="0" name="X">float(tokenat(Multiplayer.Message,0,&quot;|&quot;))</param>
+                                    <param id="1" name="Y">float(tokenat(Multiplayer.Message,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="492923650946755" type="TailsBack">
+                                    <param id="0" name="Animation">tokenat(Multiplayer.Message,2,&quot;|&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="175546177223329" type="TailsBack">
+                                    <param id="0" name="Speed">float(tokenat(Multiplayer.Message,3,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="622903478062235" type="TailsBack">
+                                    <param id="0" name="Angle">float(tokenat(Multiplayer.Message,4,&quot;|&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="829513531027711">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="648645227450093" type="TailsBack">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Multiplayer.MyID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Broadcast message" sid="759987932025191" type="Multiplayer">
+                            <param id="0" name="From ID">Multiplayer.MyID</param>
+                            <param id="1" name="Tag">&quot;Tail&apos;s&quot;</param>
+                            <param id="2" name="Message">TailsBack.X&amp;&quot;|&quot;&amp;TailsBack.Y&amp;&quot;|&quot;&amp;TailsBack.AnimationName&amp;&quot;|&quot;&amp;TailsBack.AnimationSpeed&amp;&quot;|&quot;&amp;TailsBack.Angle</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="273277915068377">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="150177368796593" type="PlayerSprite">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Multiplayer.MyID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Broadcast message" sid="102510709625875" type="Multiplayer">
+                            <param id="0" name="From ID">Multiplayer.MyID</param>
+                            <param id="1" name="Tag">&quot;PlayerInfo&quot;</param>
+                            <param id="2" name="Message">PlayerSprite.X&amp;&quot;|&quot;&amp;PlayerSprite.Y&amp;&quot;|&quot;&amp;PlayerSprite.AnimationName&amp;&quot;|&quot;&amp;PlayerSprite.AnimationSpeed&amp;&quot;|&quot;&amp;Values_Player.Direction</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948214026020295">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="828393073211120" type="obj" />
+                        <condition id="-3" name="Is on-screen" sid="539251402742640" type="obj" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Broadcast message" sid="187529246796547" type="Multiplayer">
+                            <param id="0" name="From ID">Multiplayer.MyID</param>
+                            <param id="1" name="Tag">&quot;DestroyedObj&quot;</param>
+                            <param id="2" name="Message">str(obj.UID)</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="921043550108410" title="Peer">
+            <sub-events>
+                <event-block sid="857871839786604">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="535035937747864" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;DestroyedObj&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="597724599290913">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="263287124696442" type="obj">
+                                    <param id="0" name="Unique ID">float(Multiplayer.Message)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="736665729710165" type="obj" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="159430120519391">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="476365300452455" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;PlayerInfo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="536550201730932">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="305537777096763" type="PlayerSprite">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.FromID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="344155777866852" type="PlayerSprite">
+                                    <param id="0" name="X">float(tokenat(Multiplayer.Message,0,&quot;|&quot;))</param>
+                                    <param id="1" name="Y">float(tokenat(Multiplayer.Message,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="940883964695427" type="PlayerSprite">
+                                    <param id="0" name="Animation">tokenat(Multiplayer.Message,2,&quot;|&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="748773903282513" type="PlayerSprite">
+                                    <param id="0" name="Speed">int(tokenat(Multiplayer.Message,3,&quot;|&quot;))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="833799815828330">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="472705521466192" type="System">
+                                            <param id="0" name="First value">tokenat(Multiplayer.Message,4,&quot;|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;left&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="194173114938590" type="PlayerSprite">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="117765639857951">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="755119716603055" type="System">
+                                            <param id="0" name="First value">tokenat(Multiplayer.Message,4,&quot;|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;right&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="157072024614672" type="PlayerSprite">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="282980411319563">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="174751935659400" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Tail&apos;s&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="713224646324841">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="103787632926921" type="TailsBack">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.FromID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="338609498589804" type="TailsBack">
+                                    <param id="0" name="X">float(tokenat(Multiplayer.Message,0,&quot;|&quot;))</param>
+                                    <param id="1" name="Y">float(tokenat(Multiplayer.Message,1,&quot;|&quot;))</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="253282024743635" type="TailsBack">
+                                    <param id="0" name="Animation">tokenat(Multiplayer.Message,2,&quot;|&quot;)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="400294861212510" type="TailsBack">
+                                    <param id="0" name="Speed">float(tokenat(Multiplayer.Message,3,&quot;|&quot;))</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="737739759973774" type="TailsBack">
+                                    <param id="0" name="Angle">float(tokenat(Multiplayer.Message,4,&quot;|&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="360290006286567">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="519494661780532" type="TailsBack">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Multiplayer.MyID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="850556935151155" type="Multiplayer">
+                            <param id="0" name="Peer ID">Multiplayer.HostID</param>
+                            <param id="1" name="Tag">&quot;Tail&apos;s&quot;</param>
+                            <param id="2" name="Message">TailsBack.X&amp;&quot;|&quot;&amp;TailsBack.Y&amp;&quot;|&quot;&amp;TailsBack.AnimationName&amp;&quot;|&quot;&amp;TailsBack.AnimationSpeed&amp;&quot;|&quot;&amp;TailsBack.Angle</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="565292677171629">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="226623793812890" type="PlayerSprite">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Multiplayer.MyID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="539626240778441" type="Multiplayer">
+                            <param id="0" name="Peer ID">Multiplayer.HostID</param>
+                            <param id="1" name="Tag">&quot;PlayerInfo&quot;</param>
+                            <param id="2" name="Message">PlayerSprite.X&amp;&quot;|&quot;&amp;PlayerSprite.Y&amp;&quot;|&quot;&amp;PlayerSprite.AnimationName&amp;&quot;|&quot;&amp;PlayerSprite.AnimationSpeed&amp;&quot;|&quot;&amp;Values_Player.Direction</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="606348807878090">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="560521058334847" type="obj" />
+                        <condition id="-3" name="Is on-screen" sid="569698942044628" type="obj" />
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="454486318039306" type="Multiplayer">
+                            <param id="0" name="Peer ID">Multiplayer.HostID</param>
+                            <param id="1" name="Tag">&quot;DestroyedObj&quot;</param>
+                            <param id="2" name="Message">str(obj.UID)</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>ебатьь я нихуя не пониюамапрлбзщфКВРЛ</comment>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="522587035841793" title="Common">
+            <sub-events>
+                <event-block sid="697747610425187">
+                    <conditions>
+                        <condition id="11" name="On peer connected" sid="188900679908177" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="482035257702862" type="System">
+                            <param id="0" name="Object to create">PlayerSprite</param>
+                            <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                            <param id="2" name="X">PlayerSpawn.X</param>
+                            <param id="3" name="Y">PlayerSpawn.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="919225370543354" type="PlayerSprite">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="886456145179905" type="System">
+                            <param id="0" name="Object to create">MultiplayerStandartText3</param>
+                            <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="236157138654229" type="MultiplayerStandartText3">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="568107787035703" type="System">
+                            <param id="0" name="Object to create">TailsBack</param>
+                            <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="547967556748003" type="TailsBack">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="542357669074820">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="881009323871494" type="MultiplayerStandartText3">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">PlayerSprite.ID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="782006723797723" type="MultiplayerStandartText3">
+                            <param id="0" name="X">PlayerSprite.X</param>
+                            <param id="1" name="Y">PlayerSprite.Y-55</param>
+                        </action>
+                        <action id="0" name="Set text" sid="581700566539618" type="MultiplayerStandartText3">
+                            <param id="0" name="Text">Multiplayer.PeerAliasFromID(PlayerSprite.ID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="379327635896659">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="578692981926768" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;DestroyedObj&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="809105382279019">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="725147073968107" type="obj">
+                                    <param id="0" name="Unique ID">float(Multiplayer.Message)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="355334442718820" type="obj" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="595851355335832">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="366960098433157" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="983468932731020" type="PlayerSprite">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">Multiplayer.MyID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="624221940854105" type="TailsBack">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">Multiplayer.MyID</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="512295955781263" type="System">
+                            <param id="0" name="Object to create">MultiplayerStandartText3</param>
+                            <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="413166445924858" type="MultiplayerStandartText3">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">Multiplayer.MyID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="226537073853114">
+                            <conditions>
+                                <condition id="10" name="Is host" sid="729335340708153" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="102287265390270" type="System">
+                                    <param id="0" name="Group name">&quot;Host&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="776646173762919">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="411226521544962" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="742210409268798" type="System">
+                                    <param id="0" name="Group name">&quot;Peer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="339737917457899">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="575408733458876" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="158244995179803" type="Browser">
+                    <param id="0" name="Type">1</param>
+                    <param id="1" name="Message">&quot;my id:&quot;&amp;PlayerSprite.ID</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="917090970243679">
+                    <conditions>
+                        <condition id="-10" name="For" sid="746125559740286" type="System">
+                            <param id="0" name="Name">&quot;list&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">Multiplayer.PeerCount-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="298625518459179" type="Browser">
+                            <param id="0" name="Type">1</param>
+                            <param id="1" name="Message">Multiplayer.PeerIDAt(loopindex)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>если начинать с нуля,то это будет включать id игрока,за которого играют,нам нужны только другие. А отнятие из кол-ва пиров нужно,чтобы убрать пустоту</comment>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="434512581192306" title="Sync">
+            <sub-events>
+                <event-group description="" sid="127756564205248" title="PlayerSpawn">
+                    <sub-events>
+                        <comment>спасибо халату за поддержку,без него бы у меня крыша деднулась!</comment>
+                        <event-block sid="946930995566915">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="239270039893013" type="PlayerSprite" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="606292336252950">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="171363539625712" type="MultiplayerStandartText3">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PlayerSprite.ID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="486353724543861" type="MultiplayerStandartText3" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="851487925197095">
+                                    <conditions>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="842478449292263" type="PlayerSprite">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Multiplayer.MyID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="912179094098500" type="PlayerSprite" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="862993156515695">
+                                            <conditions>
+                                                <condition id="-10" name="For" sid="435527116273057" type="System">
+                                                    <param id="0" name="Name">&quot;list&quot;</param>
+                                                    <param id="1" name="Start index">1</param>
+                                                    <param id="2" name="End index">Multiplayer.PeerCount-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="947604397508859" type="System">
+                                                    <param id="0" name="Object to create">PlayerSprite</param>
+                                                    <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                                                    <param id="2" name="X">PlayerSpawn.X</param>
+                                                    <param id="3" name="Y">PlayerSpawn.Y</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="865902981962052" type="PlayerSprite">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">Multiplayer.PeerIDAt(loopindex)</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="457676625811071" type="System">
+                                                    <param id="0" name="Object to create">MultiplayerStandartText3</param>
+                                                    <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                                                    <param id="2" name="X">0</param>
+                                                    <param id="3" name="Y">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="892473760099992" type="MultiplayerStandartText3">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">Multiplayer.PeerIDAt(loopindex)</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="312257287775091" type="System">
+                                                    <param id="0" name="Object to create">TailsBack</param>
+                                                    <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                                                    <param id="2" name="X">0</param>
+                                                    <param id="3" name="Y">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="718046268177853" type="TailsBack">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">Multiplayer.PeerID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="237352407178089">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="131006319442232" type="System" />
+                                <condition id="-8" name="Compare two values" sid="222390277997326" type="System">
+                                    <param id="0" name="First value">Multiplayer.PeerCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="690184991824161">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="590828617341924" type="System">
+                                            <param id="0" name="Name">&quot;list&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">Multiplayer.PeerCount-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="325489591647323">
+                                            <conditions>
+                                                <condition id="-7" inverted="1" name="Compare instance variable" sid="667242123957604" type="PlayerSprite">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">loopindex</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="246404941480569" type="System">
+                                                    <param id="0" name="Object to create">PlayerSprite</param>
+                                                    <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                                                    <param id="2" name="X">PlayerSpawn.X</param>
+                                                    <param id="3" name="Y">PlayerSpawn.Y</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="344631471110042" type="PlayerSprite">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">Multiplayer.PeerIDAt(loopindex)</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="972843981077509" type="System">
+                                                    <param id="0" name="Object to create">MultiplayerStandartText3</param>
+                                                    <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                                                    <param id="2" name="X">0</param>
+                                                    <param id="3" name="Y">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="902849546148019" type="MultiplayerStandartText3">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">Multiplayer.PeerIDAt(loopindex)</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="952015124610218" type="System">
+                                                    <param id="0" name="Object to create">TailsBack</param>
+                                                    <param id="1" name="Layer">&quot;Objects_Player&quot;</param>
+                                                    <param id="2" name="X">0</param>
+                                                    <param id="3" name="Y">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="588781263232776" type="TailsBack">
+                                                    <param id="0" name="Instance variable">ID</param>
+                                                    <param id="1" name="Value">Multiplayer.PeerID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

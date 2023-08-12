@@ -304,6 +304,11 @@
                 <LevelTimer>0</LevelTimer>
             </instance-variables>
         </instance>
+        <instance type="Values_Multiplayer" uid="1729">
+            <instance-variables>
+                <Char>1</Char>
+            </instance-variables>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

@@ -1637,6 +1637,7 @@
                     </properties>
                     <instance-variables>
                         <IsRotate>false</IsRotate>
+                        <ID></ID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />

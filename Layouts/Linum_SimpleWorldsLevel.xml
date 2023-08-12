@@ -8410,6 +8410,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <ID></ID>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -8434,6 +8437,7 @@
                     </properties>
                     <instance-variables>
                         <IsRotate>false</IsRotate>
+                        <ID></ID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />
@@ -10409,6 +10413,8 @@
                         <DropDash>false</DropDash>
                         <DropDashState>0</DropDashState>
                         <UseSinCos>true</UseSinCos>
+                        <UID_Player>0</UID_Player>
+                        <UID_Tails>0</UID_Tails>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
